@@ -3,8 +3,8 @@
 ###################################
 
 set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
-set -g fish_user_paths "$HOME/go/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
+# set -g fish_user_paths "$HOME/go/bin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
 # set -g fish_user_paths "/usr/local/Cellar/swift/4.2.1/Swift-4.2.1.xctoolchain/usr/bin" $fish_user_paths
 
 ###################################
@@ -17,8 +17,8 @@ set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
 
 set -gx LDFLAGS "-L/usr/local/opt/openssl@1.1/lib"
 set -gx CPPFLAGS "-I/usr/local/opt/openssl@1.1/include"
-set -gx LDFLAGS "-L/usr/local/opt/llvm/lib"
-set -gx CPPFLAGS "-I/usr/local/opt/llvm/include"
+# set -gx LDFLAGS "-L/usr/local/opt/llvm/lib"
+# set -gx CPPFLAGS "-I/usr/local/opt/llvm/include"
 set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 # ********************************
@@ -29,17 +29,17 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 # set -gx TOOLCHAINS "swift"
 
 # **** Global $PATH ****
-set -gx PATH "$GOPATH/bin" $PATH
-set -gx PATH "/usr/local/opt/llvm/bin" $PATH
+# set -gx PATH "$GOPATH/bin" $PATH
+# set -gx PATH "/usr/local/opt/llvm/bin" $PATH
 
 # **** Go $PATH ****
-set -gx GOPATH "$HOME/go"
+# set -gx GOPATH "$HOME/go"
 
 # **** Swift $PATH ****
 # set -gx PATH "/usr/local/Cellar/swift/4.2.1/Swift-4.2.1.xctoolchain/usr/bin"
 
 # **** Go Envs ****
-set -gx GO111MODULE "auto"
+# set -gx GO111MODULE "auto"
 
 # **** Compression ****
 set -gx GZIP 9
@@ -53,7 +53,7 @@ set -gx GZIP 9
 alias load_fnm "fnm env --shell=fish --multi | source"
 
 # **** git clean alias ****
-alias git_clean="git reflog expire --expire=now --all && git repack -ad && git prune"
+alias git_clean="git reflog expire --expire=now --all AND git repack -ad AND git prune"
 
 # **** archive alias ****
 alias gza="tar cvzf"
