@@ -12,8 +12,8 @@ set -g fish_user_paths "/usr/local/anaconda3/bin" $fish_user_paths
 # **** Android SDK ****
 set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
 
-# **** conda ****
-set -gx PREFIX /usr/local/anaconda3
+# **** NPM ****
+set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
 
 # ********************************
 # ********* openssl env **********
@@ -31,10 +31,11 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 set -gx PATH "$ANDROID_HOME/emulator" $PATH
 set -gx PATH "$ANDROID_HOME/tools" $PATH
 set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
-set -gx PATH "ANDROID_HOME/platform-tools" $PATH
+set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
 
-# **** Conda ****
-set -gx PATH "$PREFIX/bin" $PATH
+# **** NPM ****
+
+set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
 
 ###################################
 ############# aliases #############
@@ -52,9 +53,6 @@ alias python=/usr/local/bin/python3
 
 # **** Virtual ENV alias ****
 alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
-
-# **** conda init ****
-alias conda_init "$PREFIX/bin/conda \"shell.fish\" \"hook\" $argv | source"
 
 ###################################
 ########## init scripts ###########
