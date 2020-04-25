@@ -3,7 +3,7 @@
 ###################################
 
 set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/anaconda3/bin" $fish_user_paths
+set -gx fish_user_paths "$HOME/.npm-global/bin" $fish_user_paths
 
 ###################################
 ######### env parameters  #########
@@ -34,19 +34,16 @@ set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
 set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
 
 # **** NPM ****
-
 set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
 
 ###################################
 ############# aliases #############
 ###################################
 
-# **** fnm alias ****
-# node.js version manager
-alias load_fnm "fnm env --shell=fish --multi | source"
-
 # **** git clean alias ****
-alias git_clean="git reflog expire --expire=now --all && git repack -ad && git prune"
+alias git_reflog_expire="git reflog expire --expire=now --all"
+alias git_repack_ad="git repack -ad"
+alias git_prune="git prune"
 
 # **** python3 ****
 alias python=/usr/local/bin/python3
@@ -60,3 +57,6 @@ alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
 
 # **** starship ****
 starship init fish | source
+
+# **** fnm ****
+fnm env --shell=fish --multi | source
