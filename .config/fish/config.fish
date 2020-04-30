@@ -15,6 +15,9 @@ set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
 # **** NPM ****
 set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
 
+# **** BAT ****
+set -gx BAT_THEME "GitHub"
+
 # ********************************
 # ********* openssl env **********
 # ********************************
@@ -39,6 +42,11 @@ set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
 ###################################
 ############# aliases #############
 ###################################
+
+# **** Terminal stuffs ****
+alias cat=bat
+alias ls=exa
+alias grep=rg
 
 # **** git clean alias ****
 alias git_reflog_expire="git reflog expire --expire=now --all"
