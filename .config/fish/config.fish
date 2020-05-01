@@ -64,7 +64,7 @@ alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
 ###################################
 
 # **** starship ****
-source ("/usr/local/bin/starship" init fish --print-full-init | psub)
+starship init fish | source
 
 # **** fnm ****
 fnm env --shell=fish --multi | source
