@@ -2,12 +2,15 @@
 ######### fish-user Paths #########
 ###################################
 
-set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
+set -gx fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.npm-global/bin" $fish_user_paths
 
 ###################################
 ######### env parameters  #########
 ###################################
+
+# **** Brew ****
+set -gx HOMEBREW_NO_ANALYTICS 1
 
 # **** Android SDK ****
 set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
