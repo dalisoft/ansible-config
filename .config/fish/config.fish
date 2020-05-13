@@ -62,12 +62,12 @@ alias python=/usr/local/bin/python3
 # **** Virtual ENV alias ****
 alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
 
+# **** fnm ****
+alias load_fnm "fnm env --shell=fish --multi | source"
+
 ###################################
 ########## init scripts ###########
 ###################################
 
 # **** starship ****
 starship init fish | source
-
-# **** fnm ****
-fnm env --shell=fish --multi | source
