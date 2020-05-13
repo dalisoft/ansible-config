@@ -48,6 +48,8 @@ set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
 
 # **** Terminal stuffs ****
 alias cat=bat
+alias ls=exa
+alias grep=rg
 
 # **** git clean alias ****
 alias git_reflog_expire="git reflog expire --expire=now --all"
@@ -60,12 +62,12 @@ alias python=/usr/local/bin/python3
 # **** Virtual ENV alias ****
 alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
 
-# **** fnm ****
-alias load_fnm "fnm env --shell=fish --multi | source"
-
 ###################################
 ########## init scripts ###########
 ###################################
 
 # **** starship ****
 starship init fish | source
+
+# **** fnm ****
+fnm env --shell=fish --multi | source
