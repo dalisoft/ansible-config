@@ -1,0 +1,17 @@
+// Settings in here override those in "LSP-eslint/LSP-eslint.sublime-settings"
+
+{
+	"languages": [
+		{
+			"languageId": "eslint",
+			"scopes": ["source.js", "source.jsx", "source.ts", "source.tsx", "text.html.vue"],
+			"syntaxes": [
+				"Packages/User/JS Custom/Syntaxes/Default.sublime-syntax",
+				"Packages/JavaScript/JavaScript.sublime-syntax",
+				"Packages/TypeScript Syntax/TypeScript.tmLanguage",
+				"Packages/User/JS Custom/Syntaxes/React.sublime-syntax",
+				"Packages/Vue Syntax Highlight/Vue Component.sublime-syntax",
+			],
+		},
+	]
+}
