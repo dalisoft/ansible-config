@@ -65,6 +65,10 @@ alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
 # **** fnm ****
 alias load_fnm "fnm env --shell=fish --multi | source"
 
+# **** clean ****
+alias clear_mac_cache "rm -rf ~/Library/Caches"
+alias clear_mac_logs "rm -rf ~/Logs"
+
 ###################################
 ########## init scripts ###########
 ###################################
