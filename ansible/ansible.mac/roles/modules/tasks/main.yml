@@ -1,0 +1,13 @@
+---
+  - name: Installing pip modules
+    pip:
+     name:
+       - python-language-server
+
+  - name: Installing npm modules
+    npm:
+      global: yes
+      path: ~/.npm-global
+      name:
+        - nodemon
+        - expo-cli
