@@ -1,0 +1,41 @@
+---
+- name: assert supported build
+  assert:
+    that:
+      - "visual_studio_code_extensions_build in ('stable', 'insiders')"
+
+- name: include package manager specific vars
+  with_first_found:
+    - '../vars/pkg-mgr/{{ ansible_pkg_mgr }}.yml'
+    - ../vars/pkg-mgr/default.yml
+  include_vars: '{{ item }}'
+
+- name: install extension cli dependencies
+  package:
+    name: '{{ item }}'
+    state: present
+  with_items: '{{ visual_studio_code_extensions_dependencies }}'
+
+- name: install extensions
+  become: yes
+  become_user: '{{ item.0.username }}'
+  visual_studio_code_extensions:
+    executable: '{{ visual_studio_code_extensions_exe }}'
+    name: '{{ item.1 }}'
+    state: present
+  with_subelements:
+    - '{{ users }}'
+    - visual_studio_code_extensions
+    - skip_missing: yes
+
+- name: uninstall extensions
+  become: yes
+  become_user: '{{ item.0.username }}'
+  visual_studio_code_extensions:
+    executable: '{{ visual_studio_code_extensions_exe }}'
+    name: '{{ item.1 }}'
+    state: absent
+  with_subelements:
+    - '{{ users }}'
+    - visual_studio_code_extensions_absent
+    - skip_missing: yes

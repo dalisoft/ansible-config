@@ -1,0 +1,177 @@
+---
+- name: Converge
+  hosts: all
+
+  pre_tasks:
+    - name: create test users
+      become: yes
+      user:
+        name: '{{ item }}'
+        state: present
+        home: '/home/{{ item }}'
+        createhome: yes
+      with_items:
+        - test_usr
+        - test_usr2
+        - test_usr3
+
+    - name: install dependencies (Debian)
+      become: yes
+      apt:
+        name:
+          - ca-certificates
+          - apt-transport-https
+          - gconf2
+          - libasound2
+          - libgtk2.0-0
+          - libx11-xcb1
+          - libxss1
+          - gnupg2
+        state: present
+      when: ansible_pkg_mgr == 'apt'
+
+    - name: install apt key (Debian)
+      apt_key:
+        url: 'https://packages.microsoft.com/keys/microsoft.asc'
+        state: present
+      when: ansible_pkg_mgr == 'apt'
+
+    - name: install VS Code apt repo (Debian)
+      apt_repository:
+        repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+        state: present
+      when: ansible_pkg_mgr == 'apt'
+
+    - name: import VS Code RPM key (SUSE)
+      rpm_key:
+        state: present
+        key: 'https://packages.microsoft.com/keys/microsoft.asc'
+      when: "ansible_os_family == 'Suse'"
+
+    - name: install VS Code repo (SUSE)
+      zypper_repository:
+        name: Visual Studio Code
+        repo: 'https://packages.microsoft.com/yumrepos/vscode'
+        state: present
+      when: "ansible_os_family == 'Suse'"
+
+    - name: install VS Code repo (yum, dnf)
+      become: yes
+      yum_repository:
+        name: code
+        description: Visual Studio Code repo
+        file: vscode
+        baseurl: https://packages.microsoft.com/yumrepos/vscode
+        gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+        gpgcheck: yes
+      when: ansible_pkg_mgr in ('yum', 'dnf')
+
+    - name: install VS Code
+      become: yes
+      package:
+        name: code
+        state: present
+      register: vscode_install
+
+    - name: install VS Code Insiders (apt)
+      become: yes
+      package:
+        name: code-insiders
+        state: present
+      register: vscode_insiders_install
+      when: "ansible_pkg_mgr == 'apt'"
+
+    - name: download VS Code RPM
+      become: yes
+      get_url:
+        url: 'https://update.code.visualstudio.com/latest/linux-rpm-x64/insider'
+        dest: '/root/code-insiders.rpm'
+        mode: 'u=rw,go='
+      when: "ansible_pkg_mgr in ('yum', 'dnf', 'zypper')"
+
+    - name: install VS Code Insiders (yum)
+      become: yes
+      yum:
+        name: '/root/code-insiders.rpm'
+        state: present
+      when: "ansible_pkg_mgr == 'yum'"
+
+    - name: install VS Code Insiders (dnf)
+      become: yes
+      dnf:
+        name: '/root/code-insiders.rpm'
+        state: present
+      when: "ansible_pkg_mgr == 'dnf'"
+
+    - name: install VS Code Insiders (zypper)
+      become: yes
+      zypper:
+        name: '/root/code-insiders.rpm'
+        state: present
+        disable_gpg_check: yes
+      when: "ansible_pkg_mgr == 'zypper'"
+
+    - name: install extension cli dependencies (dnf)
+      become: yes
+      dnf:
+        name: libX11-xcb
+        state: present
+      when: ansible_pkg_mgr == 'dnf'
+
+    - name: install extension cli dependencies (zypper)
+      become: yes
+      zypper:
+        name: libX11-xcb1
+        state: present
+      when: ansible_pkg_mgr == 'zypper'
+
+    - name: install extension to be uninstalled (code)
+      tags:
+        # Suppress warning: [ANSIBLE0016] Tasks that run when changed should likely be handlers
+        # Not applicable because this is part of the test setup not part of the role.
+        - skip_ansible_lint
+      become: yes
+      become_user: test_usr
+      command: 'code --install-extension streetsidesoftware.code-spell-checker'
+      changed_when: no
+      when: vscode_install.changed
+
+    - name: install extension to be uninstalled (code-insiders)
+      tags:
+        # Suppress warning: [ANSIBLE0016] Tasks that run when changed should likely be handlers
+        # Not applicable because this is part of the test setup not part of the role.
+        - skip_ansible_lint
+      become: yes
+      become_user: test_usr
+      command: 'code-insiders --install-extension streetsidesoftware.code-spell-checker'
+      changed_when: no
+      when: vscode_insiders_install.changed
+
+  roles:
+    - role: ansible-role-visual-studio-code-extensions
+      users:
+        - username: test_usr
+          visual_studio_code_extensions:
+            - ms-python.python
+            - wholroyd.jinja
+          visual_studio_code_extensions_absent:
+            - streetsidesoftware.code-spell-checker
+            - doesnot.Exist
+        - username: test_usr2
+          visual_studio_code_extensions: []
+          visual_studio_code_extensions_absent: []
+        - username: test_usr3
+    - role: ansible-role-visual-studio-code-extensions
+      visual_studio_code_extensions_build: insiders
+      users:
+        - username: test_usr
+          visual_studio_code_extensions:
+            - ms-python.python
+            - wholroyd.jinja
+          visual_studio_code_extensions_absent:
+            - streetsidesoftware.code-spell-checker
+            - doesnot.Exist
+        - username: test_usr2
+          visual_studio_code_extensions: []
+          visual_studio_code_extensions_absent: []
+        - username: test_usr3

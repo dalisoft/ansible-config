@@ -14,3 +14,6 @@
         - docker
         - octave-app
         - brave-browser
+    register: result
+    until: result is successful
+    when: homebrew_check.stat.exists

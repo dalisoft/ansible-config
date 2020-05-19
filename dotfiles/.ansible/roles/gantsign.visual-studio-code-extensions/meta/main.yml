@@ -1,0 +1,29 @@
+---
+galaxy_info:
+  author: John Freeman
+  description: Role for installing Visual Studio Code extensions.
+  company: GantSign Ltd.
+  license: MIT
+  min_ansible_version: 2.5
+  platforms:
+    - name: EL
+      versions:
+        - 7
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Fedora
+      versions:
+        - 28
+    - name: opensuse
+      versions:
+        - 15.1
+    - name: MacOSX
+      versions:
+        - 10.12
+  galaxy_tags:
+    - code
+    - vscode
+    - development
+dependencies: []
