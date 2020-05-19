@@ -37,6 +37,7 @@
         - htop # Monitoring manager
         - tmux # Terminal Multi-pleXer
         - wget # Benchmark tool
+        - cmake # Build tool
     register: result
     until: result is successful
     when: homebrew_check.stat.exists
@@ -62,6 +63,7 @@
         - node
       #  - go
       #  - rust
+      #  - llvm
     register: result
     until: result is successful
     when: homebrew_check.stat.exists
@@ -82,4 +84,3 @@
     register: result
     until: result is successful
     when: homebrew_check.stat.exists
-
