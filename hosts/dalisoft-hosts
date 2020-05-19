@@ -1,0 +1,360 @@
+#
+# CrispChat domains related
+# to chat and tracking too
+#
+
+0.0.0.0 image.crisp.chat
+0.0.0.0 client.crisp.chat
+0.0.0.0 settings.crisp.chat
+0.0.0.0 client.relay.crisp.chat
+
+#
+# AdGuard snippets downloading domains
+#
+
+# 0.0.0.0 userscripts.adtidy.org
+# 0.0.0.0 filters.adtidy.org
+# 0.0.0.0 api.adguard.com
+
+#
+# Addinational tracking
+#
+
+0.0.0.0 rutracker.appspot.com
+0.0.0.0 cdn.advg.agency
+0.0.0.0 cdn.admitad-connect.com
+
+#
+# Disable known services
+#
+
+0.0.0.0 sentry.iddqd.yandex.net
+0.0.0.0 yandex.com
+0.0.0.0 yandex.ru
+0.0.0.0 bing.com
+0.0.0.0 www.bing.com
+0.0.0.0 hostinger.ru
+0.0.0.0 www.hostinger.ru
+
+#
+# Disable Facebook website
+# and it's sub-domains
+# related to trackers
+# and ads
+#
+
+0.0.0.0 facebook.com
+0.0.0.0 www.facebook.com
+0.0.0.0 pixel.facebook.com
+0.0.0.0 connect.facebook.net
+0.0.0.0 edge-chat.facebook.com
+0.0.0.0 scontent.xx.fbcdn.net
+0.0.0.0 scontent.fakx2-1.fna.fbcdn.net
+0.0.0.0 fbsbx.com
+0.0.0.0 fbcdn.com
+0.0.0.0 instagram.c10r.facebook.com
+0.0.0.0 edge-mqtt.facebook.com
+0.0.0.0 graph.instagram.com
+0.0.0.0 staticxx.facebook.com
+0.0.0.0 connect.facebook.net
+0.0.0.0 lookaside.facebook.com
+
+#
+# Google trackers, ads and analytics
+#
+
+0.0.0.0 safebrowsing.googleapis.com
+0.0.0.0 adservice.google.co.uz
+0.0.0.0 adservice.google.com
+0.0.0.0 r1---sn-01oxu-u5ne.googlevideo.com
+0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 tpc.googlesyndication.com
+0.0.0.0 ogs.google.com
+0.0.0.0 csi.gstatic.com
+0.0.0.0 clients1.google.com
+0.0.0.0 analytics-google.com
+0.0.0.0 googleadservices.com
+0.0.0.0 s.youtube.com
+0.0.0.0 suggestqueries.google.com
+0.0.0.0 device-provisioning.googleapis.com
+0.0.0.0 www-googletagmanager.l.google.com
+0.0.0.0 www.googletagmanager.com
+0.0.0.0 clients.l.google.com
+0.0.0.0 youtube-nocookie.com
+0.0.0.0 s.ytimg.com
+0.0.0.0 manifest.googlevideo.com
+0.0.0.0 statsgoogle.appsflyer.com
+0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 firebaselogging-pa.googleapis.com
+
+# Google service trackers, but
+# disabling these host may affect
+# service functionality
+
+# 0.0.0.0 youtube-ui.l.google.com
+
+#
+# Microsoft
+# trackers and analytics
+#
+
+0.0.0.0 msftconnecttest.com
+0.0.0.0 www.msftconnecttest.com
+0.0.0.0 client.wns.windows.com
+0.0.0.0 dns.msftncsi.com
+0.0.0.0 settings-win.data.microsoft.com
+0.0.0.0 livetileedge.dsx.mp.microsoft.com
+
+#
+# Some unknown addresses
+# i sure it's Microsoft
+# trackers
+#
+
+0.0.0.0 sfsidchk.home
+0.0.0.0 orynujdmg.home
+0.0.0.0 rnivhncihwr.home
+0.0.0.0 nlujtcduduwy.home
+0.0.0.0 hgyesrqzuf.home
+0.0.0.0 mtcliyy.home
+0.0.0.0 yiuegterxjauts.home
+0.0.0.0 psmovpt.home
+0.0.0.0 fayiajfrw.home
+0.0.0.0 _ldap._tcp.dc._msdcs.workgroup.home
+
+#
+# GitHub
+# trackers and analytics
+#
+
+0.0.0.0 collector.githubapp.com
+
+#
+# Apple trackers and analytics
+#
+
+0.0.0.0 dsce9.akamaiedge.net
+0.0.0.0 valid.apple.com
+0.0.0.0 metrics.icloud.com
+0.0.0.0 api.smoot.apple.com
+0.0.0.0 weather-analytics-events.apple.com
+0.0.0.0 xp.apple.com
+0.0.0.0 gs-loc-new.ls-apple.com.akadns.net
+0.0.0.0 gs-loc.apple.com
+0.0.0.0 gspe35-ssl.ls.apple.com
+0.0.0.0 gspe21-ssl.ls.apple.com
+0.0.0.0 gspe1-ssl.ls.apple.com
+0.0.0.0 configuration.ls.apple.com
+0.0.0.0 ls.apple.com
+0.0.0.0 apple-finance.query.yahoo.com
+0.0.0.0 init.itunes.apple.com
+0.0.0.0 p14-buy.itunes.apple.com
+0.0.0.0 play.itunes.apple.com
+0.0.0.0 help.apple.com
+0.0.0.0 captive.apple.com
+0.0.0.0 ls.apple.com
+
+#
+# AmazonAWS trackers
+# but disabling this host
+# disables the GitHub releases too
+#
+
+# 0.0.0.0 s3-1-w.amazonaws.com
+
+#
+# Trello trackers
+#
+
+0.0.0.0 c.trello.com
+
+#
+# OLX.uz trackers
+#
+
+0.0.0.0 cnt0.www.uz
+0.0.0.0 tracking.olx-st.com
+0.0.0.0 bz2.olx.uz
+0.0.0.0 ninja.data.olxcdn.com
+0.0.0.0 laquesis.data.olxcdn.com
+
+#
+# RuNetwork trackers
+#
+
+# Most populars
+0.0.0.0 counter.yadro.ru
+0.0.0.0 counter.yadro.com
+0.0.0.0 xray.imgsmail.ru
+0.0.0.0 vktarget.ru
+
+0.0.0.0 utimg.ru
+
+# Less populars
+0.0.0.0 robinbob.in
+0.0.0.0 betsponsport.ru
+0.0.0.0 userator.ru
+0.0.0.0 biglion.ru
+
+#
+# Ad-services and analytics
+#
+
+# Ad-services
+0.0.0.0 adtidy.org
+0.0.0.0 aaxads.com
+
+# Ad-analytics
+0.0.0.0 settings.crashlytics.com
+0.0.0.0 stats.appsflyer.com
+0.0.0.0 browser.sentry-cdn.com
+
+#
+# TP-Link router calls
+#
+
+0.0.0.0 tp-link.home
+0.0.0.0 www.tp-link.com
+
+#
+# Unwanted calls
+# from machines
+# especially from iOS and macOS
+#
+
+0.0.0.0 connectivity-check.ubuntu.com
+0.0.0.0 app-measurement.com
+0.0.0.0 malwarebytes.org
+0.0.0.0 ninja.akamaized.net
+0.0.0.0 e9.akamaiedge.net
+0.0.0.0 ipaddress.com
+0.0.0.0 d2wy8f7a9ursnm.cloudfront.net
+
+#
+# Intercom.io
+# trackers and analytics
+#
+
+0.0.0.0 intercom.com
+0.0.0.0 www.intercom.com
+0.0.0.0 js.intercomcdn.com
+0.0.0.0 api-iam.intercom.io
+0.0.0.0 nexus-websocket-a.intercom.io
+0.0.0.0 widget.intercom.io
+
+#
+# My.com trackers
+#
+
+0.0.0.0 tracker-api.my.com
+
+#
+# Sublime Text
+# requests was sent
+# from Package Control
+# with data of my configs
+# and plugins, so disabled it
+#
+
+0.0.0.0 sublimehq.com
+0.0.0.0 pkg.sublimehq.com
+0.0.0.0 license.sublimehq.com
+
+#
+# Spam
+#
+
+0.0.0.0 franecki.net
+0.0.0.0 falcon.r.acdnpro.com
+
+#
+# URL shortener
+# but with trackers
+#
+
+0.0.0.0 miro-alternate.app.link
+0.0.0.0 miro.app.Link
+
+#
+# Kaspersky trackers
+#
+
+0.0.0.0 touch.kaspersky.com
+0.0.0.0 ipmcloud.kaspersky.com
+0.0.0.0 dnl-01.geo.kaspersky.com
+0.0.0.0 dnl-02.geo.kaspersky.com
+0.0.0.0 dnl-04.geo.kaspersky.com
+0.0.0.0 dnl-06.geo.kaspersky.com
+0.0.0.0 dnl-08.geo.kaspersky.com
+0.0.0.0 dnl-10.geo.kaspersky.com
+
+0.0.0.0 ksn-pp.kaspersky-labs.com
+0.0.0.0 ksn-kddi.kaspersky-labs.com
+0.0.0.0 ksn-fr-geo.kaspersky-labs.com
+0.0.0.0 ksn-crypto-wifiplus-geo.kaspersky-labs.com
+0.0.0.0 ksn-crypto-verdict-geo.kaspersky-labs.com
+0.0.0.0 ksn-crypto-url-geo.kaspersky-labs.com
+0.0.0.0 ksn-crypto-tcert-geo.kaspersky-labs.com
+0.0.0.0 ksn-crypto-kas-geo.kaspersky-labs.com
+0.0.0.0 ksn-crypto-info-geo.kaspersky-labs.com
+0.0.0.0 ksn-cinfo-geo.kaspersky-labs.com
+
+0.0.0.0 ksn-kddi.kas-labs.com
+0.0.0.0 ksn-fr-geo.kas-labs.com
+0.0.0.0 ksn-crypto-wifiplus-geo.kas-labs.com
+0.0.0.0 ksn-crypto-verdict-geo.kas-labs.com
+0.0.0.0 ksn-crypto-url-geo.kas-labs.com
+0.0.0.0 ksn-crypto-stat-geo.kas-labs.com
+0.0.0.0 ksn-crypto-info-geo.kas-labs.com
+0.0.0.0 ksn-crypto-tcert-geo.kas-labs.com
+0.0.0.0 ksn-crypto-kas-geo.kas-labs.com
+0.0.0.0 ksn-crypto-info-geo.kas-labs.com
+0.0.0.0 ksn-cinfo-geo.kas-labs.com
+
+# Kaspersky calls to other services
+0.0.0.0 ip-info.ff.avast.com
+0.0.0.0 emupdate.avcdn.net
+
+#
+# Currently uncategorized
+#
+
+0.0.0.0 pocketbitsllc.com
+0.0.0.0 content.invisioncic.com
+0.0.0.0 hopigrarn.com
+0.0.0.0 cowner.net
+0.0.0.0 fukavertal.pro
+0.0.0.0 ultimedia.com
+0.0.0.0 in.appcenter.ms
+0.0.0.0 data.flurry.com
+0.0.0.0 adsvolume.com
+0.0.0.0 no-thanks.invalid
+0.0.0.0 wpad.home
+0.0.0.0 stat.joxi.ru
+0.0.0.0 update.joxi.ru
+0.0.0.0 router.bitcomet.com
+0.0.0.0 router.utorrent.com
+0.0.0.0 router.bittorrent.com
+0.0.0.0 s.w.org
+0.0.0.0 sw-update.obdev.at
+0.0.0.0 version.cyberduck.io
+0.0.0.0 peterborgapps.com
+0.0.0.0 www.peterborgapps.com
+
+#
+# Anti-trackers
+# itself trackers
+# list
+#
+
+0.0.0.0 improving.duckduckgo.com
+
+#
+# Vendors tracking
+# Thanks for not installed
+# trackers on CPU/GPU
+# but who knows, maybe exists
+#
+
+0.0.0.0 gameplayapi.intel.com
+0.0.0.0 services.gfe.nvidia.com

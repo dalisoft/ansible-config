@@ -1,0 +1,11 @@
+.DS_Store
+
+# DotFiles .gitignore
+dotfiles/.npmrc
+
+# Hosts .gitignore
+hosts/hosts
+hosts/hosts.orig
+hosts/hosts-tmp
+hosts/hosts.tmp
+hosts/ad_away_hosts.txt
