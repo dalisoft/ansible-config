@@ -1,5 +1,5 @@
 ---
-- name: My machine
+- name: My macOS Machines
   hosts: all
   become: false
   roles:
