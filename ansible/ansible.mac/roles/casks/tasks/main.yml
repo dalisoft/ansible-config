@@ -1,0 +1,16 @@
+---
+  - name: Installing Cask items
+    homebrew_cask:
+      name:
+        - font-fira-code
+        - sublime-text
+        - vscodium
+        - webstorm
+        - pycharm
+        - postman
+        - gitkraken
+        - adoptopenjdk8
+        - vlc
+        - docker
+        - octave-app
+        - brave-browser

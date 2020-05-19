@@ -1,0 +1,56 @@
+---
+  - name: Tap all Homebrew taps
+    homebrew_tap:
+      name:
+        - homebrew/cask-fonts
+        - adoptopenjdk/openjdk
+        - octave-app/octave-app
+        - schniz/tap
+
+  - name: Install Shell basics
+    homebrew:
+      name:
+        - fish
+        - starship
+        - exa
+        - bat
+        - ripgrep
+#      state: present
+
+  - name: Install Programming Languages
+    homebrew:
+      name:
+        - python
+        - node
+        - go
+        - rust
+
+  - name: Install Git
+    homebrew:
+      name:
+        - git
+        - git-lfs
+
+  - name: Install terminal helper
+    homebrew:
+      name:
+        - wget # For downloading some files
+        - mackup # For sync configs across machines
+        - htop # Monitoring manager
+        - tmux # Terminal Multi-pleXer
+
+  - name: Install Heroku
+    homebrew:
+      name: heroku
+      state: present
+
+  - name: Install Ansible
+    homebrew:
+      name: ansible
+      state: present
+
+  - name: Install Node.js helpers
+    homebrew:
+      name:
+        - yarn
+        - fnm

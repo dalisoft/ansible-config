@@ -1,7 +1,11 @@
 .DS_Store
 
+# Ansible .gitignore
+ansible/tmp
+
 # DotFiles .gitignore
 dotfiles/.npmrc
+dotfiles/.ansible/tmp
 
 # Hosts .gitignore
 hosts/hosts
