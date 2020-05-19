@@ -6,7 +6,8 @@
         - sublime-text
         - vscodium
         - webstorm
-        - pycharm
+        - pycharm-ce
+        - android-studio
         - postman
         - gitkraken
         - adoptopenjdk8
