@@ -15,6 +15,8 @@
         - docker
         - octave-app
         - brave-browser
+      state: upgraded
+      greedy: True
     register: result
     until: result is successful
     when: homebrew_check.stat.exists
