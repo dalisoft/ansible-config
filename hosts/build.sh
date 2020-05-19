@@ -1,3 +1,5 @@
+#/!/bin/bash
+
 # Delete any hosts-tmp file
 # if exists
 echo 'Removing existing `hosts-tmp`...'
