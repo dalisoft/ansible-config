@@ -9,11 +9,15 @@
         - pycharm-ce
         - android-studio
         - postman
+        - omnidb
         - gitkraken
         - adoptopenjdk8
         - vlc
         - docker
         - octave-app
+        - folx
+        - krita
+        - inkscape
         - brave-browser
       state: upgraded
       greedy: True
