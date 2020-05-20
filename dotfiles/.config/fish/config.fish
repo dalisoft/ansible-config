@@ -69,6 +69,9 @@ alias load_fnm "fnm env --shell=fish --multi | source"
 alias clear_mac_cache "rm -rf ~/Library/Caches"
 alias clear_mac_logs "rm -rf ~/Library/Logs"
 
+# **** test internet speed ****
+alias inet_speed_test "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+
 ###################################
 ########## init scripts ###########
 ###################################
