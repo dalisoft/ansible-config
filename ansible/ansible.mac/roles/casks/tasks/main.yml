@@ -3,6 +3,7 @@
     homebrew_cask:
       name:
         - font-fira-code
+        - macs-fan-control
         - sublime-text
         - vscodium
         - webstorm
