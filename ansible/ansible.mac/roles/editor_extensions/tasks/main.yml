@@ -4,8 +4,8 @@
      name:
        - "python-language-server[all]"
 
- # - name: Installing Golang Program Language Server
-  #  shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
+  - name: Installing Golang Program Language Server
+    shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
 
- #  - name: Installing GoSublime
-  #  shell: git clone https://margo.sh/GoSublime "~/Library/Application Support/Sublime Text 3/Packages/GoSublime"
+  - name: Installing GoSublime
+    shell: git clone https://margo.sh/GoSublime "~/Library/Application Support/Sublime Text 3/Packages/GoSublime"

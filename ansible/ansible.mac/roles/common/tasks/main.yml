@@ -3,6 +3,7 @@
     homebrew_tap:
       name:
         - homebrew/cask-fonts
+        - heroku/brew
         - adoptopenjdk/openjdk
         - octave-app/octave-app
         - schniz/tap
@@ -36,17 +37,11 @@
         - mackup # For sync configs across machines
         - htop # Monitoring manager
         - tmux # Terminal Multi-pleXer
-        - wget # Benchmark tool
+        - wrk # Benchmark tool
         - cmake # Build tool
     register: result
     until: result is successful
     when: homebrew_check.stat.exists
-
-  - name: Configure mackup
-    shell: |
-      git clone https://github.com/dalisoft/config.git ~/Desktop/config
-      cp ~/Desktop/config/.mackup.cfg ~/.mackup.cfg
-      mackup restore
 
   - name: Install Heroku
     homebrew:
@@ -61,9 +56,9 @@
       name:
         - python
         - node
-      #  - go
-      #  - rust
-      #  - llvm
+        - go
+        - rust
+        - llvm
     register: result
     until: result is successful
     when: homebrew_check.stat.exists
