@@ -1,7 +1,15 @@
 ---
 # SublimeText extensions
+- name: Checking GoPLS on macOS
+  stat:
+    path: ~/go/bin/gopls
+  when:
+    - ansible_os_family == 'Darwin'
+  register: gopls_bin
+
 - name: Installing Golang Program Language Server
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
+  when: not gopls_bin.stat.exists
 
 - name: Checking GoSublime on macOS
   stat:

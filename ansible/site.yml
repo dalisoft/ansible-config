@@ -24,6 +24,10 @@
   vars:
     install_homebrew_if_missing: true
 
+    initial_configs:
+      - .gitconfig
+      - .mackup.cfg
+
   pre_tasks:
     - import_tasks: pre-tasks.yml
 
