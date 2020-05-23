@@ -1,0 +1,22 @@
+---
+- name: "List installed Cask items"
+  command: brew cask ls
+  register: brew_cask_packages_list
+  changed_when: false
+  check_mode: false
+  tags:
+    - install-brew-cask-packages
+
+- name: Installing Cask items
+  homebrew_cask:
+    name: "{{ item }}"
+    state: upgraded
+    greedy: True
+  with_items: "{{ brew_cask_packages }}"
+  register: install_brew_cask_package
+  until: install_brew_cask_package is successful
+  when:
+    - homebrew_check.stat.exists
+    - item not in brew_cask_packages_list.stdout
+  tags:
+    - install-brew-cask-packages

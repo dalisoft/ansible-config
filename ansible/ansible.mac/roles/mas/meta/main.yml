@@ -1,11 +1,13 @@
 ---
-  dependencies:
-    - role: geerlingguy.mas
-      vars:
-        mas_installed_apps:
-          - id: 1464122853
-            name: NextDNS
-          - id: 816239782
-            name: Joxi
-          - id: 1399498094
-            name: Websocket Client
+dependencies:
+  - role: geerlingguy.mas
+    vars:
+      mas_signin_dialog: false
+      mas_upgrade_all_apps: true
+      mas_installed_apps:
+        - id: 1464122853
+          name: NextDNS
+        - id: 816239782
+          name: Joxi
+        - id: 1399498094
+          name: Websocket Client

@@ -1,0 +1,28 @@
+---
+brew_cask_packages:
+  - quicklook-json
+  - qlcolorcode
+  - qlstephen
+  - qlmarkdown
+  - qlimagesize
+  - font-fira-code
+  - adoptopenjdk8
+  - adguard
+  - brave-browser
+  - macs-fan-control
+  - telegram-desktop
+  - the-unarchiver
+  - folx
+  - vlc
+  - octave-app
+  - postman
+  - gitkraken
+  - docker
+  - omnidb
+  - sublime-text
+  - vscodium
+  - webstorm
+  - pycharm-ce
+  - android-studio
+  - krita
+  - inkscape
