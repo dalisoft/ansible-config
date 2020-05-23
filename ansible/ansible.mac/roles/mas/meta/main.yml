@@ -3,13 +3,9 @@
     - role: geerlingguy.mas
       vars:
         mas_installed_apps:
-          - id: 946399090
-            name: Telegram
           - id: 1464122853
             name: NextDNS
           - id: 816239782
             name: Joxi
-          - id: 425424353
-            name: The Unarchiver
           - id: 1399498094
             name: Websocket Client
