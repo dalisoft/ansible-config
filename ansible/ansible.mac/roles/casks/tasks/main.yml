@@ -20,6 +20,7 @@
         - krita
         - inkscape
         - brave-browser
+        - adguard
       state: upgraded
       greedy: True
     register: result
