@@ -1,0 +1,20 @@
+---
+vscode_extensions:
+  - ms-azuretools.vscode-docker
+  - mikestead.dotenv
+  - EditorConfig.EditorConfig
+  - dbaeumer.vscode-eslint
+  - mkaufman.HTMLHint
+  - emilast.LogFileHighlighter
+  - DavidAnson.vscode-markdownlint
+  - PKief.material-icon-theme
+  - eg2.vscode-npm-script
+  - christian-kohler.npm-intellisense
+  - techer.open-in-browser
+  - ricard.postcss
+  - esbenp.prettier-vscode
+  - ms-python.python
+  - cssho.vscode-svgviewer
+  - wayou.vscode-todo-highlight
+  - ms-vscode.vscode-typescript-tslint-plugin
+  - redhat.vscode-yaml

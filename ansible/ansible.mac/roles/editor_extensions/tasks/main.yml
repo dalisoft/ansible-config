@@ -1,18 +1,50 @@
 ---
+# SublimeText extensions
 - name: Installing Golang Program Language Server
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
 
-- name: GoSublime check on macOS
+- name: Checking GoSublime on macOS
   stat:
     path: ~/Library/Application Support/Sublime Text 3/Packages/GoSublime
-  register: gosublime_macos_dir
+  when:
+    - ansible_os_family == 'Darwin'
+  register: gosublime_dir
 
 - name: Installing GoSublime on macOS
   git:
     repo: https://github.com/DisposaBoy/GoSublime.git
-    dest: ~/Library/Application Support/Sublime Text 3/Packages/GoSublime
+    dest: "{{ gosublime_dir.stat.path }}"
   when:
     - ansible_os_family == 'Darwin'
-    - not gosublime_macos_dir.stat.exists
+    - not gosublime_dir.stat.exists
+  tags:
+    - install-editor-extensions
+
+# VSCodium extensions
+- name: VSCodium check on macOS
+  stat:
+    path: /Applications/VSCodium.app/Contents/Resources/app/bin/code
+  when:
+    - ansible_os_family == 'Darwin'
+  register: code_bin
+
+- name: "List installed VSCodium extensions"
+  command: "{{ code_bin.stat.path }} --list-extensions"
+  register: vscodium_extensions_list
+  changed_when: false
+  check_mode: false
+  when:
+    - code_bin.stat.exists
+  tags:
+    - install-brew-cask-packages
+
+- name: Installing VSCodium extensions
+  shell: "{{ code_bin.stat.path }} --install-extension {{ item }}"
+  with_items: "{{ vscode_extensions }}"
+  register: install_vscodium_extensions
+  until: install_vscodium_extensions is successful
+  when:
+    - code_bin.stat.exists
+    - item not in vscodium_extensions_list.stdout_lines
   tags:
     - install-editor-extensions

@@ -26,6 +26,7 @@
     name: "{{ item }}"
     state: upgraded
     greedy: True
+    sudo_password: "{{ SUDO_PASS }}"
   with_items: "{{ brew_cask_packages_root }}"
   register: install_brew_cask_package
   until: install_brew_cask_package is successful

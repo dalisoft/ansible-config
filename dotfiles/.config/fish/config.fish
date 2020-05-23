@@ -4,6 +4,8 @@
 
 set -gx fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.npm-global/bin" $fish_user_paths
+set -gx fish_user_paths "$HOME/go/bin" $fish_user_paths
+set -gx fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 
 ###################################
 ######### env parameters  #########
@@ -20,6 +22,13 @@ set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
 
 # **** BAT ****
 set -gx BAT_THEME "GitHub"
+
+# **** GO ****
+set -gx GOPATH "$HOME/go"
+
+# **** Rust (Cargo) ****
+set -gx CARGO_INSTALL_ROOT "$HOME/.cargo"
+set -gx CARGO_HOME "$HOME/.cargo"
 
 # ********************************
 # ********* openssl env **********
@@ -41,6 +50,12 @@ set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
 
 # **** NPM ****
 set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
+
+# **** GO ****
+set -gx PATH "$HOME/go/bin" $PATH
+
+# **** Rust (Cargo) ****
+set -gx PATH "$HOME/.cargo/bin" $PATH
 
 ###################################
 ############# aliases #############

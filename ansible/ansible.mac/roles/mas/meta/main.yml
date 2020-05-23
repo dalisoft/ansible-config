@@ -3,7 +3,7 @@ dependencies:
   - role: geerlingguy.mas
     vars:
       mas_signin_dialog: false
-      mas_upgrade_all_apps: true
+      mas_upgrade_all_apps: false
       mas_installed_apps:
         - id: 1464122853
           name: NextDNS

@@ -8,12 +8,18 @@
     - modules
     - editor_extensions
 
+  vars_prompt:
+    - name: "SUDO_PASS"
+      prompt: "Please enter your SUDO password"
+      private: yes
+
   vars_files:
     - vars/brew.yml
     - vars/snap.yml
     - vars/snap_classic.yml
     - vars/npm.yml
     - vars/pip.yml
+    - vars/editor_extensions.yml
 
   vars:
     install_homebrew_if_missing: true
