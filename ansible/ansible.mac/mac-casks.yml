@@ -20,3 +20,17 @@
     - item not in brew_cask_packages_list.stdout_lines
   tags:
     - install-brew-cask-packages
+
+- name: Installing Cask packages with ROOT permission
+  homebrew_cask:
+    name: "{{ item }}"
+    state: upgraded
+    greedy: True
+  with_items: "{{ brew_cask_packages_root }}"
+  register: install_brew_cask_package
+  until: install_brew_cask_package is successful
+  when:
+    - homebrew_check.stat.exists
+    - item not in brew_cask_packages_list.stdout_lines
+  tags:
+    - install-brew-cask-packages

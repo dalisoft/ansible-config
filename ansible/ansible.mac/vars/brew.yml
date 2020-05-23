@@ -37,8 +37,6 @@ brew_cask_packages:
   - qlmarkdown
   - qlimagesize
   - font-fira-code
-  - adoptopenjdk8
-  - adguard
   - brave-browser
   - macs-fan-control
   - telegram-desktop
@@ -48,7 +46,6 @@ brew_cask_packages:
   - octave-app
   - postman
   - gitkraken
-  - docker
   - omnidb
   - sublime-text
   - vscodium
@@ -57,3 +54,8 @@ brew_cask_packages:
   - android-studio
   - krita
   - inkscape
+
+brew_cask_packages_root:
+  - adguard
+  - adoptopenjdk8
+  - docker

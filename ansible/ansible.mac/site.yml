@@ -23,7 +23,6 @@
 
   tasks:
     - import_tasks: mac-casks.yml
-      become: false
       when: ansible_os_family == 'Darwin'
       tags:
         - package

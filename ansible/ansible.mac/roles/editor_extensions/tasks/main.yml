@@ -4,16 +4,15 @@
 
 - name: GoSublime check on macOS
   stat:
-    path: ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/GoSublime
+    path: ~/Library/Application Support/Sublime Text 3/Packages/GoSublime
   register: gosublime_macos_dir
 
 - name: Installing GoSublime on macOS
-  become: false
   git:
-    repo: https://margo.sh/GoSublime
-    dest: ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/GoSublime
+    repo: https://github.com/DisposaBoy/GoSublime.git
+    dest: ~/Library/Application Support/Sublime Text 3/Packages/GoSublime
   when:
     - ansible_os_family == 'Darwin'
-    - gosublime_macos_dir.stat.exists and gosublime_macos_dir.stat.isdir
+    - not gosublime_macos_dir.stat.exists
   tags:
     - install-editor-extensions
