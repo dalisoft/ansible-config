@@ -1,6 +1,19 @@
 ---
 - name: Installing Golang Program Language Server
-  shell: "GO111MODULE=on go get golang.org/x/tools/gopls@latest"
+  shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
 
-- name: Installing GoSublime
-  shell: 'git clone https://margo.sh/GoSublime "~/Library/Application Support/Sublime Text 3/Packages/GoSublime"'
+- name: GoSublime check on macOS
+  stat:
+    path: ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/GoSublime
+  register: gosublime_macos_dir
+
+- name: Installing GoSublime on macOS
+  become: false
+  git:
+    repo: https://margo.sh/GoSublime
+    dest: ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/GoSublime
+  when:
+    - ansible_os_family == 'Darwin'
+    - gosublime_macos_dir.stat.exists and gosublime_macos_dir.stat.isdir
+  tags:
+    - install-editor-extensions

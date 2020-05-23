@@ -1,81 +1,43 @@
 ---
-- name: Tap all Homebrew taps
+# Homebrew Taps
+- name: "List all Homebrew taps"
+  command: brew tap
+  register: brew_tap_list
+  changed_when: false
+  check_mode: false
+  tags:
+    - install-brew-taps
+
+- name: Tap all Homebrew Cask taps
   homebrew_tap:
-    name:
-      - homebrew/cask-fonts
-      - heroku/brew
-      - adoptopenjdk/openjdk
-      - octave-app/octave-app
-      - schniz/tap
+    name: "{{ item }}"
+  with_items: "{{ brew_taps }}"
+  register: install_brew_tap
+  until: install_brew_tap is successful
+  when:
+    - homebrew_check.stat.exists
+    - item not in brew_tap_list.stdout_lines
+  tags:
+    - install-brew-taps
 
-- name: Install Shell basics
-  homebrew:
-    name:
-      - fish
-      - starship
-      - exa
-      - bat
-      - ripgrep
-  #  state: present
-  register: result
-  until: result is successful
-  when: homebrew_check.stat.exists
+# Homebrew packages
+- name: "List installed Homebrew packages"
+  command: brew ls -1 -t
+  register: brew_packages_list
+  changed_when: false
+  check_mode: false
+  tags:
+    - install-brew-packages
 
-- name: Install Git
+- name: Installing Homebrew packages
   homebrew:
-    name:
-      - git
-      - git-lfs
-  register: result
-  until: result is successful
-  when: homebrew_check.stat.exists
-
-- name: Install terminal helper
-  homebrew:
-    name:
-      - wget # For downloading some files
-      - mackup # For sync configs across machines
-      - htop # Monitoring manager
-      - tmux # Terminal Multi-pleXer
-      - wrk # Benchmark tool
-      - cmake # Build tool
-  register: result
-  until: result is successful
-  when: homebrew_check.stat.exists
-
-- name: Install Heroku
-  homebrew:
-    name: heroku
-    state: present
-  register: result
-  until: result is successful
-  when: homebrew_check.stat.exists
-
-- name: Install Programming Languages
-  homebrew:
-    name:
-      - python
-      - node
-      - go
-      - rust
-      - llvm
-  register: result
-  until: result is successful
-  when: homebrew_check.stat.exists
-
-- name: Install Ansible
-  homebrew:
-    name: ansible
-    state: present
-  register: result
-  until: result is successful
-  when: homebrew_check.stat.exists
-
-- name: Install Node.js helpers
-  homebrew:
-    name:
-      - yarn
-      - fnm
-  register: result
-  until: result is successful
-  when: homebrew_check.stat.exists
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ brew_packages }}"
+  register: install_brew_package
+  until: install_brew_package is successful
+  when:
+    - homebrew_check.stat.exists
+    - item not in brew_packages_list.stdout_lines
+  tags:
+    - install-brew-packages

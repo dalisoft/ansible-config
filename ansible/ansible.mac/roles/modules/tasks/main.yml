@@ -13,7 +13,7 @@
     global: yes
     path: ~/.npm-global
     name: "{{ item }}"
-    state: present
+    state: latest
   with_items: "{{ npm_modules }}"
   register: install_npm_package
   until: install_npm_package is successful
@@ -25,7 +25,7 @@
 
 # PIP Modules
 - name: "List installed pip modules"
-  command: pip list
+  command: pip3 list
   register: pip_modules_list
   changed_when: false
   check_mode: false
@@ -36,11 +36,12 @@
   pip:
     name: "{{ item }}"
     state: present
+    executable: pip3
   with_items: "{{ pip_modules }}"
   register: install_pip_module
   until: install_pip_module is successful
   when:
     - homebrew_check.stat.exists
-    - item not in pip_modules_list.stdout
+    - item not in pip_modules_list.stdout_lines
   tags:
     - install-pip-modules

@@ -1,5 +1,5 @@
 ---
-- name: My macOS Machine
+- name: My Machine Configurations
   hosts: all
   become: false
   roles:
@@ -16,15 +16,14 @@
     - vars/pip.yml
 
   vars:
-    install_homebrew_if_missing: false
-    upgrade_homebrew_packages: false
+    install_homebrew_if_missing: true
 
   pre_tasks:
     - import_tasks: pre-tasks.yml
 
   tasks:
     - import_tasks: mac-casks.yml
-      become: true
+      become: false
       when: ansible_os_family == 'Darwin'
       tags:
         - package

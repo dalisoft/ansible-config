@@ -14,3 +14,6 @@ hosts/hosts.orig
 hosts/hosts-tmp
 hosts/hosts.tmp
 hosts/ad_away_hosts.txt
+
+# IDEA Files
+.idea
