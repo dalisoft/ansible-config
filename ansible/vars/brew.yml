@@ -1,0 +1,61 @@
+---
+brew_taps:
+  - homebrew/cask-fonts
+  - heroku/brew
+  - adoptopenjdk/openjdk
+  - octave-app/octave-app
+  - schniz/tap
+
+brew_packages:
+  - fish
+  - starship
+  - exa
+  - bat
+  - ripgrep
+  - git
+  - git-lfs
+  - wget # For downloading some files
+  - mackup # For sync configs across machines
+  - htop # Monitoring manager
+  - tmux # Terminal Multi-pleXer
+  - wrk # Benchmark tool
+  - cmake # Build tool
+  - heroku
+  - ansible
+  - python
+  - node
+  - go
+  - rust
+  - llvm
+  - yarn
+  - fnm
+
+brew_cask_packages:
+  - quicklook-json
+  - qlcolorcode
+  - qlstephen
+  - qlmarkdown
+  - qlimagesize
+  - font-fira-code
+  - brave-browser
+  - macs-fan-control
+  - telegram-desktop
+  - the-unarchiver
+  - folx
+  - vlc
+  - octave-app
+  - postman
+  - gitkraken
+  - omnidb
+  - sublime-text
+  - vscodium
+  - webstorm
+  - pycharm-ce
+  - android-studio
+  - krita
+  - inkscape
+
+brew_cask_packages_root:
+  - adguard
+  - adoptopenjdk8
+  - docker

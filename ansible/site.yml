@@ -1,0 +1,38 @@
+---
+- name: My Machine Configurations
+  hosts: all
+  become: false
+  roles:
+    - common
+    - mas
+    - modules
+    - editor_extensions
+
+  vars_prompt:
+    - name: "SUDO_PASS"
+      prompt: "Please enter your SUDO password"
+      private: yes
+
+  vars_files:
+    - vars/brew.yml
+    - vars/snap.yml
+    - vars/snap_classic.yml
+    - vars/npm.yml
+    - vars/pip.yml
+    - vars/editor_extensions.yml
+
+  vars:
+    install_homebrew_if_missing: true
+
+    initial_configs:
+      - .gitconfig
+      - .mackup.cfg
+
+  pre_tasks:
+    - import_tasks: pre-tasks.yml
+
+  tasks:
+    - import_tasks: mac-casks.yml
+      when: ansible_os_family == 'Darwin'
+      tags:
+        - package

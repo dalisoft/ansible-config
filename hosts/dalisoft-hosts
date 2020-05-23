@@ -9,14 +9,6 @@
 0.0.0.0 client.relay.crisp.chat
 
 #
-# AdGuard snippets downloading domains
-#
-
-# 0.0.0.0 userscripts.adtidy.org
-# 0.0.0.0 filters.adtidy.org
-# 0.0.0.0 api.adguard.com
-
-#
 # Addinational tracking
 #
 
@@ -141,18 +133,9 @@
 0.0.0.0 xp.apple.com
 0.0.0.0 gs-loc-new.ls-apple.com.akadns.net
 0.0.0.0 gs-loc.apple.com
-0.0.0.0 gspe35-ssl.ls.apple.com
-0.0.0.0 gspe21-ssl.ls.apple.com
-0.0.0.0 gspe1-ssl.ls.apple.com
-0.0.0.0 configuration.ls.apple.com
-0.0.0.0 ls.apple.com
 0.0.0.0 apple-finance.query.yahoo.com
-0.0.0.0 init.itunes.apple.com
-0.0.0.0 p14-buy.itunes.apple.com
 0.0.0.0 play.itunes.apple.com
-0.0.0.0 help.apple.com
 0.0.0.0 captive.apple.com
-0.0.0.0 ls.apple.com
 
 #
 # AmazonAWS trackers

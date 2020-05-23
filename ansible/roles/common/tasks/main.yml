@@ -1,0 +1,43 @@
+---
+# Homebrew Taps
+- name: "List all Homebrew taps"
+  command: brew tap
+  register: brew_tap_list
+  changed_when: false
+  check_mode: false
+  tags:
+    - install-brew-taps
+
+- name: Tap all Homebrew Cask taps
+  homebrew_tap:
+    name: "{{ item }}"
+  with_items: "{{ brew_taps }}"
+  register: install_brew_tap
+  until: install_brew_tap is successful
+  when:
+    - homebrew_check.stat.exists
+    - item not in brew_tap_list.stdout_lines
+  tags:
+    - install-brew-taps
+
+# Homebrew packages
+- name: "List installed Homebrew packages"
+  command: brew ls -1 -t
+  register: brew_packages_list
+  changed_when: false
+  check_mode: false
+  tags:
+    - install-brew-packages
+
+- name: Installing Homebrew packages
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ brew_packages }}"
+  register: install_brew_package
+  until: install_brew_package is successful
+  when:
+    - homebrew_check.stat.exists
+    - item not in brew_packages_list.stdout_lines
+  tags:
+    - install-brew-packages
