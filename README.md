@@ -4,9 +4,18 @@ My machine configuration playbook
 
 > Don't forget to to copy this repo to `~/Desktop/config`, else it's does not work
 
+## Machine coverage
+
+This playbook covers almost 80% of my MacBook Pro state (like Time Machine copy), so this playbook currently tested, optimized and running only on macOS. Next steps
+
+- Make fully macOS Configuration steps
+- Linux support (apt/snap) and configurations
+
 ## Install Homebrew
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+
+See [more](https://brew.sh)
 
 ## Run Ansible
 
