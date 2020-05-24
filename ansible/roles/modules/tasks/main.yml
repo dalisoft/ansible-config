@@ -1,4 +1,23 @@
 ---
+# FNM Versions
+- name: "List installed fnm versions"
+  command: fnm ls
+  register: fnmv_list
+  changed_when: false
+  check_mode: false
+  tags:
+    - install-fnm-version
+
+- name: Installing fnm version
+  shell: "fnm install {{ item }}"
+  with_items: "{{ fnm_versions }}"
+  register: install_fnm_version
+  until: install_fnm_version is successful
+  when:
+    - item not in fnmv_list.stdout
+  tags:
+    - install-fnm-version
+
 # NPM Modules
 - name: "List installed npm modules"
   command: npm ls -g --depth=0
@@ -18,7 +37,6 @@
   register: install_npm_package
   until: install_npm_package is successful
   when:
-    - homebrew_check.stat.exists
     - item not in npm_modules_list.stdout
   tags:
     - install-npm-modules

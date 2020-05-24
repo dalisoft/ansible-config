@@ -56,6 +56,7 @@
   "timeline.showView": true,
   "breadcrumbs.enabled": true,
   "extensions.ignoreRecommendations": false,
+  "extensions.autoUpdate": false,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "update.mode": "none",
@@ -153,10 +154,6 @@
   "task.autoDetect": "on",
   "task.quickOpen.detail": true,
   "npm.autoDetect": "on",
-  "customizeUI.activityBar": "bottom",
-  "customizeUI.listRowHeight": 20,
-  "customizeUI.font.regular": "PT Sans",
-  "customizeUI.font.monospace": "Fira Code",
   "go.gopath": "~/go",
   "go.toolsGopath": "~/go/bin",
   "go.formatTool": "goimports",
@@ -166,19 +163,6 @@
     "-rpc.trace",
     "--debug=localhost:6060",
   ],
-  "rust.rustup": {
-    "toolchain": "nightly-x86_64-apple-darwin",
-    "nightlyToolchain": "nightly-x86_64-apple-darwin"
-  },
-  "rust.rls": {
-    "executable": "ra_lsp_server"
-  },
-  "rust.mode": "rls",
-  "rust-analyzer.raLspServerPath": "ra_lsp_server",
-  "kite.enableSnippets": false,
-  "kite.showWelcomeNotificationOnStartup": false,
-  "kite.showGoBetaNotification": true,
-  "deepcode.api.cloudBackend": "https://www.deepcode.ai/",
+  "rust-analyzer.updates.askBeforeDownload": false,
   "docker.images.label": "Tag",
-  "extensions.autoUpdate": false,
 }

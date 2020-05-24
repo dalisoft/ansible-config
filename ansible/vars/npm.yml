@@ -1,5 +1,11 @@
 ---
 npm_modules:
+  - cordova
   - expo-cli
   - nodemon
   - prettier
+  - http-server
+
+fnm_versions:
+  - 12.16.3
+  - 13.14.0

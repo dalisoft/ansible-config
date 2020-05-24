@@ -1,3 +1,4 @@
 ---
 pip_modules:
   - "python-language-server[all]"
+  - virtualenv

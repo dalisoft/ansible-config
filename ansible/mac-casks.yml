@@ -14,6 +14,7 @@
   register: install_brew_cask_package
   until: install_brew_cask_package is successful
   when:
+    - homebrew_check.stat.exists
     - item not in brew_cask_packages_list.stdout_lines
 
 - name: Installing Cask packages with ROOT permission
@@ -26,4 +27,5 @@
   register: install_brew_cask_package
   until: install_brew_cask_package is successful
   when:
+    - homebrew_check.stat.exists
     - item not in brew_cask_packages_list.stdout_lines

@@ -1,10 +1,17 @@
 ---
 vscode_extensions:
-  - ms-azuretools.vscode-docker
-  - mikestead.dotenv
-  - EditorConfig.EditorConfig
+  # Main Programming Languages
+  - ms-python.python
+  # Linters
   - dbaeumer.vscode-eslint
+  - esbenp.prettier-vscode
   - mkaufman.HTMLHint
+  - ms-vscode.vscode-typescript-tslint-plugin
+  # Other tools
+  - redhat.vscode-yaml
+  - ms-azuretools.vscode-docker
+  - EditorConfig.EditorConfig
+  - mikestead.dotenv
   - emilast.LogFileHighlighter
   - DavidAnson.vscode-markdownlint
   - PKief.material-icon-theme
@@ -12,9 +19,10 @@ vscode_extensions:
   - christian-kohler.npm-intellisense
   - techer.open-in-browser
   - ricard.postcss
-  - esbenp.prettier-vscode
-  - ms-python.python
   - cssho.vscode-svgviewer
   - wayou.vscode-todo-highlight
-  - ms-vscode.vscode-typescript-tslint-plugin
-  - redhat.vscode-yaml
+  # Addinational Programming Languages
+  - ms-vscode.Go
+  - jaredly.reason-vscode
+  - matklad.rust-analyzer
+  - ms-vscode.cpptools
