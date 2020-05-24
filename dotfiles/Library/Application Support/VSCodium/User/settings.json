@@ -42,7 +42,7 @@
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.snippetSuggestions": "top",
   "editor.definitionLinkOpensInPeek": true,
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "editor.fontFamily": "Monaco",
   // "editor.fontLigatures": true,
   "terminal.integrated.minimumContrastRatio": 4.5,
