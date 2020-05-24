@@ -163,6 +163,7 @@
     "-rpc.trace",
     "--debug=localhost:6060",
   ],
+  "reason_language_server.location": "/usr/local/bin/reason-language-server",
   "rust-analyzer.updates.askBeforeDownload": false,
   "docker.images.label": "Tag",
 }
