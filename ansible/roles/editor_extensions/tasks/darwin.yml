@@ -1,0 +1,30 @@
+---
+- name: Checking GoSublime on macOS
+  stat:
+    path: ~/Library/Application Support/Sublime Text 3/Packages/GoSublime
+  register: gosublime_dir
+
+- name: Installing Rust Analyzer Language Server on macOS
+  shell: |
+    curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-mac -o ~/lsp/bin/rust-analyzer
+    chmod +x ~/lsp/bin/rust-analyzer
+  when:
+    - not rust_analyzer_bin.stat.exists
+
+- name: Installing Reason Language Server on macOS
+  shell: |
+    cd ~/lsp/bin
+    wget https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
+    unzip rls-macos.zip -d .
+    mv rls-macos/reason-language-server reason-language-server
+    chmod +x reason-language-server
+    rm -rf rls-macos
+    rm -rf rls-macos.zip
+  when:
+    - not reason_bin.stat.exists
+
+# VSCodium extensions
+- name: VSCodium check on macOS
+  stat:
+    path: /Applications/VSCodium.app/Contents/Resources/app/bin/code
+  register: code_bin

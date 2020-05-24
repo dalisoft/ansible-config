@@ -1,32 +1,13 @@
 ---
 # SublimeText extensions
-- name: Checking GoPLS on macOS
+- name: Checking GoPLS
   stat:
     path: ~/go/bin/gopls
-  when:
-    - ansible_os_family == 'Darwin'
   register: gopls_bin
 
 - name: Installing Golang Program Language Server
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
   when: not gopls_bin.stat.exists
-
-- name: Checking GoSublime on macOS
-  stat:
-    path: ~/Library/Application Support/Sublime Text 3/Packages/GoSublime
-  when:
-    - ansible_os_family == 'Darwin'
-  register: gosublime_dir
-
-- name: Installing GoSublime on macOS
-  git:
-    repo: https://github.com/DisposaBoy/GoSublime.git
-    dest: "{{ gosublime_dir.stat.path }}"
-  when:
-    - ansible_os_family == 'Darwin'
-    - not gosublime_dir.stat.exists
-  tags:
-    - install-editor-extensions
 
 - name: Create LSP Bin Path
   file:
@@ -34,52 +15,29 @@
     state: directory
     mode: "0755"
 
-- name: Checking Rust Analyzer Language Server on macOS
+- name: Checking Rust Analyzer Language Server
   stat:
     path: ~/lsp/bin/rust-analyzer
-  when:
-    - ansible_os_family == 'Darwin'
   register: rust_analyzer_bin
 
-- name: Installing Rust Analyzer Language Server on macOS
-  shell: |
-    curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-mac -o ~/lsp/bin/rust-analyzer
-    chmod +x ~/lsp/bin/rust-analyzer
-  when:
-    - ansible_os_family == 'Darwin'
-    - not rust_analyzer_bin.stat.exists
-  tags:
-    - install-editor-extensions
-
-- name: Checking Reason Language Server on macOS
+- name: Checking Reason Language Server
   stat:
     path: ~/lsp/bin/reason-language-server
-  when:
-    - ansible_os_family == 'Darwin'
   register: reason_bin
 
-- name: Installing Reason Language Server on macOS
-  shell: |
-    cd ~/lsp/bin
-    wget https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
-    unzip rls-macos.zip -d .
-    mv rls-macos/reason-language-server reason-language-server
-    chmod +x reason-language-server
-    rm -rf rls-macos
-    rm -rf rls-macos.zip
-  when:
-    - ansible_os_family == 'Darwin'
-    - not reason_bin.stat.exists
+- import_tasks: darwin.yml
+  when: ansible_os_family == 'Darwin'
   tags:
     - install-editor-extensions
 
-# VSCodium extensions
-- name: VSCodium check on macOS
-  stat:
-    path: /Applications/VSCodium.app/Contents/Resources/app/bin/code
+- name: Installing GoSublime
+  git:
+    repo: https://github.com/DisposaBoy/GoSublime.git
+    dest: "{{ gosublime_dir.stat.path }}"
   when:
-    - ansible_os_family == 'Darwin'
-  register: code_bin
+    - not gosublime_dir.stat.exists
+  tags:
+    - install-editor-extensions
 
 - name: "List installed VSCodium extensions"
   command: "{{ code_bin.stat.path }} --list-extensions"
