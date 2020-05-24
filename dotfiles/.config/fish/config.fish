@@ -6,6 +6,7 @@ set -gx fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.npm-global/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/go/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
+set -gx fish_user_paths "$HOME/lsp/bin" $fish_user_paths
 
 ###################################
 ######### env parameters  #########
@@ -56,6 +57,9 @@ set -gx PATH "$HOME/go/bin" $PATH
 
 # **** Rust (Cargo) ****
 set -gx PATH "$HOME/.cargo/bin" $PATH
+
+# **** LSP ****
+set -gx PATH "$HOME/lsp/bin" $PATH
 
 ###################################
 ############# aliases #############
