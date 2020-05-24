@@ -17,3 +17,6 @@ hosts/ad_away_hosts.txt
 
 # IDEA Files
 .idea
+
+# Security file
+askpass.sh

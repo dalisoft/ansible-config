@@ -41,3 +41,14 @@
     - item not in brew_packages_list.stdout_lines
   tags:
     - install-brew-packages
+
+# Configure dotfiles (mackup)
+- name: "Configure dotfiles"
+  command: mackup restore -f
+  register: install_dotfiles
+  until: install_dotfiles is successful
+  when:
+    - homebrew_check.stat.exists
+    - initial_config_link is successful
+  tags:
+    - install-dot-files
