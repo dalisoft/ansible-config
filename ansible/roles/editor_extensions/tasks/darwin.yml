@@ -5,21 +5,27 @@
   register: gosublime_dir
 
 - name: Installing Rust Analyzer Language Server on macOS
+  become: yes
   shell: |
-    curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-mac -o ~/lsp/bin/rust-analyzer
-    chmod +x ~/lsp/bin/rust-analyzer
+    wget -nc https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-mac
+    mv rust-analyzer-mac /usr/local/bin/rust-analyzer
+    chmod +x /usr/local/bin/rust-analyzer
+  args:
+    chdir: ~/
   when:
     - not rust_analyzer_bin.stat.exists
 
 - name: Installing Reason Language Server on macOS
+  become: yes
   shell: |
-    cd ~/lsp/bin
-    wget https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
+    wget -nc https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
     unzip rls-macos.zip -d .
-    mv rls-macos/reason-language-server reason-language-server
-    chmod +x reason-language-server
+    mv rls-macos/reason-language-server /usr/local/bin/reason-language-server
+    chmod +x /usr/local/bin/reason-language-server
     rm -rf rls-macos
     rm -rf rls-macos.zip
+  args:
+    chdir: ~/
   when:
     - not reason_bin.stat.exists
 

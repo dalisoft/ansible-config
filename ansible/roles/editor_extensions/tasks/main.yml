@@ -9,20 +9,14 @@
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
   when: not gopls_bin.stat.exists
 
-- name: Create LSP Bin Path
-  file:
-    path: ~/lsp/bin
-    state: directory
-    mode: "0755"
-
 - name: Checking Rust Analyzer Language Server
   stat:
-    path: ~/lsp/bin/rust-analyzer
+    path: /usr/local/bin/rust-analyzer
   register: rust_analyzer_bin
 
 - name: Checking Reason Language Server
   stat:
-    path: ~/lsp/bin/reason-language-server
+    path: /usr/local/bin/reason-language-server
   register: reason_bin
 
 - import_tasks: darwin.yml
