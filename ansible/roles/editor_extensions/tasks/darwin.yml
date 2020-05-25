@@ -13,7 +13,7 @@
   args:
     chdir: ~/
   when:
-    - not rust_analyzer_bin.stat.exists
+    - force_install_lsp is true or not rust_analyzer_bin.stat.exists
 
 - name: Installing Reason Language Server on macOS
   become: yes
@@ -27,7 +27,7 @@
   args:
     chdir: ~/
   when:
-    - not reason_bin.stat.exists
+    - force_install_lsp is true or not reason_bin.stat.exists
 
 # VSCodium extensions
 - name: VSCodium check on macOS

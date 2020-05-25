@@ -49,8 +49,8 @@ brew_cask_packages:
   - omnidb
   - sublime-text
   - vscodium
-  - webstorm
-  - pycharm-ce
+  - clion
+  - intellij-idea
   - android-studio
   - krita
   - inkscape

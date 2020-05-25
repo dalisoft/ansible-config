@@ -7,7 +7,7 @@
 
 - name: Installing Golang Program Language Server
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
-  when: not gopls_bin.stat.exists
+  when: force_install_lsp is true or not gopls_bin.stat.exists
 
 - name: Checking Rust Analyzer Language Server
   stat:
