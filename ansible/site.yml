@@ -23,13 +23,16 @@
 
   vars:
     install_homebrew_if_missing: true
-    force_install_lsp: false
+    force_install: false
 
     initial_configs:
       - .gitconfig
       - .mackup.cfg
-      - .nano
       - .nanorc
+      - .vimrc
+      - .nano
+      - vimrc
+      - .config/nvim
 
   pre_tasks:
     - import_tasks: pre-tasks.yml

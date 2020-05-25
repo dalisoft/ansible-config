@@ -9,7 +9,7 @@
     curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-l -o ~/lsp/bin/rust-analyzer
     chmod +x ~/lsp/bin/rust-analyzer
   when:
-    - force_install_lsp is true or not rust_analyzer_bin.stat.exists
+    - force_install is true or not rust_analyzer_bin.stat.exists
 
 - name: Installing Reason Language Server on Linux
   shell: |
@@ -21,7 +21,7 @@
     rm -rf rls-linux
     rm -rf rls-linux.zip
   when:
-    - force_install_lsp is true or not reason_bin.stat.exists
+    - force_install is true or not reason_bin.stat.exists
 
 # VSCodium extensions
 - name: VSCodium check on Linux
