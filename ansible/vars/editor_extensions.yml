@@ -22,6 +22,7 @@ vscode_extensions:
   - cssho.vscode-svgviewer
   - wayou.vscode-todo-highlight
   # Addinational Programming Languages
+  - bmewburn.vscode-intelephense-client
   - ms-vscode.Go
   - jaredly.reason-vscode
   - matklad.rust-analyzer
