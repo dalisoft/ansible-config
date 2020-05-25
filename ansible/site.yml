@@ -28,6 +28,8 @@
     initial_configs:
       - .gitconfig
       - .mackup.cfg
+      - .nano
+      - .nanorc
 
   pre_tasks:
     - import_tasks: pre-tasks.yml

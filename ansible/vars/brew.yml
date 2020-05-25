@@ -12,6 +12,7 @@ brew_packages:
   - exa
   - bat
   - ripgrep
+  - nano
   - git
   - git-lfs
   - wget # For downloading some files
