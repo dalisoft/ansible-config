@@ -22,7 +22,7 @@ set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
 set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
 
 # **** BAT ****
-set -gx BAT_THEME "GitHub"
+set -gx BAT_THEME "Monokai Extended Bright"
 
 # **** GO ****
 set -gx GOPATH "$HOME/go"
@@ -69,6 +69,7 @@ set -gx PATH "$HOME/lsp/bin" $PATH
 alias cat=bat
 alias ls=exa
 alias grep=rg
+alias vim=nvim
 
 # **** git clean alias ****
 alias git_reflog_expire="git reflog expire --expire=now --all"
@@ -83,10 +84,6 @@ alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
 
 # **** fnm ****
 alias load_fnm "fnm env --shell=fish --multi | source"
-
-# **** clean ****
-alias clear_mac_cache "rm -rf ~/Library/Caches"
-alias clear_mac_logs "rm -rf ~/Library/Logs"
 
 # **** test internet speed ****
 alias inet_speed_test "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"

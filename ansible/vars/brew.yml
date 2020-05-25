@@ -13,6 +13,7 @@ brew_packages:
   - bat
   - ripgrep
   - nano
+  - neovim
   - git
   - git-lfs
   - wget # For downloading some files
