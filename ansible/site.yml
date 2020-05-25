@@ -31,7 +31,8 @@
       - .nanorc
       - .vimrc
       - .nano
-      - vimrc
+      - vim
+      - .config/nvim
 
   pre_tasks:
     - import_tasks: pre-tasks.yml
