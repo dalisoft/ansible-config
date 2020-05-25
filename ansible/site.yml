@@ -23,7 +23,7 @@
 
   vars:
     install_homebrew_if_missing: true
-    force_install_lsp: true
+    force_install_lsp: false
 
     initial_configs:
       - .gitconfig
