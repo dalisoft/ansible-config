@@ -1,3 +1,4 @@
 [submodule "dotfiles/.nano/nanorc"]
 	path = dotfiles/.nano/nanorc
 	url = https://github.com/scopatz/nanorc.git
+	branch = master
