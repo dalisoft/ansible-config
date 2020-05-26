@@ -59,6 +59,6 @@
   until: install_vim_plugin is successful
   when:
     - homebrew_check.stat.exists
-    - install_vim_plugin is successful
+    - install_dotfiles is successful
   tags:
     - install-vim-plugins
