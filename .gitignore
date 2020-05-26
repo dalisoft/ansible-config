@@ -8,6 +8,9 @@ dotfiles/.npmrc
 dotfiles/.ansible/tmp
 dotfiles/.ansible/roles
 
+# DotFiles VIM
+dotfiles/.vim/plugged
+
 # Hosts .gitignore
 hosts/hosts
 hosts/hosts.orig

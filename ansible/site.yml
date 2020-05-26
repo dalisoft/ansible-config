@@ -30,9 +30,11 @@
       - .mackup.cfg
       - .nanorc
       - .vimrc
+
+    initial_folders:
+      - .vim
+      - .config
       - .nano
-      - vim
-      - .config/nvim
 
   pre_tasks:
     - import_tasks: pre-tasks.yml
