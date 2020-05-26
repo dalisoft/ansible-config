@@ -18,7 +18,7 @@ set encoding=UTF-8
 set background=dark
 colorscheme monokai
 set t_Co=256
-set guifont=Fira\ Code\ Regular:h13
+set guifont=Fira\ Code:h13
 
 set number
 set incsearch
