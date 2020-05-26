@@ -31,6 +31,8 @@ brew_packages:
   - llvm
   - yarn
   - fnm
+  - docker
+  - docker-compose
 
 brew_cask_packages:
   - quicklook-json
@@ -48,11 +50,11 @@ brew_cask_packages:
   - octave-app
   - postman
   - gitkraken
-  - omnidb
   - sublime-text
   - vscodium
   - clion
   - intellij-idea
+  - datagrip
   - android-studio
   - krita
   - inkscape
@@ -60,4 +62,4 @@ brew_cask_packages:
 brew_cask_packages_root:
   - adguard
   - adoptopenjdk8
-  - docker
+#    - docker
