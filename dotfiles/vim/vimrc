@@ -1,55 +1,24 @@
-for i in split(glob('~/.vim/_includes/*.vim'), '\n')
-    exe 'source' i
-endfor
+exe 'source ~/.vim/_includes/boilerplate.vim'
+exe 'source ~/.vim/_includes/wrapping.vim'
 
 call plug#begin('~/.vim/plugged')
-
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
+Plug 'crusoexia/vim-monokai'
 call plug#end()
 
 
-if has('gui_running')
-        set background=light
-        set gfn=Consolas:h16
-        "source ~/.vim/_includes/wrapping.vim
-else
-        set background=dark
-endif
+" NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
-colorscheme solarized
-" russian hotkeys
-set keymap      =russian-jcukenwin
-set iminsert    =0
-set imsearch    =0
-
-" spaces instead of tabs
-set expandtab
-set smarttab
-set tabstop     =4
-set shiftwidth  =4
-set smartindent
-set autoindent
-
-" ui options (i dont love distraction)
-set noshowmode
-setlocal nonumber
-
-" search options
-set noincsearch
-set ignorecase
-
-" plugin configuration
-let g:ctrlp_user_command            = 'ag %s -l --nocolor --hidden -g ""'
-
-let g:kls_mappings                  = 0 "disable switching layout, when pressing ':'
-
+" Files default file assoc
 autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=markdown
+autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 
-source ~/.vim/prose.vim
+exe 'source ~/.vim/_includes/keymap.vim'
 
 syntax on
-colorscheme onedark
+colorscheme monokai
 
-autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
+
 
