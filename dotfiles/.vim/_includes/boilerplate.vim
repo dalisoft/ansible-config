@@ -36,3 +36,21 @@ set autoindent
 " Syntax
 syntax enable
 filetype plugin indent on
+
+" NERDTree
+let NERDTreeShowHidden=1
+" let NERDTreeDirArrowExpandable = '▷'
+" let NERDTreeDirArrowCollapsible = '▼'
+let g:NERDTreeIndicatorMapCustom = {
+\ "Modified"  : "✹",
+\ "Staged"    : "✚",
+\ "Untracked" : "✭",
+\ "Renamed"   : "➜",
+\ "Unmerged"  : "═",
+\ "Deleted"   : "✖",
+\ "Dirty"     : "✗",
+\ "Clean"     : "✔︎",
+\ 'Ignored'   : '☒',
+\ "Unknown"   : "?"
+\ }
+    " }}}
