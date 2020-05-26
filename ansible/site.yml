@@ -33,7 +33,7 @@
 
     initial_folders:
       - .vim
-      - .config
+      - .config/nvim
       - .nano
 
   pre_tasks:

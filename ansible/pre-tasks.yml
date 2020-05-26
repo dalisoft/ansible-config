@@ -52,7 +52,7 @@
     dest: "~/{{ item }}"
     state: directory
     recurse: yes
-  with_items: "{{ initial_configs }}"
+  with_items: "{{ initial_folders }}"
   retries: 1
   register: initial_config_link
   until: initial_config_link.attempts == 1
