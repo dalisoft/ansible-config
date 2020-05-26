@@ -1,26 +1,36 @@
-exe 'source ~/.vim/_includes/boilerplate.vim'
-exe 'source ~/.vim/_includes/wrapping.vim'
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+
+set nocompatible
 
 call plug#begin('~/.vim/plugged')
+
 Plug 'crusoexia/vim-monokai'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'elzr/vim-json'
+Plug 'tpope/vim-dotenv'
+
 call plug#end()
 
-
-" NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-
-" Files default file assoc
-autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=markdown
-autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
-
-exe 'source ~/.vim/_includes/keymap.vim'
-
-syntax on
+set encoding=UTF-8
+set background=dark
 colorscheme monokai
+set t_Co=256
+set guifont=Fira\ Code\ Regular:h13
 
+set number
+set incsearch
+set hlsearch
 
+set laststatus=2
+set noswapfile
+set autoread
+set autoindent
+set smartindent
+set rnu
+set splitright
+set splitbelow
 
+syntax enable
