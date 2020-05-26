@@ -6,10 +6,7 @@ set dir=/tmp
 " GUI
 set encoding=UTF-8
 set background=dark
-colorscheme monokai
 set t_Co=256
-set term=xterm-256color
-set macligatures
 set guifont=Fira\ Code\ Regular:h12
 
 " Misc
