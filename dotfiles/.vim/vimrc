@@ -3,10 +3,9 @@ exe 'source ~/.vim/_includes/wrapping.vim'
 
 call plug#begin('~/.vim/plugged')
 Plug 'crusoexia/vim-monokai'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle'] }
+Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
@@ -19,7 +18,6 @@ autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost *.txt set filetype=ma
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 
 exe 'source ~/.vim/_includes/keymap.vim'
-exe 'source ~/.vim/_includes/coc.vim'
 
 syntax on
 colorscheme monokai
