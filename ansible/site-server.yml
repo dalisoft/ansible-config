@@ -1,0 +1,32 @@
+---
+- name: My Machine Configurations
+  hosts: all
+  become: false
+  roles:
+    - common
+    - modules
+
+  vars_files:
+    - vars/brew.yml
+    - vars/snap.yml
+    - vars/snap_classic.yml
+    - vars/npm.yml
+    - vars/pip.yml
+
+  vars:
+    install_homebrew_if_missing: true
+    force_install: false
+
+    initial_configs:
+      - .gitconfig
+      - .mackup.cfg
+      - .nanorc
+      - .vimrc
+
+    initial_folders:
+      - .vim
+      - .config/nvim
+      - .nano
+
+  pre_tasks:
+    - import_tasks: pre-tasks.yml
