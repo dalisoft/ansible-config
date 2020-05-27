@@ -136,6 +136,7 @@
 0.0.0.0 apple-finance.query.yahoo.com
 0.0.0.0 play.itunes.apple.com
 0.0.0.0 captive.apple.com
+0.0.0.0 supportmetrics.apple.com
 
 #
 # AmazonAWS trackers
