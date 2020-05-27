@@ -45,6 +45,7 @@ brew_cask_packages:
   - macs-fan-control
   - telegram-desktop
   - the-unarchiver
+  - firefox
   - folx
   - vlc
   - octave-app
@@ -60,6 +61,6 @@ brew_cask_packages:
   - inkscape
 
 brew_cask_packages_root:
-  - adguard
+  #  - adguard
   - adoptopenjdk8
-#    - docker
+  #  - docker
