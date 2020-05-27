@@ -14,7 +14,7 @@ set -gx fish_user_paths "$HOME/lsp/bin" $fish_user_paths
 
 switch (uname)
   case Darwin
-    set -gx DOCKER_HOST "ssh://root@$REMOTE_MACHINE_IP"
+    # set -gx DOCKER_HOST "ssh://root@$REMOTE_MACHINE_IP"
   case Linux
     # echo "Linux"
 end
