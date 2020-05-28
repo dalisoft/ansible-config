@@ -5,8 +5,9 @@ ansible/tmp
 
 # DotFiles .gitignore
 dotfiles/.npmrc
-dotfiles/.ansible/tmp
-dotfiles/.ansible/roles
+
+# Ansible
+dotfiles/.ansible
 
 # DotFiles VIM
 dotfiles/.vim/plugged
