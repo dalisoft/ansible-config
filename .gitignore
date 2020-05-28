@@ -3,21 +3,11 @@
 # Ansible .gitignore
 ansible/tmp
 
-# DotFiles .gitignore
-dotfiles/.npmrc
+# Dotfiles
+dotfiles
 
-# Ansible
-dotfiles/.ansible
-
-# DotFiles VIM
-dotfiles/.vim/plugged
-
-# Hosts .gitignore
-hosts/hosts
-hosts/hosts.orig
-hosts/hosts-tmp
-hosts/hosts.tmp
-hosts/ad_away_hosts.txt
+# Hosts
+hosts
 
 # IDEA Files
 .idea
