@@ -1,8 +1,9 @@
 .DS_Store
 
 .npmrc
-.ansible/tmp
-.ansible/roles
+
+# Ansible
+.ansible
 
 # VIM
 .vim/plugged
