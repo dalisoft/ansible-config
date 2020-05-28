@@ -59,6 +59,7 @@ brew_cask_packages:
   - android-studio
   - krita
   - inkscape
+  - betterzip
 
 brew_cask_packages_root:
   #  - adguard
