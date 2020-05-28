@@ -3,12 +3,6 @@
 # Ansible .gitignore
 ansible/tmp
 
-# Dotfiles
-dotfiles
-
-# Hosts
-hosts
-
 # IDEA Files
 .idea
 
