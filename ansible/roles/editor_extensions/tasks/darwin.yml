@@ -31,8 +31,8 @@
   when:
     - force_install is true or not reason_bin.stat.exists
 
-# VSCodium extensions
-- name: VSCodium check on macOS
+# VSCode extensions
+- name: VSCode check on macOS
   stat:
-    path: /Applications/VSCodium.app/Contents/Resources/app/bin/code
+    path: /Applications/VSCode.app/Contents/Resources/app/bin/code
   register: code_bin

@@ -26,8 +26,8 @@
   when:
     - force_install is true or not reason_bin.stat.exists
 
-# VSCodium extensions
-- name: VSCodium check on Linux
+# VSCode extensions
+- name: VSCode check on Linux
   stat:
     path: /usr/local/bin/code
   register: code_bin

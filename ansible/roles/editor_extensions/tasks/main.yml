@@ -35,20 +35,9 @@
   tags:
     - install-editor-extensions
 
-- name: Installing DockerFileLint
-  git:
-    repo: https://github.com/dalisoft/SublimeLinter-contrib-dockerfilelint.git
-    dest: "{{ st_packages_dir.stat.path }}/SublimeLinter-contrib-dockerfilelint"
-    update: "yes"
-    recursive: "no"
-  when:
-    - st_packages_dir.stat.exists
-  tags:
-    - install-editor-extensions
-
-- name: "List installed VSCodium extensions"
+- name: "List installed VSCode extensions"
   command: "{{ code_bin.stat.path }} --list-extensions"
-  register: vscodium_extensions_list
+  register: code_extensions_list
   changed_when: false
   check_mode: false
   when:
@@ -59,10 +48,10 @@
 - name: Installing VSCodium extensions
   shell: "{{ code_bin.stat.path }} --install-extension {{ item }}"
   with_items: "{{ vscode_extensions }}"
-  register: install_vscodium_extensions
-  until: install_vscodium_extensions is successful
+  register: install_code_extensions
+  until: install_code_extensions is successful
   when:
     - code_bin.stat.exists
-    - item not in vscodium_extensions_list.stdout_lines
+    - item not in code_extensions_list.stdout_lines
   tags:
     - install-editor-extensions
