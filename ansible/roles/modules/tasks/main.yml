@@ -29,7 +29,7 @@
 
 - name: Installing npm modules
   npm:
-    global: yes
+    global: "yes"
     path: ~/.npm-global
     name: "{{ item }}"
     state: latest

@@ -1,6 +1,7 @@
 ---
 brew_taps:
   - homebrew/cask-fonts
+  - homebrew/cask-versions
   - heroku/brew
   - adoptopenjdk/openjdk
   - octave-app/octave-app
@@ -16,12 +17,12 @@ brew_packages:
   - neovim
   - git
   - git-lfs
-  - wget # For downloading some files
-  - mackup # For sync configs across machines
-  - htop # Monitoring manager
-  - tmux # Terminal Multi-pleXer
-  - wrk # Benchmark tool
-  - cmake # Build tool
+  - wget  # For downloading some files
+  - mackup  # For sync configs across machines
+  - htop  # Monitoring manager
+  - tmux  # Terminal Multi-pleXer
+  - wrk  # Benchmark tool
+  - cmake  # Build tool
   - heroku
   - ansible
   - python
@@ -35,7 +36,6 @@ brew_packages:
   - docker-compose
 
 brew_cask_packages:
-  - quicklook-json
   - qlcolorcode
   - qlstephen
   - qlmarkdown
@@ -51,7 +51,7 @@ brew_cask_packages:
   - octave-app
   - postman
   - gitkraken
-  - sublime-text
+  # - sublime-text-dev
   - vscodium
   - clion
   - intellij-idea

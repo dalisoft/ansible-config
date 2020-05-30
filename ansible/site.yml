@@ -11,7 +11,7 @@
   vars_prompt:
     - name: "SUDO_PASS"
       prompt: "Please enter your SUDO password"
-      private: yes
+      private: "yes"
 
   vars_files:
     - vars/brew.yml

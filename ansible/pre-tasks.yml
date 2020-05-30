@@ -4,7 +4,7 @@
     path: /usr/local/bin/brew
   register: homebrew_check
 
-- name: Fail If Homebrew Is Not Installed and install_homebrew_if_missing Is False
+- name: Fail If brew Is Not Installed and install_homebrew_if_missing Is False
   fail:
     msg: Homebrew is missing...Install from http://brew.sh/
   when:
@@ -12,7 +12,9 @@
     - not install_homebrew_if_missing
 
 - name: Installing Homebrew
-  shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  shell: /usr/bin/ruby -e \
+    "$(curl -fsSL \
+    https://raw.githubusercontent.com/Homebrew/install/master/install)"
   when:
     - not homebrew_check.stat.exists
     - install_homebrew_if_missing
@@ -38,7 +40,7 @@
     src: "~/Desktop/config/dotfiles/{{ item }}"
     dest: "~/{{ item }}"
     state: link
-    force: no
+    force: "no"
   with_items: "{{ initial_configs }}"
   retries: 1
   register: initial_config_link
@@ -51,7 +53,7 @@
     src: "~/Desktop/config/dotfiles/{{ item }}"
     dest: "~/{{ item }}"
     state: link
-    force: no
+    force: "no"
   with_items: "{{ initial_folders }}"
   retries: 1
   register: initial_config_link
