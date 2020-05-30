@@ -1,11 +1,12 @@
 ---
 npm_modules:
-  - cordova
-  - expo-cli
   - nodemon
+  - eslint
+  - dockerfilelint
   - prettier
   - http-server
-  - dockerfilelint
+  - cordova
+  - expo-cli
 
 fnm_versions:
   - 12.16.3
