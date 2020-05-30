@@ -24,12 +24,33 @@
   tags:
     - install-editor-extensions
 
+- name: Checking GoSublime directory
+  stat:
+    path: '{{ st_packages_dir.stat.path }}/GoSublime'
+  register: gosublime_dir
+
 - name: Installing GoSublime
   git:
     repo: https://github.com/DisposaBoy/GoSublime.git
     dest: "{{ gosublime_dir.stat.path }}"
   when:
+    - st_packages_dir.stat.exists
     - not gosublime_dir.stat.exists
+  tags:
+    - install-editor-extensions
+
+- name: Checking DockerFileLint directory
+  stat:
+    path: '{{ st_packages_dir.stat.path }}/SublimeLinter-contrib-dockerfilelint'
+  register: dockerfilelint_dir
+
+- name: Installing DockerFileLint
+  git:
+    repo: https://github.com/dalisoft/SublimeLinter-contrib-dockerfilelint.git
+    dest: "{{ dockerfilelint_dir.stat.path }}"
+  when:
+    - st_packages_dir.stat.exists
+    - not dockerfilelint_dir.stat.exists
   tags:
     - install-editor-extensions
 

@@ -1,13 +1,14 @@
 ---
-- name: Checking GoSublime on macOS
+- name: Checking ST Packages Directory on macOS
   stat:
-    path: ~/Library/Application Support/Sublime Text 3/Packages/GoSublime
-  register: gosublime_dir
+    path: ~/Library/Application Support/Sublime Text 3/Packages
+  register: st_packages_dir
 
 - name: Installing Rust Analyzer Language Server on macOS
-  become: yes
+  become: true
   shell: |
-    wget -nc https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-mac
+    wget -nc \
+    https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-mac
     mv rust-analyzer-mac /usr/local/bin/rust-analyzer
     chmod +x /usr/local/bin/rust-analyzer
   args:
@@ -16,9 +17,10 @@
     - force_install is true or not rust_analyzer_bin.stat.exists
 
 - name: Installing Reason Language Server on macOS
-  become: yes
+  become: true
   shell: |
-    wget -nc https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
+    wget -nc \
+    https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
     unzip rls-macos.zip -d .
     mv rls-macos/reason-language-server /usr/local/bin/reason-language-server
     chmod +x /usr/local/bin/reason-language-server

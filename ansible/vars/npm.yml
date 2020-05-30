@@ -5,6 +5,7 @@ npm_modules:
   - nodemon
   - prettier
   - http-server
+  - dockerfilelint
 
 fnm_versions:
   - 12.16.3

@@ -1,4 +1,7 @@
 ---
 pip_modules:
   - "python-language-server[all]"
+  - yamllint
+  - pyls-mypy
+  - pyls-isort
   - virtualenv
