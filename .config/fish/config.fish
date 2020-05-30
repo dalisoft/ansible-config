@@ -93,7 +93,7 @@ alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
 alias load_fnm "fnm env --shell=fish --multi | source"
 
 # **** test internet speed ****
-alias inet_speed_test "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias inet_speed_test "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 
 ###################################
 ########## init scripts ###########
