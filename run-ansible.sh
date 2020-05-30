@@ -4,7 +4,7 @@ extra_vars=''
 
 if [[ "$1" != "" ]]
 then
-  extra_vars="{\"SUDO_PASS\":$1}"
+  extra_vars="{\"SUDO_PASS\":\"$1\"}"
 fi
 
 cd ansible

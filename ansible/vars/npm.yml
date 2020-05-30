@@ -9,5 +9,5 @@ npm_modules:
   - expo-cli
 
 fnm_versions:
-  - 12.16.3
+  - 12.17.0
   - 13.14.0

@@ -63,5 +63,5 @@ brew_cask_packages:
 
 brew_cask_packages_root:
   #  - adguard
-  - adoptopenjdk8
+  - adoptopenjdk/openjdk/adoptopenjdk8
   #  - docker

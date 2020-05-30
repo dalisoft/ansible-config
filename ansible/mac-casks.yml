@@ -1,31 +1,23 @@
 ---
-- name: "List installed Cask packages"
-  command: brew cask ls -1
-  register: brew_cask_packages_list
-  changed_when: false
-  check_mode: false
-
 - name: Installing Cask packages
   homebrew_cask:
-    name: "{{ item }}"
+    name: "{{ brew_cask_packages }}"
     state: upgraded
     greedy: "True"
-  with_items: "{{ brew_cask_packages }}"
   register: install_brew_cask_package
   until: install_brew_cask_package is successful
   when:
     - homebrew_check.stat.exists
-    - item not in brew_cask_packages_list.stdout_lines
 
 - name: Installing Cask packages with ROOT permission
+  become: "yes"
   homebrew_cask:
     name: "{{ item }}"
     state: upgraded
     greedy: "True"
     sudo_password: "{{ SUDO_PASS }}"
-  with_items: "{{ brew_cask_packages_root }}"
+  with_items: '{{ brew_cask_packages_root }}'
   register: install_brew_cask_package
   until: install_brew_cask_package is successful
   when:
     - homebrew_check.stat.exists
-    - item not in brew_cask_packages_list.stdout_lines
