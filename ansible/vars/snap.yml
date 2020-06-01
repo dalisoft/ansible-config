@@ -1,18 +1,12 @@
 ---
 snap_packages:
-  - vlc
   - postman
-  - firefox
-  - octave
-  - krita
   - inkscape
 
 snap_classic_packages:
-  - heroku
   - microk8s
   - gitkraken
   - sublime-text
-  - codium
   - android-studio
   - intellij-idea-ultimate
   - clion

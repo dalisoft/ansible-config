@@ -22,12 +22,20 @@
 # Homebrew packages
 - name: Installing Homebrew packages
   homebrew:
-    name: "{{ brew_packages }}"
+    name: "{{ brew_common_packages }}"
     state: latest
   register: install_brew_package
   until: install_brew_package is successful
   tags:
     - install-brew-packages
+
+- import_tasks: darwin.yml
+  when: ansible_os_family == 'Darwin'
+
+- import_tasks: ubuntu.yml
+  when:
+   - ansible_distribution == 'Ubuntu'
+   - ansible_distribution_major_version|int >= 20
 
 # Configure dotfiles (mackup)
 - name: Configure dotfiles

@@ -7,32 +7,32 @@ brew_taps:
   - octave-app/octave-app
   - schniz/tap
 
-brew_packages:
-  - fish
-  - starship
+brew_common_packages:
+  - cassowary # Benchmark tool
+  - wrk # Benchmark tool
   - exa
   - bat
-  - ripgrep
+  - starship
+  - heroku
+  - mackup # For sync configs across machines
+  - rust
+  - fnm
+
+brew_mac_packages:
+  - fish
   - nano
   - neovim
   - git
   - git-lfs
   - wget # For downloading some files
-  - mackup # For sync configs across machines
   - htop # Monitoring manager
   - tmux # Terminal Multi-pleXer
-  - wrk # Benchmark tool
-  - cassowary # Benchmark tool
   - cmake # Build tool
-  - heroku
-  - ansible
   - python
   - node
   - go
-  - rust
   - llvm
   - yarn
-  - fnm
   - docker
   - docker-compose
 

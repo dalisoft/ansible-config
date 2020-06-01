@@ -1,0 +1,49 @@
+---
+apt_keys:
+  - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+  - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+  - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+  - https://dl.yarnpkg.com/debian/pubkey.gpg
+  - https://download.docker.com/linux/ubuntu/gpg
+
+apt_repos:
+  - ppa:git-core/ppa
+  - ppa:fish-shell/release-3
+  - deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main
+  - deb https://dl.yarnpkg.com/debian/ stable main
+  - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+
+apt_repos_custom:
+  - https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+  - deb https://deb.nodesource.com/node_14.x focal main
+
+apt_terminal_items:
+  - fish
+  - curl
+  - wget
+  - cmake
+  - git
+  - git-lfs
+  - htop
+  - ripgrep
+  - nano
+  - neovim
+  - tmux
+  - nodejs
+  - yarn
+  - golang-go
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-compose
+
+apt_gui_items:
+  - firefox
+  - krita
+  - octave
+  - vlc
+  - codium
+  - adoptopenjdk-8-hotspot
+  # - adoptopenjdk-8-headless
+  # - adoptopenjdk-11-hotspot
+  # - adoptopenjdk-11-headless

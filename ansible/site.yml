@@ -8,12 +8,16 @@
     - modules
 
   vars_prompt:
+    - name: "USER"
+      prompt: "Please enter your User name"
+      private: yes
     - name: "SUDO_PASS"
       prompt: "Please enter your SUDO password"
-      private: "yes"
+      private: yes
 
   vars_files:
     - vars/brew.yml
+    - vars/apt.yml
     - vars/snap.yml
     - vars/npm.yml
     - vars/pip.yml
@@ -46,7 +50,7 @@
     - import_tasks: snap.yml
       when:
         - ansible_distribution == 'Ubuntu'
-        - ansible_distribution_major_version|int >= 18
+        - ansible_distribution_major_version|int >= 20
       tags:
         - install-snap-packages
     - import_tasks: roles/editor_extensions/tasks/main.yml

@@ -1,0 +1,10 @@
+---
+- name: Installing Homebrew packages for macOS
+  homebrew:
+    name: "{{ brew_mac_packages }}"
+    state: latest
+  register: install_brew_package
+  until: install_brew_package is successful
+  when: ansible_os_family == 'Darwin'
+  tags:
+    - install-brew-packages
