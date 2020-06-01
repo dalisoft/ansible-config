@@ -9,7 +9,6 @@
   vars_files:
     - vars/brew.yml
     - vars/snap.yml
-    - vars/snap_classic.yml
     - vars/npm.yml
     - vars/pip.yml
 

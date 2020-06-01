@@ -1,0 +1,28 @@
+---
+- name: "List Snap packages"
+  command: snap list
+  register: snap_installed_packages
+  changed_when: false
+  check_mode: false
+
+- name: Installing Snap packages
+  become: "yes"
+  snap:
+    name: "{{ item }}"
+    classic: "no"
+    state: present
+  with_items: '{{ snap_packages }}'
+  when: item not in snap_installed_packages
+  register: install_snap_package
+  until: install_snap_package is successful
+
+- name: Installing Snap packages
+  become: "yes"
+  snap:
+    name: "{{ item }}"
+    classic: "yes"
+    state: present
+  with_items: '{{ snap_classic_packages }}'
+  when: item not in snap_installed_packages
+  register: install_snap_classic_package
+  until: install_snap_classic_package is successful

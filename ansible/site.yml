@@ -16,7 +16,6 @@
   vars_files:
     - vars/brew.yml
     - vars/snap.yml
-    - vars/snap_classic.yml
     - vars/npm.yml
     - vars/pip.yml
     - vars/editor_extensions.yml
@@ -45,3 +44,8 @@
         - ansible_os_family == 'Darwin'
       tags:
         - install-brew-cask-packages
+    - import_tasks: snap.yml
+      when:
+        - ansible_os_family == 'Debian'
+      tags:
+        - install-snap-packages

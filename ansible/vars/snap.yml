@@ -1,3 +1,10 @@
 ---
 snap_packages:
   - vlc
+  - postman
+
+snap_classic_packages:
+  - heroku
+  - gitkraken
+  - android-studio
+  - microk8s
