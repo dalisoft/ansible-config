@@ -1,7 +1,7 @@
 ---
 - name: My Machine Configurations
   hosts: all
-  become: "no"
+  become: false
   roles:
     - common
     - mas

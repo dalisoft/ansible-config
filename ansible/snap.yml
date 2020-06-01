@@ -6,11 +6,10 @@
   check_mode: false
 
 - name: Installing Snap packages
-  become: "yes"
-  become_user: "root"
+  become: true
+  become_user: root
   snap:
     name: "{{ item }}"
-    classic: "no"
     state: present
   with_items: '{{ snap_packages }}'
   when: item not in snap_installed_packages
@@ -18,11 +17,11 @@
   until: install_snap_package is successful
 
 - name: Installing Snap packages
-  become: "yes"
-  become_user: "root"
+  become: true
+  become_user: root
   snap:
     name: "{{ item }}"
-    classic: "yes"
+    classic: yes
     state: present
   with_items: '{{ snap_classic_packages }}'
   when: item not in snap_installed_packages

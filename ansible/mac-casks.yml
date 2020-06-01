@@ -8,7 +8,7 @@
   until: install_brew_cask_package is successful
 
 - name: Installing Cask packages with ROOT permission
-  become: "yes"
+  become: true
   homebrew_cask:
     name: "{{ item }}"
     state: upgraded

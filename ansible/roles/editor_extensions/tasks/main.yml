@@ -26,8 +26,6 @@
   git:
     repo: https://github.com/DisposaBoy/GoSublime.git
     dest: "{{ st_packages_dir.stat.path }}/GoSublime"
-    update: "yes"
-    recursive: "no"
   when:
     - st_packages_dir.stat.exists
 
