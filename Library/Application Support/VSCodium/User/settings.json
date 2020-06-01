@@ -52,10 +52,12 @@
   "terminal.integrated.rendererType": "auto",
   "terminal.integrated.experimentalRefreshOnResume": true,
   "terminal.integrated.experimentalUseTitleEvent": true,
+  "terminal.integrated.experimentalLinkProvider": true,
   "timeline.showView": true,
   "breadcrumbs.enabled": true,
   "extensions.ignoreRecommendations": false,
   "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "update.mode": "none",
@@ -133,7 +135,6 @@
   },
   "emmet.triggerExpansionOnTab": true,
   "emmet.showSuggestionsAsSnippets": true,
-  "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "search.exclude": {
@@ -149,6 +150,7 @@
   "task.autoDetect": "off",
   "task.quickOpen.detail": false,
   "npm.autoDetect": "on",
+  "npm.fetchOnlinePackageInfo": false,
   "go.gopath": "~/go",
   "go.toolsGopath": "~/go/bin",
   "go.formatTool": "goimports",
@@ -161,5 +163,5 @@
   "reason_language_server.location": "/usr/local/bin/reason-language-server",
   "rust-analyzer.updates.askBeforeDownload": false,
   "docker.images.label": "Tag",
-  "sync.gist": "f4d95c99eabc359b8e6d4db79119a771"
+  "sync.gist": "f4d95c99eabc359b8e6d4db79119a771",
 }
