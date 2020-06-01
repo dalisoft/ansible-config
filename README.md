@@ -12,12 +12,26 @@ This playbook covers almost 80% of my MacBook Pro state (like Time Machine copy)
 
 - Make fully macOS Configuration steps
 
-## Steps:
+## Steps
 
-1.
-  - Run `./run.sh $YOUR_PASSWORD` and then type password if you haven't installed Homebrew and Ansible
-  - Run `./run-ansible.sh $YOUR_PASSWORD` if you have installed Homebrew and Ansible
+### Step 1
 
-2. Shell default change (if possible), guide [here](https://stackoverflow.com/a/26321141)
+| Name | Command | System | Required |
+|-|-|-|-|
+|Homebrew| See [here](https://brew.sh) | macOS, Linux | Yes|
+|Ansible| `brew install ansible` | macOS, Linux | Yes|
+|XCode CLI| `xcode-select --install` | macOS | Yes|
+|snap| See [here](https://snapcraft.io/docs/installing-snap-on-ubuntu) | Linux | Yes |
 
-Done. Enjoy!
+> **Don't forget install all of these dependencies**
+
+### Step 2
+
+- Open terminal
+- Run `./run-ansible.sh $YOUR_PASSWORD`
+
+### Step 3
+
+Shell default change (if possible), guide [here](https://stackoverflow.com/a/26321141)
+
+### Done. Enjoy
