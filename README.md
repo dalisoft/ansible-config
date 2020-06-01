@@ -30,6 +30,6 @@ This playbook covers almost 80% of my MacBook Pro state (like Time Machine copy)
 
 ### Step 3
 
-Shell default change (if possible), guide [here](https://stackoverflow.com/a/26321141)
+Shell default change (if possible), guide [here for macOS](https://stackoverflow.com/a/26321141) or [here for Linux](https://superuser.com/a/119216)
 
 ### Done. Enjoy
