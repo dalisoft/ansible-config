@@ -39,7 +39,5 @@
     executable: pip3
   register: install_pip_module
   until: install_pip_module is successful
-  when:
-    - homebrew_check.stat.exists
   tags:
     - install-pip-modules

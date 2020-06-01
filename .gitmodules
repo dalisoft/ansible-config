@@ -1,7 +1,3 @@
-[submodule "dotfiles/.nano/nanorc"]
-	path = dotfiles/.nano/nanorc
-	url = https://github.com/scopatz/nanorc.git
-	branch = master
 [submodule "hosts"]
 	path = hosts
 	url = git@github.com:dalisoft/hosts.git

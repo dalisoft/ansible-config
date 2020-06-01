@@ -42,7 +42,6 @@
   tasks:
     - import_tasks: mac-casks.yml
       when:
-        - homebrew_check.stat.exists
         - ansible_os_family == 'Darwin'
       tags:
         - install-brew-cask-packages
