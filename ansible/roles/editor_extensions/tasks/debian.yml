@@ -25,9 +25,3 @@
     rm -rf rls-linux.zip
   when:
     - force_install is true or not reason_bin.stat.exists
-
-# VSCode extensions
-- name: VSCode check on Linux
-  stat:
-    path: /usr/local/bin/code
-  register: code_bin

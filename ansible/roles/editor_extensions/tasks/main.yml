@@ -36,22 +36,19 @@
     - install-editor-extensions
 
 - name: "List installed VSCode extensions"
-  command: "{{ code_bin.stat.path }} --list-extensions"
+  command: "code --list-extensions"
   register: code_extensions_list
   changed_when: false
   check_mode: false
-  when:
-    - code_bin.stat.exists
   tags:
     - install-brew-cask-packages
 
 - name: Installing VSCodium extensions
-  shell: "{{ code_bin.stat.path }} --install-extension {{ item }}"
+  shell: "code --install-extension {{ item }}"
   with_items: "{{ vscode_extensions }}"
   register: install_code_extensions
   until: install_code_extensions is successful
   when:
-    - code_bin.stat.exists
     - item not in code_extensions_list.stdout_lines
   tags:
     - install-editor-extensions

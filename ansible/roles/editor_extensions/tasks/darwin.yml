@@ -30,9 +30,3 @@
     chdir: ~/
   when:
     - force_install is true or not reason_bin.stat.exists
-
-# VSCode extensions
-- name: VSCode check on macOS
-  stat:
-    path: /Applications/VSCode.app/Contents/Resources/app/bin/code
-  register: code_bin
