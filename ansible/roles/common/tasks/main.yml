@@ -30,10 +30,11 @@
     - install-brew-packages
 
 # Configure dotfiles (mackup)
-- name: "Configure dotfiles"
+- name: Configure dotfiles
   command: mackup restore -f
   register: install_dotfiles
   until: install_dotfiles is successful
+  when:
     - initial_config_link is successful
   tags:
     - install-dot-files
@@ -42,6 +43,7 @@
   command: nvim -c "PlugInstall" -c "qa"
   register: install_vim_plugin
   until: install_vim_plugin is successful
+  when:
     - install_dotfiles is successful
   tags:
     - install-vim-plugins
