@@ -11,8 +11,9 @@ snap_classic_packages:
   - heroku
   - microk8s
   - gitkraken
-  - android-studio
+  - sublime-text
   - codium
+  - android-studio
   - intellij-idea-ultimate
   - clion
   - datagrip

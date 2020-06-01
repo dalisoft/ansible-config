@@ -21,8 +21,6 @@
 
 - import_tasks: darwin.yml
   when: ansible_os_family == 'Darwin'
-  tags:
-    - install-editor-extensions
 
 - name: Installing GoSublime
   git:
@@ -32,16 +30,13 @@
     recursive: "no"
   when:
     - st_packages_dir.stat.exists
-  tags:
-    - install-editor-extensions
 
+# VSCode Extensions
 - name: "List installed VSCode extensions"
   command: "code --list-extensions"
   register: code_extensions_list
   changed_when: false
   check_mode: false
-  tags:
-    - install-brew-cask-packages
 
 - name: Installing VSCodium extensions
   shell: "code --install-extension {{ item }}"
@@ -50,5 +45,3 @@
   until: install_code_extensions is successful
   when:
     - item not in code_extensions_list.stdout_lines
-  tags:
-    - install-editor-extensions
