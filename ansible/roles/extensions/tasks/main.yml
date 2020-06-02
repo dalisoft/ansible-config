@@ -9,41 +9,35 @@
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
   when: force_install is true or not gopls_bin.stat.exists
 
-- name: Checking Rust Analyzer Language Server
-  stat:
-    path: /usr/local/bin/rust-analyzer
-  register: rust_analyzer_bin
+- import_tasks: _debian.yml
+  when: ansible_os_family == 'Debian'
+
+- name: Installing Rust Analyzer Language Server
+  get_url:
+    url: "https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/{{ ralsp }}"
+    dest: /usr/local/bin/rust-analyzer
+    mode: "0644"
 
 - name: Checking Reason Language Server
   stat:
     path: /usr/local/bin/reason-language-server
   register: reason_bin
 
-- import_tasks: _debian.yml
-  when: ansible_os_family == 'Debian'
-
-- name: Installing Rust Analyzer Language Server on Linux
+- name: Downloading Reason Language Server
   get_url:
-    url: "https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/{{ ralsp }} "
-    dest: /usr/local/bin/rust-analyzer
-    mode: "0644"
-  when: force_install is true or not reason_bin.stat.exists
-
-- name: Downloading Reason Language Server on Linux
-  get_url:
-    url: "https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/{{ rls }}"
-    dest: ~/lsp/rls.zip
+    url: "https://github.com/jaredly/reason-language-server/releases/latest/download/{{ rls }}.zip"
+    dest: '~/lsp/{{ rls }}.zip'
   register: rls_zip
   when: force_install is true or not reason_bin.stat.exists
 
-- name: Extracting Reason Language Server on Linux
+- name: Extracting Reason Language Server
   unarchive:
-    src: rls.zip
+    src: '~/lsp/{{ rls }}.zip'
     dest: ~/lsp
   register: rls_unzip
-  when: rls_zip.changed and force_install is true or not reason_bin.stat.exists
+  when: rls_zip.changed or force_install is true or not reason_bin.stat.exists
 
-- name: Installing Reason Language Server on Linux
+- name: Installing Reason Language Server
   copy:
     src: ~/lsp/rls/reason-language-server
     dest: /usr/local/bin/reason-language-server
