@@ -97,7 +97,7 @@ alias git_repack_ad="git repack -ad"
 alias git_prune="git prune"
 
 # **** python3 ****
-alias python=/usr/local/bin/python3
+alias python=python3
 
 # **** Virtual ENV alias ****
 alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
