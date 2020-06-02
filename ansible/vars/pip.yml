@@ -1,7 +1,16 @@
 ---
-pip_modules:
-  - "python-language-server[all]"
-  - yamllint
-  - pyls-mypy
-  - pyls-isort
-  - virtualenv
+- name: Python Common modules
+  include_vars:
+    name: pip_common
+    file: common/pip.yml
+
+- name: Python Desktop-only modules
+  include_vars:
+    name: pip_desktop
+    file: desktop/pip.yml
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+
+- name: Prepare [PIP] packages
+  set_fact:
+    pip_modules: '{{ (pip_common.pip_modules | default([])) + (pip_desktop.pip_modules | default([])) }}'

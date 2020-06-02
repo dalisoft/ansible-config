@@ -29,6 +29,9 @@
   tags:
     - install-brew-packages
 
+- import_tasks: debian/apt.yml
+  when: ansible_os_family == 'Debian'
+
 # Configure dotfiles (mackup)
 - name: Configure dotfiles
   command: mackup restore -f

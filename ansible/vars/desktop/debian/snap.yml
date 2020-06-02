@@ -1,0 +1,13 @@
+---
+snap_packages:
+  - postman
+  - inkscape
+
+snap_classic_packages:
+  - microk8s
+  - gitkraken
+  - sublime-text
+  - android-studio
+  - intellij-idea-ultimate
+  - clion
+  - datagrip

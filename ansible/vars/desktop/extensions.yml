@@ -1,5 +1,5 @@
 ---
-vscode_extensions:
+vscodium_extensions:
   # Linters
   - dbaeumer.vscode-eslint
   - esbenp.prettier-vscode
@@ -26,3 +26,7 @@ vscode_extensions:
   - ms-python.python
   - ms-vscode.Go
   - ms-vscode.cpptools
+
+sublime_extensions_git:
+  - name: GoSublime
+    git_url: https://github.com/DisposaBoy/GoSublime.git

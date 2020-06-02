@@ -1,0 +1,23 @@
+---
+apt_items:
+  - firefox
+  - krita
+  - octave
+  - vlc
+  - codium
+  - adoptopenjdk-8-hotspot
+  # - adoptopenjdk-8-headless
+  # - adoptopenjdk-11-hotspot
+  # - adoptopenjdk-11-headless
+
+apt_keys:
+  - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+  - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+  - https://dl.yarnpkg.com/debian/pubkey.gpg
+  - https://download.docker.com/linux/ubuntu/gpg
+
+apt_repos:
+  - deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main
+
+apt_repos_custom:
+  - https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/

@@ -1,19 +1,14 @@
 ---
-snap_packages:
-  - vlc
-  - postman
-  - firefox
-  - octave
-  - krita
-  - inkscape
+- name: SNAP packages for Debian
+  include_vars:
+    name: snap_desktop
+    file: desktop/debian/snap.yml
+  when:
+    - ansible_os_family == 'Debian'
+    - INSTALL_MODE == 'DESKTOP'
 
-snap_classic_packages:
-  - heroku
-  - microk8s
-  - gitkraken
-  - sublime-text
-  - codium
-  - android-studio
-  - intellij-idea-ultimate
-  - clion
-  - datagrip
+
+- name: Prepare [SNAP] packages
+  set_fact:
+    snap_packages: '{{ snap_desktop.snap_packages | default([]) }}'
+    snap_classic_packages: '{{ snap_desktop.snap_classic_packages | default([]) }}'

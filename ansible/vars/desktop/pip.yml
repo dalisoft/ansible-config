@@ -1,0 +1,5 @@
+---
+pip_modules:
+  - "python-language-server[all]"
+  - pyls-mypy
+  - pyls-isort

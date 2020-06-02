@@ -1,0 +1,51 @@
+---
+# SublimeText extensions
+- name: Checking GoPLS
+  stat:
+    path: ~/go/bin/gopls
+  register: gopls_bin
+
+- name: Installing Golang Program Language Server
+  shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
+  when:
+    - force_install is true or not gopls_bin.stat.exists
+
+- name: Checking Rust Analyzer Language Server
+  stat:
+    path: /usr/local/bin/rust-analyzer
+  register: rust_analyzer_bin
+
+- name: Checking Reason Language Server
+  stat:
+    path: /usr/local/bin/reason-language-server
+  register: reason_bin
+
+- import_tasks: _darwin.yml
+  when:
+    - ansible_os_family == 'Darwin'
+
+- import_tasks: _debian.yml
+  when: ansible_os_family == 'Debian'
+
+- name: Installing Sublime Text packages
+  git:
+    repo: '{{ item.git_url }}'
+    dest: "{{ st_packages_dir.stat.path }}/{{ item.name }}"
+  with_items: '{{ sublime_extensions_git }}'
+  when:
+    - st_packages_dir.stat.exists
+
+# VSCodium Extensions
+- name: "List installed VSCodium extensions"
+  command: "codium --list-extensions"
+  register: codium_extensions_list
+  changed_when: false
+  check_mode: false
+
+- name: Installing VSCodium extensions
+  shell: "code --install-extension {{ item }}"
+  with_items: "{{ vscodium_extensions }}"
+  register: install_codium_extensions
+  until: install_codium_extensions is successful
+  when:
+    - item not in codium_extensions_list.stdout_lines

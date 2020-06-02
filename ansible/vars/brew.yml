@@ -1,68 +1,27 @@
 ---
-brew_taps:
-  - homebrew/cask-fonts
-  # - homebrew/cask-versions
-  - heroku/brew
-  - adoptopenjdk/openjdk
-  - octave-app/octave-app
-  - schniz/tap
+- name: Homebrew common packages
+  include_vars:
+    name: brew_common
+    file: common/brew.yml
 
-brew_packages:
-  - fish
-  - starship
-  - exa
-  - bat
-  - ripgrep
-  - nano
-  - neovim
-  - git
-  - git-lfs
-  - wget # For downloading some files
-  - mackup # For sync configs across machines
-  - htop # Monitoring manager
-  - tmux # Terminal Multi-pleXer
-  - wrk # Benchmark tool
-  - cassowary # Benchmark tool
-  - cmake # Build tool
-  - heroku
-  - ansible
-  - python
-  - node
-  - go
-  - rust
-  - llvm
-  - yarn
-  - fnm
-  - docker
-  - docker-compose
+- name: Homebrew Desktop-only packages for Debian
+  include_vars:
+    name: brew_debian_desktop
+    file: desktop/debian/brew.yml
+  when:
+    - ansible_os_family == 'Debian'
+    - INSTALL_MODE == 'DESKTOP'
 
-brew_cask_packages:
-  - qlcolorcode
-  - qlstephen
-  - qlmarkdown
-  - qlimagesize
-  - font-fira-code
-  - brave-browser
-  - macs-fan-control
-  - telegram-desktop
-  - the-unarchiver
-  - firefox
-  - folx
-  - vlc
-  - octave-app
-  - postman
-  - gitkraken
-  # - sublime-text-dev
-  - vscodium
-  - clion
-  - intellij-idea
-  - datagrip
-  - android-studio
-  - krita
-  - inkscape
-  - betterzip
+- name: Homebrew Desktop-only packages for Darwin
+  include_vars:
+    name: brew_darwin_desktop
+    file: desktop/darwin/brew.yml
+  when:
+    - ansible_os_family == 'Darwin'
+    - INSTALL_MODE == 'DESKTOP'
 
-brew_cask_packages_root:
-  #  - adguard
-  - adoptopenjdk/openjdk/adoptopenjdk8
-  #  - docker
+- name: Prepare [Homebrew] packages
+  set_fact:
+    brew_taps: '{{ (brew_common.brew_taps | default([])) + (brew_debian_desktop.brew_taps | default([])) + (brew_darwin_desktop.brew_taps | default([])) }}'
+    brew_packages: '{{ (brew_common.brew_packages | default([])) + (brew_debian_desktop.brew_packages | default([])) + (brew_darwin_desktop.brew_packages | default([])) }}'
+    brew_cask_packages: '{{ (brew_common.brew_cask_packages | default([])) + (brew_debian_desktop.brew_cask_packages | default([])) + (brew_darwin_desktop.brew_cask_packages | default([])) }}'

@@ -3,9 +3,10 @@
   stat:
     path: ~/Library/Application Support/Sublime Text 3/Packages
   register: st_packages_dir
+  when:
+    - INSTALL_MODE == 'DESKTOP'
 
 - name: Installing Rust Analyzer Language Server on macOS
-  become: true
   shell: |
     wget -nc \
     https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-mac
@@ -14,10 +15,10 @@
   args:
     chdir: ~/
   when:
+    - INSTALL_MODE == 'DESKTOP'
     - force_install is true or not rust_analyzer_bin.stat.exists
 
 - name: Installing Reason Language Server on macOS
-  become: true
   shell: |
     wget -nc \
     https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
@@ -29,4 +30,5 @@
   args:
     chdir: ~/
   when:
+    - INSTALL_MODE == 'DESKTOP'
     - force_install is true or not reason_bin.stat.exists
