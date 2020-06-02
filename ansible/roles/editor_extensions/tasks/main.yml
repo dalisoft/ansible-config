@@ -43,10 +43,10 @@
     - INSTALL_MODE == 'DESKTOP'
     - st_packages_dir.stat.exists
 
-# VSCode Extensions
-- name: "List installed VSCode extensions"
-  command: "code --list-extensions"
-  register: code_extensions_list
+# VSCodium Extensions
+- name: "List installed VSCodium extensions"
+  command: "codium --list-extensions"
+  register: codium_extensions_list
   changed_when: false
   check_mode: false
   when:
@@ -54,9 +54,9 @@
 
 - name: Installing VSCodium extensions
   shell: "code --install-extension {{ item }}"
-  with_items: "{{ vscode_extensions }}"
-  register: install_code_extensions
-  until: install_code_extensions is successful
+  with_items: "{{ vscodium_extensions }}"
+  register: install_codium_extensions
+  until: install_codium_extensions is successful
   when:
     - INSTALL_MODE == 'DESKTOP'
     - item not in code_extensions_list.stdout_lines
