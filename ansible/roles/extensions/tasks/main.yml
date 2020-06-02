@@ -1,5 +1,5 @@
 ---
-# SublimeText extensions
+# Language Server binaries
 - name: Checking GoPLS
   stat:
     path: ~/go/bin/gopls
@@ -50,6 +50,7 @@
     mode: "0644"
   when: rls_unzip.changed and force_install is true or not reason_bin.stat.exists
 
+# SublimeText extensions
 - name: Installing Sublime Text packages
   git:
     repo: "{{ item.git_url }}"
