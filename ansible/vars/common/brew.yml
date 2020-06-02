@@ -3,11 +3,9 @@ brew_taps:
   - schniz/tap
 
 brew_packages:
-  - cassowary # Benchmark tool
-  - wrk # Benchmark tool
+  - starship
   - exa
   - bat
-  - starship
-  - mackup # For sync configs across machines
-  - rust
   - fnm
+  - wrk # Benchmark tool
+  - mackup # For sync configs across machines

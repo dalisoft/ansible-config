@@ -7,6 +7,7 @@ brew_taps:
   - octave-app/octave-app
 
 brew_packages:
+  - cassowary # Benchmark tool
   - heroku
   - ansible
   - fish
@@ -22,6 +23,7 @@ brew_packages:
   - node
   - go
   - llvm
+  - rust
   - yarn
   - docker
   - docker-compose

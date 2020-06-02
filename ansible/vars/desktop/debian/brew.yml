@@ -1,3 +1,4 @@
 ---
 brew_packages:
-  - ansible
+  - cassowary # Benchmark tool
+  - rust
