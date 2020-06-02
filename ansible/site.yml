@@ -4,8 +4,10 @@
   become: false
   roles:
     - common
-    - mas
+    - darwin
+    - debian
     - modules
+    - extensions
 
   vars_prompt:
     - name: "INSTALL_MODE"
@@ -18,46 +20,28 @@
       prompt: "Please enter your SUDO password"
       private: yes
 
-  vars_files:
-    - vars/brew.yml
-    - vars/apt.yml
-    - vars/snap.yml
-    - vars/npm.yml
-    - vars/pip.yml
-    - vars/editor_extensions.yml
-
   vars:
     install_homebrew_if_missing: true
     force_install: false
 
     initial_configs:
+    # Files
       - .gitconfig
       - .mackup.cfg
       - .nanorc
       - .vimrc
-
-    initial_folders:
+    # Folders
       - .vim
       - .config/nvim
       - .nano
 
   pre_tasks:
     - import_tasks: pre-tasks.yml
+    # Import variables as tasks
+    - import_tasks: vars/brew.yml
+    - import_tasks: vars/apt.yml
+    - import_tasks: vars/snap.yml
+    - import_tasks: vars/npm.yml
+    - import_tasks: vars/pip.yml
+    - import_tasks: vars/extensions.yml
 
-  tasks:
-    - import_tasks: mac-casks.yml
-      when:
-        - INSTALL_MODE == 'DESKTOP'
-        - ansible_os_family == 'Darwin'
-      tags:
-        - install-brew-cask-packages
-    - import_tasks: snap.yml
-      when:
-        - INSTALL_MODE == 'DESKTOP'
-        - ansible_distribution == 'Ubuntu'
-        - ansible_distribution_major_version|int >= 19
-      tags:
-        - install-snap-packages
-    - import_tasks: roles/editor_extensions/tasks/main.yml
-      tags:
-        - install-editor-extensions

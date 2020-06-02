@@ -1,0 +1,32 @@
+---
+apt_keys:
+  - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+  - https://dl.yarnpkg.com/debian/pubkey.gpg
+  - https://download.docker.com/linux/ubuntu/gpg
+
+apt_repos:
+  - ppa:git-core/ppa
+  - ppa:fish-shell/release-3
+  - deb https://deb.nodesource.com/node_14.x focal main
+  - deb https://dl.yarnpkg.com/debian/ stable main
+  - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+
+apt_items:
+  - fish
+  - curl
+  - wget
+  - cmake
+  - git
+  - git-lfs
+  - htop
+  - ripgrep
+  - nano
+  - neovim
+  - tmux
+  - nodejs
+  - yarn
+  - golang-go
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-compose

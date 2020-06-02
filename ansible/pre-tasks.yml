@@ -26,15 +26,3 @@
   until: initial_config_link.attempts == 1
   tags:
     - link-initial-config
-
-- name: Linking initial folders
-  file:
-    src: "~/Desktop/config/dotfiles/{{ item }}"
-    dest: "~/{{ item }}"
-    state: link
-  with_items: "{{ initial_folders }}"
-  retries: 1
-  register: initial_config_link
-  until: initial_config_link.attempts == 1
-  tags:
-    - link-initial-config

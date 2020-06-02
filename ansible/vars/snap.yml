@@ -1,13 +1,8 @@
 ---
-snap_packages:
-  - postman
-  - inkscape
-
-snap_classic_packages:
-  - microk8s
-  - gitkraken
-  - sublime-text
-  - android-studio
-  - intellij-idea-ultimate
-  - clion
-  - datagrip
+- name: SNAP packages for Debian
+  include_vars:
+    name: snap/desktop_debian
+    file: desktop/debian/snap.yml
+  when:
+    - ansible_os_family == 'Debian'
+    - INSTALL_MODE == 'DESKTOP'

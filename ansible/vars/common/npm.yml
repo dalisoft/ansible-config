@@ -1,0 +1,11 @@
+---
+npm_modules:
+  - nodemon
+  - eslint
+  - prettier
+  - http-server
+  - node-gyp
+
+fnm_versions:
+  - 12.17.0
+  - 13.14.0

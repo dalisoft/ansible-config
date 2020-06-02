@@ -1,0 +1,5 @@
+---
+npm_modules:
+  - dockerfilelint
+  - cordova
+  - expo-cli

@@ -1,70 +1,25 @@
 ---
-brew_common_taps:
-  - heroku/brew
-  - schniz/tap
+- name: Homebrew common packages
+  include_vars:
+    name: homebrew/common
+    file: common/brew.yml
 
-brew_mac_taps:
-  - homebrew/cask-fonts
-  # - homebrew/cask-versions
-  - adoptopenjdk/openjdk
-  - octave-app/octave-app
+- name: Homebrew Desktop-only packages for Debian
+  include_vars:
+    name: homebrew/desktop_debian
+    file: desktop/debian/brew.yml
+  when:
+    - ansible_os_family == 'Debian'
+    - INSTALL_MODE == 'DESKTOP'
 
-brew_common_packages:
-  - cassowary # Benchmark tool
-  - wrk # Benchmark tool
-  - exa
-  - bat
-  - starship
-  - heroku
-  - mackup # For sync configs across machines
-  - rust
-  - fnm
+- name: Homebrew Desktop-only packages for Darwin
+  include_vars:
+    name: homebrew/desktop_darwin
+    file: desktop/darwin/brew.yml
+  when:
+    - ansible_os_family == 'Darwin'
+    - INSTALL_MODE == 'DESKTOP'
 
-brew_mac_packages:
-  - fish
-  - nano
-  - neovim
-  - git
-  - git-lfs
-  - wget # For downloading some files
-  - htop # Monitoring manager
-  - tmux # Terminal Multi-pleXer
-  - cmake # Build tool
-  - python
-  - node
-  - go
-  - llvm
-  - yarn
-  - docker
-  - docker-compose
-
-brew_cask_packages:
-  - qlcolorcode
-  - qlstephen
-  - qlmarkdown
-  - qlimagesize
-  - font-fira-code
-  - brave-browser
-  - macs-fan-control
-  - telegram-desktop
-  - the-unarchiver
-  - firefox
-  - folx
-  - vlc
-  - octave-app
-  - postman
-  - gitkraken
-  # - sublime-text-dev
-  - vscodium
-  - clion
-  - intellij-idea
-  - datagrip
-  - android-studio
-  - krita
-  - inkscape
-  - betterzip
-
-brew_cask_packages_root:
-  #  - adguard
-  - adoptopenjdk/openjdk/adoptopenjdk8
-  #  - docker
+- debug: var=brew_packages
+- debug: var=brew_taps
+- debug: var=brew_cask_packages

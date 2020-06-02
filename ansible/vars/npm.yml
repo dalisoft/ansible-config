@@ -1,14 +1,12 @@
 ---
-npm_modules:
-  - nodemon
-  - eslint
-  - dockerfilelint
-  - prettier
-  - http-server
-  - cordova
-  - expo-cli
-  - node-gyp
+- name: NPM Common modules
+  include_vars:
+    name: npm/common
+    file: common/npm.yml
 
-fnm_versions:
-  - 12.17.0
-  - 13.14.0
+- name: NPM Desktop-only modules
+  include_vars:
+    name: npm/desktop
+    file: desktop/npm.yml
+  when:
+    - INSTALL_MODE == 'DESKTOP'

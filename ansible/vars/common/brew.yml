@@ -1,0 +1,15 @@
+---
+brew_taps:
+  - heroku/brew
+  - schniz/tap
+
+brew_packages:
+  - cassowary # Benchmark tool
+  - wrk # Benchmark tool
+  - exa
+  - bat
+  - starship
+  - heroku
+  - mackup # For sync configs across machines
+  - rust
+  - fnm
