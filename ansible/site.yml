@@ -5,9 +5,7 @@
   roles:
     - common
     - darwin
-    - debian
     - modules
-    - extensions
 
   vars_prompt:
     - name: "INSTALL_MODE"
@@ -44,4 +42,11 @@
     - import_tasks: vars/npm.yml
     - import_tasks: vars/pip.yml
     - import_tasks: vars/extensions.yml
+    # Import tasks
+    - import_tasks: roles/debian/tasks/main.yml
+      when:
+        - ansible_os_family == 'Debian'
+    - import_tasks: roles/extensions/tasks/main.yml
+      when:
+        - INSTALL_MODE == 'DESKTOP'
 

@@ -14,3 +14,4 @@
 - name: Prepare [NPM] packages
   set_fact:
     npm_modules: '{{ npm_common.npm_modules + (npm_desktop.npm_modules | default([])) }}'
+    fnm_versions: '{{ npm_common.fnm_versions + (npm_desktop.fnm_versions | default([])) }}'
