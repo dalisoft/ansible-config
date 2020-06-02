@@ -7,7 +7,7 @@
 
 - name: Installing Golang Program Language Server
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
-  when: force_install is true or not gopls_bin.stat.exists
+  when: force_install == true or gopls_bin.stat.exists != true
 
 - import_tasks: _debian.yml
   when: ansible_os_family == 'Debian'
@@ -28,21 +28,21 @@
     url: "https://github.com/jaredly/reason-language-server/releases/latest/download/{{ rls }}.zip"
     dest: '~/lsp/{{ rls }}.zip'
   register: rls_zip
-  when: force_install is true or not reason_bin.stat.exists
+  when: force_install == true or reason_bin.stat.exists != true
 
 - name: Extracting Reason Language Server
   unarchive:
     src: '~/lsp/{{ rls }}.zip'
     dest: ~/lsp
   register: rls_unzip
-  when: rls_zip.changed or force_install is true or not reason_bin.stat.exists
+  when: rls_zip.changed == true or force_install == true or reason_bin.stat.exists != true
 
 - name: Installing Reason Language Server
   copy:
     src: '~/lsp/{{ rls }}/reason-language-server'
     dest: /usr/local/bin/reason-language-server
     mode: a+x
-  when: rls_unzip.changed and force_install is true or not reason_bin.stat.exists
+  when: rls_unzip.changed == true and force_install == true or reason_bin.stat.exists != true
 
 - name: Cleanup Reason Language Server folder
   file:
