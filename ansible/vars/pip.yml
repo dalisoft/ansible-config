@@ -13,4 +13,4 @@
 
 - name: Prepare [PIP] packages
   set_fact:
-    pip_modules: '{{ pip_common.pip_modules + (pip_desktop.pip_modules | default([])) }}'
+    pip_modules: '{{ (pip_common.pip_modules | default([])) + (pip_desktop.pip_modules | default([])) }}'

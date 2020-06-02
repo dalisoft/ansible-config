@@ -22,5 +22,6 @@
 
 - name: Prepare [Homebrew] packages
   set_fact:
-    brew_taps: '{{ brew_common.brew_taps + (brew_debian_desktop.brew_taps | default([])) + (brew_darwin_desktop.brew_taps | default([])) }}'
-    brew_packages: '{{ brew_common.brew_packages + (brew_debian_desktop.brew_packages | default([])) + (brew_darwin_desktop.brew_packages | default([])) }}'
+    brew_taps: '{{ (brew_common.brew_taps | default([])) + (brew_debian_desktop.brew_taps | default([])) + (brew_darwin_desktop.brew_taps | default([])) }}'
+    brew_packages: '{{ (brew_common.brew_packages | default([])) + (brew_debian_desktop.brew_packages | default([])) + (brew_darwin_desktop.brew_packages | default([])) }}'
+    brew_cask_packages: '{{ (brew_common.brew_cask_packages | default([])) + (brew_debian_desktop.brew_cask_packages | default([])) + (brew_darwin_desktop.brew_cask_packages | default([])) }}'

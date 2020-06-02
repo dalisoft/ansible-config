@@ -8,5 +8,5 @@
 
 - name: Prepare Extensions
   set_fact:
-    vscodium_extensions: '{{ exts_desktop.vscodium_extensions }}'
-    sublime_extensions_git: '{{ exts_desktop.sublime_extensions_git }}'
+    vscodium_extensions: '{{ exts_desktop.vscodium_extensions | default([]) }}'
+    sublime_extensions_git: '{{ exts_desktop.sublime_extensions_git | default([]) }}'
