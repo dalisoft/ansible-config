@@ -59,4 +59,4 @@
   until: install_codium_extensions is successful
   when:
     - INSTALL_MODE == 'DESKTOP'
-    - item not in code_extensions_list.stdout_lines
+    - item not in codium_extensions_list.stdout_lines

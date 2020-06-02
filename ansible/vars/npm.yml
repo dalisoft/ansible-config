@@ -1,12 +1,10 @@
 ---
 - name: NPM Common modules
   include_vars:
-    name: npm/common
     file: common/npm.yml
 
 - name: NPM Desktop-only modules
   include_vars:
-    name: npm/desktop
     file: desktop/npm.yml
   when:
     - INSTALL_MODE == 'DESKTOP'

@@ -1,15 +1,15 @@
 ---
 - name: APT Common Packages for Debian
   include_vars:
-    name: apt/common_debian
     file: common/debian/apt.yml
   when:
     - ansible_os_family == 'Debian'
 
 - name: APT Desktop-only Packages for Debian
   include_vars:
-    name: apt/desktop_debian
     file: desktop/debian/apt.yml
   when:
     - ansible_os_family == 'Debian'
     - INSTALL_MODE == 'DESKTOP'
+
+- debug: var=apt_items

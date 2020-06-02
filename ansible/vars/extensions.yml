@@ -1,7 +1,6 @@
 ---
 - name: VSCodium Extensions
   include_vars:
-    name: extensions-vscodium/desktop
     file: desktop/extensions.yml
   when:
     - INSTALL_MODE == 'DESKTOP'
