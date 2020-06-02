@@ -1,4 +1,4 @@
 ---
 brew_packages:
-  - cassowary # Benchmark tool
+  - cassowary
   - rust

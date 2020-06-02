@@ -7,7 +7,7 @@ brew_taps:
   - octave-app/octave-app
 
 brew_packages:
-  - cassowary # Benchmark tool
+  - cassowary
   - heroku
   - ansible
   - fish
@@ -15,10 +15,10 @@ brew_packages:
   - neovim
   - git
   - git-lfs
-  - wget # For downloading some files
-  - htop # Monitoring manager
-  - tmux # Terminal Multi-pleXer
-  - cmake # Build tool
+  - wget
+  - htop
+  - tmux
+  - cmake
   - python
   - node
   - go

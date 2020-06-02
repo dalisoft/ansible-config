@@ -7,5 +7,4 @@ brew_packages:
   - exa
   - bat
   - fnm
-  - wrk # Benchmark tool
-  - mackup # For sync configs across machines
+  - wrk
