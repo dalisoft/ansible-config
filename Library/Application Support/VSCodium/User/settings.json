@@ -43,7 +43,7 @@
   "editor.snippetSuggestions": "top",
   "editor.definitionLinkOpensInPeek": true,
   "editor.fontSize": 14,
-  "editor.fontFamily": "Monaco",
+  "editor.fontFamily": "Monaco, Fira Code",
   "terminal.integrated.minimumContrastRatio": 4.5,
   "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.fontWeight": "100",
