@@ -46,6 +46,7 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 
 - Open all JetBrains app and Sync Settings & Plugins
 - Open Sublime Text, download "Sync Settings", configure token and Download Cloud Settings
+- Copy Workdir from another machine or download manually
 
 ### Done. Enjoy
 
