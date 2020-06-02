@@ -27,12 +27,12 @@
   when:
     - INSTALL_MODE == 'DESKTOP'
 
-- import_tasks: darwin.yml
+- import_tasks: _darwin.yml
   when:
     - INSTALL_MODE == 'DESKTOP'
     - ansible_os_family == 'Darwin'
 
-- import_tasks: debian.yml
+- import_tasks: _debian.yml
   when: ansible_os_family == 'Debian'
 
 - name: Installing GoSublime

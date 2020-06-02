@@ -1,10 +1,16 @@
 ---
 - name: NPM Common modules
   include_vars:
+    name: npm_common
     file: common/npm.yml
 
 - name: NPM Desktop-only modules
   include_vars:
+    name: npm_desktop
     file: desktop/npm.yml
   when:
     - INSTALL_MODE == 'DESKTOP'
+
+- name: Prepare [NPM] packages
+  set_fact:
+    npm_modules: '{{ npm_common.npm_modules + (npm_desktop.npm_modules | default([])) }}'

@@ -1,7 +1,14 @@
 ---
 - name: SNAP packages for Debian
   include_vars:
+    name: snap_desktop
     file: desktop/debian/snap.yml
   when:
     - ansible_os_family == 'Debian'
     - INSTALL_MODE == 'DESKTOP'
+
+
+- name: Prepare [SNAP] packages
+  set_fact:
+    snap_packages: '{{ snap_desktop.snap_packages }}'
+    snap_classic_packages: '{{ snap_desktop.snap_classic_packages }}'

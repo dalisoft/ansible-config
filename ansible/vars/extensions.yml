@@ -1,6 +1,11 @@
 ---
 - name: VSCodium Extensions
   include_vars:
+    name: vscodium_desktop
     file: desktop/extensions.yml
   when:
     - INSTALL_MODE == 'DESKTOP'
+
+- name: Prepare Extensions
+  set_fact:
+    vscodium_extensions: '{{ vscodium_desktop.vscodium_extensions }}'

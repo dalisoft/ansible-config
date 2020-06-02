@@ -1,10 +1,12 @@
 ---
 - name: Homebrew common packages
   include_vars:
+    name: brew_common
     file: common/brew.yml
 
 - name: Homebrew Desktop-only packages for Debian
   include_vars:
+    name: brew_debian_desktop
     file: desktop/debian/brew.yml
   when:
     - ansible_os_family == 'Debian'
@@ -12,7 +14,13 @@
 
 - name: Homebrew Desktop-only packages for Darwin
   include_vars:
+    name: brew_darwin_desktop
     file: desktop/darwin/brew.yml
   when:
     - ansible_os_family == 'Darwin'
     - INSTALL_MODE == 'DESKTOP'
+
+- name: Prepare [Homebrew] packages
+  set_fact:
+    brew_taps: '{{ brew_common.brew_taps + (brew_debian_desktop.brew_taps | default([])) + (brew_darwin_desktop.brew_taps | default([])) }}'
+    brew_packages: '{{ brew_common.brew_packages + (brew_debian_desktop.brew_packages | default([])) + (brew_darwin_desktop.brew_packages | default([])) }}'

@@ -1,15 +1,22 @@
 ---
 - name: APT Common Packages for Debian
   include_vars:
+    name: apt_common
     file: common/debian/apt.yml
   when:
     - ansible_os_family == 'Debian'
 
 - name: APT Desktop-only Packages for Debian
   include_vars:
+    name: apt_desktop
     file: desktop/debian/apt.yml
   when:
     - ansible_os_family == 'Debian'
     - INSTALL_MODE == 'DESKTOP'
 
-- debug: var=apt_items
+- name: Prepare [APT] packages
+  set_fact:
+    apt_keys: '{{ apt_common.apt_keys + (apt_desktop.apt_keys | default([])) }}'
+    apt_repos: '{{ apt_common.apt_repos + (apt_desktop.apt_repos | default([])) }}'
+    apt_repos_custom: '{{ apt_common.apt_repos + (apt_desktop.apt_repos | default([])) }}'
+    apt_items: '{{ apt_common.apt_items + (apt_desktop.apt_items | default([])) }}'
