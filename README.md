@@ -33,3 +33,23 @@ This playbook covers almost 80% of my MacBook Pro state (like Time Machine copy)
 Shell default change (if possible), guide [here for macOS](https://stackoverflow.com/a/26321141) or [here for Linux](https://superuser.com/a/119216)
 
 ### Done. Enjoy
+
+## Known Bugs
+
+### `/usr/local/bin` not writable
+
+#### Linux
+
+Run `sudo chown -R $USER:root /usr/local/bin` command and problem should be fixed
+
+#### macOS
+
+Run ```sudo chown -R `whoami`:admin /usr/local/bin``` command and problem should be fixed
+
+### Please enter your SUDO password prompt
+
+Run `run-ansible.sh` with your Root user password, e.g. `sh run-ansible.sh 1234`
+
+### Why Linux needs more rights
+
+I don't know why, but there no way bypass these requirements (at least i not able do that)

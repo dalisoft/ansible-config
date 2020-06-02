@@ -8,6 +8,9 @@
     - modules
 
   vars_prompt:
+    - name: "INSTALL_MODE"
+      prompt: "Please enter your Install Mode [DESKTOP or SERVER]"
+      private: yes
     - name: "USER"
       prompt: "Please enter your User name"
       private: yes
@@ -44,13 +47,15 @@
   tasks:
     - import_tasks: mac-casks.yml
       when:
+        - INSTALL_MODE == 'DESKTOP'
         - ansible_os_family == 'Darwin'
       tags:
         - install-brew-cask-packages
     - import_tasks: snap.yml
       when:
+        - INSTALL_MODE == 'DESKTOP'
         - ansible_distribution == 'Ubuntu'
-        - ansible_distribution_major_version|int >= 20
+        - ansible_distribution_major_version|int >= 19
       tags:
         - install-snap-packages
     - import_tasks: roles/editor_extensions/tasks/main.yml

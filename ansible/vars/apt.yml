@@ -10,12 +10,12 @@ apt_repos:
   - ppa:git-core/ppa
   - ppa:fish-shell/release-3
   - deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main
+  - deb https://deb.nodesource.com/node_14.x focal main
   - deb https://dl.yarnpkg.com/debian/ stable main
   - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
 
 apt_repos_custom:
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-  - deb https://deb.nodesource.com/node_14.x focal main
 
 apt_terminal_items:
   - fish

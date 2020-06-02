@@ -4,29 +4,43 @@
   stat:
     path: ~/go/bin/gopls
   register: gopls_bin
+  when:
+    - INSTALL_MODE == 'DESKTOP'
 
 - name: Installing Golang Program Language Server
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
-  when: force_install is true or not gopls_bin.stat.exists
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+    - force_install is true or not gopls_bin.stat.exists
 
 - name: Checking Rust Analyzer Language Server
   stat:
     path: /usr/local/bin/rust-analyzer
   register: rust_analyzer_bin
+  when:
+    - INSTALL_MODE == 'DESKTOP'
 
 - name: Checking Reason Language Server
   stat:
     path: /usr/local/bin/reason-language-server
   register: reason_bin
+  when:
+    - INSTALL_MODE == 'DESKTOP'
 
 - import_tasks: darwin.yml
-  when: ansible_os_family == 'Darwin'
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+    - ansible_os_family == 'Darwin'
+
+- import_tasks: debian.yml
+  when: ansible_os_family == 'Debian'
 
 - name: Installing GoSublime
   git:
     repo: https://github.com/DisposaBoy/GoSublime.git
     dest: "{{ st_packages_dir.stat.path }}/GoSublime"
   when:
+    - INSTALL_MODE == 'DESKTOP'
     - st_packages_dir.stat.exists
 
 # VSCode Extensions
@@ -35,6 +49,8 @@
   register: code_extensions_list
   changed_when: false
   check_mode: false
+  when:
+    - INSTALL_MODE == 'DESKTOP'
 
 - name: Installing VSCodium extensions
   shell: "code --install-extension {{ item }}"
@@ -42,4 +58,5 @@
   register: install_code_extensions
   until: install_code_extensions is successful
   when:
+    - INSTALL_MODE == 'DESKTOP'
     - item not in code_extensions_list.stdout_lines

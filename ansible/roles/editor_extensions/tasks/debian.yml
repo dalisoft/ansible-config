@@ -1,27 +1,59 @@
 ---
-- name: Checking GoSublime on Linux
-  stat:
-    path: ~/.config/sublime-text-3/Packages/GoSublime
-  register: gosublime_dir
-
-- name: Installing Rust Analyzer Language Server on Linux
-  shell: |
-    curl -L \
-    https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux\
-     -o ~/lsp/bin/rust-analyzer
-    chmod +x ~/lsp/bin/rust-analyzer
+# VSCodium
+- name: Linking VSCode Settings on Linux
+  file:
+    src: ~/Desktop/config/dotfiles/Library/Application Support/VSCodium
+    dest: "~/Desktop/config/dotfiles/.config/VSCodium"
+    state: link
+  retries: 1
+  register: vscode_debian_link
+  until: vscode_debian_link.attempts == 1
   when:
-    - force_install is true or not rust_analyzer_bin.stat.exists
+    - INSTALL_MODE == 'DESKTOP'
+
+# Sublime Text
+- name: Checking ST Packages Directory on Linux
+  stat:
+    path: ~/.config/sublime-text-3/Packages
+  register: st_packages_dir
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+
+# Language Server binaries
+- name: Installing Rust Analyzer Language Server on Linux
+  get_url:
+    url: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux
+    dest: /usr/local/bin/rust-analyzer
+    mode: '0644'
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+    - force_install is true or not reason_bin.stat.exists
+
+- name: Downloading Reason Language Server on Linux
+  get_url:
+    url: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux
+    dest: ~/lsp
+  register: rls_zip
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+    - force_install is true or not reason_bin.stat.exists
+
+- name: Extracting Reason Language Server on Linux
+  unarchive:
+    src: rls-linux.zip
+    dest: ~/lsp
+  register: rls_unzip
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+    - rls_zip.changed
+    - force_install is true or not reason_bin.stat.exists
 
 - name: Installing Reason Language Server on Linux
-  shell: |
-    cd ~/lsp/bin
-    wget \
-    https://github.com/jaredly/reason-language-server/releases/latest/download/rls-linux.zip
-    unzip rls-linux.zip -d .
-    mv rls-linux/reason-language-server reason-language-server
-    chmod +x reason-language-server
-    rm -rf rls-linux
-    rm -rf rls-linux.zip
+  copy:
+    src: ~/lsp/rls-linux/reason-language-server
+    dest: /usr/local/bin/reason-language-server
+    mode: '0644'
   when:
+    - INSTALL_MODE == 'DESKTOP'
+    - rls_unzip.changed
     - force_install is true or not reason_bin.stat.exists

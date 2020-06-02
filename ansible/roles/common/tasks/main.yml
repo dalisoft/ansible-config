@@ -11,7 +11,7 @@
 - name: Tap all Homebrew taps
   homebrew_tap:
     name: "{{ item }}"
-  with_items: "{{ brew_taps }}"
+  with_items: "{{ brew_common_taps }}"
   register: install_brew_tap
   until: install_brew_tap is successful
   when:
@@ -32,10 +32,8 @@
 - import_tasks: darwin.yml
   when: ansible_os_family == 'Darwin'
 
-- import_tasks: ubuntu.yml
-  when:
-   - ansible_distribution == 'Ubuntu'
-   - ansible_distribution_major_version|int >= 20
+- import_tasks: debian.yml
+  when: ansible_os_family == 'Debian'
 
 # Configure dotfiles (mackup)
 - name: Configure dotfiles

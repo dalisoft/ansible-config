@@ -1,11 +1,13 @@
 ---
-brew_taps:
+brew_common_taps:
+  - heroku/brew
+  - schniz/tap
+
+brew_mac_taps:
   - homebrew/cask-fonts
   # - homebrew/cask-versions
-  - heroku/brew
   - adoptopenjdk/openjdk
   - octave-app/octave-app
-  - schniz/tap
 
 brew_common_packages:
   - cassowary # Benchmark tool

@@ -1,7 +1,9 @@
 ---
 dependencies:
   - role: geerlingguy.mas
-    when: ansible_os_family == 'Darwin'
+    when:
+      - INSTALL_MODE == 'DESKTOP'
+      - ansible_os_family == 'Darwin'
     vars:
       mas_signin_dialog: false
       mas_upgrade_all_apps: false

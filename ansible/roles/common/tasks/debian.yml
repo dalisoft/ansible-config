@@ -26,6 +26,8 @@
   with_items: '{{ apt_repos_custom }}'
   register: install_apt_repo
   until: install_apt_repo is successful
+  when:
+    - INSTALL_MODE == 'DESKTOP'
 
 - name: "Update apt repositories"
   become: true
@@ -52,6 +54,8 @@
     state: present
   register: install_apt_package
   until: install_apt_package is successful
+  when:
+    - INSTALL_MODE == 'DESKTOP'
 
 - name: Create docker group
   group:
@@ -69,10 +73,11 @@
     append: "yes"
   register: docker_post_step_2
   until: docker_post_step_2 is successful
+  when: docker_post_step_1.changed
 
 - name: Apply group change of docker
-  become: true
   shell: newgrp docker
   register: docker_post_step_3
   until: docker_post_step_3 is successful
+  when: docker_post_step_2.changed
 

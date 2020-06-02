@@ -1,10 +1,16 @@
 #!/bin/bash
 
 extra_vars=''
+install_mode='DESKTOP'
+
+if [ "$2" == "SERVER" ]
+then
+  install_mode=$2
+fi
 
 if [ "$1" != "" ]
 then
-  extra_vars="{\"SUDO_PASS\":\"$1\",\"ansible_become_pass\":\"$1\",\"USER\":\"$USER\"}"
+  extra_vars="{\"SUDO_PASS\":\"$1\",\"ansible_become_pass\":\"$1\",\"USER\":\"$USER\",\"INSTALL_MODE\":\"$install_mode\"}"
 fi
 
 cd ansible
