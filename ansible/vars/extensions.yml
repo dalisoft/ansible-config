@@ -6,7 +6,21 @@
   when:
     - INSTALL_MODE == 'DESKTOP'
 
+- name: Loading Sublime Text variable from Debian
+  include_vars:
+    file: desktop/debian/extensions.yml
+  when:
+    - ansible_os_family == 'Debian'
+    - INSTALL_MODE == 'DESKTOP'
+
+- name: Loading Sublime Text variable from Darwin
+  include_vars:
+    file: desktop/darwin/extensions.yml
+  when:
+    - ansible_os_family == 'Darwin'
+    - INSTALL_MODE == 'DESKTOP'
+
 - name: Prepare Extensions
   set_fact:
-    vscodium_extensions: '{{ exts_desktop.vscodium_extensions | default([]) }}'
-    sublime_extensions_git: '{{ exts_desktop.sublime_extensions_git | default([]) }}'
+    vscodium_extensions: "{{ exts_desktop.vscodium_extensions | default([]) }}"
+    sublime_extensions_git: "{{ exts_desktop.sublime_extensions_git | default([]) }}"

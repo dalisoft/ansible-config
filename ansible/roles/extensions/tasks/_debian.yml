@@ -8,8 +8,6 @@
   retries: 1
   register: vscodium_debian_link
   until: vscodium_debian_link.attempts == 1
-  when:
-    - INSTALL_MODE == 'DESKTOP'
 
 - name: Linking VSCodium Binary
   file:
@@ -19,52 +17,32 @@
   retries: 1
   register: vscodium_debian_link
   until: vscodium_debian_link.attempts == 1
-  when:
-    - INSTALL_MODE == 'DESKTOP'
-
-# Sublime Text
-- name: Checking ST Packages Directory on Linux
-  stat:
-    path: ~/.config/sublime-text-3/Packages
-  register: st_packages_dir
-  when:
-    - INSTALL_MODE == 'DESKTOP'
 
 # Language Server binaries
 - name: Installing Rust Analyzer Language Server on Linux
   get_url:
     url: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux
     dest: /usr/local/bin/rust-analyzer
-    mode: '0644'
-  when:
-    - INSTALL_MODE == 'DESKTOP'
-    - force_install is true or not reason_bin.stat.exists
+    mode: "0644"
+  when: force_install is true or not reason_bin.stat.exists
 
 - name: Downloading Reason Language Server on Linux
   get_url:
     url: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux
     dest: ~/lsp/rls-linux.zip
   register: rls_zip
-  when:
-    - INSTALL_MODE == 'DESKTOP'
-    - force_install is true or not reason_bin.stat.exists
+  when: force_install is true or not reason_bin.stat.exists
 
 - name: Extracting Reason Language Server on Linux
   unarchive:
     src: rls-linux.zip
     dest: ~/lsp
   register: rls_unzip
-  when:
-    - INSTALL_MODE == 'DESKTOP'
-    - rls_zip.changed
-    - force_install is true or not reason_bin.stat.exists
+  when: rls_zip.changed and force_install is true or not reason_bin.stat.exists
 
 - name: Installing Reason Language Server on Linux
   copy:
     src: ~/lsp/rls-linux/reason-language-server
     dest: /usr/local/bin/reason-language-server
-    mode: '0644'
-  when:
-    - INSTALL_MODE == 'DESKTOP'
-    - rls_unzip.changed
-    - force_install is true or not reason_bin.stat.exists
+    mode: "0644"
+  when: rls_unzip.changed and force_install is true or not reason_bin.stat.exists
