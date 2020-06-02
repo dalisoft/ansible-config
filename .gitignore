@@ -7,3 +7,6 @@
 
 # VIM
 .vim/plugged
+
+# nano
+.nano/search_history
