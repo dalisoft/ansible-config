@@ -1,6 +1,5 @@
 ---
 brew_taps:
-  - heroku/brew
   - schniz/tap
 
 brew_packages:
@@ -9,7 +8,6 @@ brew_packages:
   - exa
   - bat
   - starship
-  - heroku
   - mackup # For sync configs across machines
   - rust
   - fnm

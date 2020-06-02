@@ -4,6 +4,7 @@ snap_packages:
   - inkscape
 
 snap_classic_packages:
+  - heroku
   - microk8s
   - gitkraken
   - sublime-text

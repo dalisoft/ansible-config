@@ -1,11 +1,13 @@
 ---
 brew_taps:
+  - heroku/brew
   - homebrew/cask-fonts
   # - homebrew/cask-versions
   - adoptopenjdk/openjdk
   - octave-app/octave-app
 
 brew_packages:
+  - heroku
   - ansible
   - fish
   - nano
