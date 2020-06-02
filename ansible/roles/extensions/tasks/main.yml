@@ -19,11 +19,36 @@
     path: /usr/local/bin/reason-language-server
   register: reason_bin
 
-- import_tasks: _darwin.yml
-  when: ansible_os_family == 'Darwin'
-
 - import_tasks: _debian.yml
   when: ansible_os_family == 'Debian'
+
+- name: Installing Rust Analyzer Language Server on Linux
+  get_url:
+    url: "https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/{{ ralsp }} "
+    dest: /usr/local/bin/rust-analyzer
+    mode: "0644"
+  when: force_install is true or not reason_bin.stat.exists
+
+- name: Downloading Reason Language Server on Linux
+  get_url:
+    url: "https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/{{ rls }}"
+    dest: ~/lsp/rls.zip
+  register: rls_zip
+  when: force_install is true or not reason_bin.stat.exists
+
+- name: Extracting Reason Language Server on Linux
+  unarchive:
+    src: rls.zip
+    dest: ~/lsp
+  register: rls_unzip
+  when: rls_zip.changed and force_install is true or not reason_bin.stat.exists
+
+- name: Installing Reason Language Server on Linux
+  copy:
+    src: ~/lsp/rls/reason-language-server
+    dest: /usr/local/bin/reason-language-server
+    mode: "0644"
+  when: rls_unzip.changed and force_install is true or not reason_bin.stat.exists
 
 - name: Installing Sublime Text packages
   git:
