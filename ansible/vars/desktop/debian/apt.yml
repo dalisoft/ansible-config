@@ -10,13 +10,19 @@ apt_items:
   # - adoptopenjdk-8-headless
   # - adoptopenjdk-11-hotspot
   # - adoptopenjdk-11-headless
-  # KVM packages
+  # KVM packages for Virtual Machines
   - virt-viewer
   - virt-manager
   - qemu-kvm
   - virtinst
   - bridge-utils
+  # For Python development
   - python3-pip
+  # For AI Stuffs
+  - nvidia-cuda-toolkit
+  - nvidia-cuda-gdb
+  - nvidia-cuda-dev
+  - nvidia-cuda-doc
 
 apt_keys:
   - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
