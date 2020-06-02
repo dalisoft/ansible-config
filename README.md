@@ -14,6 +14,13 @@ This playbook covers almost 80% of my MacBook Pro state (like Time Machine copy)
 
 ### Step 1
 
+| OS | Min. required version | Recommended version |
+|-|-|-|
+| macOS | High Sierra (10.13.6) | Mojave (10.14.4) and higher |
+| Linux Ubuntu | 19.10 | Focal Fossa (20.04) and higher |
+
+---
+
 | Name | Command | System | Required |
 |-|-|-|-|
 |Homebrew| See [here](https://brew.sh) | macOS, Linux | Yes|
@@ -34,22 +41,17 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 
 ### Done. Enjoy
 
-## Known Bugs
+## Known Bugs / FAQ
 
 ### `/usr/local/bin` not writable
 
-#### Linux
-
-Run `sudo chown -R $USER:root /usr/local/bin` command and problem should be fixed
-
-#### macOS
-
-Run ```sudo chown -R `whoami`:admin /usr/local/bin``` command and problem should be fixed
+- on Linux: Run `sudo chown -R $USER:root /usr/local/bin` command and problem should be fixed
+- on macOS: Run ```sudo chown -R `whoami`:admin /usr/local/bin``` command and problem should be fixed
 
 ### Please enter your SUDO password prompt
 
-Run `run-ansible.sh` with your Root user password, e.g. `sh run-ansible.sh 1234`
+- Run `run-ansible.sh` with your Root user password, e.g. `sh run-ansible.sh 1234`
 
 ### Why Linux needs more rights
 
-I don't know why, but there no way bypass these requirements (at least i not able do that)
+- I don't know why, but there no way bypass these requirements (at least i not able do that)
