@@ -3,6 +3,6 @@
   when:
     - INSTALL_MODE == 'DESKTOP'
     - ansible_distribution == 'Ubuntu'
-    - ansible_distribution_major_version|int >= 19
+    - ansible_distribution_major_version|int >= 18
   tags:
     - install-snap-packages
