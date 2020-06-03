@@ -2,8 +2,7 @@
 - name: Installing Cask packages
   homebrew_cask:
     name: "{{ brew_cask_packages }}"
-    state: upgraded
-    greedy: "True"
+    state: present
   register: install_brew_cask_package
   until: install_brew_cask_package is successful
 
@@ -11,9 +10,8 @@
   become: true
   homebrew_cask:
     name: "{{ item }}"
-    state: upgraded
-    greedy: "True"
+    state: present
     sudo_password: "{{ SUDO_PASS }}"
-  with_items: '{{ brew_cask_packages_root }}'
+  with_items: "{{ brew_cask_packages_root }}"
   register: install_brew_cask_package
   until: install_brew_cask_package is successful

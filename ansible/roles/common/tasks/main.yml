@@ -23,7 +23,7 @@
 - name: Installing Homebrew packages
   homebrew:
     name: "{{ brew_packages }}"
-    state: latest
+    state: present
   register: install_brew_package
   until: install_brew_package is successful
   tags:

@@ -5,6 +5,7 @@ npm_modules:
   - prettier
   - http-server
   - node-gyp
+  - npm-check-updates
 
 fnm_versions:
   - 12.17.0

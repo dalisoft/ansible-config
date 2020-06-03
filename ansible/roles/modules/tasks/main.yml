@@ -24,8 +24,8 @@
     global: "yes"
     path: ~/.npm-global
     name: "{{ item }}"
-    state: latest
-  with_items: '{{ npm_modules }}'
+    state: present
+  with_items: "{{ npm_modules }}"
   register: install_npm_package
   until: install_npm_package is successful
   tags:
@@ -35,7 +35,7 @@
 - name: Installing pip modules
   pip:
     name: "{{ pip_modules }}"
-    state: latest
+    state: present
     executable: pip3
   register: install_pip_module
   until: install_pip_module is successful
