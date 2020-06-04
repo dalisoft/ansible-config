@@ -6,6 +6,7 @@
     - common
     - darwin
     - modules
+    - links
 
   vars_prompt:
     - name: "INSTALL_MODE"
@@ -23,12 +24,12 @@
     force_install: false
 
     initial_configs:
-    # Files
+      # Files
       - .gitconfig
       - .mackup.cfg
       - .nanorc
       - .vimrc
-    # Folders
+      # Folders
       - .vim
       - .config/nvim
       - .nano
@@ -49,4 +50,3 @@
     - import_tasks: roles/extensions/tasks/main.yml
       when:
         - INSTALL_MODE == 'DESKTOP'
-

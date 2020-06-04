@@ -31,22 +31,3 @@
 
 - import_tasks: debian/apt.yml
   when: ansible_os_family == 'Debian'
-
-# Configure dotfiles (mackup)
-- name: Configure dotfiles
-  command: mackup restore -f
-  register: install_dotfiles
-  until: install_dotfiles is successful
-  when:
-    - initial_config_link is successful
-  tags:
-    - install-dot-files
-
-- name: Install Neo-Vim plugins
-  command: nvim -c "PlugInstall" -c "qa"
-  register: install_vim_plugin
-  until: install_vim_plugin is successful
-  when:
-    - install_dotfiles is successful
-  tags:
-    - install-vim-plugins
