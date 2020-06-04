@@ -29,16 +29,16 @@ brew_packages:
   - docker-compose
 
 brew_cask_packages:
-  - qlcolorcode
-  - qlstephen
-  - qlmarkdown
-  - qlimagesize
+  # - qlcolorcode
+  # - qlstephen
+  # - qlmarkdown
+  # - qlimagesize
   - font-fira-code
   - brave-browser
   - macs-fan-control
   - telegram-desktop
   - the-unarchiver
-  - firefox
+  # - firefox
   - folx
   - vlc
   - octave-app
@@ -46,12 +46,12 @@ brew_cask_packages:
   - gitkraken
   # - sublime-text-dev
   - vscodium
-  - clion
-  - intellij-idea
-  - datagrip
+  # - clion
+  # - intellij-idea
+  # - datagrip
   - android-studio
-  - krita
-  - inkscape
+  # - krita
+  # - inkscape
   - betterzip
 
 brew_cask_packages_root:
