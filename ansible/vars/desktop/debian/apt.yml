@@ -11,10 +11,9 @@ apt_items:
   # - adoptopenjdk-11-hotspot
   # - adoptopenjdk-11-headless
   # KVM packages for Virtual Machines
-  - virt-viewer
-  - virt-manager
   - qemu-kvm
   - virtinst
+  - virtualbox
   - bridge-utils
   # For Python development
   - python3-pip
