@@ -6,14 +6,13 @@ pacman_packages:
   - krita
   - octave
   - vlc
-  - codium
-  - adoptopenjdk-8-hotspot
+  - vscodium-bin
+  - jdk8-adoptopenjdk
   # - adoptopenjdk-8-headless
   # - adoptopenjdk-11-hotspot
   # - adoptopenjdk-11-headless
   # KVM packages for Virtual Machines
-  - qemu-kvm
-  - virtinst
+  - qemu
   - virtualbox
   - bridge-utils
   # For Python development
@@ -22,5 +21,5 @@ pacman_packages:
   # For AI Stuffs
   - cuda
   # Addinational tools
-  - cassowary
+  # - cassowary
   - rust
