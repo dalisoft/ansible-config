@@ -17,12 +17,10 @@ pacman_packages:
   - virtualbox
   - bridge-utils
   # For Python development
-  - python3-pip
+  - python
+  # - python-pip
   # For AI Stuffs
-  - nvidia-cuda-toolkit
-  - nvidia-cuda-gdb
-  - nvidia-cuda-dev
-  - nvidia-cuda-doc
+  - cuda
   # Addinational tools
   - cassowary
   - rust
