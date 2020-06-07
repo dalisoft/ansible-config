@@ -6,7 +6,6 @@ pacman_packages:
   - krita
   - octave
   - vlc
-  - vscodium-bin
   - jdk8-adoptopenjdk
   # Packages for Virtual Machines
   - qemu

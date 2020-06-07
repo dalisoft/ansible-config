@@ -8,6 +8,7 @@ snap_classic_packages:
   - microk8s
   - gitkraken
   - sublime-text
+  - codium
   - android-studio
   - intellij-idea-ultimate
   - clion
