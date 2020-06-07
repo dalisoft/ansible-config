@@ -8,18 +8,15 @@ pacman_packages:
   - vlc
   - vscodium-bin
   - jdk8-adoptopenjdk
-  # - adoptopenjdk-8-headless
-  # - adoptopenjdk-11-hotspot
-  # - adoptopenjdk-11-headless
-  # KVM packages for Virtual Machines
+  # Packages for Virtual Machines
   - qemu
   - virtualbox
   - bridge-utils
   # For Python development
   - python
-  # - python-pip
   # For AI Stuffs
   - cuda
   # Addinational tools
-  # - cassowary
   - rust
+  # Missing tools
+  # - cassowary

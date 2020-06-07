@@ -7,10 +7,7 @@ apt_items:
   - vlc
   - codium
   - adoptopenjdk-8-hotspot
-  # - adoptopenjdk-8-headless
-  # - adoptopenjdk-11-hotspot
-  # - adoptopenjdk-11-headless
-  # KVM packages for Virtual Machines
+  # KVM/Packages for Virtual Machines
   - qemu-kvm
   - virtinst
   - virtualbox
