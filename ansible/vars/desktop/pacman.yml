@@ -1,0 +1,28 @@
+---
+pacman_packages:
+  # Main tools
+  - ansible
+  - firefox
+  - krita
+  - octave
+  - vlc
+  - codium
+  - adoptopenjdk-8-hotspot
+  # - adoptopenjdk-8-headless
+  # - adoptopenjdk-11-hotspot
+  # - adoptopenjdk-11-headless
+  # KVM packages for Virtual Machines
+  - qemu-kvm
+  - virtinst
+  - virtualbox
+  - bridge-utils
+  # For Python development
+  - python3-pip
+  # For AI Stuffs
+  - nvidia-cuda-toolkit
+  - nvidia-cuda-gdb
+  - nvidia-cuda-dev
+  - nvidia-cuda-doc
+  # Addinational tools
+  - cassowary
+  - rust

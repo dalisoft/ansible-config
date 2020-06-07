@@ -3,12 +3,14 @@
   include_vars:
     name: brew_common
     file: common/brew.yml
+  when: ansible_os_family != 'Archlinux'
 
 - name: Homebrew Desktop-only packages for Debian
   include_vars:
     name: brew_debian_desktop
     file: desktop/debian/brew.yml
   when:
+    - ansible_os_family != 'Archlinux'
     - ansible_os_family == 'Debian'
     - INSTALL_MODE == 'DESKTOP'
 
@@ -17,6 +19,7 @@
     name: brew_darwin_desktop
     file: desktop/darwin/brew.yml
   when:
+    - ansible_os_family != 'Archlinux'
     - ansible_os_family == 'Darwin'
     - INSTALL_MODE == 'DESKTOP'
 

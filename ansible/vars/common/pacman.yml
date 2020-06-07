@@ -1,0 +1,28 @@
+---
+pacman_packages:
+  # Essentials
+  - fish
+  - starship-bin
+  - exa
+  - bat
+  - curl
+  - wget
+  - cmake
+  - ripgrep
+  # Git
+  - git
+  - git-lfs
+  - htop
+  - nano
+  - neovim
+  - tmux
+  - yarn
+  - wrk
+  # Dev
+  - docker
+  - docker-compose
+  # Languages
+  - nodejs
+  - go
+  # Language tools
+  - fnm-bin

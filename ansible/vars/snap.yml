@@ -4,9 +4,8 @@
     name: snap_desktop
     file: desktop/debian/snap.yml
   when:
-    - ansible_os_family == 'Debian'
+    - ansible_os_family == 'Debian' or ansible_os_family == 'Archlinux'
     - INSTALL_MODE == 'DESKTOP'
-
 
 - name: Prepare [SNAP] packages
   set_fact:

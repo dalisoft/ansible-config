@@ -11,6 +11,7 @@
     src: "~/Desktop/config/dotfiles/{{ item }}"
     dest: "~/{{ item }}"
     state: link
+    force: yes
   with_items: "{{ initial_configs }}"
   retries: 1
   register: initial_config_link

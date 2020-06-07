@@ -39,6 +39,7 @@
     # Import variables as tasks
     - import_tasks: vars/brew.yml
     - import_tasks: vars/apt.yml
+    - import_tasks: vars/pacman.yml
     - import_tasks: vars/snap.yml
     - import_tasks: vars/npm.yml
     - import_tasks: vars/pip.yml
@@ -47,6 +48,9 @@
     - import_tasks: roles/debian/tasks/main.yml
       when:
         - ansible_os_family == 'Debian'
+    - import_tasks: roles/archlinux/tasks/main.yml
+      when:
+        - ansible_os_family == 'Archlinux'
     - import_tasks: roles/extensions/tasks/main.yml
       when:
         - INSTALL_MODE == 'DESKTOP'

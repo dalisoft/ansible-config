@@ -1,0 +1,16 @@
+---
+- name: Pacman Common packages
+  include_vars:
+    name: pacman_common
+    file: common/pacman.yml
+
+- name: Pacman Desktop-only packages
+  include_vars:
+    name: pacman_desktop
+    file: desktop/pacman.yml
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+
+- name: Prepare [Pacman] packages
+  set_fact:
+    pacman_packages: "{{ (pacman_common.pacman_packages | default([])) + (pacman_desktop.pacman_packages | default([])) }}"
