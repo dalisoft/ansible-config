@@ -15,19 +15,20 @@ My machine configuration playbook
 
 ### Step 1
 
-| OS           | Min. required version | Recommended version            |
-| ------------ | --------------------- | ------------------------------ |
-| macOS        | High Sierra (10.13.6) | Mojave (10.14.6) and higher    |
-| Linux Ubuntu | 18.04                 | Focal Fossa (20.04) and higher |
+| OS            | Min. required version | Recommended version            |
+| ------------- | --------------------- | ------------------------------ |
+| macOS         | High Sierra (10.13.6) | Mojave (10.14.6) and higher    |
+| Linux Ubuntu  | 18.04                 | Focal Fossa (20.04) and higher |
+| Linux Manjaro | 19                    | 20 or Higher                   |
 
 ---
 
-| Name      | Command                                                                                        | System        | Required |
-| --------- | ---------------------------------------------------------------------------------------------- | ------------- | -------- |
-| Homebrew  | See [here](https://brew.sh)                                                                    | macOS, Debian | Yes      |
-| Ansible   | See [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) | macOS, Linux  | Yes      |
-| XCode CLI | `xcode-select --install`                                                                       | macOS         | Yes      |
-| snap      | See [here](https://snapcraft.io/docs/installing-snap-on-ubuntu)                                | Linux         | Yes      |
+| Name      | Command                                                                                        | System               | Required |
+| --------- | ---------------------------------------------------------------------------------------------- | -------------------- | -------- |
+| Homebrew  | See [here](https://brew.sh)                                                                    | macOS, Debian/Ubuntu | Yes      |
+| Ansible   | See [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) | macOS, Linux         | Yes      |
+| XCode CLI | `xcode-select --install`                                                                       | macOS                | Yes      |
+| snap      | See [here](https://snapcraft.io/docs/installing-snap-on-ubuntu)                                | Linux                | Yes      |
 
 > **Don't forget install all of these dependencies**
 
