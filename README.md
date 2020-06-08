@@ -63,6 +63,8 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 
 ## Known Bugs / FAQ
 
+> Some of these bugs/errors may happen only in first-run only, then works fine
+
 ### `/usr/local/bin` not writable
 
 | Command | OS |
@@ -70,6 +72,17 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 | `` sudo chown -R `whoami`:admin /usr/local/bin `` | macOS
 
 Run command based on OS and problem should be fixed
+
+### `Destination .../lsp does not exist`
+
+Run `mkdir ~/lsp`
+
+### Destination .../autoload does not exist`
+
+- Go-to cloned folder
+- `cd dotfiles`
+- `cd .vim`
+- `mkdir autoload`
 
 ### Please enter your SUDO password prompt
 
