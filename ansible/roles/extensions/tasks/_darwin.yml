@@ -1,0 +1,9 @@
+---
+- name: Linking VSCodium Binary
+  file:
+    src: /usr/local/bin/code
+    dest: /usr/local/bin/codium
+    state: link
+  retries: 1
+  register: vscodium_macos_link
+  until: vscodium_macos_link.attempts == 1
