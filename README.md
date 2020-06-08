@@ -6,11 +6,10 @@ My machine configuration playbook
 
 ## To-Do
 
-| No  | Name                             | Description                                                   | OS                      | Required |
-| --- | -------------------------------- | ------------------------------------------------------------- | ----------------------- | -------- |
-| 1   | Homebrew<br/>apt<br/>npm<br/>pip | - List all packages<br/>- Download only not existing packages | macOS<br/>Linux         | Yes      |
-| 2   | Windows 10                       | Add Windows support                                           | Windows 10 (LTSC, Home) | No       |
-| 3   | Theming                          | Linux Desktop theming                                         | Ubuntu<br/>Manjaro      | Yes      |
+| No  | Name       | Description           | OS                      | Required |
+| --- | ---------- | --------------------- | ----------------------- | -------- |
+| 1   | Windows 10 | Add Windows support   | Windows 10 (LTSC, Home) | No       |
+| 2   | Theming    | Linux Desktop theming | Ubuntu<br/>Manjaro      | Yes      |
 
 ## Steps
 
