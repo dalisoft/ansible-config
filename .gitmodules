@@ -2,7 +2,3 @@
 	path = hosts
 	url = git@github.com:dalisoft/hosts.git
 	branch = master
-[submodule "dotfiles"]
-	path = dotfiles
-	url = git@github.com:dalisoft/dotfiles.git
-	branch = master
