@@ -1,4 +1,9 @@
 ---
+- name: Ensure vim-plug autoload folder exists
+  file:
+    path: ~/Desktop/config/dotfiles/.vim/autoload
+    state: directory
+
 - name: Download vim-plug
   get_url:
     url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -11,6 +16,7 @@
     src: "~/Desktop/config/dotfiles/{{ item }}"
     dest: "~/{{ item }}"
     state: link
+    force: yes
   with_items: "{{ initial_configs }}"
   retries: 1
   register: initial_config_link

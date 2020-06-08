@@ -8,12 +8,3 @@
   retries: 1
   register: vscodium_debian_link
   until: vscodium_debian_link.attempts == 1
-
-- name: Linking VSCodium Binary
-  file:
-    src: /usr/bin/codium
-    dest: /usr/local/bin/code
-    state: link
-  retries: 1
-  register: vscodium_debian_link
-  until: vscodium_debian_link.attempts == 1

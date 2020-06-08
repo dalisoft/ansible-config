@@ -1,0 +1,21 @@
+---
+pacman_packages:
+  # Main tools
+  - ansible
+  - firefox
+  - krita
+  - octave
+  - vlc
+  - jdk8-adoptopenjdk
+  # Packages for Virtual Machines
+  - qemu
+  - virtualbox
+  - bridge-utils
+  # For Python development
+  - python
+  # For AI Stuffs
+  - cuda
+  # Addinational tools
+  - rust
+  # Missing tools
+  # - cassowary

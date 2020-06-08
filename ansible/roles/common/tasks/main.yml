@@ -7,6 +7,7 @@
   check_mode: false
   tags:
     - install-brew-taps
+  when: ansible_os_family != 'Archlinux'
 
 - name: Tap all Homebrew taps
   homebrew_tap:
@@ -15,6 +16,7 @@
   register: install_brew_tap
   until: install_brew_tap is successful
   when:
+    - ansible_os_family != 'Archlinux'
     - item not in brew_tap_list.stdout_lines
   tags:
     - install-brew-taps
@@ -26,6 +28,7 @@
     state: present
   register: install_brew_package
   until: install_brew_package is successful
+  when: ansible_os_family != 'Archlinux'
   tags:
     - install-brew-packages
 

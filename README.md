@@ -6,12 +6,10 @@ My machine configuration playbook
 
 ## To-Do
 
-| No  | Name                             | Description                                                   | OS                      | Required |
-| --- | -------------------------------- | ------------------------------------------------------------- | ----------------------- | -------- |
-| 1   | Homebrew<br/>apt<br/>npm<br/>pip | - List all packages<br/>- Download only not existing packages | macOS<br/>Linux         | Yes      |
-| 2   | Pacman                           | Add pacman support                                            | Arch Linux<br/>Manjaro  | No       |
-| 3   | Windows 10                       | Add Windows support                                           | Windows 10 (LTSC, Home) | No       |
-| 4   | Theming                          | Linux Desktop theming                                         | Ubuntu<br/>Manjaro      | Yes      |
+| No  | Name       | Description           | OS                      | Required |
+| --- | ---------- | --------------------- | ----------------------- | -------- |
+| 1   | Windows 10 | Add Windows support   | Windows 10 (LTSC, Home) | No       |
+| 2   | Theming    | Linux Desktop theming | Ubuntu<br/>Manjaro      | Yes      |
 
 ## Steps
 
@@ -64,13 +62,26 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 
 ## Known Bugs / FAQ
 
+> Some of these bugs/errors may happen only in first-run only, then works fine
+
 ### `/usr/local/bin` not writable
 
 | Command | OS |
-| `sudo chown -R $USER:root /usr/local/bin` | Ubuntu |
+| `sudo chown -R $USER:root /usr/local/bin` | Linux |
 | `` sudo chown -R `whoami`:admin /usr/local/bin `` | macOS
 
 Run command based on OS and problem should be fixed
+
+### `Destination .../lsp does not exist`
+
+Run `mkdir ~/lsp`
+
+### Destination .../autoload does not exist`
+
+- Go-to cloned folder
+- `cd dotfiles`
+- `cd .vim`
+- `mkdir autoload`
 
 ### Please enter your SUDO password prompt
 
