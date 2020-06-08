@@ -67,9 +67,10 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 
 ### `/usr/local/bin` not writable
 
-| Command | OS |
-| `sudo chown -R $USER:root /usr/local/bin` | Linux |
-| `` sudo chown -R `whoami`:admin /usr/local/bin `` | macOS
+| Command                                           | OS    |
+| ------------------------------------------------- | ----- |
+| `sudo chown -R $USER:root /usr/local/bin`         | Linux |
+| `` sudo chown -R `whoami`:admin /usr/local/bin `` | macOS |
 
 Run command based on OS and problem should be fixed
 
