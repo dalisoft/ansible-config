@@ -1,0 +1,14 @@
+.DS_Store
+
+.npmrc
+
+# Ansible
+.ansible
+
+# VIM
+.vim/plugged
+.vim/.netrwhist
+.vim/autoload/plug.vim
+
+# nano
+.nano/search_history
