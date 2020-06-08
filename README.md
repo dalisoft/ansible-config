@@ -22,12 +22,12 @@ My machine configuration playbook
 
 ---
 
-| Name      | Command                                                                                        | System       | Required |
-| --------- | ---------------------------------------------------------------------------------------------- | ------------ | -------- |
-| Homebrew  | See [here](https://brew.sh)                                                                    | macOS, Linux | Yes      |
-| Ansible   | See [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) | macOS, Linux | Yes      |
-| XCode CLI | `xcode-select --install`                                                                       | macOS        | Yes      |
-| snap      | See [here](https://snapcraft.io/docs/installing-snap-on-ubuntu)                                | Linux        | Yes      |
+| Name      | Command                                                                                        | System        | Required |
+| --------- | ---------------------------------------------------------------------------------------------- | ------------- | -------- |
+| Homebrew  | See [here](https://brew.sh)                                                                    | macOS, Debian | Yes      |
+| Ansible   | See [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) | macOS, Linux  | Yes      |
+| XCode CLI | `xcode-select --install`                                                                       | macOS         | Yes      |
+| snap      | See [here](https://snapcraft.io/docs/installing-snap-on-ubuntu)                                | Linux         | Yes      |
 
 > **Don't forget install all of these dependencies**
 
