@@ -1,5 +1,9 @@
 ---
 npm_modules:
+  - nodemon
+  - http-server
   - dockerfilelint
   - cordova
   - expo-cli
+  - npm-check-updates
+  - lerna
