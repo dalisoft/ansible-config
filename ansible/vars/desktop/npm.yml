@@ -7,3 +7,4 @@ npm_modules:
   - expo-cli
   - npm-check-updates
   - lerna
+  - lerna-wizard
