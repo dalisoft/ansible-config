@@ -29,7 +29,7 @@
 - name: Installing npm modules
   npm:
     global: "yes"
-    path: ~/.npm-global
+    path: "{{ HOME }}/.npm-global"
     name: "{{ item }}"
     state: present
   with_items: "{{ npm_modules }}"

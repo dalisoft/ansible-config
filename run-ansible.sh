@@ -10,7 +10,7 @@ fi
 
 if [ "$1" != "" ]
 then
-  extra_vars="{\"SUDO_PASS\":\"$1\",\"ansible_become_pass\":\"$1\",\"USER\":\"$USER\",\"INSTALL_MODE\":\"$install_mode\"}"
+  extra_vars="{\"SUDO_PASS\":\"$1\",\"ansible_become_pass\":\"$1\",\"USER\":\"$USER\",\"HOME\":\"$HOME\",\"INSTALL_MODE\":\"$install_mode\"}"
 fi
 
 cd ansible

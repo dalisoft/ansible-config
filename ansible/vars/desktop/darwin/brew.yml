@@ -34,7 +34,7 @@ brew_cask_packages:
   - qlimagesize
   - font-fira-code
   - brave-browser
-  - macs-fan-control
+  # - macs-fan-control # TODO: This is only for MacBook
   - telegram-desktop
   - the-unarchiver
   - firefox
@@ -43,10 +43,10 @@ brew_cask_packages:
   - octave-app
   - postman
   - gitkraken
-#  - sublime-text
+  #  - sublime-text # TODO: Enable when v4 comes to Homebrew
   - vscodium
-  - clion
-  - intellij-idea
+  # - clion # TODO: This is only for iMac
+  # - intellij-idea # TODO: This is only for iMac
   - android-studio
   - betterzip
 
