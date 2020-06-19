@@ -43,7 +43,7 @@ brew_cask_packages:
   - octave-app
   - postman
   - gitkraken
-  - sublime-text
+#  - sublime-text
   - vscodium
   - clion
   - intellij-idea
