@@ -33,7 +33,7 @@ brew_cask_packages:
   - qlmarkdown
   - qlimagesize
   - font-fira-code
-  - brave-browser
+  - google-chrome
   # - macs-fan-control # TODO: This is only for MacBook
   - telegram-desktop
   - the-unarchiver
