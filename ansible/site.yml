@@ -44,6 +44,8 @@
     - import_tasks: vars/npm.yml
     - import_tasks: vars/pip.yml
     - import_tasks: vars/extensions.yml
+
+  tasks:
     # Import tasks
     - import_tasks: roles/debian/tasks/main.yml
       when:
