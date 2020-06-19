@@ -165,5 +165,6 @@
   "reason_language_server.location": "/usr/local/bin/reason-language-server",
   "rust-analyzer.updates.askBeforeDownload": false,
   "docker.images.label": "Tag",
-  "sync.gist": "f4d95c99eabc359b8e6d4db79119a771"
+  "sync.gist": "f4d95c99eabc359b8e6d4db79119a771",
+  "python.pythonPath": "/usr/local/bin/python3"
 }
