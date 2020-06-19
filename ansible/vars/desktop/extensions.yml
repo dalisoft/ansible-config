@@ -24,8 +24,8 @@ vscodium_extensions:
   - jaredly.reason-vscode
   - matklad.rust-analyzer
   - ms-python.python
-  - ms-vscode.Go
-  - ms-vscode.cpptools
+  - golang.Go
+  - llvm-vs-code-extensions.vscode-clangd
 
 sublime_extensions_git:
   - name: GoSublime
