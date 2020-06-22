@@ -58,7 +58,6 @@
     - import_tasks: roles/archlinux/tasks/main.yml
       when:
         - ansible_os_family == 'Archlinux'
-
     # Disable extensions currently
     # See https://github.com/VSCodium/vscodium/issues/424
     # - import_tasks: roles/extensions/tasks/main.yml
