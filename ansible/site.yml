@@ -59,7 +59,8 @@
       when:
         - ansible_os_family == 'Archlinux'
     # Disable extensions currently
-    # See https://github.com/VSCodium/vscodium/issues/424
-    # - import_tasks: roles/extensions/tasks/main.yml
-    #   when:
-    #     - INSTALL_MODE == 'DESKTOP'
+    # See https://github.com/VSCodium/vscodium/issues/424 for issue
+    # See https://github.com/VSCodium/vscodium/issues/430#issuecomment-646312604 for temporarily solution
+    - import_tasks: roles/extensions/tasks/main.yml
+      when:
+        - INSTALL_MODE == 'DESKTOP'
