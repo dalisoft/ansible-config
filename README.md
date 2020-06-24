@@ -74,6 +74,10 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 
 Run command based on OS and problem should be fixed
 
+### VSCodium `.length` issue
+
+See [here](https://github.com/VSCodium/vscodium/issues/430#issuecomment-646312604) to fix
+
 ### `Destination .../lsp does not exist`
 
 Run `mkdir ~/lsp`
