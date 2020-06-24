@@ -20,6 +20,7 @@ brew_packages:
   - cmake
   - python
   - node
+  - deno
   - go
   - llvm
   - rust

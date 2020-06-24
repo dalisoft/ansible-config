@@ -8,3 +8,5 @@ npm_modules:
   - npm-check-updates
   - lerna
   - lerna-wizard
+  - vercel
+  - serverless

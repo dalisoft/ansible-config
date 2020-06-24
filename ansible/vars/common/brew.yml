@@ -1,6 +1,7 @@
 ---
 brew_taps:
   - schniz/tap
+  - dprint/dprint
 
 brew_packages:
   - starship
@@ -8,3 +9,5 @@ brew_packages:
   - bat
   - fnm
   - wrk
+  - dprint
+  - rust-analyzer
