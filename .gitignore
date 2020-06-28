@@ -1,10 +1,1 @@
-.DS_Store
-
-# Ansible .gitignore
-ansible/tmp
-
-# IDEA Files
-.idea
-
-# Security file
-askpass.sh
+dotfiles/.gitignore
