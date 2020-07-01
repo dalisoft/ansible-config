@@ -24,7 +24,6 @@
     url: "https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/{{ ralsp }}"
     dest: /usr/local/bin/rust-analyzer
     mode: a+x
-  when: ansible_os_family == 'Archlinux'
 
 - name: Downloading Reason Language Server
   get_url:

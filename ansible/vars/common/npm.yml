@@ -5,5 +5,5 @@ npm_modules:
   - node-gyp
 
 fnm_versions:
-  - 12.18.1
+  - 12.18.2
   - 13.14.0
