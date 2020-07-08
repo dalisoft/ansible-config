@@ -14,6 +14,7 @@ brew_packages:
   - neovim
   - git
   - git-lfs
+  - curl
   - wget
   - htop
   - tmux

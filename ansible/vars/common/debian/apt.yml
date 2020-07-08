@@ -13,13 +13,11 @@ apt_repos:
 
 apt_items:
   - fish
-  - curl
   - wget
   - cmake
   - git
   - git-lfs
   - htop
-  - ripgrep
   - nano
   - neovim
   - tmux

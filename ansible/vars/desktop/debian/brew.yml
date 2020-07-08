@@ -1,4 +1,5 @@
 ---
 brew_packages:
+  - curl
   - cassowary
   - rust
