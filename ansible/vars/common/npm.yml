@@ -1,6 +1,5 @@
 ---
 npm_modules:
-  - eslint
   - prettier
   - node-gyp
 
