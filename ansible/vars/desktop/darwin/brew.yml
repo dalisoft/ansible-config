@@ -6,6 +6,8 @@ brew_taps:
   - octave-app/octave-app
 
 brew_packages:
+  - rsync
+  - gradle
   - cassowary
   - heroku
   - ansible
