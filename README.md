@@ -59,6 +59,17 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 | 3   | Design-2-Code Apps | - Download from cloud Adobe Apps<br/>- Download purchased Sketch                                  | Yes      |
 | 4   | Workdir            | - Download Open-source projects from Cloud<br/>- Copy other private workdirs from another machine | Yes      |
 
+### Step 5 [Optional]
+
+Installing macOS Style theme
+
+| Type        | URL                                                                                                             | Name                    |
+| ----------- | --------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| Gui / Shell | <https://github.com/vinceliuice/Mojave-gtk-theme>                                                               | Mojave-dark             |
+| Cursor      | <https://github.com/keeferrourke/capitaine-cursors>                                                             | Capitaine-cursors-light |
+| Icons       | <https://github.com/USBA/Cupertino-Catalina-iCons>                                                              | Cupertino-Catalina      |
+| Walpaper    | [See here](https://wallpapershome.com/download-wallpapers/macos-catalina-day-mountains-wwdc-2019-5k-21590.html) | macOS Catalina          |
+
 ### Done. Enjoy
 
 ## Known Bugs / FAQ

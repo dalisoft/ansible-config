@@ -18,4 +18,6 @@ pacman_packages:
   # Addinational tools
   - rust
   # Missing tools
-  # - cassowary
+  - cassowary
+  # macOS Style dependencies
+  - sassc

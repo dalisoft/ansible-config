@@ -28,8 +28,6 @@ brew_packages:
   - llvm
   - rust
   - yarn
-  - docker
-  - docker-compose
 
 brew_cask_packages:
   - qlcolorcode
@@ -38,6 +36,7 @@ brew_cask_packages:
   - qlimagesize
   - font-fira-code
   - google-chrome
+  - docker
   # - macs-fan-control # TODO: This is only for MacBook
   - telegram-desktop
   - the-unarchiver

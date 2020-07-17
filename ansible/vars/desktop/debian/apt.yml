@@ -2,7 +2,6 @@
 apt_items:
   - rsync
   - ansible
-  - firefox
   - krita
   - octave
   - vlc
@@ -19,14 +18,23 @@ apt_items:
   - nvidia-cuda-gdb
   - nvidia-cuda-dev
   - nvidia-cuda-doc
+  # Browsers
+  - google-chrome-stable
+  - firefox
+  # macOS Theme dependencies
+  - sassc
+  - libcanberra-gtk-module
+  - libglib2.0-dev
 
 apt_keys:
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
   - https://dl.yarnpkg.com/debian/pubkey.gpg
   - https://download.docker.com/linux/ubuntu/gpg
+  - https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 apt_repos:
   - deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main
+  - deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 
 apt_repos_custom:
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
