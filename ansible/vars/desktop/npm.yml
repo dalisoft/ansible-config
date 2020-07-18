@@ -3,7 +3,7 @@ npm_modules:
   - nodemon
   - http-server
   - cordova
-  - expo-cli
+  # - expo-cli # disable until https://github.com/expo/expo-cli/issues/2354 fixed
   - npm-check-updates
   - lerna
   - lerna-wizard
