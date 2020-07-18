@@ -35,23 +35,25 @@ brew_cask_packages:
   - qlmarkdown
   - qlimagesize
   - font-fira-code
-  - google-chrome
   - docker
   # - macs-fan-control # TODO: This is only for MacBook
   - telegram-desktop
   - the-unarchiver
-  - firefox
   - folx
   - vlc
   - octave-app
   - postman
   - gitkraken
+  # Editors
   #  - sublime-text # TODO: Enable when v4 comes to Homebrew
   - vscodium
   # - clion # TODO: This is only for iMac
   # - intellij-idea # TODO: This is only for iMac
   - android-studio
   - betterzip
+  # Browsers
+  - google-chrome
+  - firefox
 
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk8
