@@ -4,7 +4,6 @@ snap_packages:
   - inkscape
 
 snap_classic_packages:
-  - chromium
   - heroku
   - microk8s
   - gitkraken
