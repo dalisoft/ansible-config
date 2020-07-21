@@ -2,4 +2,3 @@
 pip_modules:
   - yamllint
   - virtualenv
-  - mackup

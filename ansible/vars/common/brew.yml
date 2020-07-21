@@ -11,3 +11,4 @@ brew_packages:
   - fnm
   - wrk
   - dprint
+  - mackup
