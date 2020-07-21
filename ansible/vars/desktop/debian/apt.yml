@@ -27,6 +27,7 @@ apt_items:
   - nvidia-cuda-doc
   # Browsers
   - firefox
+  - epiphany-browser
   # macOS Theme dependencies
   - sassc
   - libcanberra-gtk-module
