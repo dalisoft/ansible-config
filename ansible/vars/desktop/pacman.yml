@@ -3,7 +3,6 @@ pacman_packages:
   - curl
   # Main tools
   - ansible
-  - firefox
   - krita
   - inkscape
   - octave
@@ -18,6 +17,9 @@ pacman_packages:
   - python
   # For AI Stuffs
   - cuda
+  # Browsers
+  - firefox
+  - epiphany
   # Addinational tools
   - rust
   # Missing tools
