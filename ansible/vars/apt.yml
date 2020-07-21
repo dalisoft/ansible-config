@@ -18,5 +18,4 @@
   set_fact:
     apt_keys: "{{ (apt_common.apt_keys | default([])) + (apt_desktop.apt_keys | default([])) }}"
     apt_repos: "{{ (apt_common.apt_repos | default([])) + (apt_desktop.apt_repos | default([])) }}"
-    apt_repos_custom: "{{ (apt_common.apt_repos_custom | default([])) + (apt_desktop.apt_repos_custom | default([])) }}"
     apt_items: "{{ (apt_common.apt_items  | default([])) + (apt_desktop.apt_items | default([])) }}"

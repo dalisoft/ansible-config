@@ -19,16 +19,6 @@
   register: install_apt_repo
   until: install_apt_repo is successful
 
-- name: Adding custom apt repositories
-  become: true
-  become_user: root
-  shell: "add-apt-repository '{{ item }}'"
-  with_items: "{{ apt_repos_custom }}"
-  register: install_apt_repo
-  until: install_apt_repo is successful
-  when:
-    - INSTALL_MODE == 'DESKTOP'
-
 - name: "Update apt repositories"
   become: true
   become_user: root

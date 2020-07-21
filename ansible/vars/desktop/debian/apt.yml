@@ -26,11 +26,14 @@ apt_items:
   - libglib2.0-dev
   # Fonts
   - fonts-firacode
+  # For performance
+  - linux-xanmod
 
 apt_keys:
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
   - https://dl.yarnpkg.com/debian/pubkey.gpg
   - https://download.docker.com/linux/ubuntu/gpg
+  - https://dl.xanmod.org/gpg.key
 
-apt_repos_custom:
-  - https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+apt_repos:
+  - deb http://deb.xanmod.org releases main
