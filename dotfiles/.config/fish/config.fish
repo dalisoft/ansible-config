@@ -47,6 +47,9 @@ set -gx GOPATH "$HOME/go"
 set -gx CARGO_INSTALL_ROOT "$HOME/.cargo"
 set -gx CARGO_HOME "$HOME/.cargo"
 
+# **** nFanCurve ****
+set -gx NFANCURVE_PATH "$HOME/nfancurve"
+
 # ********************************
 # ********* openssl env **********
 # ********************************

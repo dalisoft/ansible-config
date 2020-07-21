@@ -23,7 +23,8 @@
 
   environment:
     NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
-    PATH: "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/snap/bin:/home/dalisoft/.local/bin:{{ ansible_env.PATH }}"
+    NFANCURVE_PATH: "$HOME/nfancurve"
+    PATH: "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/snap/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
 
   vars:
     install_homebrew_if_missing: true
