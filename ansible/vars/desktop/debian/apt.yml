@@ -1,6 +1,9 @@
 ---
 apt_items:
+  # PopOS polyfill
   - snapd
+  - grub2-common
+
   - gradle
   # Programming language
   - rustc
