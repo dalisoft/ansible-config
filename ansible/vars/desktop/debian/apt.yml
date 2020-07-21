@@ -1,5 +1,6 @@
 ---
 apt_items:
+  - snapd
   - gradle
   # Programming language
   - rustc
