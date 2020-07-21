@@ -60,7 +60,7 @@
 
 # VSCodium Extensions
 - name: "List installed VSCodium extensions"
-  command: "codium --list-extensions"
+  shell: codium --list-extensions
   register: codium_extensions_list
   changed_when: false
   check_mode: false

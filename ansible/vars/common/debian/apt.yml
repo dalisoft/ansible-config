@@ -13,8 +13,6 @@ apt_repos:
 
 apt_items:
   - curl
-  - bat
-  - ripgrep
   - fish
   - wget
   - cmake
