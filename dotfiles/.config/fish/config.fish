@@ -17,6 +17,7 @@ set -gx fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 switch (uname)
   case Darwin
     # set -gx DOCKER_HOST "ssh://root@$REMOTE_MACHINE_IP"
+    alias cat=bat
   case Linux
     # echo "Linux"
     set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew";
@@ -25,6 +26,8 @@ switch (uname)
 
     set -gx MANPATH "$HOMEBREW_PREFIX/share/man" $MANPATH;
     set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH
+
+    alias cat=batcat
 
 end
 
@@ -89,7 +92,6 @@ set -gx PATH "$HOME/lsp/bin" $PATH
 ###################################
 
 # **** Terminal stuffs ****
-alias cat=bat
 alias ls=exa
 alias grep=rg
 alias vim=nvim
