@@ -1,5 +1,9 @@
 ---
 apt_items:
+  - gradle
+  # Programming language
+  - rustc
+  - cargo
   - rsync
   - ansible
   - krita

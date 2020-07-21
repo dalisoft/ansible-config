@@ -1,5 +1,6 @@
 ---
 pacman_packages:
+  - curl
   # Main tools
   - ansible
   - firefox
