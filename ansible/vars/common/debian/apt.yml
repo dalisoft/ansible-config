@@ -12,6 +12,9 @@ apt_repos:
   - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
 
 apt_items:
+  - curl
+  - bat
+  - ripgrep
   - fish
   - wget
   - cmake

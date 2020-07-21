@@ -6,8 +6,7 @@ brew_taps:
 brew_packages:
   - starship
   - exa
-  - bat
-  - ripgrep
   - fnm
   - wrk
   - dprint
+  - cassowary

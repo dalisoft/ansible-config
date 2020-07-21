@@ -1,6 +1,0 @@
----
-brew_packages:
-  - gradle
-  - curl
-  - cassowary
-  - rust
