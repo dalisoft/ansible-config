@@ -39,7 +39,9 @@
       # Folders
       - .vim
       - .config/nvim
+      - .config/autostart
       - .nano
+      - nfancurve
 
   pre_tasks:
     - import_tasks: pre-tasks.yml
