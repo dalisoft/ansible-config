@@ -3,6 +3,10 @@ apt_items:
   # PopOS polyfill
   - snapd
   - grub2-common
+  # Improve performance
+  - linux-xanmod
+  - intel-microcode
+  - iucode-tool
   # Programming language
   - rustc
   - cargo
@@ -37,8 +41,6 @@ apt_items:
   - libglib2.0-dev
   # Fonts
   - fonts-firacode
-  # For performance
-  - linux-xanmod
 
 apt_keys:
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
