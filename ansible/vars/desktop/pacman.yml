@@ -12,6 +12,7 @@ pacman_packages:
   - qemu
   - virtualbox
   - bridge-utils
+  - vscodium-bin
   # For Python development
   - python
   # For AI Stuffs
