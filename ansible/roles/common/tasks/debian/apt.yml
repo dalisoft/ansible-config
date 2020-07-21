@@ -5,7 +5,7 @@
   apt_key:
     url: "{{ item }}"
     state: present
-  with_items: '{{ apt_keys }}'
+  with_items: "{{ apt_keys }}"
   register: install_apt_key
   until: install_apt_key is successful
 
@@ -15,7 +15,7 @@
   apt_repository:
     repo: "{{ item }}"
     state: present
-  with_items: '{{ apt_repos }}'
+  with_items: "{{ apt_repos }}"
   register: install_apt_repo
   until: install_apt_repo is successful
 
@@ -23,7 +23,7 @@
   become: true
   become_user: root
   shell: "add-apt-repository '{{ item }}'"
-  with_items: '{{ apt_repos_custom }}'
+  with_items: "{{ apt_repos_custom }}"
   register: install_apt_repo
   until: install_apt_repo is successful
   when:
@@ -69,4 +69,3 @@
   register: docker_post_step_3
   until: docker_post_step_3 is successful
   when: docker_post_step_2.changed
-

@@ -1,12 +1,12 @@
 {
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -15,7 +15,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -31,9 +31,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
-  "editor.codeActionsOnSave": [
-    "source.fixAll"
-  ],
+  "editor.codeActionsOnSave": ["source.fixAll"],
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 80,
@@ -157,11 +155,7 @@
   "go.toolsGopath": "~/go/bin",
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
-  "go.languageServerFlags": [
-    "serve",
-    "-rpc.trace",
-    "--debug=localhost:6060",
-  ],
+  "go.languageServerFlags": ["serve", "-rpc.trace", "--debug=localhost:6060"],
   "reason_language_server.location": "/usr/local/bin/reason-language-server",
   "rust-analyzer.updates.askBeforeDownload": false,
   "docker.images.label": "Tag",

@@ -9,5 +9,5 @@
 
 - name: Prepare [SNAP] packages
   set_fact:
-    snap_packages: '{{ snap_desktop.snap_packages | default([]) }}'
-    snap_classic_packages: '{{ snap_desktop.snap_classic_packages | default([]) }}'
+    snap_packages: "{{ snap_desktop.snap_packages | default([]) }}"
+    snap_classic_packages: "{{ snap_desktop.snap_classic_packages | default([]) }}"

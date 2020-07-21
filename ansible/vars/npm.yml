@@ -20,5 +20,5 @@
 
 - name: Prepare [NPM] packages
   set_fact:
-    npm_modules: '{{ (npm_common.npm_modules | default([])) + (npm_desktop.npm_modules | default([])) + (npm_server.npm_modules | default([])) }}'
-    fnm_versions: '{{ (npm_common.fnm_versions | default([])) + (npm_desktop.fnm_versions | default([])) }}'
+    npm_modules: "{{ (npm_common.npm_modules | default([])) + (npm_desktop.npm_modules | default([])) + (npm_server.npm_modules | default([])) }}"
+    fnm_versions: "{{ (npm_common.fnm_versions | default([])) + (npm_desktop.fnm_versions | default([])) }}"
