@@ -30,7 +30,7 @@
 - name: Installing optionless packages
   become: true
   become_user: root
-  shell: sudo apt install -o Dpkg::Options::="--force-overwrite" bat ripgrep
+  shell: apt install -o Dpkg::Options::="--force-overwrite" bat ripgrep
   register: install_optionless_apt_package
   until: install_optionless_apt_package is successful
 
