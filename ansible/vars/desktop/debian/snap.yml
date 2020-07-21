@@ -1,7 +1,6 @@
 ---
 snap_packages:
   - postman
-  - inkscape
 
 snap_classic_packages:
   - heroku

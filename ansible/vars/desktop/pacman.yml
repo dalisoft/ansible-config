@@ -5,6 +5,7 @@ pacman_packages:
   - ansible
   - firefox
   - krita
+  - inkscape
   - octave
   - vlc
   - jdk8-adoptopenjdk
