@@ -2,7 +2,7 @@
 - import_tasks: ubuntu/snap.yml
   when:
     - INSTALL_MODE == 'DESKTOP'
-    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution == 'Ubuntu' or ansible_distribution == 'Pop!_OS'
     - ansible_distribution_major_version|int >= 18
   tags:
     - install-snap-packages

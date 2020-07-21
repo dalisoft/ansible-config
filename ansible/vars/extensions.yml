@@ -10,7 +10,7 @@
   include_vars:
     file: desktop/debian/extensions.yml
   when:
-    - ansible_os_family == 'Debian' or ansible_os_family == 'Archlinux'
+    - ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS' or ansible_os_family == 'Archlinux'
     - INSTALL_MODE == 'DESKTOP'
 
 - name: Loading Sublime Text variable from Darwin

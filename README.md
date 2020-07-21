@@ -4,12 +4,7 @@ My machine configuration playbook
 
 > Don't forget to to copy this repo to `~/Desktop/config`, else it's does not work
 
-## To-Do
-
-| No  | Name       | Description           | OS                      | Required |
-| --- | ---------- | --------------------- | ----------------------- | -------- |
-| 1   | Windows 10 | Add Windows support   | Windows 10 (LTSC, Home) | No       |
-| 2   | Theming    | Linux Desktop theming | Ubuntu<br/>Manjaro      | Yes      |
+> **This is only for UNIX systems**
 
 ## Steps
 
@@ -19,6 +14,7 @@ My machine configuration playbook
 | ------------- | --------------------- | ------------------------------ |
 | macOS         | High Sierra (10.13.6) | Mojave (10.14.6) and higher    |
 | Linux Ubuntu  | 18.04                 | Focal Fossa (20.04) and higher |
+| Linux PopOS  | 18.04                 | 20.04 and higher |
 | Linux Manjaro | 19                    | 20 or Higher                   |
 
 ---
@@ -65,10 +61,10 @@ Installing macOS Style theme
 
 | Type        | URL                                                                                                             | Name                    |
 | ----------- | --------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| Gui / Shell | <https://github.com/vinceliuice/Mojave-gtk-theme>                                                               | Mojave-dark             |
+| Gui / Shell | <https://github.com/vinceliuice/WhiteSur-gtk-theme>                                                               | Mojave-dark             |
 | Cursor      | <https://github.com/keeferrourke/capitaine-cursors>                                                             | Capitaine-cursors-light |
-| Icons       | <https://github.com/USBA/Cupertino-Catalina-iCons>                                                              | Cupertino-Catalina      |
-| Walpaper    | [See here](https://wallpapershome.com/download-wallpapers/macos-catalina-day-mountains-wwdc-2019-5k-21590.html) | macOS Catalina          |
+| Icons       | <https://github.com/vinceliuice/McMojave-circle>                                                              | Cupertino-Catalina      |
+| Walpaper    | [See here](https://www.howtoisolve.com/download-macos-big-sur-wallpaper-hd-in-2020-4k-5k-wallpaper/) | macOS Catalina          |
 
 ### Done. Enjoy
 

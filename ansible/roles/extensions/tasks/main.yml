@@ -12,7 +12,7 @@
 - import_tasks: _darwin.yml
   when: ansible_os_family == 'Darwin'
 - import_tasks: _debian.yml
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
 
 - name: Ensure LSP Download cache folder exists
   file:

@@ -55,7 +55,7 @@
     # Import tasks
     - import_tasks: roles/debian/tasks/main.yml
       when:
-        - ansible_os_family == 'Debian'
+        - ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
     - import_tasks: roles/archlinux/tasks/main.yml
       when:
         - ansible_os_family == 'Archlinux'
