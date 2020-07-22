@@ -1,5 +1,8 @@
 ---
 pacman_packages:
+  - gradle
+  # Utilities
+  - rsync
   - curl
   # Main tools
   - ansible
