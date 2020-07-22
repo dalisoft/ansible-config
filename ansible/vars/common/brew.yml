@@ -2,6 +2,7 @@
 brew_taps:
   - schniz/tap
   - dprint/dprint
+  - heroku/brew
 
 brew_packages:
   - starship

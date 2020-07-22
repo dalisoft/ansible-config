@@ -1,6 +1,5 @@
 ---
 brew_taps:
-  - heroku/brew
   - homebrew/cask-fonts
   - adoptopenjdk/openjdk
   - octave-app/octave-app
