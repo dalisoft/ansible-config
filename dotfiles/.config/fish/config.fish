@@ -27,6 +27,8 @@ switch (uname)
     set -gx MANPATH "$HOMEBREW_PREFIX/share/man" $MANPATH;
     set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH
 
+    set -gx MOZ_USE_OMTC 1
+
     alias cat=batcat
 
 end

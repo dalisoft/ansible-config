@@ -25,6 +25,7 @@
     NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
     NFANCURVE_PATH: "$HOME/nfancurve"
     PATH: "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/snap/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
+    MOZ_USE_OMTC: 1
 
   vars:
     install_homebrew_if_missing: true
