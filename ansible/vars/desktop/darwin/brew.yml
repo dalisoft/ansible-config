@@ -9,7 +9,6 @@ brew_packages:
   - rsync
   - gradle
   - cassowary
-  - heroku
   - ansible
   - fish
   - nano

@@ -10,3 +10,4 @@ brew_packages:
   - wrk
   - dprint
   - cassowary
+  - heroku
