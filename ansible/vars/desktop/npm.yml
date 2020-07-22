@@ -1,6 +1,7 @@
 ---
 npm_modules:
   - nodemon
+  - heroku
   - http-server
   - cordova
   # - expo-cli # disable until https://github.com/expo/expo-cli/issues/2354 fixed

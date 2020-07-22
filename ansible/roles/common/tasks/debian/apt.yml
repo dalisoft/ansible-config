@@ -59,7 +59,6 @@
     append: "yes"
   register: docker_post_step_2
   until: docker_post_step_2 is successful
-  when: docker_post_step_1.changed
 
 - name: Apply group change of docker
   shell: newgrp docker
