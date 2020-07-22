@@ -78,7 +78,7 @@
   "window.zoomLevel": 0,
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.nativeTabs": true,
-  "window.titleBarStyle": "native",
+  "window.titleBarStyle": "custom",
   "window.restoreWindows": "folders",
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
