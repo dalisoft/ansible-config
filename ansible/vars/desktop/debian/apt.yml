@@ -44,6 +44,8 @@ apt_items:
   - libglib2.0-dev
   # Fonts
   - fonts-firacode
+  # Chats
+  - telegram-desktop
 
 apt_keys:
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
