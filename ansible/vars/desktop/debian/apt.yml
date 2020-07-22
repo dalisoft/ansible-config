@@ -3,6 +3,9 @@ apt_items:
   # PopOS polyfill
   - snapd
   - grub2-common
+  # System utilities
+  - gparted
+  - timeshift
   # Improve performance
   - linux-xanmod
   - intel-microcode
