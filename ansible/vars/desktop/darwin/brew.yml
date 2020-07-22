@@ -52,6 +52,8 @@ brew_cask_packages:
   # Browsers
   - google-chrome
   - firefox
+  # Utilities
+  - android-file-transfer
 
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk8
