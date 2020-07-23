@@ -11,6 +11,7 @@ pacman_packages:
   - octave
   - vlc
   - transmittion-gtk
+  - uget
   - jdk8-adoptopenjdk
   # Packages for Virtual Machines
   - qemu

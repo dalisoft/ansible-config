@@ -1,4 +1,13 @@
 ---
+apt_keys:
+  - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+  - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+  - https://dl.xanmod.org/gpg.key
+
+apt_repos:
+  - deb http://deb.xanmod.org releases main
+  - deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main
+
 apt_items:
   # PopOS polyfill
   - snapd
@@ -7,6 +16,7 @@ apt_items:
   - gparted
   - timeshift
   - transmission
+  - uget
   # Improve performance
   - linux-xanmod
   - intel-microcode
@@ -47,13 +57,3 @@ apt_items:
   - fonts-firacode
   # Chats
   - telegram-desktop
-
-apt_keys:
-  - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-  - https://dl.yarnpkg.com/debian/pubkey.gpg
-  - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
-  - https://dl.xanmod.org/gpg.key
-
-apt_repos:
-  - deb http://deb.xanmod.org releases main
-  - deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main
