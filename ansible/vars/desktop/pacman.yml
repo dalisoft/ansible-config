@@ -10,6 +10,7 @@ pacman_packages:
   - inkscape
   - octave
   - vlc
+  - transmittion-gtk
   - jdk8-adoptopenjdk
   # Packages for Virtual Machines
   - qemu

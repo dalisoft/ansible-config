@@ -6,6 +6,7 @@ apt_items:
   # System utilities
   - gparted
   - timeshift
+  - transmission
   # Improve performance
   - linux-xanmod
   - intel-microcode
