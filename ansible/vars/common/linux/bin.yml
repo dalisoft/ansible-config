@@ -4,6 +4,9 @@ binaries:
   - name: fnm
     link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
     command: "mv {{ HOME }}/binaries/fnm-linux/fnm {{ HOME }}/binaries/fnm"
+  # - name: exa
+  #   link: https://github.com/ogham/exa/releases/download/latest/exa-linux-x86_64-0.9.0.zip
+  #  command: "mv exa-linux-x86_64 exa"
   # Tar.GZIP
   - name: starship
     link: https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz
