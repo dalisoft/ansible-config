@@ -31,6 +31,11 @@
     install_homebrew_if_missing: true
     force_install: false
 
+    ensure_folders:
+      - .vim/autoload
+      - .config/nvim
+      - .config/autostart
+
     initial_configs:
       # Files
       - .gitconfig

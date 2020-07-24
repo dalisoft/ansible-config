@@ -12,6 +12,8 @@ apt_items:
   # PopOS polyfill
   - snapd
   - grub2-common
+  - tar
+  - unzip
   # System utilities
   - gparted
   - timeshift

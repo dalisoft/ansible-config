@@ -4,5 +4,3 @@
 - import_tasks: ../ubuntu/snap.yml
   when:
     - INSTALL_MODE == 'DESKTOP'
-  tags:
-    - install-snap-packages

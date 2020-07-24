@@ -3,7 +3,7 @@ binaries:
   # ZIP
   - name: fnm
     link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
-    command: mv fnm-linux/fnm fnm && rm -rf fnm-linux
+    command: cp fnm-linux/fnm fnm
   # Tar.GZIP
   - name: starship
     link: https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz

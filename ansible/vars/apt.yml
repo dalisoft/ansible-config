@@ -20,3 +20,5 @@
     apt_keys: "{{ (apt_common.apt_keys | default([])) + (apt_desktop.apt_keys | default([])) }}"
     apt_repos: "{{ (apt_common.apt_repos | default([])) + (apt_desktop.apt_repos | default([])) }}"
     apt_items: "{{ (apt_common.apt_items  | default([])) + (apt_desktop.apt_items | default([])) }}"
+
+- debug: var=apt_keys

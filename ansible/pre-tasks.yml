@@ -1,8 +1,11 @@
 ---
-- name: Ensure vim-plug autoload folder exists
+- name: Ensure config folders exists
   file:
-    path: ~/Desktop/config/dotfiles/.vim/autoload
+    path: "~/Desktop/config/dotfiles/{{ item }}"
     state: directory
+  with_items: "{{ ensure_folders }}"
+  tags:
+    - ensure-config-folders
 
 - name: Download vim-plug
   get_url:
