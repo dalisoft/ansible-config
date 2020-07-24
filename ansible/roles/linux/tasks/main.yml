@@ -67,8 +67,6 @@
   until: cmd_gz_binary is successful
 
 - name: Install binaries
-  become: true
-  become_user: root
   copy:
     src: "{{ HOME }}/binaries/{{ item.name }}"
     dest: "/usr/local/bin/{{ item.name }}"
@@ -80,8 +78,6 @@
   when: item.direct is not defined and download_binary.changed
 
 - name: Install plain compressed binaries
-  become: true
-  become_user: root
   copy:
     src: "{{ HOME }}/binaries/{{ item.name }}"
     dest: "/usr/local/bin/{{ item.name }}"
