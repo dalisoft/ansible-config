@@ -2,7 +2,7 @@
 # Language Server binaries
 - name: Checking GoPLS
   stat:
-    path: ~/go/bin/gopls
+    path: "{{ HOME }}/go/bin/gopls"
   register: gopls_bin
 
 - name: Installing Golang Program Language Server

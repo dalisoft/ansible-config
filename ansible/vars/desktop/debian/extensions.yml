@@ -1,2 +1,2 @@
 ---
-st_packages_dir: ~/.config/sublime-text-3/Packages
+st_packages_dir: "{{ HOME }}/.config/sublime-text-3/Packages"

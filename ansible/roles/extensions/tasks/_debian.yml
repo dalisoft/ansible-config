@@ -2,8 +2,8 @@
 # VSCodium
 - name: Linking VSCodium Settings on Linux
   file:
-    src: ~/Desktop/config/dotfiles/Library/Application Support/VSCodium
-    dest: "~/Desktop/config/dotfiles/.config/VSCodium"
+    src: "{{ HOME }}/Desktop/config/dotfiles/Library/Application Support/VSCodium"
+    dest: "{{ HOME }}/Desktop/config/dotfiles/.config/VSCodium"
     state: link
   retries: 1
   register: vscodium_debian_link
