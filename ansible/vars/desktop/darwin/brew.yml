@@ -9,7 +9,6 @@ brew_taps:
 
 brew_packages:
   - starship
-  - exa
   - bat
   - ripgrep
   - dprint
@@ -17,8 +16,6 @@ brew_packages:
   - heroku
   - rsync
   - gradle
-  - cassowary
-  - wrk
   - ansible
   - fish
   - nano
