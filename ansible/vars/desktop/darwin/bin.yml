@@ -3,7 +3,7 @@ binaries:
   # ZIP
   - name: reason-language-server
     link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
-    command: "cp {{ HOME }}/binaries/rls-macos/reason-language-server {{ HOME }}/binaries/reason-language-server"
+    command: "mv {{ HOME }}/binaries/rls-macos/reason-language-server {{ HOME }}/binaries/reason-language-server"
 
 binaries_gz:
   - name: rust-analyzer

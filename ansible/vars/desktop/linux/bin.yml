@@ -6,7 +6,7 @@ binaries:
     direct: yes
   - name: reason-language-server
     link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-linux.zip
-    command: cp {{ HOME }}/binaries/rls-linux/reason-language-server {{ HOME }}/binaries/reason-language-server
+    command: mv {{ HOME }}/binaries/rls-linux/reason-language-server {{ HOME }}/binaries/reason-language-server
   # Tar.GZIP
   - name: cassowary
     link: https://github.com/rogerwelin/cassowary/releases/latest/download/cassowary_0.11.0_Linux_x86_64.tar.gz

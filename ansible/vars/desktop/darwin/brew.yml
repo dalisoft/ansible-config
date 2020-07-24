@@ -9,10 +9,11 @@ brew_taps:
 
 brew_packages:
   - starship
-  - fnm
+  - exa
   - bat
-  - dprint
   - ripgrep
+  - dprint
+  - fnm
   - heroku
   - rsync
   - gradle

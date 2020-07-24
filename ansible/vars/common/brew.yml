@@ -1,4 +1,3 @@
 ---
 brew_packages:
-  - exa
   - wrk
