@@ -27,7 +27,5 @@ pacman_packages:
   - epiphany
   # Addinational tools
   - rust
-  # Missing tools
-  - cassowary
   # macOS Style dependencies
   - sassc

@@ -1,13 +1,23 @@
 ---
 brew_taps:
+  - schniz/tap
+  - dprint/dprint
+  - heroku/brew
   - homebrew/cask-fonts
   - adoptopenjdk/openjdk
   - octave-app/octave-app
 
 brew_packages:
+  - starship
+  - fnm
+  - bat
+  - dprint
+  - ripgrep
+  - heroku
   - rsync
   - gradle
   - cassowary
+  - wrk
   - ansible
   - fish
   - nano

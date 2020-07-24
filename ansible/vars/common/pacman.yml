@@ -2,7 +2,6 @@
 pacman_packages:
   # Essentials
   - fish
-  - starship-bin
   - exa
   - bat
   - curl
@@ -24,5 +23,3 @@ pacman_packages:
   # Languages
   - nodejs
   - go
-  # Language tools
-  - fnm-bin

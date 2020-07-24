@@ -31,6 +31,3 @@
   when: ansible_os_family != 'Archlinux'
   tags:
     - install-brew-packages
-
-- import_tasks: debian/apt.yml
-  when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'

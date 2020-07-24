@@ -10,7 +10,6 @@
     name: brew_darwin_desktop
     file: desktop/darwin/brew.yml
   when:
-    - ansible_os_family != 'Archlinux'
     - ansible_os_family == 'Darwin'
     - INSTALL_MODE == 'DESKTOP'
 

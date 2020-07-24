@@ -3,6 +3,7 @@ snap_packages:
   - postman
 
 snap_classic_packages:
+  - heroku
   - gitkraken
   - sublime-text
   - android-studio

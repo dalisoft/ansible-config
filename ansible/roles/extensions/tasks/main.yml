@@ -14,43 +14,6 @@
 - import_tasks: _debian.yml
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
 
-- name: Ensure LSP Download cache folder exists
-  file:
-    path: ~/lsp
-    state: directory
-
-- name: Installing Rust Analyzer Language Server
-  get_url:
-    url: "https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/{{ ralsp }}"
-    dest: /usr/local/bin/rust-analyzer
-    mode: a+x
-
-- name: Downloading Reason Language Server
-  get_url:
-    url: "https://github.com/jaredly/reason-language-server/releases/latest/download/{{ rls }}.zip"
-    dest: "~/lsp/{{ rls }}.zip"
-  register: rls_zip
-
-- name: Extracting Reason Language Server
-  unarchive:
-    src: "~/lsp/{{ rls }}.zip"
-    dest: ~/lsp
-  register: rls_unzip
-  when: rls_zip.changed == true or force_install == true
-
-- name: Installing Reason Language Server
-  copy:
-    src: "~/lsp/{{ rls }}/reason-language-server"
-    dest: /usr/local/bin/reason-language-server
-    mode: a+x
-  when: rls_unzip.changed == true and force_install == true
-
-- name: Cleanup Reason Language Server folder
-  file:
-    path: "~/lsp/{{ rls }}"
-    state: absent
-  when: rls_unzip.changed
-
 # SublimeText extensions
 - name: Installing Sublime Text packages
   git:
