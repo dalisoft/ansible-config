@@ -8,6 +8,7 @@
   unarchive:
     src: "{{ item.link }}"
     dest: "/usr/local/bin"
+    mode: u+x
     remote_src: yes
   with_items: "{{ binaries }}"
   when: item.direct is defined
@@ -18,6 +19,7 @@
   unarchive:
     src: "{{ item.link }}"
     dest: "{{ HOME }}/binaries"
+    mode: u+x
     remote_src: yes
   with_items: "{{ binaries }}"
   when: item.direct is not defined
