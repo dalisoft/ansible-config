@@ -8,34 +8,34 @@ brew_taps:
   - octave-app/octave-app
 
 brew_packages:
-  - exa
-  - cassowary
-  - wrk
-  - starship
-  - bat
-  - ripgrep
-  - dprint
-  - fnm
-  - heroku
-  - rsync
-  - gradle
-  - ansible
-  - fish
-  - nano
-  - neovim
   - git
   - git-lfs
-  - curl
-  - wget
+  - heroku
+  - fish
+  - starship
+  - bat
+  - exa
+  - fnm
+  - ripgrep
   - htop
   - tmux
-  - cmake
-  - python
+  - nano
+  - neovim
+  - rsync
+  - curl
+  - wget
+  - ansible
+  - dprint
+  - cassowary
+  - wrk
+  - gradle
   - node
   - deno
+  - python
+  - rust
   - go
   - llvm
-  - rust
+  - cmake
   - yarn
 
 brew_cask_packages:
