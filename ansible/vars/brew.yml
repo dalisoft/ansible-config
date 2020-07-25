@@ -1,10 +1,4 @@
 ---
-- name: Homebrew common packages
-  include_vars:
-    name: brew_common
-    file: common/brew.yml
-  when: ansible_os_family != 'Archlinux'
-
 - name: Homebrew Desktop-only packages for Darwin
   include_vars:
     name: brew_darwin_desktop

@@ -1,5 +1,0 @@
----
-brew_packages:
-  - exa
-  - cassowary
-  - wrk

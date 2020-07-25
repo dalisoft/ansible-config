@@ -6,9 +6,6 @@ set -gx fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.npm-global/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/go/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
-set -gx fish_user_paths "$HOME/lsp/bin" $fish_user_paths
-set -gx fish_user_paths "/home/linuxbrew/.linuxbrew/bin" $fish_user_paths
-set -gx fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 
 ###################################
 ######### env parameters  #########
@@ -16,19 +13,10 @@ set -gx fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 
 switch (uname)
   case Darwin
-    # set -gx DOCKER_HOST "ssh://root@$REMOTE_MACHINE_IP"
     alias cat=bat
+
   case Linux
-    # echo "Linux"
-    set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew";
-    set -gx HOMEBREW_CELLAR "/home/linuxbrew/.linuxbrew/Cellar";
-    set -gx HOMEBREW_REPOSITORY "/home/linuxbrew/.linuxbrew/Homebrew";
-
-    set -gx MANPATH "$HOMEBREW_PREFIX/share/man" $MANPATH;
-    set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH
-
     set -gx MOZ_USE_OMTC 1
-
     alias cat=batcat
 
 end
