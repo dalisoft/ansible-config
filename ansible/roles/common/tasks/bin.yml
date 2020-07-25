@@ -84,17 +84,8 @@
 
 - name: Cleanup cache folder
   file:
-    path: "{{ HOME }}/binaries/{{ item.name }}"
+    path: "{{ HOME }}/binaries"
     state: absent
-  with_items: "{{ binaries }}"
-  register: cleanup_binaries
-  until: cleanup_binaries is successful
-
-- name: Cleanup cache folder
-  file:
-    path: "{{ HOME }}/binaries/{{ item.name }}"
-    state: absent
-  with_items: "{{ binaries_gz }}"
   register: cleanup_binaries
   until: cleanup_binaries is successful
 

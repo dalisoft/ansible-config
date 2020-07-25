@@ -3,9 +3,9 @@ binaries:
   # ZIP
   - name: reason-language-server
     link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
-    command: "mv {{ HOME }}/binaries/rls-macos/reason-language-server {{ HOME }}/binaries/reason-language-server"
+    command: rls-macos/reason-language-server reason-language-server
 
 binaries_gz:
   - name: rust-analyzer
     link: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-mac.gz
-    command: gunzip rust-analyzer-mac.gz && mv {{ HOME }}/binaries/rust-analyzer-mac {{ HOME }}/binaries/rust-analyzer
+    command: mv rust-analyzer-mac.gz rust-analyzer.gz && gunzip rust-analyzer.gz

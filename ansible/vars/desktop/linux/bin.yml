@@ -6,7 +6,7 @@ binaries:
     direct: yes
   - name: reason-language-server
     link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-linux.zip
-    command: mv {{ HOME }}/binaries/rls-linux/reason-language-server {{ HOME }}/binaries/reason-language-server
+    command: mv rls-linux/reason-language-server reason-language-server
   # Tar.GZIP
   - name: cassowary
     link: https://github.com/rogerwelin/cassowary/releases/latest/download/cassowary_0.11.0_Linux_x86_64.tar.gz
@@ -15,4 +15,4 @@ binaries:
 binaries_gz:
   - name: rust-analyzer
     link: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux.gz
-    command: gunzip rust-analyzer-linux.gz && mv {{ HOME }}/binaries/rust-analyzer-linux {{ HOME }}/binaries/rust-analyzer
+    command: mv rust-analyzer-linux.gz rust-analyzer.gz && gunzip rust-analyzer.gz
