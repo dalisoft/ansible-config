@@ -37,7 +37,7 @@ brew_cask_packages:
   - the-unarchiver
   - betterzip
   - telegram-desktop
-  # - macs-fan-control # TODO: This is only for MacBook
+  - macs-fan-control # This is only for MacBook
   # Browsers
   - google-chrome
   - firefox
@@ -49,10 +49,10 @@ brew_cask_packages:
   - postman
   - gitkraken
   # Editors
-  #  - sublime-text # TODO: Enable when v4 comes to Homebrew
+  #  - sublime-text # Enable when v4 comes to Homebrew
   - vscodium
-  # - clion # TODO: This is only for iMac
-  # - intellij-idea # TODO: This is only for iMac
+  - clion # This is only for iMac
+  - intellij-idea # This is only for iMac
   - android-studio
   # Utilities
   - android-file-transfer
