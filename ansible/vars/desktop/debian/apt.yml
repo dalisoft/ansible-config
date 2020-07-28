@@ -14,48 +14,57 @@ apt_items:
   - grub2-common
   - tar
   - unzip
-  # System utilities
-  - gparted
-  - timeshift
-  - transmission
-  - uget
-  # Improve performance
+  # Improve Linux performance
   - linux-xanmod
   - intel-microcode
   - iucode-tool
-  # Programming language
+  # Programming languages
+  # Go
+  - golang-go
+  # Python
+  - python3-pip
+  # Rust
   - rustc
   - cargo
+  # Mobile-dev
   - gradle
-  # Utilities
-  - rsync
+  # Other desktop tools
   - ansible
+  # For some GTK themes
+  # and macOS Theme dependencies
+  # for Linux
   - krita
   - inkscape
-  - octave
-  - vlc
-  - adoptopenjdk-8-hotspot
-  # KVM/Packages for Virtual Machines
-  - qemu-kvm
-  - virtinst
-  - virtualbox
-  - bridge-utils
-  - codium
-  # For Python development
-  - python3-pip
-  # For AI Stuffs
-  - nvidia-cuda-toolkit
-  - nvidia-cuda-gdb
-  - nvidia-cuda-dev
-  - nvidia-cuda-doc
-  # Browsers
-  - firefox
-  - epiphany-browser
-  # macOS Theme dependencies
   - sassc
   - libcanberra-gtk-module
   - libglib2.0-dev
   # Fonts
   - fonts-firacode
-  # Chats
+  # Most needed desktop apps
+  # System utilities
+  - gparted
+  - timeshift
   - telegram-desktop
+  # Browsers
+  - firefox
+  - epiphany-browser
+  # Media / Downloaders
+  - uget
+  - vlc
+  - transmission
+  # Development tools
+  - octave
+  # Editors
+  - codium
+  # KVM/Packages for Virtual Machines
+  - qemu-kvm
+  - virtinst
+  - virtualbox
+  - bridge-utils
+  # For AI Stuffs
+  - nvidia-cuda-toolkit
+  - nvidia-cuda-gdb
+  - nvidia-cuda-dev
+  - nvidia-cuda-doc
+  # Java tools
+  - adoptopenjdk-8-hotspot
