@@ -1,6 +1,9 @@
 ---
 pacman_packages:
   # Programming languages
+  # PHP
+  - php
+  - composer
   # Go
   - go
   # Python

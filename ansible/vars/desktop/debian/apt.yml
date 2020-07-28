@@ -19,6 +19,9 @@ apt_items:
   - intel-microcode
   - iucode-tool
   # Programming languages
+  # PHP
+  - php
+  - composer
   # Go
   - golang-go
   # Python
