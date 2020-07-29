@@ -56,6 +56,7 @@
   "timeline.showView": true,
   "breadcrumbs.enabled": false,
   "extensions.ignoreRecommendations": false,
+  "extensions.showRecommendationsOnlyOnDemand": true,
   "extensions.autoUpdate": false,
   "extensions.autoCheckUpdates": false,
   "telemetry.enableCrashReporter": false,
@@ -137,6 +138,7 @@
   "emmet.showSuggestionsAsSnippets": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
+  "git.autofetch": false,
   "search.exclude": {
     "**/.cache": true,
     "**/.out": true,
