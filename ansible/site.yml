@@ -32,9 +32,10 @@
     force_install: false
 
     ensure_folders:
-      - .vim/autoload
-      - .config/nvim
-      - .config/autostart
+      - '{{ HOME }}/Desktop/config/dotfiles/.vim/autoload'
+      - '{{ HOME }}/Desktop/config/dotfiles/.config/nvim'
+      - '{{ HOME }}/Desktop/config/dotfiles/.config/autostart'
+      - /usr/local/bin
 
     initial_configs:
       # Files
