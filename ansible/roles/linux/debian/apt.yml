@@ -30,7 +30,7 @@
 - name: Installing optionless packages
   become: true
   become_user: root
-  shell: 'apt install -o Dpkg::Options::="--force-overwrite" {{ apt_force_items }}'
+  shell: 'apt install -o Dpkg::Options::="--force-overwrite" {{ apt_force_items }} -y'
   register: install_optionless_apt_package
   until: install_optionless_apt_package is successful
 
