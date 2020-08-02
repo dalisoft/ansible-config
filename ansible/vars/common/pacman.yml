@@ -18,9 +18,6 @@ pacman_packages:
   # Addinational tools
   - node
   - yarn
-  - fnm
-  - dprint
-  - wrk
   # Build tools
   - cmake
   # Docker

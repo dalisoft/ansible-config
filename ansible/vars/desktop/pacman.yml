@@ -1,5 +1,8 @@
 ---
 pacman_packages:
+  # Old Pacman polyfill
+  - tar
+  - unzip
   # Programming languages
   # PHP
   - php
@@ -19,7 +22,15 @@ pacman_packages:
   # for Linux
   - krita
   - inkscape
+  - optipng
   - sassc
+  - gtk-engine-murrine
+  - gtk-engines
+  # Fonts
+  - ttf-fira-code
+  # System utilities
+  - gparted
+  - telegram-desktop
   # Browsers
   - firefox
   - epiphany-browser
