@@ -51,8 +51,8 @@ brew_cask_packages:
   # Editors
   #  - sublime-text # Enable when v4 comes to Homebrew
   - vscodium
-  - clion # This is only for iMac
-  - intellij-idea # This is only for iMac
+  # - clion # This is only for iMac
+  # - intellij-idea # This is only for iMac
   - android-studio
   # Utilities
   - android-file-transfer
