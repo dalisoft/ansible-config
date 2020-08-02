@@ -1,11 +1,12 @@
 ---
 apt_keys:
+#  - https://dl.xanmod.org/gpg.key
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
   - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
-#  - https://dl.xanmod.org/gpg.key
 
 apt_repos:
 #  - deb http://deb.xanmod.org releases main
+  - deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ focal main
   - deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main
 
 apt_items:
