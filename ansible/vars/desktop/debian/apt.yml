@@ -2,7 +2,7 @@
 apt_keys:
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
   - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
-  - https://dl.xanmod.org/gpg.key
+#  - https://dl.xanmod.org/gpg.key
 
 apt_repos:
   - deb http://deb.xanmod.org releases main
@@ -15,9 +15,9 @@ apt_items:
   - tar
   - unzip
   # Improve Linux performance
-  - linux-xanmod
-  - intel-microcode
-  - iucode-tool
+  #  - linux-xanmod
+  #  - intel-microcode
+  #  - iucode-tool
   # Programming languages
   # PHP
   - php

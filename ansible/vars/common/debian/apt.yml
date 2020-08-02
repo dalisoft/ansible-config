@@ -26,7 +26,7 @@ apt_items:
   - rsync
   - curl
   - wget
-  - openssh-server
+  #  - openssh-server
   # Addinational tools
   - nodejs
   - yarn
