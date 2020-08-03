@@ -29,6 +29,6 @@
   register: fix_vscodium
   until: fix_vscodium is successful
   when:
-    - fix_vscodium is successful
+    - install_dotfiles is successful
   tags:
     - fix-vscodium-script
