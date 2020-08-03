@@ -22,7 +22,7 @@
   environment:
     NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
     NFANCURVE_PATH: "$HOME/nfancurve"
-    PATH: "/usr/local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/snap/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
+    PATH: "/usr/local/bin:/snap/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
     MOZ_USE_OMTC: 1
 
   vars:
@@ -30,9 +30,10 @@
     force_install: false
 
     ensure_folders:
-      - '{{ HOME }}/Desktop/config/dotfiles/.vim/autoload'
-      - '{{ HOME }}/Desktop/config/dotfiles/.config/nvim'
-      - '{{ HOME }}/Desktop/config/dotfiles/.config/autostart'
+      - "{{ HOME }}/.local/bin"
+      - "{{ HOME }}/Desktop/config/dotfiles/.vim/autoload"
+      - "{{ HOME }}/Desktop/config/dotfiles/.config/nvim"
+      - "{{ HOME }}/Desktop/config/dotfiles/.config/autostart"
       - /usr/local/bin
 
     initial_configs:
