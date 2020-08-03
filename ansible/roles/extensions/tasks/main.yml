@@ -29,7 +29,7 @@
 - name: Fix VSCodium extensions path
   become: true
   become_user: root
-  script: "{{ HOME` }}/Desktop/config/scripts/fix-codium.py"
+  script: "{{ HOME }}/Desktop/config/scripts/fix-codium.py"
   args:
     executable: python3
   register: fix_vscodium

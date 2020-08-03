@@ -63,11 +63,3 @@ See [here](https://github.com/vinceliuice/WhiteSur-gtk-theme#suggested-themes) f
 For icons, see [here](https://github.com/keeferrourke/capitaine-cursors)
 
 ### Done. Enjoy
-
-## Known Bugs / FAQ
-
-Run command based on OS and problem should be fixed
-
-### VSCodium extensions `.length` issue
-
-See [here](https://github.com/VSCodium/vscodium/issues/418#issuecomment-659257713) to fix
