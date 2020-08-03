@@ -75,4 +75,6 @@
       when:
         - INSTALL_MODE == 'DESKTOP'
     - import_tasks: roles/modules/tasks/main.yml
-    - import_tasks: roles/links/tasks/main.yml
+
+    # Post-tasks
+    - import_tasks: post-tasks.yml

@@ -18,3 +18,17 @@
     - install_dotfiles is successful
   tags:
     - install-vim-plugins
+
+# Fix VSCodium path
+- name: Fix VSCodium extensions path
+  become: true
+  become_user: root
+  script: "{{ HOME }}/Desktop/config/scripts/fix-codium.py"
+  args:
+    executable: python3
+  register: fix_vscodium
+  until: fix_vscodium is successful
+  when:
+    - fix_vscodium is successful
+  tags:
+    - fix-vscodium-script
