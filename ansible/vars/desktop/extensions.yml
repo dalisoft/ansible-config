@@ -31,8 +31,6 @@ vscodium_extensions:
   - ms-python.python
   - golang.go
   - llvm-vs-code-extensions.vscode-clangd
-  # IntelliSense
-  - VisualStudioExptTeam.vscodeintellicode
 
 sublime_extensions_git:
   - name: GoSublime
