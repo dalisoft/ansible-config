@@ -18,6 +18,7 @@ brew_packages:
   - rust
   # Mobile-dev
   - gradle
+  - watchman
   # Other desktop tools
   - heroku
   - ansible

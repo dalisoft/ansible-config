@@ -40,10 +40,13 @@
   register: codium_extensions_list
   changed_when: false
   check_mode: false
+  when: fix_vscodium.changed
 
 - name: Installing VSCodium extensions
   shell: "codium --install-extension {{ item }}"
   with_items: "{{ vscodium_extensions }}"
   register: install_codium_extensions
   until: install_codium_extensions is successful
-  when: item not in codium_extensions_list.stdout_lines
+  when:
+    - fix_vscodium.changed
+    - item not in codium_extensions_list.stdout_lines

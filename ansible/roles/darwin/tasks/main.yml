@@ -6,3 +6,15 @@
     - ansible_distribution == 'MacOSX'
   tags:
     - install-brew-cask-packages
+
+- name: Install Podfile for XCode
+  gem:
+    name: cocoapods
+    state: latest
+    user_install: no
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+    - ansible_os_family == 'Darwin'
+    - ansible_distribution == 'MacOSX'
+  tags:
+    - install-gem-packages
