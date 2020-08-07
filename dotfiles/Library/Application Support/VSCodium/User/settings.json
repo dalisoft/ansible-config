@@ -95,6 +95,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.tsserver.useSeparateSyntaxServer": true,
   "typescript.surveys.enabled": false,
+  "typescript.suggest.paths": false,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -163,5 +164,6 @@
   "docker.images.label": "Tag",
   "sync.gist": "f4d95c99eabc359b8e6d4db79119a771",
   "python.pythonPath": "/usr/local/bin/python3",
-  "python.languageServer": "Microsoft"
+  "python.languageServer": "Microsoft",
+  "cSpell.language": "en,ru"
 }
