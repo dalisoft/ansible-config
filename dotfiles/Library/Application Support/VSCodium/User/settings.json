@@ -109,8 +109,6 @@
   "explorer.openEditors.visible": 0,
   "files.watcherExclude": {
     "**/.cache/**": true,
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
     "**/.webpack/**": true,
     "**/.idea/**": true,
     "**/node_modules/**": true
@@ -166,8 +164,6 @@
   "reason_language_server.location": "/usr/local/bin/reason-language-server",
   "rust-analyzer.updates.askBeforeDownload": false,
   "docker.images.label": "Tag",
-  "sync.gist": "f4d95c99eabc359b8e6d4db79119a771",
-  "python.pythonPath": "/usr/local/bin/python3",
   "python.languageServer": "Microsoft",
   "cSpell.enabled": false
 }
