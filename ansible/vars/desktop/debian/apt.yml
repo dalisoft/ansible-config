@@ -39,8 +39,6 @@ apt_items:
   # For some GTK themes
   # and macOS Theme dependencies
   # for Linux
-  - krita
-  - inkscape
   - optipng
   - sassc
   - libcanberra-gtk-module
