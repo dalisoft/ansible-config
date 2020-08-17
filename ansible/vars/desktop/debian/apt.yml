@@ -49,7 +49,6 @@ apt_items:
   - fonts-firacode
   # Most needed desktop apps
   # System utilities
-  - gparted
   - timeshift
   - telegram-desktop
   # Browsers
