@@ -56,7 +56,6 @@ apt_items:
   - firefox
   - epiphany-browser
   # Media / Downloaders
-  - uget
   - vlc
   - transmission
   # Development tools
@@ -66,8 +65,8 @@ apt_items:
   # KVM/Packages for Virtual Machines
   - qemu-kvm
   - virtinst
-  - virtualbox
   - bridge-utils
+  - cpu-checker
   # For AI Stuffs
   - nvidia-cuda-toolkit
   - nvidia-cuda-gdb
