@@ -35,9 +35,7 @@ brew_cask_packages:
   # Fonts
   - font-fira-code
   # Most needed desktop apps
-  - the-unarchiver
   - betterzip
-  - telegram-desktop
   - macs-fan-control # This is only for MacBook
   # Browsers
   - google-chrome

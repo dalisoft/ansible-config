@@ -22,3 +22,5 @@ dependencies:
           name: 1Password
         - id: 946399090
           name: Telegram Lite
+        - id: 425424353
+          name: The Unarchiver
