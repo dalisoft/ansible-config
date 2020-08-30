@@ -56,7 +56,6 @@ brew_cask_packages:
   - android-file-transfer
   # DevOps tools
   - docker
-  - sqlectron
 
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk8
