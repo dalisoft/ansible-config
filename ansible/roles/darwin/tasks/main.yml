@@ -10,8 +10,8 @@
 - name: Install Podfile for XCode
   gem:
     name: cocoapods
-    state: latest
-    user_install: no
+    state: present
+    user_install: yes
   when:
     - INSTALL_MODE == 'DESKTOP'
     - ansible_os_family == 'Darwin'
