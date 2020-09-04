@@ -12,7 +12,11 @@
     mode: u+x
     remote_src: yes
   loop: "{{ binaries }}"
-  when: (binaries | length > 0) and item.binary is defined
+  when:
+    - (binaries | length > 0)
+    - item.binary is defined
+    - item.direct is not defined
+    - item.command is not defined
   register: download_direct_binary
   until: download_direct_binary is successful
 
@@ -23,7 +27,10 @@
     mode: u+x
     remote_src: yes
   loop: "{{ binaries }}"
-  when: (binaries | length > 0) and item.direct is defined
+  when:
+    - (binaries | length > 0)
+    - item.binary is not defined
+    - item.direct is defined
   register: download_direct_zip_binary
   until: download_direct_zip_binary is successful
 
@@ -34,7 +41,10 @@
     mode: u+x
     remote_src: yes
   loop: "{{ binaries }}"
-  when: (binaries | length > 0) and item.direct is not defined
+  when:
+    - (binaries | length > 0)
+    - item.binary is not defined
+    - item.direct is not defined
   register: download_binary
   until: download_binary is successful
 
@@ -59,7 +69,10 @@
   loop: "{{ binaries }}"
   register: install_binary
   until: install_binary is successful
-  when: (binaries | length > 0) and item.direct is not defined
+  when:
+    - (binaries | length > 0)
+    - item.binary is not defined
+    - item.direct is not defined
 
 - name: Cleanup cache folder
   file:
