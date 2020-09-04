@@ -5,7 +5,7 @@
   apt_key:
     url: "{{ item }}"
     state: present
-  with_items: "{{ apt_keys }}"
+  loop: "{{ apt_keys }}"
   register: install_apt_key
   until: install_apt_key is successful
 
@@ -15,7 +15,7 @@
   apt_repository:
     repo: "{{ item }}"
     state: present
-  with_items: "{{ apt_repos }}"
+  loop: "{{ apt_repos }}"
   register: install_apt_repo
   until: install_apt_repo is successful
 

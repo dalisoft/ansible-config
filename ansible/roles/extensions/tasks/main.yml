@@ -19,7 +19,7 @@
   git:
     repo: "{{ item.git_url }}"
     dest: "{{ st_packages_dir }}/{{ item.name }}"
-  with_items: "{{ sublime_extensions_git }}"
+  loop: "{{ sublime_extensions_git }}"
 
 # VSCodium Extensions
 
@@ -44,7 +44,7 @@
 
 - name: Installing VSCodium extensions
   shell: "codium --install-extension {{ item }}"
-  with_items: "{{ vscodium_extensions }}"
+  loop: "{{ vscodium_extensions }}"
   register: install_codium_extensions
   until: install_codium_extensions is successful
   when:

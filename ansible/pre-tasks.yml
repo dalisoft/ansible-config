@@ -3,8 +3,8 @@
   file:
     path: "{{ item }}"
     state: directory
-    mode: '0755'
-  with_items: "{{ ensure_folders }}"
+    mode: "0755"
+  loop: "{{ ensure_folders }}"
   tags:
     - ensure-config-folders
 
@@ -21,7 +21,7 @@
     dest: "{{ HOME }}/{{ item }}"
     state: link
     force: yes
-  with_items: "{{ initial_configs }}"
+  loop: "{{ initial_configs }}"
   retries: 1
   register: initial_config_link
   until: initial_config_link.attempts == 1

@@ -16,6 +16,7 @@ brew_packages:
   - python
   # Rust
   - rust
+  - rust-analyzer # LSP for Rust
   # Mobile-dev
   - gradle
   - watchman

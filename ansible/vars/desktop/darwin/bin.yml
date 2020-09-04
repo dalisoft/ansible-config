@@ -1,6 +1,0 @@
----
-binaries:
-  # ZIP
-  - name: reason-language-server
-    link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-macos.zip
-    command: mv rls-macos/reason-language-server reason-language-server

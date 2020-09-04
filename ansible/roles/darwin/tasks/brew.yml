@@ -9,7 +9,7 @@
   homebrew_cask:
     name: "{{ item }}"
     state: present
-  with_items: "{{ brew_cask_packages }}"
+  loop: "{{ brew_cask_packages }}"
   register: install_brew_cask_package
   until: install_brew_cask_package is successful
   when: item not in brew_cask_installed.stdout_lines
@@ -20,7 +20,7 @@
     name: "{{ item }}"
     state: present
     sudo_password: "{{ SUDO_PASS }}"
-  with_items: "{{ brew_cask_packages_root }}"
+  loop: "{{ brew_cask_packages_root }}"
   register: install_brew_cask_package
   until: install_brew_cask_package is successful
   when: item not in brew_cask_installed.stdout_lines

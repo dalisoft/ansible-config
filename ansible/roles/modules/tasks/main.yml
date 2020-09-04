@@ -10,7 +10,7 @@
 
 - name: Installing fnm version
   shell: "fnm install {{ item }}"
-  with_items: "{{ fnm_versions }}"
+  loop: "{{ fnm_versions }}"
   register: install_fnm_version
   until: install_fnm_version is successful
   when:
@@ -32,7 +32,7 @@
     path: "{{ HOME }}/.npm-global"
     name: "{{ item }}"
     state: present
-  with_items: "{{ npm_modules }}"
+  loop: "{{ npm_modules }}"
   register: install_npm_package
   until: install_npm_package is successful
   when: item not in npm_modules_installed.stdout

@@ -7,11 +7,13 @@
   tags:
     - install-brew-cask-packages
 
-- name: Install Podfile for XCode
+- name: Install Gems
   gem:
-    name: cocoapods
+    name: "{{ item }}"
     state: present
     user_install: yes
+  loop:
+    - cocoapods
   when:
     - INSTALL_MODE == 'DESKTOP'
     - ansible_os_family == 'Darwin'

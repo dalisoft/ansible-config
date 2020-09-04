@@ -40,7 +40,6 @@
       # Files
       - .gitconfig
       - .gitignore
-      - .mackup.cfg
       - .nanorc
       - .vimrc
       # Folders
@@ -75,6 +74,3 @@
       when:
         - INSTALL_MODE == 'DESKTOP'
     - import_tasks: roles/modules/tasks/main.yml
-
-    # Post-tasks
-    - import_tasks: post-tasks.yml
