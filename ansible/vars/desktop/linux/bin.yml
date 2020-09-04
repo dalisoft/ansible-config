@@ -2,7 +2,6 @@
 binaries:
   - name: rust-analyzer
     link: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux
-    dest: rust-analyzer
     binary: yes
   # ZIP
   - name: dprint
