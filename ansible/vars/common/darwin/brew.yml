@@ -1,8 +1,14 @@
 ---
-pacman_packages:
+brew_taps:
+  - schniz/tap
+  - dprint/dprint
+
+brew_packages:
   # Most common terminal stuffs
   - fish
+  - starship
   - bat
+  - exa
   - ripgrep
   - git
   - git-lfs
@@ -18,8 +24,8 @@ pacman_packages:
   # Addinational tools
   - node
   - yarn
+  - fnm
+  - dprint
+  - wrk
   # Build tools
   - cmake
-  # Docker
-  - docker
-  - docker-compose

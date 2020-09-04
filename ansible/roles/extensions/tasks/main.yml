@@ -2,7 +2,7 @@
 # Language Server binaries
 - name: Checking GoPLS
   stat:
-    path: ~/go/bin/gopls
+    path: "{{ HOME }}/go/bin/gopls"
   register: gopls_bin
 
 - name: Installing Golang Program Language Server
@@ -14,60 +14,39 @@
 - import_tasks: _debian.yml
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
 
-- name: Ensure LSP Download cache folder exists
-  file:
-    path: ~/lsp
-    state: directory
-
-- name: Installing Rust Analyzer Language Server
-  get_url:
-    url: "https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/{{ ralsp }}"
-    dest: /usr/local/bin/rust-analyzer
-    mode: a+x
-
-- name: Downloading Reason Language Server
-  get_url:
-    url: "https://github.com/jaredly/reason-language-server/releases/latest/download/{{ rls }}.zip"
-    dest: "~/lsp/{{ rls }}.zip"
-  register: rls_zip
-
-- name: Extracting Reason Language Server
-  unarchive:
-    src: "~/lsp/{{ rls }}.zip"
-    dest: ~/lsp
-  register: rls_unzip
-  when: rls_zip.changed == true or force_install == true
-
-- name: Installing Reason Language Server
-  copy:
-    src: "~/lsp/{{ rls }}/reason-language-server"
-    dest: /usr/local/bin/reason-language-server
-    mode: a+x
-  when: rls_unzip.changed == true and force_install == true
-
-- name: Cleanup Reason Language Server folder
-  file:
-    path: "~/lsp/{{ rls }}"
-    state: absent
-  when: rls_unzip.changed
-
 # SublimeText extensions
 - name: Installing Sublime Text packages
   git:
     repo: "{{ item.git_url }}"
     dest: "{{ st_packages_dir }}/{{ item.name }}"
-  with_items: "{{ sublime_extensions_git }}"
+  loop: "{{ sublime_extensions_git }}"
 
 # VSCodium Extensions
+
+# Fix VSCodium extensions as VSCodium uses
+# Open-VSX.org market url and there isn't available
+# some of extensions
+- name: Fix VSCodium extensions path
+  become: true
+  become_user: root
+  script: "{{ HOME }}/Desktop/config/scripts/fix-codium.py"
+  args:
+    executable: python3
+  register: fix_vscodium
+  until: fix_vscodium is successful
+
 - name: "List installed VSCodium extensions"
   shell: codium --list-extensions
   register: codium_extensions_list
   changed_when: false
   check_mode: false
+  when: fix_vscodium.changed
 
 - name: Installing VSCodium extensions
   shell: "codium --install-extension {{ item }}"
-  with_items: "{{ vscodium_extensions }}"
+  loop: "{{ vscodium_extensions }}"
   register: install_codium_extensions
   until: install_codium_extensions is successful
-  when: item not in codium_extensions_list.stdout_lines
+  when:
+    - fix_vscodium.changed
+    - item not in codium_extensions_list.stdout_lines

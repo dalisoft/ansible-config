@@ -6,3 +6,17 @@
     - ansible_distribution == 'MacOSX'
   tags:
     - install-brew-cask-packages
+
+- name: Install Gems
+  gem:
+    name: "{{ item }}"
+    state: present
+    user_install: yes
+  loop:
+    - cocoapods
+  when:
+    - INSTALL_MODE == 'DESKTOP'
+    - ansible_os_family == 'Darwin'
+    - ansible_distribution == 'MacOSX'
+  tags:
+    - install-gem-packages

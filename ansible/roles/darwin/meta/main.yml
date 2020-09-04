@@ -16,3 +16,11 @@ dependencies:
           name: Websocket Client
         - id: 1440147259
           name: AdGuard Safari
+        - id: 1515213004
+          name: Session Buddy (Pal)
+        - id: 1333542190
+          name: 1Password
+        - id: 946399090
+          name: Telegram Lite
+        - id: 425424353
+          name: The Unarchiver

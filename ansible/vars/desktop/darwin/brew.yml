@@ -1,59 +1,62 @@
 ---
 brew_taps:
+  - heroku/brew
   - homebrew/cask-fonts
   - adoptopenjdk/openjdk
   - octave-app/octave-app
 
 brew_packages:
-  - rsync
-  - gradle
-  - cassowary
-  - ansible
-  - fish
-  - nano
-  - neovim
-  - git
-  - git-lfs
-  - curl
-  - wget
-  - htop
-  - tmux
-  - cmake
-  - python
-  - node
-  - deno
+  # Programming languages
+  # PHP
+  - php
+  - composer
+  # Go
   - go
-  - llvm
+  # Python
+  - python
+  # Rust
   - rust
-  - yarn
+  - rust-analyzer # LSP for Rust
+  # Mobile-dev
+  - gradle
+  - watchman
+  # Other desktop tools
+  - heroku
+  - ansible
+  - cassowary
+  - deno
+  - llvm
 
 brew_cask_packages:
+  # macOS QuickLook plugins
   - qlcolorcode
   - qlstephen
   - qlmarkdown
   - qlimagesize
+  # Fonts
   - font-fira-code
-  - docker
-  # - macs-fan-control # TODO: This is only for MacBook
-  - telegram-desktop
-  - the-unarchiver
+  # Most needed desktop apps
+  # - macs-fan-control # This is only for MacBook
+  # Browsers
+  - google-chrome
+  - firefox
+  # Media / Downloaders
   - folx
   - vlc
+  # Development tools
   - octave-app
   - postman
   - gitkraken
   # Editors
-  #  - sublime-text # TODO: Enable when v4 comes to Homebrew
+  #  - sublime-text # Enable when v4 comes to Homebrew
   - vscodium
-  # - clion # TODO: This is only for iMac
-  # - intellij-idea # TODO: This is only for iMac
+  # - clion # This is only for iMac
+  # - intellij-idea # This is only for iMac
   - android-studio
-  - betterzip
-  # Browsers
-  - google-chrome
-  - firefox
   # Utilities
   - android-file-transfer
+  # DevOps tools
+  - docker
 
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk8

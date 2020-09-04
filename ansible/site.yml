@@ -5,8 +5,6 @@
   roles:
     - common
     - darwin
-    - modules
-    - links
 
   vars_prompt:
     - name: "INSTALL_MODE"
@@ -24,18 +22,24 @@
   environment:
     NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
     NFANCURVE_PATH: "$HOME/nfancurve"
-    PATH: "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/snap/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
+    PATH: "/usr/local/bin:/snap/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
     MOZ_USE_OMTC: 1
 
   vars:
     install_homebrew_if_missing: true
     force_install: false
 
+    ensure_folders:
+      - "{{ HOME }}/.local/bin"
+      - "{{ HOME }}/Desktop/config/dotfiles/.vim/autoload"
+      - "{{ HOME }}/Desktop/config/dotfiles/.config/nvim"
+      - "{{ HOME }}/Desktop/config/dotfiles/.config/autostart"
+      - /usr/local/bin
+
     initial_configs:
       # Files
       - .gitconfig
       - .gitignore
-      - .mackup.cfg
       - .nanorc
       - .vimrc
       # Folders
@@ -49,6 +53,7 @@
     - import_tasks: pre-tasks.yml
     # Import variables as tasks
     - import_tasks: vars/brew.yml
+    - import_tasks: vars/binaries.yml
     - import_tasks: vars/apt.yml
     - import_tasks: vars/pacman.yml
     - import_tasks: vars/snap.yml
@@ -58,15 +63,14 @@
 
   tasks:
     # Import tasks
-    - import_tasks: roles/debian/tasks/main.yml
+    - import_tasks: roles/linux/tasks/main.yml
       when:
-        - ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
-    - import_tasks: roles/archlinux/tasks/main.yml
-      when:
-        - ansible_os_family == 'Archlinux'
+        - ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS' or ansible_os_family == 'Archlinux'
     # Disable extensions currently
     # See https://github.com/VSCodium/vscodium/issues/424 for issue
-    # See https://github.com/VSCodium/vscodium/issues/430#issuecomment-646312604 for temporarily solution
+    # See https://github.com/VSCodium/vscodium/issues/430#issuecomment-646312604
+    # or https://github.com/VSCodium/vscodium/issues/418#issuecomment-659257713 # (recommended) for temporarily solution
     - import_tasks: roles/extensions/tasks/main.yml
       when:
         - INSTALL_MODE == 'DESKTOP'
+    - import_tasks: roles/modules/tasks/main.yml

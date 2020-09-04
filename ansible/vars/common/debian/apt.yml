@@ -12,19 +12,27 @@ apt_repos:
   - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
 
 apt_items:
-  - curl
+  # Most common terminal stuffs
   - fish
-  - wget
-  - cmake
+  - ripgrep
   - git
   - git-lfs
+  # Addinational terminal stuffs
   - htop
+  - tmux
   - nano
   - neovim
-  - tmux
+  # Optional, but common utilities
+  - rsync
+  - curl
+  - wget
+  #  - openssh-server
+  # Addinational tools
   - nodejs
   - yarn
-  - golang-go
+  # Build tools
+  - cmake
+  # Docker
   - docker-ce
   - docker-ce-cli
   - containerd.io

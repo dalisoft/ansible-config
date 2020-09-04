@@ -7,30 +7,45 @@
   check_mode: false
   tags:
     - install-brew-taps
-  when: ansible_os_family != 'Archlinux'
+  when: ansible_os_family == 'Darwin'
 
 - name: Tap all Homebrew taps
   homebrew_tap:
     name: "{{ item }}"
-  with_items: "{{ brew_taps }}"
+    state: present
+  loop: "{{ brew_taps }}"
   register: install_brew_tap
   until: install_brew_tap is successful
   when:
-    - ansible_os_family != 'Archlinux'
+    - ansible_os_family == 'Darwin'
     - item not in brew_tap_list.stdout_lines
   tags:
     - install-brew-taps
 
 # Homebrew packages
+- name: "List all Homebrew packages"
+  command: brew ls
+  register: brew_pkgs_list
+  changed_when: false
+  check_mode: false
+  tags:
+    - install-brew-packages
+  when: ansible_os_family == 'Darwin'
+
 - name: Installing Homebrew packages
   homebrew:
-    name: "{{ brew_packages }}"
+    name: "{{ item }}"
     state: present
+  loop: "{{ brew_packages }}"
   register: install_brew_package
   until: install_brew_package is successful
-  when: ansible_os_family != 'Archlinux'
+  when:
+    - ansible_os_family == 'Darwin'
+    - item not in brew_pkgs_list.stdout_lines
   tags:
     - install-brew-packages
 
-- import_tasks: debian/apt.yml
-  when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
+# Binary packages
+- import_tasks: bin.yml
+  tags:
+    - install-binary-packages

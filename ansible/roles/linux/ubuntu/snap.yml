@@ -11,7 +11,7 @@
   snap:
     name: "{{ item }}"
     state: present
-  with_items: "{{ snap_packages }}"
+  loop: "{{ snap_packages }}"
   when: item not in snap_installed_packages
   register: install_snap_package
   until: install_snap_package is successful
@@ -23,7 +23,7 @@
     name: "{{ item }}"
     classic: yes
     state: present
-  with_items: "{{ snap_classic_packages }}"
+  loop: "{{ snap_classic_packages }}"
   when: item not in snap_installed_packages
   register: install_snap_classic_package
   until: install_snap_classic_package is successful

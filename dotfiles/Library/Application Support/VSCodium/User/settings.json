@@ -5,16 +5,7 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
@@ -31,7 +22,11 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
-  "editor.codeActionsOnSave": ["source.fixAll"],
+  "editor.renameOnType": true,
+  "editor.codeActionsOnSave": [
+    "source.fixAll",
+    "source.organizeImports"
+  ],
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 80,
@@ -56,6 +51,7 @@
   "timeline.showView": true,
   "breadcrumbs.enabled": false,
   "extensions.ignoreRecommendations": false,
+  "extensions.showRecommendationsOnlyOnDemand": true,
   "extensions.autoUpdate": false,
   "extensions.autoCheckUpdates": false,
   "telemetry.enableCrashReporter": false,
@@ -81,19 +77,22 @@
   "window.titleBarStyle": "custom",
   "window.restoreWindows": "folders",
   "javascript.implicitProjectConfig.experimentalDecorators": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
   "javascript.suggest.autoImports": true,
   "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.validate.enable": false,
   "javascript.format.enable": false,
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.validate.enable": true,
   "typescript.format.enable": false,
   "typescript.implementationsCodeLens.enabled": true,
   "typescript.referencesCodeLens.enabled": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.tsserver.useSeparateSyntaxServer": true,
   "typescript.surveys.enabled": false,
+  "typescript.suggest.paths": false,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -104,8 +103,6 @@
   "explorer.openEditors.visible": 0,
   "files.watcherExclude": {
     "**/.cache/**": true,
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
     "**/.webpack/**": true,
     "**/.idea/**": true,
     "**/node_modules/**": true
@@ -127,6 +124,7 @@
   "files.saveConflictResolution": "askUser",
   "prettier.requireConfig": true,
   "emmet.includeLanguages": {
+    "vue-html": "html",
     "postcss": "css",
     "javascript": "javascriptreact"
   },
@@ -137,6 +135,7 @@
   "emmet.showSuggestionsAsSnippets": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
+  "git.autofetch": false,
   "search.exclude": {
     "**/.cache": true,
     "**/.out": true,
@@ -155,10 +154,14 @@
   "go.toolsGopath": "~/go/bin",
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
-  "go.languageServerFlags": ["serve", "-rpc.trace", "--debug=localhost:6060"],
+  "go.languageServerFlags": [
+    "serve",
+    "-rpc.trace",
+    "--debug=localhost:6060"
+  ],
   "reason_language_server.location": "/usr/local/bin/reason-language-server",
   "rust-analyzer.updates.askBeforeDownload": false,
   "docker.images.label": "Tag",
-  "sync.gist": "f4d95c99eabc359b8e6d4db79119a771",
-  "python.pythonPath": "/usr/local/bin/python3"
+  "python.languageServer": "Microsoft",
+  "cSpell.enabled": false
 }

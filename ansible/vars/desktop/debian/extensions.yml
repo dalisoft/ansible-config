@@ -1,4 +1,2 @@
 ---
-st_packages_dir: ~/.config/sublime-text-3/Packages
-rls: rls-linux
-ralsp: rust-analyzer-linux
+st_packages_dir: "{{ HOME }}/.config/sublime-text-3/Packages"

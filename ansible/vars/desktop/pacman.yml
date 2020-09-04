@@ -1,33 +1,52 @@
 ---
 pacman_packages:
+  # Old Pacman polyfill
+  - tar
+  - unzip
+  # Programming languages
+  # PHP
+  - php
+  - composer
+  # Go
+  - go
+  # Python
+  - python
+  # Rust
+  - rust
+  # Mobile-dev
   - gradle
-  # Utilities
-  - rsync
-  - curl
-  # Main tools
+  # Other desktop tools
   - ansible
+  # For some GTK themes
+  # and macOS Theme dependencies
+  # for Linux
   - krita
   - inkscape
-  - octave
+  - optipng
+  - sassc
+  - gtk-engine-murrine
+  - gtk-engines
+  # Fonts
+  - ttf-fira-code
+  # System utilities
+  - gparted
+  - telegram-desktop
+  # Browsers
+  - firefox
+  - epiphany-browser
+  # Media / Downloaders
+  - uget
   - vlc
   - transmittion-gtk
-  - uget
-  - jdk8-adoptopenjdk
-  # Packages for Virtual Machines
+  # Development tools
+  - octave
+  # Editors
+  - vscodium-bin
+  # KVM/Packages for Virtual Machines
   - qemu
   - virtualbox
   - bridge-utils
-  - vscodium-bin
-  # For Python development
-  - python
   # For AI Stuffs
   - cuda
-  # Browsers
-  - firefox
-  - epiphany
-  # Addinational tools
-  - rust
-  # Missing tools
-  - cassowary
-  # macOS Style dependencies
-  - sassc
+  # Java tools
+  - jdk8-adoptopenjdk

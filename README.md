@@ -38,6 +38,7 @@ My machine configuration playbook
 
 - Open terminal
 - Run `./run-ansible.sh $PASSWORD $MODE?`
+- Run `nvim -c "PlugInstall" -c "qa"` after successfully installation [Optional]
 
 ### Step 3
 
@@ -58,47 +59,8 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 
 Installing macOS Style theme
 
-| Type        | URL                                                                                                  | Name                    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ----------------------- |
-| Gui / Shell | <https://github.com/vinceliuice/WhiteSur-gtk-theme>                                                  | Mojave-dark             |
-| Cursor      | <https://github.com/keeferrourke/capitaine-cursors>                                                  | Capitaine-cursors-light |
-| Icons       | <https://github.com/vinceliuice/McMojave-circle>                                                     | Cupertino-Catalina      |
-| Walpaper    | [See here](https://www.howtoisolve.com/download-macos-big-sur-wallpaper-hd-in-2020-4k-5k-wallpaper/) | macOS Catalina          |
+See [here](https://github.com/vinceliuice/WhiteSur-gtk-theme#suggested-themes) for Shell, Firefox theme, Icons [2](https://github.com/vinceliuice/McMojave-circle) and Wallpaper [2](https://www.howtoisolve.com/download-macos-big-sur-wallpaper-hd-in-2020-4k-5k-wallpaper/)
+
+For icons, see [here](https://github.com/keeferrourke/capitaine-cursors)
 
 ### Done. Enjoy
-
-## Known Bugs / FAQ
-
-> Some of these bugs/errors may happen only in first-run only, then works fine
-
-### `/usr/local/bin` not writable
-
-| Command                                           | OS    |
-| ------------------------------------------------- | ----- |
-| `sudo chown -R $USER:root /usr/local/bin`         | Linux |
-| `` sudo chown -R `whoami`:admin /usr/local/bin `` | macOS |
-
-Run command based on OS and problem should be fixed
-
-### VSCodium extensions `.length` issue
-
-See [here](https://github.com/VSCodium/vscodium/issues/430#issuecomment-646312604) to fix
-
-### `Destination .../lsp does not exist`
-
-Run `mkdir ~/lsp`
-
-### Destination .../autoload does not exist`
-
-- Go-to cloned folder
-- `cd dotfiles`
-- `cd .vim`
-- `mkdir autoload`
-
-### Please enter your SUDO password prompt
-
-- Run `run-ansible.sh` with your Root user password, e.g. `sh run-ansible.sh 1234`
-
-### Why Linux needs more rights
-
-- I don't know why, but there no way bypass these requirements (at least i not able do that)

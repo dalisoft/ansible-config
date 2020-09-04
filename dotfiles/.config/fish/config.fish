@@ -6,9 +6,6 @@ set -gx fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.npm-global/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/go/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
-set -gx fish_user_paths "$HOME/lsp/bin" $fish_user_paths
-set -gx fish_user_paths "/home/linuxbrew/.linuxbrew/bin" $fish_user_paths
-set -gx fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 
 ###################################
 ######### env parameters  #########
@@ -16,19 +13,10 @@ set -gx fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 
 switch (uname)
   case Darwin
-    # set -gx DOCKER_HOST "ssh://root@$REMOTE_MACHINE_IP"
     alias cat=bat
+
   case Linux
-    # echo "Linux"
-    set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew";
-    set -gx HOMEBREW_CELLAR "/home/linuxbrew/.linuxbrew/Cellar";
-    set -gx HOMEBREW_REPOSITORY "/home/linuxbrew/.linuxbrew/Homebrew";
-
-    set -gx MANPATH "$HOMEBREW_PREFIX/share/man" $MANPATH;
-    set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH
-
     set -gx MOZ_USE_OMTC 1
-
     alias cat=batcat
 
 end
@@ -102,6 +90,7 @@ alias vim=nvim
 alias git_reflog_expire="git reflog expire --expire=now --all"
 alias git_repack_ad="git repack -ad"
 alias git_prune="git prune"
+alias git_rb="git fetch --all --prune && git pull --rebase && git submodule update --init --recursive"
 
 # **** python3 ****
 alias python=python3
@@ -114,6 +103,11 @@ alias load_fnm "fnm env --shell=fish --multi | source"
 
 # **** test internet speed ****
 alias inet_speed_test "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
+
+# **** manager updates and cleanups ****
+alias update_all "brew update --verbose && brew upgrade --verbose && brew cask upgrade --greedy --verbose && brew cleanup && brew cleanup -s && update_modules"
+alias update_modules "npm update -g && cd ~/Desktop && git_rb"
+alias brew_cleanup "brew cleanup --prune 0 && brew cleanup -s"
 
 ###################################
 ########## init scripts ###########
