@@ -13,8 +13,6 @@ apt_items:
   # PopOS polyfill
   - snapd
   - grub2-common
-  - tar
-  - unzip
   - exfat-fuse
   - exfat-utils
   # Improve Linux performance

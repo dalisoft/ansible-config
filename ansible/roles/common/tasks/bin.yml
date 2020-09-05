@@ -3,19 +3,19 @@
   file:
     path: "{{ HOME }}/binaries"
     state: directory
-  when: binaries | length > 0
+  when: binaries|length > 0
 
 - name: Linking direct binaries
   get_url:
-    src: "{{ item.link }}"
+    url: "{{ item.link }}"
     dest: "/usr/local/bin/{{ item.name }}"
     mode: u+x
     remote_src: yes
   loop: "{{ binaries }}"
   when:
-    - (binaries | length > 0)
-    - item.binary is defined
-    - item.direct is not defined
+    - binaries|length > 0
+    - item.binary == True
+    - item.direct != True
     - item.command is not defined
   register: download_direct_binary
   until: download_direct_binary is successful
@@ -28,9 +28,9 @@
     remote_src: yes
   loop: "{{ binaries }}"
   when:
-    - (binaries | length > 0)
-    - item.binary is not defined
-    - item.direct is defined
+    - binaries|length > 0
+    - item.binary != True
+    - item.direct == True
   register: download_direct_zip_binary
   until: download_direct_zip_binary is successful
 
@@ -42,17 +42,17 @@
     remote_src: yes
   loop: "{{ binaries }}"
   when:
-    - (binaries | length > 0)
-    - item.binary is not defined
-    - item.direct is not defined
+    - binaries|length > 0
+    - item.binary != True
+    - item.direct != True
   register: download_binary
   until: download_binary is successful
 
 - name: Executing binaries command
   shell: "{{ item.command }}"
   when:
-    - binaries | length > 0
-    - item.direct is not defined
+    - binaries|length > 0
+    - item.direct != True
     - item.command is defined
   loop: "{{ binaries }}"
   args:
@@ -70,9 +70,9 @@
   register: install_binary
   until: install_binary is successful
   when:
-    - (binaries | length > 0)
-    - item.binary is not defined
-    - item.direct is not defined
+    - binaries|length > 0
+    - item.binary != True
+    - item.direct != True
 
 - name: Cleanup cache folder
   file:
@@ -80,7 +80,7 @@
     state: absent
   register: cleanup_binaries
   until: cleanup_binaries is successful
-  when: (binaries | length > 0)
+  when: binaries|length > 0
 
 - name: Cleanup installed folder
   shell: rm -rf *.md LICENSE
@@ -88,4 +88,4 @@
     chdir: "/usr/local/bin"
   register: cleanup_binaries
   until: cleanup_binaries is successful
-  when: (binaries | length > 0)
+  when: binaries|length > 0

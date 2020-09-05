@@ -1,8 +1,5 @@
 ---
 pacman_packages:
-  # Old Pacman polyfill
-  - tar
-  - unzip
   # Programming languages
   # PHP
   - php
