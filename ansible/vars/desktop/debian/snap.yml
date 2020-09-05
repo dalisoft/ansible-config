@@ -1,12 +1,13 @@
 ---
 snap_packages:
+  - starship
   - postman
 
 snap_classic_packages:
   - heroku
   - gitkraken
- # - sublime-text
+  # - sublime-text
   - android-studio
- # - intellij-idea-ultimate
- # - clion
- # - datagrip
+  # - intellij-idea-ultimate
+  # - clion
+  # - datagrip

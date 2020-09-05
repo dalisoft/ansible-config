@@ -11,9 +11,11 @@ pacman_packages:
   # Rust
   - rust
   # Mobile-dev
+  - android-studio
   - gradle
   # Other desktop tools
   - ansible
+  - heroku-cli
   # For some GTK themes
   # and macOS Theme dependencies
   # for Linux
@@ -36,6 +38,8 @@ pacman_packages:
   - vlc
   - transmittion-gtk
   # Development tools
+  - gitkraken
+  - postman
   - octave
   # Editors
   - vscodium-bin
