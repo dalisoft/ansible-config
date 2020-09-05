@@ -10,6 +10,7 @@ apt_repos:
   - deb https://deb.nodesource.com/node_14.x focal main
   - deb https://dl.yarnpkg.com/debian/ stable main
   - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+  - deb [arch=amd64] http://archive.ubuntu.com/ubuntu groovy universe
 
 apt_items:
   # Most common terminal stuffs
@@ -26,6 +27,7 @@ apt_items:
   - rsync
   - curl
   - wget
+  - wrk
   #  - openssh-server
   # Addinational tools
   - nodejs
@@ -37,3 +39,8 @@ apt_items:
   - docker-ce-cli
   - containerd.io
   - docker-compose
+
+apt_force_items:
+  - bat
+  - rust-exa
+  - ripgrep

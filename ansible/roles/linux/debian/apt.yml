@@ -1,4 +1,11 @@
 ---
+- name: "List all apt packages"
+  package_facts:
+    manager: apt
+  register: apt_pkgs_list
+  changed_when: false
+  check_mode: false
+
 - name: Adding apt keys
   become: true
   become_user: root
@@ -15,16 +22,17 @@
   apt_repository:
     repo: "{{ item }}"
     state: present
-    update_cache: yes
+    update_cache: no
   loop: "{{ apt_repos }}"
   register: install_apt_repo
   until: install_apt_repo is successful
 
-- name: "List all apt packages"
-  command: apt list | grep installed
-  register: apt_pkgs_list
-  changed_when: false
-  check_mode: false
+- name: Update apt repositories
+  become: true
+  become_user: root
+  shell: "apt update -y"
+  register: update_apt_repo
+  until: update_apt_repo is successful
 
 - name: Installing apt force packages
   become: true
@@ -33,7 +41,7 @@
     name: "{{ item }}"
     state: present
     dpkg_options: "force-overwrite"
-  when: item not in apt_pkgs_list.stdout_lines
+  when: item not in ansible_facts.packages
   loop: "{{ apt_force_items }}"
   register: install_optionless_apt_package
   until: install_optionless_apt_package is successful
@@ -44,7 +52,7 @@
   apt:
     name: "{{ item }}"
     state: present
-  when: item not in apt_pkgs_list.stdout_lines
+  when: item not in ansible_facts.packages
   loop: "{{ apt_items }}"
   register: install_apt_package
   until: install_apt_package is successful

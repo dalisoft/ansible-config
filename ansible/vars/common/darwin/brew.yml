@@ -1,7 +1,6 @@
 ---
 brew_taps:
   - schniz/tap
-  - dprint/dprint
 
 brew_packages:
   # Most common terminal stuffs
@@ -25,7 +24,6 @@ brew_packages:
   - node
   - yarn
   - fnm
-  - dprint
   - wrk
   # Build tools
   - cmake

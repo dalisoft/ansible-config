@@ -4,7 +4,6 @@ vscodium_extensions:
   - dbaeumer.vscode-eslint
   - esbenp.prettier-vscode
   - mkaufman.HTMLHint
-  - dprint.dprint
   # Other tools
   - redhat.vscode-yaml
   - EditorConfig.EditorConfig

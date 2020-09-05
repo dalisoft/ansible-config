@@ -1,8 +1,10 @@
 ---
 pacman_packages:
   # Most common terminal stuffs
+  - starship
   - fish
   - bat
+  - exa
   - ripgrep
   - git
   - git-lfs
@@ -15,6 +17,7 @@ pacman_packages:
   - rsync
   - curl
   - wget
+  - wrk
   # Addinational tools
   - node
   - yarn
