@@ -42,5 +42,5 @@ apt_items:
 
 apt_force_items:
   - bat
-  - rust-exa
+  - exa
   - ripgrep
