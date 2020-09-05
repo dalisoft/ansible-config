@@ -13,9 +13,10 @@
   become: true
   become_user: root
   pacman:
-    name: "{{ pacman_packages }}"
+    name: "{{ item }}"
     state: present
     update_cache: yes
+  loop: "{{ pacman_packages }}"
   register: install_pacman_package
   until: install_pacman_package is successful
   tags:

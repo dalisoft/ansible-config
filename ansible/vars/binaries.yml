@@ -16,4 +16,3 @@
 - name: Prepare binaries
   set_fact:
     binaries: "{{ (bin_common_linux.binaries | default([])) + (bin_desktop_linux.binaries | default([])) }}"
-    binaries_gz: "{{ (bin_common_linux.binaries_gz | default([])) + (bin_desktop_linux.binaries_gz | default([])) }}"

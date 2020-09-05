@@ -3,7 +3,22 @@
   file:
     path: "{{ HOME }}/binaries"
     state: directory
-  when: binaries | length > 0
+  when: binaries|length > 0
+
+- name: Linking direct binaries
+  get_url:
+    url: "{{ item.link }}"
+    dest: "/usr/local/bin/{{ item.name }}"
+    mode: u+x
+    remote_src: yes
+  loop: "{{ binaries }}"
+  when:
+    - binaries|length > 0
+    - item.binary == True
+    - item.direct != True
+    - item.command is not defined
+  register: download_direct_binary
+  until: download_direct_binary is successful
 
 - name: Initializing binaries
   unarchive:
@@ -12,9 +27,12 @@
     mode: u+x
     remote_src: yes
   loop: "{{ binaries }}"
-  when: (binaries | length > 0) and item.direct is defined
-  register: download_direct_binary
-  until: download_direct_binary is successful
+  when:
+    - binaries|length > 0
+    - item.binary != True
+    - item.direct == True
+  register: download_direct_zip_binary
+  until: download_direct_zip_binary is successful
 
 - name: Downloading binaries
   unarchive:
@@ -23,43 +41,24 @@
     mode: u+x
     remote_src: yes
   loop: "{{ binaries }}"
-  when: (binaries | length > 0) and item.direct is not defined
+  when:
+    - binaries|length > 0
+    - item.binary != True
+    - item.direct != True
   register: download_binary
   until: download_binary is successful
-
-- name: Downloading plain compressed binaries
-  get_url:
-    url: "{{ item.link }}"
-    dest: "{{ HOME }}/binaries/{{ item.name }}-linux.gz"
-  loop: "{{ binaries_gz }}"
-  when: (binaries | length > 0) and item.direct is not defined
-  register: download_gz_binary
-  until: download_gz_binary is successful
 
 - name: Executing binaries command
   shell: "{{ item.command }}"
   when:
-    - binaries | length > 0
-    - item.direct is not defined
+    - binaries|length > 0
+    - item.direct != True
     - item.command is defined
   loop: "{{ binaries }}"
   args:
     chdir: "{{ HOME }}/binaries"
   register: cmd_binary
   until: cmd_binary is successful
-
-- name: Executing plain compressed binaries command
-  shell: "{{ item.command }}"
-  when:
-    - binaries | length > 0
-    - item.direct is not defined
-    - download_gz_binary.changed
-    - item.command is defined
-  loop: "{{ binaries_gz }}"
-  args:
-    chdir: "{{ HOME }}/binaries"
-  register: cmd_gz_binary
-  until: cmd_gz_binary is successful
 
 - name: Install binaries
   copy:
@@ -70,18 +69,10 @@
   loop: "{{ binaries }}"
   register: install_binary
   until: install_binary is successful
-  when: (binaries | length > 0) and item.direct is not defined
-
-- name: Install plain compressed binaries
-  copy:
-    src: "{{ HOME }}/binaries/{{ item.name }}"
-    dest: "/usr/local/bin"
-    mode: u+x
-    remote_src: yes
-  loop: "{{ binaries_gz }}"
-  register: install_gz_binary
-  until: install_gz_binary is successful
-  when: (binaries | length > 0) and item.direct is not defined
+  when:
+    - binaries|length > 0
+    - item.binary != True
+    - item.direct != True
 
 - name: Cleanup cache folder
   file:
@@ -89,7 +80,7 @@
     state: absent
   register: cleanup_binaries
   until: cleanup_binaries is successful
-  when: (binaries | length > 0)
+  when: binaries|length > 0
 
 - name: Cleanup installed folder
   shell: rm -rf *.md LICENSE
@@ -97,4 +88,4 @@
     chdir: "/usr/local/bin"
   register: cleanup_binaries
   until: cleanup_binaries is successful
-  when: (binaries | length > 0)
+  when: binaries|length > 0

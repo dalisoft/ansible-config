@@ -15,22 +15,26 @@
   apt_repository:
     repo: "{{ item }}"
     state: present
+    update_cache: yes
   loop: "{{ apt_repos }}"
   register: install_apt_repo
   until: install_apt_repo is successful
 
-- name: "Update apt repositories"
-  become: true
-  become_user: root
-  apt:
-    update_cache: yes
+- name: "List all apt packages"
+  command: apt list | grep installed
+  register: apt_pkgs_list
   changed_when: false
   check_mode: false
 
-- name: Installing optionless packages
+- name: Installing apt force packages
   become: true
   become_user: root
-  shell: 'apt install -o Dpkg::Options::="--force-overwrite" {{ apt_force_items }} -y'
+  apt:
+    name: "{{ item }}"
+    state: present
+    dpkg_options: "force-overwrite"
+  when: item not in apt_pkgs_list.stdout_lines
+  loop: "{{ apt_force_items }}"
   register: install_optionless_apt_package
   until: install_optionless_apt_package is successful
 
@@ -38,7 +42,18 @@
   become: true
   become_user: root
   apt:
-    name: "{{ apt_items }}"
+    name: "{{ item }}"
     state: present
+  when: item not in apt_pkgs_list.stdout_lines
+  loop: "{{ apt_items }}"
   register: install_apt_package
   until: install_apt_package is successful
+
+- name: Cleanup apt packages
+  become: true
+  become_user: root
+  apt:
+    autoclean: yes
+    autoremove: yes
+  register: clean_apt_package
+  until: clean_apt_package is successful
