@@ -12,9 +12,9 @@ My machine configuration playbook
 | OS            | Min. required version | Recommended version         |
 | ------------- | --------------------- | --------------------------- |
 | macOS         | High Sierra (10.13.6) | Mojave (10.14.6) and higher |
-| Linux Ubuntu  | 20.04                 | 20.10 and higher            |
-| Linux PopOS   | 20.04                 | 20.10 and higher            |
-| Linux Manjaro | 19                    | 20 or Higher                |
+| Linux Ubuntu  | 18.04                 | 19.04 and higher            |
+| Linux PopOS   | 18.04                 | 19.04 and higher            |
+| Linux Manjaro | 18                    | 19 or Higher                |
 
 ---
 
