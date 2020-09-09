@@ -105,7 +105,7 @@ alias load_fnm "fnm env --shell=fish --multi | source"
 alias inet_speed_test "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 
 # **** manager updates and cleanups ****
-alias update_all "brew update --verbose && brew upgrade --verbose && brew cask upgrade --greedy --verbose && brew cleanup && brew cleanup -s && update_modules"
+alias update_all "brew update --verbose && brew upgrade --verbose && brew upgrade --cask --greedy --verbose && brew cleanup && brew cleanup -s && update_modules"
 alias update_modules "npm update -g && cd ~/Desktop && git_rb"
 alias brew_cleanup "brew cleanup --prune 0 && brew cleanup -s"
 
