@@ -16,6 +16,7 @@ pacman_packages:
   # Other desktop tools
   - ansible
   - heroku-cli
+  - kdiff3
   # For some GTK themes
   # and macOS Theme dependencies
   # for Linux
