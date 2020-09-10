@@ -7,7 +7,7 @@ apt_keys:
 apt_repos:
   #  - deb http://deb.xanmod.org releases main
   - deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ focal main
-  - deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main
+  - deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main
 
 apt_items:
   # PopOS polyfill
