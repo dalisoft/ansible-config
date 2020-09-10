@@ -29,6 +29,8 @@ My machine configuration playbook
 
 ### Step 2
 
+For better and cleaner installation, please cleanup your architectures list. See [here](https://superuser.com/a/714392)
+
 #### Arguments table
 
 | Argument name | Default | Values          | Type   | Required |
