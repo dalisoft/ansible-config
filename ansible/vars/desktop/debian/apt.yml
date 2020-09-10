@@ -15,7 +15,7 @@ apt_items:
   - grub2-common
   - exfat-fuse
   - exfat-utils
-  - kdiff3
+  - meld
   # Improve Linux performance
   #  - linux-xanmod
   #  - intel-microcode
