@@ -3,7 +3,6 @@
   file:
     path: "{{ HOME }}/binaries"
     state: directory
-  when: binaries|length > 0
 
 - name: Linking direct binaries
   get_url:
@@ -13,7 +12,6 @@
     remote_src: yes
   loop: "{{ binaries }}"
   when:
-    - binaries|length > 0
     - item.binary == True
     - item.direct != True
     - item.command is not defined
@@ -28,7 +26,6 @@
     remote_src: yes
   loop: "{{ binaries }}"
   when:
-    - binaries|length > 0
     - item.binary != True
     - item.direct == True
   register: download_direct_zip_binary
@@ -42,7 +39,6 @@
     remote_src: yes
   loop: "{{ binaries }}"
   when:
-    - binaries|length > 0
     - item.binary != True
     - item.direct != True
   register: download_binary
@@ -51,7 +47,6 @@
 - name: Executing binaries command
   shell: "{{ item.command }}"
   when:
-    - binaries|length > 0
     - item.direct != True
     - item.command is defined
   loop: "{{ binaries }}"
@@ -70,7 +65,6 @@
   register: install_binary
   until: install_binary is successful
   when:
-    - binaries|length > 0
     - item.binary != True
     - item.direct != True
 
@@ -82,7 +76,6 @@
   register: cleanup_binaries
   until: cleanup_binaries is successful
   when:
-    - binaries|length > 0
     - item.binary != True
     - item.direct != True
 
@@ -94,7 +87,6 @@
     - fnm-linux
   register: cleanup_binaries_folder
   until: cleanup_binaries_folder is successful
-  when: binaries|length > 0
 
 - name: Cleanup user binaries folder
   file:
@@ -105,4 +97,3 @@
     - LICENSE
   register: cleanup_user_binaries_folder
   until: cleanup_user_binaries_folder is successful
-  when: binaries|length > 0

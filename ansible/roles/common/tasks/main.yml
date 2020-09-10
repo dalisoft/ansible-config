@@ -47,5 +47,6 @@
 
 # Binary packages
 - import_tasks: bin.yml
+  when: binaries|length > 0
   tags:
     - install-binary-packages
