@@ -22,17 +22,10 @@
   apt_repository:
     repo: "{{ item }}"
     state: present
-    update_cache: no
+    update_cache: yes
   loop: "{{ apt_repos }}"
   register: install_apt_repo
   until: install_apt_repo is successful
-
-- name: Update apt repositories
-  become: true
-  become_user: root
-  shell: "apt update -y"
-  register: update_apt_repo
-  until: update_apt_repo is successful
 
 - name: Installing apt force packages
   become: true

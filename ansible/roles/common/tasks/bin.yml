@@ -74,18 +74,35 @@
     - item.binary != True
     - item.direct != True
 
-- name: Cleanup cache folder
+- name: Cleanup binaries
   file:
-    path: "{{ HOME }}/binaries"
+    path: "{{ HOME }}/binaries/{{ item.name }}"
     state: absent
+  loop: "{{ binaries }}"
   register: cleanup_binaries
   until: cleanup_binaries is successful
+  when:
+    - binaries|length > 0
+    - item.binary != True
+    - item.direct != True
+
+- name: Cleanup binaries folder
+  file:
+    path: "{{ HOME }}/binaries/{{ item }}"
+    state: absent
+  loop:
+    - fnm-linux
+  register: cleanup_binaries_folder
+  until: cleanup_binaries_folder is successful
   when: binaries|length > 0
 
-- name: Cleanup installed folder
-  shell: rm -rf *.md LICENSE
-  args:
-    chdir: "/usr/local/bin"
-  register: cleanup_binaries
-  until: cleanup_binaries is successful
+- name: Cleanup user binaries folder
+  file:
+    path: "/usr/local/bin/{{ item }}"
+    state: absent
+  loop:
+    - README.md
+    - LICENSE
+  register: cleanup_user_binaries_folder
+  until: cleanup_user_binaries_folder is successful
   when: binaries|length > 0
