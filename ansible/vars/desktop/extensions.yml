@@ -22,9 +22,6 @@ vscodium_extensions:
   - liximomo.sftp
   - christian-kohler.path-intellisense
   - pnp.polacode
-  # Database
-  - bajdzis.vscode-database
-  - mongodb.mongodb-vscode
   # Programming Languages
   - bmewburn.vscode-intelephense-client
   - jaredly.reason-vscode

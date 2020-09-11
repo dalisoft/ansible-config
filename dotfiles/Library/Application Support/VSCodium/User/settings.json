@@ -136,6 +136,10 @@
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "git.autofetch": false,
+  "scm.alwaysShowActions": true,
+  "scm.alwaysShowRepositories": true,
+  "scm.defaultViewMode": "tree",
+  "scm.providerCountBadge": "auto",
   "search.exclude": {
     "**/.cache": true,
     "**/.out": true,
