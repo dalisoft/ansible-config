@@ -1,0 +1,34 @@
+---
+# Install Vim/Neo vim plugins
+- name: Install Neo-Vim plugins
+  command: nvim -c "PlugInstall" -c "qa"
+  register: install_vim_plugin
+  until: install_vim_plugin is successful
+  when:
+    - install_dotfiles is successful
+  tags:
+    - install-vim-plugins
+
+# GIT Config
+- name: Set GIT e-mail
+  git_config:
+    name: user.email
+    scope: global
+    value: "dalisoft@mail.ru"
+- name: Set GIT username
+  git_config:
+    name: user.name
+    scope: global
+    value: "dalisoft"
+
+- name: Hide some applications
+  become: true
+  become_user: root
+  lineinfile:
+    path: "/usr/share/applications/{{ item }}.desktop"
+    line: NoDisplay=true
+  loop:
+    - nvim
+    - htop
+    - openjdk-8-policytool
+    - groovyConsole

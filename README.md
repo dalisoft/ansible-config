@@ -66,12 +66,3 @@ See [here](https://github.com/vinceliuice/WhiteSur-gtk-theme#suggested-themes) f
 For icons, see [here](https://github.com/keeferrourke/capitaine-cursors)
 
 ### Done. Enjoy
-
-### Notes
-
-I recommend do you these steps to everything work properly
-
-- [Linux Only] Before **Step 2**, i recommend you remove _i386_ architecture and cleanup your machine, see [here](https://superuser.com/a/714392)
-- [Linux Only] Hide unnecessary apps from your **All applications** menu by changing files from `/usr/share/applications`. Add `NoDisplay=true` or change `NoDisplay` to `true` from `false` to `your-app.desktop`. For me it's `nvim`, `htop`, `vim`, `openjdk`, `groovy` and some others as i can get access via Terminal
-- [All OS] Install NeoVIM and/or VIM Plugins by running `nvim -c "PlugInstall" -c "qa"` command in Terminal
-- [MacOS/Linux only] Running VSCodium extension marketplace revert script by running `sudo python3 ~/Desktop/config/scripts/fix-codium.py` command in Terminal
