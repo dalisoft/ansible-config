@@ -40,7 +40,6 @@ For better and cleaner installation, please cleanup your architectures list. See
 
 - Open terminal
 - Run `./run-ansible.sh $PASSWORD $MODE?`
-- Run `nvim -c "PlugInstall" -c "qa"` after successfully installation [Optional]
 
 ### Step 3
 
