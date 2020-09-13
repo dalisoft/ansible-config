@@ -5,7 +5,7 @@
   register: install_vim_plugin
   until: install_vim_plugin is successful
   when:
-    - install_dotfiles is successful
+    - initial_config_link is successful
   tags:
     - install-vim-plugins
 
@@ -26,9 +26,11 @@
   become_user: root
   lineinfile:
     path: "/usr/share/applications/{{ item }}.desktop"
+    insertafter: "^Name= "
     line: NoDisplay=true
   loop:
     - nvim
-    - htop
+    - openjdk-8-java
     - openjdk-8-policytool
     - groovyConsole
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
