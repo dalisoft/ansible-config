@@ -4,3 +4,4 @@ pip_modules:
   - yamllint
   - pyls-mypy
   - pyls-isort
+  - labelme

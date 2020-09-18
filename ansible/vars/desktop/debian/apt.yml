@@ -28,6 +28,7 @@ apt_items:
   - golang-go
   # Python
   - python3-pip
+  - python3-pyqt5
   # Rust
   - rustc
   - cargo
