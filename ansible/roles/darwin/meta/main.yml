@@ -24,3 +24,5 @@ dependencies:
           name: Telegram Lite
         - id: 425424353
           name: The Unarchiver
+        - id: 1098211970
+          name: Polaris Office
