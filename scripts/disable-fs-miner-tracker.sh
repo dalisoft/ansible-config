@@ -4,5 +4,9 @@ systemctl --user mask tracker-store.service tracker-miner-fs.service tracker-min
 echo "Resetting tracker..."
 tracker reset --hard
 
+echo "Cleanup tracker..."
+rm -rf ~/.cache/tracker
+rm -rf ~/.local/share/tracker
+
 echo "Done"
 echo "Reboot your system to take effect"
