@@ -24,7 +24,6 @@ vscodium_extensions:
   - pnp.polacode
   # Programming Languages
   - bmewburn.vscode-intelephense-client
-  - jaredly.reason-vscode
   - matklad.rust-analyzer
   - ms-python.python
   - golang.go
