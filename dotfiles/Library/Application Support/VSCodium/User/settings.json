@@ -11,6 +11,9 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "editor.wordWrap": "bounded",
   "editor.scrollBeyondLastLine": false,
   "editor.scrollBeyondLastColumn": 0,
@@ -23,10 +26,7 @@
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
   "editor.renameOnType": true,
-  "editor.codeActionsOnSave": [
-    "source.fixAll",
-    "source.organizeImports"
-  ],
+  "editor.codeActionsOnSave": ["source.fixAll", "source.organizeImports"],
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 80,
@@ -158,11 +158,7 @@
   "go.toolsGopath": "~/go/bin",
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
-  "go.languageServerFlags": [
-    "serve",
-    "-rpc.trace",
-    "--debug=localhost:6060"
-  ],
+  "go.languageServerFlags": ["serve", "-rpc.trace", "--debug=localhost:6060"],
   "reason_language_server.location": "/usr/local/bin/reason-language-server",
   "rust-analyzer.updates.askBeforeDownload": false,
   "docker.images.label": "Tag",
