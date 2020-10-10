@@ -14,7 +14,5 @@ dependencies:
           name: Joxi
         - id: 1399498094
           name: Websocket Client
-        - id: 1440147259
-          name: AdGuard Safari
         - id: 1515213004
           name: Session Buddy (Pal)
