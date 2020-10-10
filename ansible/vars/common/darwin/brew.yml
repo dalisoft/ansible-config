@@ -27,3 +27,6 @@ brew_packages:
   - wrk
   # Build tools
   - cmake
+  - openblas
+  # Necessary tools
+  - ffmpeg
