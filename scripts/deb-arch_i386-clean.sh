@@ -1,4 +1,4 @@
-echo "Purging i386 architecture packages"
+echo "Purging i386 architecture packages..."
 apt-get purge ".*:i386"
 
 echo "Remove i386 architecture"
