@@ -1,6 +1,6 @@
 ---
 - name: My Machine Configurations
-  hosts: all
+  hosts: local_machine # set `all` or host name from ../hosts.ini
   become: false
   roles:
     - common

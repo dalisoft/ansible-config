@@ -7,6 +7,7 @@ apt_keys:
 apt_repos:
   - ppa:git-core/ppa
   - ppa:fish-shell/release-3
+  - ppa:jonathonf/ffmpeg-4
   - deb https://deb.nodesource.com/node_14.x focal main
   - deb https://dl.yarnpkg.com/debian/ stable main
   - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
@@ -37,6 +38,13 @@ apt_items:
   - docker-ce-cli
   - containerd.io
   - docker-compose
+  # Dependencies for WebRTC
+  - libavdevice-dev
+  - libavfilter-dev
+  - libopus-dev
+  - libvpx-dev
+  - libsrtp2-dev
+  - pkg-config
 
 apt_force_items:
   - bat

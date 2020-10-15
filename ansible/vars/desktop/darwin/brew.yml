@@ -40,6 +40,7 @@ brew_cask_packages:
   - the-unarchiver
   - telegram-desktop
   - 1password
+  - numi
   # - macs-fan-control # This is only for MacBook
   # Browsers
   - google-chrome
