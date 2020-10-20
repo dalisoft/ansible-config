@@ -24,3 +24,6 @@ pacman_packages:
   # Docker
   - docker
   - docker-compose
+  # Necessary tools
+  - ffmpeg
+  - imagemagick

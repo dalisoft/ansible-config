@@ -30,3 +30,5 @@ brew_packages:
   - openblas
   # Necessary tools
   - ffmpeg
+  - imagemagick
+  - ghostscript

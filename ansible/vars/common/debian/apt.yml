@@ -45,6 +45,9 @@ apt_items:
   - libvpx-dev
   - libsrtp2-dev
   - pkg-config
+  # Necessary tools
+  - ffmpeg
+  - imagemagick
 
 apt_force_items:
   - bat
