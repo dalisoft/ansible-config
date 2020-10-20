@@ -33,6 +33,7 @@ apt_items:
   - yarn
   # Build tools
   - cmake
+  - unzip
   # Docker
   - docker-ce
   - docker-ce-cli

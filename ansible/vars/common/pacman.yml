@@ -21,6 +21,7 @@ pacman_packages:
   - yarn
   # Build tools
   - cmake
+  - unzip
   # Docker
   - docker
   - docker-compose

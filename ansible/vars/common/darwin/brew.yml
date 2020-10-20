@@ -28,6 +28,7 @@ brew_packages:
   # Build tools
   - cmake
   - openblas
+  - unzip
   # Necessary tools
   - ffmpeg
   - imagemagick
