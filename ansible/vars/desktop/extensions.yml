@@ -37,3 +37,5 @@ vscodium_extensions:
 sublime_extensions_git:
   - name: GoSublime
     git_url: https://github.com/DisposaBoy/GoSublime.git
+  - name: LSP-PyLS
+    git_url: git@github.com:sublimelsp/LSP-pyls.git
