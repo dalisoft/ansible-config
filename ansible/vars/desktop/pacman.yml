@@ -1,5 +1,11 @@
 ---
 pacman_packages:
+  # Improve Linux performance
+  - linux-manjaro-xanmod
+  # Polyfills
+  - exfat-dkms-git
+  # Fonts
+  - ttf-fira-code
   # Programming languages
   # PHP
   - php
@@ -11,12 +17,12 @@ pacman_packages:
   # Rust
   - rust
   # Mobile-dev
-  - android-studio
   - gradle
   # Other desktop tools
   - ansible
   - heroku-cli
-  - kdiff3
+  # System utilities
+  - gparted
   # For some GTK themes
   # and macOS Theme dependencies
   # for Linux
@@ -26,24 +32,25 @@ pacman_packages:
   - sassc
   - gtk-engine-murrine
   - gtk-engines
-  # Fonts
-  - ttf-fira-code
-  # System utilities
-  - gparted
-  - telegram-desktop
+  # Utilities
+  - kdiff3
   # Browsers
   - firefox
   - epiphany-browser
-  # Media / Downloaders
+  # Most needed desktop apps
+  - telegram-desktop
   - uget
   - vlc
+  - 1password
+  - anydesk-bin
+  - octave
   - transmittion-gtk
   # Development tools
-  - gitkraken
   - postman
-  - octave
-  # Editors
+  - gitkraken
+  # Editors / IDE
   - vscodium-bin
+  - android-studio
   # KVM/Packages for Virtual Machines
   - qemu
   - virtualbox

@@ -5,21 +5,23 @@ apt_keys:
   - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
 
 apt_repos:
-  #  - deb http://deb.xanmod.org releases main
+  - deb http://deb.xanmod.org releases main
+  - deb [arch=amd64] https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ focal main
   - deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main
 
 apt_items:
+  # Improve Linux performance
+  - linux-xanmod
+  - intel-microcode
+  - iucode-tool
   # PopOS polyfill
   - snapd
   - grub2-common
   - exfat-fuse
   - exfat-utils
-  - kdiff3
-  # Improve Linux performance
-  #  - linux-xanmod
-  #  - intel-microcode
-  #  - iucode-tool
+  # Fonts
+  - fonts-firacode
   # Programming languages
   # PHP
   - php
@@ -43,20 +45,19 @@ apt_items:
   - sassc
   - libcanberra-gtk-module
   - libglib2.0-dev
-  # Fonts
-  - fonts-firacode
-  # Most needed desktop apps
   # System utilities
   - timeshift
-  - telegram-desktop
+  # Utilities
+  - kdiff3
   # Browsers
   - firefox
   - epiphany-browser
-  # Media / Downloaders
+  # Most needed desktop apps
+  - telegram-desktop
   - vlc
-  - transmission
-  # Development tools
+  - 1password
   - octave
+  - transmission
   # Editors
   - codium
   # KVM/Packages for Virtual Machines
