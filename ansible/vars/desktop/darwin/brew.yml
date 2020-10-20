@@ -36,32 +36,32 @@ brew_cask_packages:
   - qlimagesize
   # Fonts
   - font-fira-code
-  # Most needed desktop apps
+  # Utilities
   - the-unarchiver
-  - telegram-desktop
-  - 1password
   # - macs-fan-control # This is only for MacBook
+  - kdiff3
+  - android-file-transfer
   # Browsers
   - google-chrome
   - firefox
-  # Media / Downloaders
-  - folx
+  # Most needed desktop apps
+  - telegram-desktop
   - vlc
-  # Development tools
-  - kdiff3
+  - 1password
+  - anydesk
   - octave-app
+  - folx
+  # Development tools
   - postman
   - gitkraken
+  # DevOps tools
+  - docker
   # Editors
   #  - sublime-text # Enable when v4 comes to Homebrew
   - vscodium
   # - clion # This is only for iMac
   # - intellij-idea # This is only for iMac
   - android-studio
-  # Utilities
-  - android-file-transfer
-  # DevOps tools
-  - docker
 
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk8
