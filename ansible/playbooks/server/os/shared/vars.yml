@@ -10,7 +10,9 @@ initial_configs:
   # Folders
   - .vim
   - .config/nvim
-  - .config/autostart
 
 shared_packages:
   - openssh-server
+
+npm_modules:
+  - pm2

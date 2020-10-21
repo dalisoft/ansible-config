@@ -1,6 +1,156 @@
 ---
+st_packages_dir: "{{ HOME }}/.config/sublime-text-3/Packages"
+
+ensure_folders:
+  - "{{ HOME }}/.local/bin"
+  - "{{ HOME }}/Desktop/config/dotfiles/.config/autostart"
+
+initial_configs:
+  # Folders
+  - .config/autostart
+  - nfancurve
+
 binaries:
   - name: rust-analyzer
     link: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux
     direct: False
     binary: True
+
+# Linux shared package names
+shared_packages: &shared_packages
+  # Shared names (DRY method)
+  # PHP
+  - php
+  - composer
+  # Mobile-dev
+  - gradle
+  # Browsers
+  - epiphany-browser
+  - firefox
+  # Most needed desktop apps
+  - telegram-desktop
+  - vlc
+  - 1password
+  - octave
+
+# APT (Debian/Ubuntu) packages
+apt_keys:
+  - https://dl.xanmod.org/gpg.key
+  - https://keys.anydesk.com/repos/DEB-GPG-KEY
+  - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+  - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+
+apt_repos:
+  - deb http://deb.xanmod.org releases main
+  - deb [arch=amd64] https://onepassword.s3.amazonaws.com/linux/debian edge main
+  - deb http://deb.anydesk.com/ all main
+  - deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main
+  - deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ focal main
+
+apt_items:
+  # Improve Linux performance
+  - linux-xanmod
+  - intel-microcode
+  - iucode-tool
+  # PopOS polyfill
+  - snapd
+  - grub2-common
+  - exfat-fuse
+  - exfat-utils
+  # Fonts
+  - fonts-firacode
+  # Programming languages
+  - <<: *shared_packages
+  # Go
+  - golang-go
+  # Python
+  - python3-pip
+  - python3-pyqt5
+  # Rust
+  - rustc
+  - cargo
+  # For some GTK themes
+  # and macOS Theme dependencies
+  # for Linux
+  - optipng
+  - sassc
+  - libcanberra-gtk-module
+  - libglib2.0-dev
+  # System utilities
+  - timeshift
+  # Most needed desktop apps
+  - anydesk
+  - transmission
+  # Editors
+  - codium
+  # KVM/Packages for Virtual Machines
+  - qemu-kvm
+  - virtinst
+  - bridge-utils
+  - cpu-checker
+  # For AI Stuffs
+  - nvidia-cuda-toolkit
+  - nvidia-cuda-gdb
+  - nvidia-cuda-dev
+  - nvidia-cuda-doc
+  # Java tools
+  - adoptopenjdk-8-hotspot
+
+# Snap packages
+snap_packages:
+  - starship
+  - postman
+
+snap_classic_packages:
+  - heroku
+  - gitkraken
+  - sublime-text
+  - android-studio
+
+# Pacman packages
+pacman_packages:
+  # Improve Linux performance
+  - linux-manjaro-xanmod
+  # Polyfills
+  - exfat-dkms-git
+  # Fonts
+  - ttf-fira-code
+  # Programming languages
+  - <<: *shared_packages
+  # Go
+  - go
+  # Python
+  - python
+  # Rust
+  - rust
+  # Other desktop tools
+  - heroku-cli
+  # System utilities
+  - gparted
+  # For some GTK themes
+  # and macOS Theme dependencies
+  # for Linux
+  - krita
+  - inkscape
+  - optipng
+  - sassc
+  - gtk-engine-murrine
+  - gtk-engines
+  # Most needed desktop apps
+  - uget
+  - anydesk-bin
+  - transmittion-gtk
+  # Development tools
+  - postman
+  - gitkraken
+  # Editors / IDE
+  - vscodium-bin
+  - android-studio
+  # KVM/Packages for Virtual Machines
+  - qemu
+  - virtualbox
+  - bridge-utils
+  # For AI Stuffs
+  - cuda
+  # Java tools
+  - jdk8-adoptopenjdk
