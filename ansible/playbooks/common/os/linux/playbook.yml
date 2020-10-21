@@ -18,5 +18,13 @@
     MOZ_USE_OMTC: 1
     PATH: "/usr/local/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
 
+  pre_tasks:
+    # Pre-installation steps
+    - import_tasks: ../shared/unix_pre-task.yml
+
   tasks:
+    # Tasks list
     - import_tasks: tasks.yml
+    # Post-installation
+    - import_tasks: ../shared/unix_post-task.yml
+    - import_tasks: post-task.yml

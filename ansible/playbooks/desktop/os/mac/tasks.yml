@@ -42,7 +42,7 @@
     - install-brew-packages
 
 - name: "List installed Cask packages"
-  command: brew cask list -1
+  command: brew list --cask -1
   register: brew_cask_installed
   changed_when: false
   check_mode: false

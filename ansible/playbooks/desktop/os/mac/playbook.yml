@@ -10,7 +10,7 @@
   roles:
     - appstore
   vars_files:
-    #  - ../shared/vars.yml
+    - ../shared/vars.yml
     - vars.yml
   vars_prompt:
     - name: "USER"
@@ -28,3 +28,6 @@
 
   tasks:
     - import_tasks: tasks.yml
+    # Post-installation
+    - import_tasks: ../shared/unix_post-task.yml
+    - import_tasks: post-task.yml

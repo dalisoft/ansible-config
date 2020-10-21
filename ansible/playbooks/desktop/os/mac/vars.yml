@@ -1,20 +1,13 @@
 ---
-ensure_folders:
-  - /usr/local/bin
-
-# Initial files to link
-initial_configs:
-  # Files
-  - .gitconfig
-  - .gitignore
-  - .nanorc
-  # Folders
-  - .nano
+st_packages_dir: "{{ HOME }}/Library/Application Support/Sublime Text 3/Packages"
 
 # Homebrew
 # Homebrew taps
 brew_taps:
-  - schniz/tap
+  - heroku/brew
+  - homebrew/cask-fonts
+  - adoptopenjdk/openjdk
+  - octave-app/octave-app
 
 # Homebrew packages
 brew_packages:
@@ -39,7 +32,7 @@ brew_packages:
   - deno
   - llvm
 
-  brew_cask_packages:
+brew_cask_packages:
   # macOS QuickLook plugins
   - qlcolorcode
   - qlstephen
@@ -76,5 +69,4 @@ brew_packages:
 
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk8
-  #  - docker
-
+  - docker

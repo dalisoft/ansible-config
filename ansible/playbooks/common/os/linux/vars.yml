@@ -57,7 +57,6 @@ pacman_packages:
 
 # Linked binaries
 binaries:
-  # ZIP
   - name: fnm
     link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
     command: mv fnm-linux/fnm fnm
