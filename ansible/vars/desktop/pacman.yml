@@ -31,16 +31,12 @@ pacman_packages:
   - sassc
   - gtk-engine-murrine
   - gtk-engines
-  # Utilities
-  - kdiff3
   # Browsers
-  - firefox
   - epiphany-browser
   # Most needed desktop apps
   - telegram-desktop
   - uget
   - vlc
-  - 1password
   - anydesk-bin
   - octave
   - transmittion-gtk

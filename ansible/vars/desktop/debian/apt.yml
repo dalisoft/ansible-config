@@ -47,8 +47,6 @@ apt_items:
   - libglib2.0-dev
   # System utilities
   - timeshift
-  # Utilities
-  - kdiff3
   # Browsers
   - firefox
   - epiphany-browser

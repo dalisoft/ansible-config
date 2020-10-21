@@ -1,8 +1,0 @@
----
-- import_tasks: brew.yml
-  when:
-    - INSTALL_MODE == 'DESKTOP'
-    - ansible_os_family == 'Darwin'
-    - ansible_distribution == 'MacOSX'
-  tags:
-    - install-brew-cask-packages

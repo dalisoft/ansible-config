@@ -1,10 +1,16 @@
 ---
-- name: Linux Common Playbook
+- hosts: all
+
+- name: Include macOS Common playbook
+  import_playbook: ../../../common/os/mac/playbook.yml
+
+- name: macOS Desktop Playbook
   hosts: all
   become: false
-
+  roles:
+    - appstore
   vars_files:
-    - ../shared/vars.yml
+    #  - ../shared/vars.yml
     - vars.yml
   vars_prompt:
     - name: "USER"
@@ -12,11 +18,13 @@
       private: yes
     - name: "HOME"
       prompt: "Please enter your HOME dir"
+    - name: "SUDO_PASS"
+      prompt: "Please enter your SUDO password"
+      private: yes
 
   environment:
     NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
     MOZ_USE_OMTC: 1
-    PATH: "/usr/local/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
 
   tasks:
     - import_tasks: tasks.yml

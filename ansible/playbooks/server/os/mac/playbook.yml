@@ -1,5 +1,5 @@
 ---
-- name: My Machine Configurations
+- name: macOS Server Playbook
   hosts: all
   become: false
 
