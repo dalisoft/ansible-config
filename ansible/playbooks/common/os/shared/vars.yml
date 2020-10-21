@@ -1,0 +1,15 @@
+---
+force_install: false
+
+npm_modules:
+  - prettier
+  - node-gyp
+
+fnm_versions:
+  - 12.18.4
+  - 13.14.0
+  # - 14.14.0
+  - 15.0.0
+
+pip_modules:
+  - virtualenv

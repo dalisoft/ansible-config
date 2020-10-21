@@ -1,7 +1,22 @@
 ---
+ensure_folders:
+  - /usr/local/bin
+
+# Initial files to link
+initial_configs:
+  # Files
+  - .gitconfig
+  - .gitignore
+  - .nanorc
+  # Folders
+  - .nano
+
+# Homebrew
+# Homebrew taps
 brew_taps:
   - schniz/tap
 
+# Homebrew packages
 brew_packages:
   # Most common terminal stuffs
   - fish
@@ -12,10 +27,7 @@ brew_packages:
   - git
   - git-lfs
   # Addinational terminal stuffs
-  - htop
-  - tmux
   - nano
-  - neovim
   # Optional, but common utilities
   - rsync
   - curl
@@ -28,7 +40,6 @@ brew_packages:
   # Build tools
   - cmake
   - openblas
-  - unzip
   # Necessary tools
   - ffmpeg
   - imagemagick

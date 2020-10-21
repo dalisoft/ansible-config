@@ -1,0 +1,21 @@
+---
+- name: My Machine Configurations
+  hosts: all
+  become: false
+
+  vars_prompt:
+    - name: "USER"
+      prompt: "Please enter your User name"
+      private: yes
+    - name: "HOME"
+      prompt: "Please enter your HOME dir"
+    - name: "SUDO_PASS"
+      prompt: "Please enter your SUDO password"
+      private: yes
+
+  environment:
+    NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
+    MOZ_USE_OMTC: 1
+
+  tasks:
+    - import_tasks: tasks.yml

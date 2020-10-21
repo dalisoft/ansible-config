@@ -1,0 +1,16 @@
+---
+force_install: false
+
+ensure_folders:
+  - "{{ HOME }}/Desktop/config/dotfiles/.vim/autoload"
+  - "{{ HOME }}/Desktop/config/dotfiles/.config/nvim"
+  - "{{ HOME }}/Desktop/config/dotfiles/.config/autostart"
+
+# Initial files to link
+initial_configs:
+  # Files
+  - .vimrc
+  # Folders
+  - .vim
+  - .config/nvim
+  - .config/autostart

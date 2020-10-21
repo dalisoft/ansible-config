@@ -1,0 +1,29 @@
+---
+- name: Ensure config folders exists
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop: "{{ ensure_folders }}"
+  tags:
+    - ensure-config-folders
+
+- name: Download vim-plug
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: "{{ HOME }}/Desktop/config/dotfiles/.vim/autoload/plug.vim"
+  tags:
+    - link-initial-config
+
+- name: Linking initial configs
+  file:
+    src: "{{ HOME }}/Desktop/config/dotfiles/{{ item }}"
+    dest: "{{ HOME }}/{{ item }}"
+    state: link
+    force: yes
+  loop: "{{ initial_configs }}"
+  retries: 1
+  register: initial_config_link
+  until: initial_config_link.attempts == 1
+  tags:
+    - link-initial-config

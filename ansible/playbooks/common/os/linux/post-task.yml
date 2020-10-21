@@ -1,0 +1,14 @@
+---
+- name: Hide some applications
+  become: true
+  become_user: root
+  lineinfile:
+    path: "/usr/share/applications/{{ item }}.desktop"
+    insertafter: "^Name= "
+    line: NoDisplay=true
+  loop:
+    - nvim
+    - openjdk-8-java
+    - openjdk-8-policytool
+    - groovyConsole
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'

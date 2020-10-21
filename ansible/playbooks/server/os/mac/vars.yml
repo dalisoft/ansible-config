@@ -1,0 +1,24 @@
+---
+force_install: false
+
+ensure_folders:
+  - "{{ HOME }}/Desktop/config/dotfiles/.vim/autoload"
+  - "{{ HOME }}/Desktop/config/dotfiles/.config/nvim"
+
+# Initial files to link
+initial_configs:
+  # Files
+  - .vimrc
+  # Folders
+  - .vim
+  - .config/nvim
+  - .config/autostart
+
+# Homebrew packages
+brew_packages:
+  # Addinational terminal stuffs
+  - htop
+  - tmux
+  - neovim
+  # Build tools
+  - unzip
