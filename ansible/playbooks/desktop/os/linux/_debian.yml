@@ -1,0 +1,94 @@
+---
+- name: Prepare packages
+  set_fact:
+    packages: "{{ (shared_packages | default([])) + (apt_items | default([])) }}"
+
+- name: "List all apt packages"
+  package_facts:
+    manager: apt
+  register: apt_pkgs_list
+  changed_when: false
+  check_mode: false
+
+- name: Adding apt keys
+  become: true
+  become_user: root
+  apt_key:
+    url: "{{ item }}"
+    state: present
+  loop: "{{ apt_keys }}"
+  register: install_apt_key
+  until: install_apt_key is successful
+
+- name: Adding apt repositories
+  become: true
+  become_user: root
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop: "{{ apt_repos }}"
+  register: install_apt_repo
+  until: install_apt_repo is successful
+
+- name: Installing apt force packages
+  become: true
+  become_user: root
+  apt:
+    name: "{{ item }}"
+    state: present
+    dpkg_options: "force-overwrite"
+  when: item not in ansible_facts.packages
+  loop: "{{ apt_force_items }}"
+  register: install_optionless_apt_package
+  until: install_optionless_apt_package is successful
+
+- name: Installing apt packages
+  become: true
+  become_user: root
+  apt:
+    name: "{{ item }}"
+    state: present
+  when: item not in ansible_facts.packages
+  loop: "{{ packages }}"
+  register: install_apt_package
+  until: install_apt_package is successful
+
+- name: Cleanup apt packages
+  become: true
+  become_user: root
+  apt:
+    autoclean: yes
+    autoremove: yes
+  register: clean_apt_package
+  until: clean_apt_package is successful
+
+# Snap packages
+- name: "List Snap packages"
+  command: snap list
+  register: snap_installed_packages
+  changed_when: false
+  check_mode: false
+
+- name: Installing Snap packages
+  become: true
+  become_user: root
+  snap:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ snap_packages }}"
+  when: item not in snap_installed_packages
+  register: install_snap_package
+  until: install_snap_package is successful
+
+- name: Installing Snap packages
+  become: true
+  become_user: root
+  snap:
+    name: "{{ item }}"
+    classic: yes
+    state: present
+  loop: "{{ snap_classic_packages }}"
+  when: item not in snap_installed_packages
+  register: install_snap_classic_package
+  until: install_snap_classic_package is successful

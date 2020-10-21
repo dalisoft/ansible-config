@@ -32,6 +32,10 @@ shared_packages: &shared_packages
   - vlc
   - 1password
   - octave
+  # System utilities
+  - gparted
+  # KVM/Packages for Virtual Machines
+  - bridge-utils
 
 # APT (Debian/Ubuntu) packages
 apt_keys:
@@ -86,7 +90,6 @@ apt_items:
   # KVM/Packages for Virtual Machines
   - qemu-kvm
   - virtinst
-  - bridge-utils
   - cpu-checker
   # For AI Stuffs
   - nvidia-cuda-toolkit
@@ -125,8 +128,6 @@ pacman_packages:
   - rust
   # Other desktop tools
   - heroku-cli
-  # System utilities
-  - gparted
   # For some GTK themes
   # and macOS Theme dependencies
   # for Linux
@@ -149,7 +150,6 @@ pacman_packages:
   # KVM/Packages for Virtual Machines
   - qemu
   - virtualbox
-  - bridge-utils
   # For AI Stuffs
   - cuda
   # Java tools
