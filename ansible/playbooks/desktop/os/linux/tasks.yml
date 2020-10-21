@@ -1,9 +1,14 @@
 ---
 # Installation
-- import_tasks: _manjaro.yml
+- import_tasks: ../../../common/os/linux/_manjaro.yml
   when: ansible_os_family == 'Archlinux'
   tags:
     - install-archlinux-packages
+
+- import_tasks: ../../../common/os/linux/_debian.yml
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
+  tags:
+    - install-debian-common-packages
 
 - import_tasks: _debian.yml
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'

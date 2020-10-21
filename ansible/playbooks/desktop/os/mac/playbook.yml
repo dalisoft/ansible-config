@@ -27,6 +27,7 @@
     MOZ_USE_OMTC: 1
 
   tasks:
+    - import_tasks: ../../../common/os/mac/tasks.yml
     - import_tasks: tasks.yml
     # Post-installation
     - import_tasks: ../shared/unix_post-task.yml
