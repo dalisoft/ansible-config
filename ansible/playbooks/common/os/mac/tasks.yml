@@ -44,17 +44,6 @@
   tags:
     - install-brew-packages
 
-# Gems packages
-- name: Install Gems
-  gem:
-    name: "{{ item }}"
-    state: present
-    user_install: yes
-  loop:
-    - cocoapods
-  tags:
-    - install-gem-packages
-
 # Binary packages
 - import_tasks: ../shared/unix_binary-task.yml
   when: binaries is defined and binaries|length > 0

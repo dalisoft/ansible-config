@@ -3,6 +3,9 @@
   hosts: all
   become: false
 
+  vars_files:
+    - ../shared/vars.yml
+    - vars.yml
   vars_prompt:
     - name: "USER"
       prompt: "Please enter your User name"
@@ -17,5 +20,11 @@
     NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
     MOZ_USE_OMTC: 1
 
+  pre_tasks:
+    # Pre-installation steps
+    - import_tasks: ../../../common/os/mac/unix_pre-task.yml
   tasks:
     - import_tasks: tasks.yml
+    # Post-installation
+    - import_tasks: ../../../common/os/mac/unix_post-task.yml
+    - import_tasks: ../shared/post-task.yml
