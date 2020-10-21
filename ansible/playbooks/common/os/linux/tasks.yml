@@ -1,0 +1,27 @@
+---
+# Pre-installation
+- name: Pre-installation steps
+  import_tasks: ../shared/unix_pre-task.yml
+
+# Installation
+- import_tasks: _manjaro.yml
+  when: ansible_os_family == 'Archlinux'
+  tags:
+    - install-archlinux-packages
+- import_tasks: _debian.yml
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
+  tags:
+    - install-debian-packages
+
+# Binary packages
+- import_tasks: ../shared/unix_binary-task.yml
+  when: binaries is defined and binaries|length > 0
+  tags:
+    - install-binary-packages
+
+# Post-installation
+- name: Post-installation steps
+  import_tasks: ../shared/unix_post-task.yml
+
+- name: Linux Post-installation steps
+  import_tasks: ../shared/post-task.yml

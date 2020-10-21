@@ -1,11 +1,4 @@
 ---
-- name: Apply shared variables
-  include_vars:
-    file: ../shared/vars.yml
-- name: Apply task variables
-  include_vars:
-    file: vars.yml
-
 # Pre-installation
 - name: Pre-installation steps
   import_tasks: ../shared/unix_pre-task.yml
@@ -33,6 +26,10 @@
     - install-brew-taps
 
 # Homebrew packages
+- name: Prepare packages
+  set_fact:
+    packages: "{{ (shared_packages | default([])) + (brew_packages | default([])) }}"
+
 - name: "List all Homebrew packages"
   command: brew ls
   register: brew_pkgs_list
@@ -45,7 +42,7 @@
   homebrew:
     name: "{{ item }}"
     state: present
-  loop: "{{ brew_packages }}"
+  loop: "{{ packages }}"
   register: install_brew_package
   until: install_brew_package is successful
   when: item not in brew_pkgs_list.stdout_lines
@@ -62,6 +59,12 @@
     - cocoapods
   tags:
     - install-gem-packages
+
+# Binary packages
+- import_tasks: ../shared/unix_binary-task.yml
+  when: binaries is defined and binaries|length > 0
+  tags:
+    - install-binary-packages
 
 # Post-installation
 - name: Post-installation steps

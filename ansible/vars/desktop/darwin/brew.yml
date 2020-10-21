@@ -23,7 +23,6 @@ brew_packages:
   - watchman
   # Other desktop tools
   - heroku
-  - ansible
   - cassowary
   - deno
   - llvm

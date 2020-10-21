@@ -1,4 +1,8 @@
 ---
+- name: Prepare packages
+  set_fact:
+    packages: "{{ (shared_packages | default([])) + (apt_items | default([])) }}"
+
 - name: "List all apt packages"
   package_facts:
     manager: apt
@@ -46,7 +50,7 @@
     name: "{{ item }}"
     state: present
   when: item not in ansible_facts.packages
-  loop: "{{ apt_items }}"
+  loop: "{{ packages }}"
   register: install_apt_package
   until: install_apt_package is successful
 
@@ -58,3 +62,6 @@
     autoremove: yes
   register: clean_apt_package
   until: clean_apt_package is successful
+# - import_tasks: ../ubuntu/snap.yml
+#  when:
+#    - INSTALL_MODE == 'DESKTOP'

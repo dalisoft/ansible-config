@@ -7,7 +7,7 @@
 
 - name: Installing Golang Program Language Server
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
-  when: force_install == true or gopls_bin.stat.exists != true
+  when: gopls_bin.stat.exists != true
 
 - import_tasks: _darwin.yml
   when: ansible_os_family == 'Darwin'

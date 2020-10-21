@@ -26,9 +26,6 @@
     MOZ_USE_OMTC: 1
 
   vars:
-    install_homebrew_if_missing: true
-    force_install: false
-
     ensure_folders:
       - "{{ HOME }}/.local/bin"
       - "{{ HOME }}/Desktop/config/dotfiles/.vim/autoload"

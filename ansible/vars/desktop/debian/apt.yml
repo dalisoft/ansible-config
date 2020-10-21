@@ -38,8 +38,6 @@ apt_items:
   - cargo
   # Mobile-dev
   - gradle
-  # Other desktop tools
-  - ansible
   # For some GTK themes
   # and macOS Theme dependencies
   # for Linux

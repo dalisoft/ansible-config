@@ -19,7 +19,6 @@ pacman_packages:
   # Mobile-dev
   - gradle
   # Other desktop tools
-  - ansible
   - heroku-cli
   # System utilities
   - gparted

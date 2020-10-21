@@ -18,29 +18,13 @@ brew_taps:
 
 # Homebrew packages
 brew_packages:
-  # Most common terminal stuffs
-  - fish
+  - fnm
+  - wrk
+  # Build tools
+  - openblas
+  # Necessary tools
   - starship
   - bat
   - exa
   - ripgrep
-  - git
-  - git-lfs
-  # Addinational terminal stuffs
-  - nano
-  # Optional, but common utilities
-  - rsync
-  - curl
-  - wget
-  # Addinational tools
-  - node
-  - yarn
-  - fnm
-  - wrk
-  # Build tools
-  - cmake
-  - openblas
-  # Necessary tools
-  - ffmpeg
-  - imagemagick
   - ghostscript

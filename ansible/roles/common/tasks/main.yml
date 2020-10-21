@@ -44,9 +44,3 @@
     - item not in brew_pkgs_list.stdout_lines
   tags:
     - install-brew-packages
-
-# Binary packages
-- import_tasks: bin.yml
-  when: binaries|length > 0
-  tags:
-    - install-binary-packages

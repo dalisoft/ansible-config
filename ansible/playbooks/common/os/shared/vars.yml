@@ -1,5 +1,25 @@
 ---
-force_install: false
+shared_packages:
+  # Required
+  - ansible
+  # Most common terminal stuffs
+  - fish
+  - git
+  - git-lfs
+  # Addinational terminal stuffs
+  - nano
+  # Optional, but common utilities
+  - rsync
+  - curl
+  - wget
+  # Addinational tools
+  - node
+  - yarn
+  # Build tools
+  - cmake
+  # Necessary tools
+  - ffmpeg
+  - imagemagick
 
 npm_modules:
   - prettier

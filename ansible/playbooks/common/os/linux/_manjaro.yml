@@ -1,4 +1,8 @@
 ---
+- name: Prepare packages
+  set_fact:
+    packages: "{{ (shared_packages | default([])) + (pacman_packages | default([])) }}"
+
 # Packman packages
 - name: Installing Pacman packages
   become: true
@@ -7,7 +11,7 @@
     name: "{{ item }}"
     state: present
     update_cache: yes
-  loop: "{{ pacman_packages }}"
+  loop: "{{ packages }}"
   register: install_pacman_package
   until: install_pacman_package is successful
   tags:

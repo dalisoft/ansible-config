@@ -1,0 +1,74 @@
+---
+ensure_folders:
+  - "{{ HOME }}/Desktop/config/dotfiles/.config/autostart"
+  - /usr/local/bin
+
+# Initial files to link
+initial_configs:
+  # Files
+  - .gitconfig
+  - .gitignore
+  - .nanorc
+  # Folders
+  - .nano
+  - .config/autostart
+
+# APT (Debian/Ubuntu) packages
+apt_keys:
+  - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+  - https://dl.yarnpkg.com/debian/pubkey.gpg
+  - https://download.docker.com/linux/ubuntu/gpg
+
+apt_repos:
+  - ppa:git-core/ppa
+  - ppa:fish-shell/release-3
+  - ppa:jonathonf/ffmpeg-4
+  - deb https://deb.nodesource.com/node_14.x focal main
+  - deb https://dl.yarnpkg.com/debian/ stable main
+  - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+
+apt_items:
+  # Docker
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-compose
+  # Dependencies for WebRTC
+  - libavdevice-dev
+  - libavfilter-dev
+  - libopus-dev
+  - libvpx-dev
+  - libsrtp2-dev
+  - pkg-config
+
+apt_force_items:
+  - bat
+  - ripgrep
+
+# Pacman/Manjaro Packages
+pacman_packages:
+  # Docker
+  - docker
+  - docker-compose
+  # Necessary tools
+  - starship
+  - bat
+  - ripgrep
+
+# Linked binaries
+binaries:
+  # ZIP
+  - name: fnm
+    link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
+    command: mv fnm-linux/fnm fnm
+    binary: False
+    direct: False
+  - name: exa
+    link: https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
+    command: mv exa-linux-x86_64 exa
+    binary: False
+    direct: False
+  - name: wrk
+    link: https://github.com/dalisoft/wrk/releases/latest/download/wrk-linux.zip
+    binary: False
+    direct: True
