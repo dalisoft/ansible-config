@@ -27,6 +27,7 @@
   check_mode: false
   tags:
     - install-fnm-version
+
 - name: Installing npm modules
   npm:
     global: yes
