@@ -16,6 +16,7 @@
   register: install_brew_tap
   until: install_brew_tap is successful
   when:
+    - brew_taps is defined
     - item not in brew_tap_list.stdout_lines
   tags:
     - install-brew-taps
@@ -40,6 +41,8 @@
   loop: "{{ packages }}"
   register: install_brew_package
   until: install_brew_package is successful
-  when: item not in brew_pkgs_list.stdout_lines
+  when:
+    - packages is defined
+    - item not in brew_pkgs_list.stdout_lines
   tags:
     - install-brew-packages
