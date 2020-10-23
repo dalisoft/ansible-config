@@ -119,7 +119,7 @@
 
 - name: Override some basic fail2ban configurations
   copy:
-    src: ../templates/jail.local.j2
+    src: /etc/fail2ban/templates/jail.local.j2
     dest: /etc/fail2ban/jail.local
     owner: root
     group: root
