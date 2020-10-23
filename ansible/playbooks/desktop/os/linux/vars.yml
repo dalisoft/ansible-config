@@ -56,7 +56,6 @@ apt_items:
   - fonts-firacode
   # Programming languages
   - <<: *shared_packages
-  - containerd.io
   - pkg-config
   # Go
   - golang-go

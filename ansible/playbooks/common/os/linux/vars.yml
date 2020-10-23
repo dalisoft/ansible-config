@@ -11,7 +11,7 @@ apt_repos:
   - ppa:jonathonf/ffmpeg-4
   - deb https://deb.nodesource.com/node_14.x focal main
   - deb https://dl.yarnpkg.com/debian/ stable main
-  - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+  - "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_lsb.id|lower }} {{ ansible_lsb.codename|lower }} stable"
 
 apt_items:
   # Addinational tools
@@ -19,6 +19,7 @@ apt_items:
   # Docker
   - docker-ce
   - docker-ce-cli
+  - containerd.io
   - docker-compose
   # Dependencies for WebRTC
   - libavdevice-dev
@@ -26,6 +27,7 @@ apt_items:
   - libopus-dev
   - libvpx-dev
   - libsrtp2-dev
+  - pkg-config
 
 # Pacman/Manjaro Packages
 pacman_packages:
