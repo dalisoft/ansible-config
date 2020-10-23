@@ -6,6 +6,8 @@ brew_taps:
 
 # Homebrew packages
 brew_packages:
+  # Addinational tools
+  - node
   - fnm
   - wrk
   # Build tools

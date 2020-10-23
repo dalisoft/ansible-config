@@ -13,7 +13,6 @@ shared_packages:
   - curl
   - wget
   # Addinational tools
-  - node
   - yarn
   # Build tools
   - cmake

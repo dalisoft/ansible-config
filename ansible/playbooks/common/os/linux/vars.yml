@@ -14,6 +14,8 @@ apt_repos:
   - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
 
 apt_items:
+  # Addinational tools
+  - nodejs
   # Docker
   - docker-ce
   - docker-ce-cli
@@ -29,6 +31,8 @@ apt_items:
 
 # Pacman/Manjaro Packages
 pacman_packages:
+  # Addinational tools
+  - node
   # Docker
   - docker
   - docker-compose
