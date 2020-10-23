@@ -55,7 +55,6 @@ apt_items:
   - exfat-fuse
   - exfat-utils
   # Programming languages
-  - <<: *shared_packages
   - pkg-config
   # Go
   - golang-go
@@ -112,7 +111,6 @@ pacman_packages:
   # Fonts
   - ttf-fira-code
   # Programming languages
-  - <<: *shared_packages
   # Go
   - go
   # Python
