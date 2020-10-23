@@ -27,8 +27,6 @@
       when: ansible_facts['os_family'] == 'Archlinux'
     - import_tasks: _debian.yml
       when: ansible_facts['os_family'] == 'Debian' or ansible_facts['os_family'] == 'Pop!_OS'
-    - import_tasks: snap.yml
-      when: ansible_facts['os_family'] == 'Debian' or ansible_facts['os_family'] == 'Pop!_OS'
     # Post-installation
     - import_tasks: ../shared/unix_post-task.yml
     - import_tasks: post-task.yml
