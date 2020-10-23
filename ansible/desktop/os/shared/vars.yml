@@ -1,7 +1,6 @@
 ---
 ensure_folders:
   - "~/.local/bin"
-  - "~/.config/autostart"
   - /usr/local/bin
 
 initial_configs:
