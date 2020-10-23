@@ -5,5 +5,20 @@
     state: directory
     mode: "0755"
   loop: "{{ ensure_folders }}"
+  when: ensure_folders is defined
   tags:
     - ensure-config-folders
+
+- name: Linking initial configs
+  file:
+    src: "~/Desktop/config/dotfiles/{{ item }}"
+    dest: "~/{{ item }}"
+    state: link
+    force: yes
+  loop: "{{ initial_configs }}"
+  when: initial_configs is defined
+  retries: 1
+  register: initial_config_link
+  until: initial_config_link.attempts == 1
+  tags:
+    - link-initial-config

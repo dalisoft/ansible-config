@@ -22,7 +22,7 @@
 
   pre_tasks:
     # Pre-installation steps
-    - import_tasks: ../shared/unix_pre-task.yml
+    - import_tasks: ../../../common/shared/unix_pre-task.yml
 
   tasks:
     - import_tasks: ../../../common/os/linux/_manjaro.yml
