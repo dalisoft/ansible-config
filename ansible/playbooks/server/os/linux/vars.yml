@@ -2,10 +2,10 @@
 # Before first using the playbook, run the below command to create a hashed
 # password that Ansible will assign to your new user.
 # python -c 'import crypt; print crypt.crypt("<b>password</b>", "$1$<b>SALT</b>$")'
-username: user
-password: pass
+USER: user
+password: n*A4N}yEuQUp#m#q
 public_key: ~/.ssh/id_rsa.pub
-ssh_public_key:
+ssh_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYUadMYBQRalTve7ZrnJ+Rznc/bkTsf9hwG1Me8kpoVyDFlTxUm1xYLMeGBkmKbhQEP+aLr4F+uyR0K/6lyav1Tl3ubKC8YTyT2Zjm900eXArs8GNiQobizWCBgqKROQESM87xjGJjpwrVhkI6cBsn37BSkGm9w5Lit2pvtqdZaKQncZPjrQ7qtrJQD+8mLhnj9CsLVG86PciYrVz7QO21ZeQm2wks1Z4ARmGzQ3pepPG3Cv/EQGyCmTHl9Du5J2D1zsTs55+YIkirXVc0cTp1qrjYfwfeVYg5fPV2TJxVFebMiAJsWTVMZl9RptdHDegValhK4bk2BxKwyYEcbZFJ dalisoft@dalisoft-MBP.local
 
 apt_items:
   - openssh-server

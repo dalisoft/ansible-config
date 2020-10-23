@@ -1,7 +1,7 @@
 ---
 - name: Ensure binaries temporarily folder exists
   file:
-    path: "{{ HOME }}/binaries"
+    path: "~/binaries"
     state: directory
 
 - name: Linking direct binaries
@@ -34,7 +34,7 @@
 - name: Downloading binaries
   unarchive:
     src: "{{ item.link }}"
-    dest: "{{ HOME }}/binaries"
+    dest: "~/binaries"
     mode: u+x
     remote_src: yes
   loop: "{{ binaries }}"
@@ -51,13 +51,13 @@
     - item.command is defined
   loop: "{{ binaries }}"
   args:
-    chdir: "{{ HOME }}/binaries"
+    chdir: "~/binaries"
   register: cmd_binary
   until: cmd_binary is successful
 
 - name: Install binaries
   copy:
-    src: "{{ HOME }}/binaries/{{ item.name }}"
+    src: "~/binaries/{{ item.name }}"
     dest: "/usr/local/bin"
     mode: u+x
     remote_src: yes
@@ -70,7 +70,7 @@
 
 - name: Cleanup binaries
   file:
-    path: "{{ HOME }}/binaries/{{ item.name }}"
+    path: "~/binaries/{{ item.name }}"
     state: absent
   loop: "{{ binaries }}"
   register: cleanup_binaries
@@ -81,7 +81,7 @@
 
 - name: Cleanup binaries folder
   file:
-    path: "{{ HOME }}/binaries/{{ item }}"
+    path: "~/binaries/{{ item }}"
     state: absent
   loop:
     - fnm-linux

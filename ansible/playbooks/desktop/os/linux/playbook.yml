@@ -14,14 +14,16 @@
     - name: "USER"
       prompt: "Please enter your User name"
       private: yes
-    - name: "HOME"
-      prompt: "Please enter your HOME dir"
 
   environment:
-    NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
+    NPM_CONFIG_PREFIX: "~/.npm-global"
     NFANCURVE_PATH: "$HOME/nfancurve"
     PATH: "/usr/local/bin:/snap/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
     MOZ_USE_OMTC: 1
+
+  pre_tasks:
+    # Pre-installation steps
+    - import_tasks: ../shared/unix_pre-task.yml
 
   tasks:
     - import_tasks: ../../../common/os/linux/_manjaro.yml

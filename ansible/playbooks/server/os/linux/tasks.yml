@@ -14,7 +14,7 @@
 
 - name: Create the non-root user account
   user:
-    name: "{{ username }}"
+    name: "{{ USER }}"
     password: "{{ password }}"
     shell: /bin/bash
     update_password: on_create
@@ -23,7 +23,7 @@
 
 - name: Add local public key for key-based SSH authentication
   authorized_key:
-    user: "{{ username }}"
+    user: "{{ USER }}"
     state: present
     key: "{{ ssh_public_key }}"
 

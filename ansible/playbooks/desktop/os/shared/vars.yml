@@ -1,5 +1,29 @@
 ---
+ensure_folders:
+  - "~/.local/bin"
+  - "~/Desktop/config/dotfiles/.config/autostart"
+  - /usr/local/bin
+
+initial_configs:
+  # Files
+  - .gitconfig
+  - .gitignore
+  - .nanorc
+  # Folders
+  - .nano
+  - .config/autostart
+  - nfancurve
+
+fnm_versions:
+  - 12.18.4
+  - 13.14.0
+  # - 14.14.0
+  - 15.0.0
+
 npm_modules:
+  # Necessary tools
+  - prettier
+  - node-gyp
   # JS Reload
   - nodemon
   # Local Server stuffs
@@ -18,6 +42,7 @@ npm_modules:
   # - ocaml-language-server
 
 pip_modules:
+  - virtualenv
   - jupyterlab
   - notebook
   - labelme
@@ -68,3 +93,20 @@ vscodium_extensions:
   # Spell check
   - streetsidesoftware.code-spell-checker
   - streetsidesoftware.code-spell-checker-russian
+
+# Linked binaries
+binaries:
+  - name: fnm
+    link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
+    command: mv fnm-linux/fnm fnm
+    binary: False
+    direct: False
+  - name: exa
+    link: https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
+    command: mv exa-linux-x86_64 exa
+    binary: False
+    direct: False
+  - name: wrk
+    link: https://github.com/dalisoft/wrk/releases/latest/download/wrk-linux.zip
+    binary: False
+    direct: True

@@ -1,16 +1,4 @@
 ---
-ensure_folders:
-  - /usr/local/bin
-
-# Initial files to link
-initial_configs:
-  # Files
-  - .gitconfig
-  - .gitignore
-  - .nanorc
-  # Folders
-  - .nano
-
 # Homebrew
 # Homebrew taps
 brew_taps:

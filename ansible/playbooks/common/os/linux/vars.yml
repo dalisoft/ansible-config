@@ -1,18 +1,4 @@
 ---
-ensure_folders:
-  - "{{ HOME }}/Desktop/config/dotfiles/.config/autostart"
-  - /usr/local/bin
-
-# Initial files to link
-initial_configs:
-  # Files
-  - .gitconfig
-  - .gitignore
-  - .nanorc
-  # Folders
-  - .nano
-  - .config/autostart
-
 # APT (Debian/Ubuntu) packages
 apt_keys:
   - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
@@ -54,20 +40,3 @@ pacman_packages:
   - starship
   - bat
   - ripgrep
-
-# Linked binaries
-binaries:
-  - name: fnm
-    link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
-    command: mv fnm-linux/fnm fnm
-    binary: False
-    direct: False
-  - name: exa
-    link: https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
-    command: mv exa-linux-x86_64 exa
-    binary: False
-    direct: False
-  - name: wrk
-    link: https://github.com/dalisoft/wrk/releases/latest/download/wrk-linux.zip
-    binary: False
-    direct: True

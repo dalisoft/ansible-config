@@ -5,9 +5,13 @@ extra_vars=''
 args=''
 os=${OSTYPE//[0-9.-]*/}
 
+if [ "$3" != "" ]; then
+  os="$3"
+fi
+
 # Prepare data
 if [ "$1" != "" ]; then
-  extra_vars="{\"SUDO_PASS\":\"$1\",\"ansible_become_pass\":\"$1\",\"USER\":\"$USER\",\"HOME\":\"$HOME\"}"
+  extra_vars="{\"SUDO_PASS\":\"$1\",\"ansible_become_pass\":\"$1\",\"USER\":\"$USER\"}"
 fi
 args="-v --connection=local --become-user=$USER --extra-vars='$extra_vars' -i=$PWD/hosts.ini"
 
@@ -40,11 +44,11 @@ msys)
 linux)
 
   if [ "$2" == "SERVER" ]; then
-    sh ./server/os/linux/run.sh "$args"
+    run_playbook "$PWD/server/os/linux"
   elif [ "$2" == "DESKTOP" ]; then
-    sh ./desktop/os/linux/run.sh "$args"
+    run_playbook "$PWD/desktop/os/linux"
   else
-    sh ./common/os/linux/run.sh "$args"
+    run_playbook "$PWD/common/os/linux"
   fi
   ;;
 

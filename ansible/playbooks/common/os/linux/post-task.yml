@@ -6,6 +6,7 @@
     state: present
   register: docker_post_step_1
   until: docker_post_step_1 is successful
+
 - name: Adding user {{ USER }} to docker group
   become: true
   become_user: root

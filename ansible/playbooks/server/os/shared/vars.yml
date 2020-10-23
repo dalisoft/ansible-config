@@ -1,7 +1,6 @@
 ---
 ensure_folders:
-  - "{{ HOME }}/Desktop/config/dotfiles/.vim/autoload"
-  - "{{ HOME }}/Desktop/config/dotfiles/.config/nvim"
+  - "~/Desktop/config/dotfiles/.config/nvim"
 
 # Initial files to link
 initial_configs:

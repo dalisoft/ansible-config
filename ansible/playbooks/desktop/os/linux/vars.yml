@@ -1,14 +1,5 @@
 ---
-st_packages_dir: "{{ HOME }}/.config/sublime-text-3/Packages"
-
-ensure_folders:
-  - "{{ HOME }}/.local/bin"
-  - "{{ HOME }}/Desktop/config/dotfiles/.config/autostart"
-
-initial_configs:
-  # Folders
-  - .config/autostart
-  - nfancurve
+st_packages_dir: "~/.config/sublime-text-3/Packages"
 
 binaries:
   - name: rust-analyzer

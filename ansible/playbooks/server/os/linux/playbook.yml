@@ -11,16 +11,14 @@
   vars_files:
     - ../shared/vars.yml
     - vars.yml
-  vars_prompt:
-    - name: "USER"
-      prompt: "Please enter your User name"
-      private: yes
-    - name: "HOME"
-      prompt: "Please enter your HOME dir"
 
   environment:
-    NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
+    NPM_CONFIG_PREFIX: "~/.npm-global"
     PATH: "/usr/local/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
+
+  pre_tasks:
+    # Pre-installation steps
+    - import_tasks: ../shared/unix_pre-task.yml
 
   tasks:
     # Some of codes we're used from
@@ -28,4 +26,3 @@
     - import_tasks: tasks.yml
     # Post-installation
     - import_tasks: ../shared/post-task.yml
-    - import_tasks: post-task.yml

@@ -16,15 +16,17 @@
     - name: "USER"
       prompt: "Please enter your User name"
       private: yes
-    - name: "HOME"
-      prompt: "Please enter your HOME dir"
     - name: "SUDO_PASS"
       prompt: "Please enter your SUDO password"
       private: yes
 
   environment:
-    NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
+    NPM_CONFIG_PREFIX: "~/.npm-global"
     MOZ_USE_OMTC: 1
+
+  pre_tasks:
+    # Pre-installation steps
+    - import_tasks: ../shared/unix_pre-task.yml
 
   tasks:
     - import_tasks: ../../../common/os/mac/tasks.yml

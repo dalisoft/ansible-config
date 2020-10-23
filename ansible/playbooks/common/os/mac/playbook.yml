@@ -6,16 +6,9 @@
   vars_files:
     - ../shared/vars.yml
     - vars.yml
-  vars_prompt:
-    - name: "HOME"
-      prompt: "Please enter your HOME dir"
 
   environment:
-    NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
-
-  pre_tasks:
-    # Pre-installation steps
-    - import_tasks: ../shared/unix_pre-task.yml
+    NPM_CONFIG_PREFIX: "~/.npm-global"
 
   tasks:
     # Tasks list
