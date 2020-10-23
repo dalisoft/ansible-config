@@ -13,7 +13,7 @@ fi
 if [ "$1" != "" ]; then
   extra_vars="{\"SUDO_PASS\":\"$1\",\"ansible_become_pass\":\"$1\",\"USER\":\"$USER\"}"
 fi
-args="-v --connection=local --become-user=$USER --extra-vars='$extra_vars' -i=$PWD/hosts.ini"
+args="-v --connection=local --become-user=$USER --extra-vars='$extra_vars'"
 
 # Installing requirements
 run_playbook() {
