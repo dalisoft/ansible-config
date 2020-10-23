@@ -1,14 +1,4 @@
 ---
-- name: Ensure config folders exists
-  file:
-    path: "{{ item }}"
-    state: directory
-    mode: "0755"
-  loop: "{{ ensure_folders }}"
-  when: ensure_folders is defined
-  tags:
-    - ensure-config-folders
-
 - name: Linking initial configs
   file:
     src: "~/Desktop/config/dotfiles/{{ item }}"
@@ -22,3 +12,13 @@
   until: initial_config_link.attempts == 1
   tags:
     - link-initial-config
+
+- name: Ensure config folders exists
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop: "{{ ensure_folders }}"
+  when: ensure_folders is defined
+  tags:
+    - ensure-config-folders
