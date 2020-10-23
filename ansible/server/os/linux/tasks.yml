@@ -21,12 +21,6 @@
     groups: wheel
     append: yes
 
-- name: Add local public key for key-based SSH authentication
-  authorized_key:
-    user: "{{ USER }}"
-    state: present
-    key: "{{ ssh_public_key }}"
-
 - name: Harden sshd configuration
   lineinfile:
     dest: /etc/ssh/sshd_config
