@@ -3,12 +3,6 @@
   set_fact:
     packages: "{{ (shared_packages | default([])) + (apt_items | default([])) }}"
 
-- name: Import polyfill tasks
-  import_tasks: _debian.shim.yml
-  when:
-    - ansible_facts['os_family'] != 'Pop!_OS'
-    - ansible_facts['nodename'] != 'ubuntu'
-
 - name: List all apt packages
   package_facts:
     manager: apt
@@ -83,37 +77,3 @@
     autoremove: yes
   register: clean_apt_package
   until: clean_apt_package is successful
-
-# Snap packages
-- name: List Snap packages
-  command: snap list
-  register: snap_installed_packages
-  changed_when: false
-  check_mode: false
-
-- name: Installing Snap packages
-  become: true
-  become_user: root
-  snap:
-    name: "{{ item }}"
-    state: present
-  loop: "{{ snap_packages }}"
-  when:
-    - snap_packages is defined
-    - item not in snap_installed_packages
-  register: install_snap_package
-  until: install_snap_package is successful
-
-- name: Installing Snap [classic] packages
-  become: true
-  become_user: root
-  snap:
-    name: "{{ item }}"
-    classic: yes
-    state: present
-  loop: "{{ snap_classic_packages }}"
-  when:
-    - snap_classic_packages is defined
-    - item not in snap_installed_packages
-  register: install_snap_classic_package
-  until: install_snap_classic_package is successful
