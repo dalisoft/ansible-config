@@ -9,7 +9,8 @@ binaries:
 
 # Linux shared package names
 # Shared names (DRY method)
-shared_packages: &shared_packages # PHP
+shared_packages:
+  # PHP
   - php
   - composer
   # Mobile-dev
