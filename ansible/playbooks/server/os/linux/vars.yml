@@ -6,3 +6,9 @@ username: user
 password: pass
 public_key: ~/.ssh/id_rsa.pub
 ssh_public_key:
+
+apt_items:
+  - openssh-server
+  - sudo
+  - iptables
+  - fail2ban

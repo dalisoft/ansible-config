@@ -12,8 +12,13 @@ initial_configs:
   - .config/nvim
   - .config/autostart
 
-# shared_packages:
-#  - openssh-server
+shared_packages:
+  # Addinational terminal stuffs
+  - htop
+  - tmux
+  - neovim
+  # Build tools
+  - unzip
 
 npm_modules:
   - pm2

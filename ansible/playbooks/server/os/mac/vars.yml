@@ -1,9 +1,0 @@
----
-# Homebrew packages
-brew_packages:
-  # Addinational terminal stuffs
-  - htop
-  - tmux
-  - neovim
-  # Build tools
-  - unzip

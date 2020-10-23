@@ -5,7 +5,6 @@
 
   vars_files:
     - ../shared/vars.yml
-    - vars.yml
   vars_prompt:
     - name: "USER"
       prompt: "Please enter your User name"
