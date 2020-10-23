@@ -96,11 +96,13 @@ apt_force_items:
 
 # Snap packages
 snap_packages:
+  - starship
   - postman
 
 snap_classic_packages:
-  - gitkraken
+  - heroku
   - sublime-text
+  - gitkraken
   - android-studio
 
 # Pacman packages

@@ -29,6 +29,8 @@
       when: ansible_facts['os_family'] == 'Archlinux'
     - import_tasks: ../../../common/os/linux/_debian.yml
       when: ansible_facts['os_family'] == 'Debian' or ansible_facts['os_family'] == 'Pop!_OS'
+    - import_tasks: .snap.yml
+      when: ansible_facts['nodename'] == 'ubuntu' or ansible_facts['os_family'] == 'Pop!_OS'
     - import_tasks: ../../../common/os/linux/.snap.yml
       when: ansible_facts['nodename'] == 'ubuntu' or ansible_facts['os_family'] == 'Pop!_OS'
     # Post-installation

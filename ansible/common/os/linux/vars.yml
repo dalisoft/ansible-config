@@ -38,13 +38,6 @@ apt_items: # Security
 apt_force_items:
   - ripgrep
 
-# Snap packages
-snap_packages:
-  - starship
-
-snap_classic_packages:
-  - heroku
-
 # Pacman/Manjaro Packages
 pacman_packages:
   # Addinational tools
@@ -56,3 +49,20 @@ pacman_packages:
   - starship
   - bat
   - ripgrep
+
+# Linked binaries
+binaries:
+  - name: fnm
+    link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
+    command: mv fnm-linux/fnm fnm
+    binary: False
+    direct: False
+  - name: exa
+    link: https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
+    command: mv exa-linux-x86_64 exa
+    binary: False
+    direct: False
+  - name: wrk
+    link: https://github.com/dalisoft/wrk/releases/latest/download/wrk-linux.zip
+    binary: False
+    direct: True

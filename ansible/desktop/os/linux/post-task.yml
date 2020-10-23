@@ -1,4 +1,16 @@
 ---
+- name: Setting default shell
+  become: true
+  become_user: root
+  user:
+    name: "{{ item }}"
+    shell: /usr/bin/fish
+  loop:
+    - root
+    - "{{ USER }}"
+  register: fish_set_default
+  until: fish_set_default is successful
+
 # VSCodium
 - name: Linking VSCodium Settings on Linux
   file:
