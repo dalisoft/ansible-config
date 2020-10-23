@@ -23,5 +23,4 @@ shared_packages:
   # Build tools
   - cmake
   # Necessary tools
-  - ffmpeg
   - imagemagick

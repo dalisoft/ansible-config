@@ -18,3 +18,4 @@ brew_packages:
   - exa
   - ripgrep
   - ghostscript
+  - ffmpeg
