@@ -17,3 +17,15 @@
   register: docker_post_step_2
   until: docker_post_step_2 is successful
   when: docker_post_step_1.changed
+
+- name: Setting default shell
+  become: true
+  become_user: root
+  user:
+    name: "{{ item }}"
+    shell: /usr/bin/fish
+  loop:
+    - root
+    - "{{ USER }}"
+  register: fish_set_default
+  until: fish_set_default is successful

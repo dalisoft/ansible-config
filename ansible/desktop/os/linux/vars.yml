@@ -48,12 +48,9 @@ apt_items:
   - intel-microcode
   - iucode-tool
   # PopOS polyfill
-  - snapd
   - grub2-common
   - exfat-fuse
   - exfat-utils
-  # Fonts
-  - fonts-firacode
   # Programming languages
   - <<: *shared_packages
   - pkg-config
@@ -93,15 +90,12 @@ apt_items:
 
 apt_force_items:
   - bat
-  - ripgrep
 
 # Snap packages
 snap_packages:
-  - starship
   - postman
 
 snap_classic_packages:
-  - heroku
   - gitkraken
   - sublime-text
   - android-studio
