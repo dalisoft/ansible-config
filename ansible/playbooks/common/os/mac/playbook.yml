@@ -11,6 +11,10 @@
   environment:
     NPM_CONFIG_PREFIX: "~/.npm-global"
 
+  pre_tasks:
+    # Pre-installation steps
+    - import_tasks: ../shared/unix_pre-task.yml
+
   tasks:
     # Tasks list
     - import_tasks: tasks.yml

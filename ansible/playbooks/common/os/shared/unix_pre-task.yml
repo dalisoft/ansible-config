@@ -1,0 +1,9 @@
+---
+- name: Ensure config folders exists
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop: "{{ ensure_folders }}"
+  tags:
+    - ensure-config-folders

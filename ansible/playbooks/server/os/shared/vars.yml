@@ -1,6 +1,7 @@
 ---
 ensure_folders:
-  - "~/Desktop/config/dotfiles/.config/nvim"
+  - "~/.config/nvim"
+  - "~/.vim/autoload"
 
 # Initial files to link
 initial_configs:
