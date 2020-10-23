@@ -117,17 +117,12 @@
     - netfilter-persistent
   when: ansible_facts['os_family'] == "Debian"
 
-- name: Override some basic fail2ban configurations
+- name: Creating a file with content
   copy:
-    src: /etc/fail2ban/templates/jail.local.j2
     dest: /etc/fail2ban/jail.local
     owner: root
     group: root
     mode: 0644
-
-- name: Creating a file with content
-  copy:
-    dest: /etc/fail2ban/templates/jail.local.j2
     content: |
       [DEFAULT]
       # Ban hosts for one hour:
