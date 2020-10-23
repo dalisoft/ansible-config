@@ -2,6 +2,7 @@
 ensure_folders:
   - "~/.config/nvim"
   - "~/Desktop/config/dotfiles/.vim/autoload"
+  - /etc/fail2ban
 
 # Initial files to link
 initial_configs:
