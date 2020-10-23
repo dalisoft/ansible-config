@@ -19,7 +19,6 @@ apt_items:
   # Docker
   - docker-ce
   - docker-ce-cli
-  - containerd.io
   - docker-compose
   # Dependencies for WebRTC
   - libavdevice-dev
@@ -27,7 +26,6 @@ apt_items:
   - libopus-dev
   - libvpx-dev
   - libsrtp2-dev
-  - pkg-config
 
 # Pacman/Manjaro Packages
 pacman_packages:
