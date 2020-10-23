@@ -1,0 +1,31 @@
+---
+- hosts: all
+
+- name: Include Linux Common playbook
+  import_playbook: ../../../common/os/linux/playbook.yml
+
+- name: Linux Server Playbook
+  hosts: all
+  become: true
+  remote_user: root
+  vars_files:
+    - ../shared/vars.yml
+    - vars.yml
+  vars_prompt:
+    - name: "USER"
+      prompt: "Please enter your User name"
+      private: yes
+    - name: "HOME"
+      prompt: "Please enter your HOME dir"
+
+  environment:
+    NPM_CONFIG_PREFIX: "{{ HOME }}/.npm-global"
+    PATH: "/usr/local/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
+
+  tasks:
+    # Some of codes we're used from
+    # https://blog.ssdnodes.com/blog/secure-ansible-playbook/
+    - import_tasks: tasks.yml
+    # Post-installation
+    - import_tasks: ../shared/post-task.yml
+    - import_tasks: post-task.yml

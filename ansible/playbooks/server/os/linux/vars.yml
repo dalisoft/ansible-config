@@ -1,0 +1,8 @@
+---
+# Before first using the playbook, run the below command to create a hashed
+# password that Ansible will assign to your new user.
+# python -c 'import crypt; print crypt.crypt("<b>password</b>", "$1$<b>SALT</b>$")'
+username: user
+password: pass
+public_key: ~/.ssh/id_rsa.pub
+ssh_public_key:

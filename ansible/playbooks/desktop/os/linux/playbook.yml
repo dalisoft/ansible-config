@@ -24,7 +24,12 @@
     MOZ_USE_OMTC: 1
 
   tasks:
-    - import_tasks: tasks.yml
+    - import_tasks: ../../../common/os/linux/_manjaro.yml
+      when: ansible_os_family == 'Archlinux'
+    - import_tasks: ../../../common/os/linux/_debian.yml
+      when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
+    - import_tasks: _debian.yml
+      when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
     # Post-installation
     - import_tasks: ../shared/unix_post-task.yml
     - import_tasks: post-task.yml

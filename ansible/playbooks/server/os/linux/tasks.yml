@@ -1,0 +1,65 @@
+---
+- name: Ensure wheel group is present
+  group:
+    name: wheel
+    state: present
+
+- name: Ensure wheel group has sudo privileges
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: "^%wheel"
+    line: "%wheel ALL=(ALL:ALL) ALL"
+    validate: "/usr/sbin/visudo -cf %s"
+
+- name: Install the `sudo` package
+  package:
+    name: sudo
+    state: latest
+
+- name: Create the non-root user account
+  user:
+    name: "{{ username }}"
+    password: "{{ password }}"
+    shell: /bin/bash
+    update_password: on_create
+    groups: wheel
+    append: yes
+
+- name: Add local public key for key-based SSH authentication
+  authorized_key:
+    user: "{{ username }}"
+    state: present
+    key: "{{ ssh_public_key }}"
+
+- name: Harden sshd configuration
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "{{item.regexp}}"
+    line: "{{item.line}}"
+    state: present
+  with_items:
+    - regexp: "^#?PermitRootLogin"
+      line: "PermitRootLogin no"
+    - regexp: "^^#?PasswordAuthentication"
+      line: "PasswordAuthentication no"
+    - regexp: "^#?AllowAgentForwarding"
+      line: "AllowAgentForwarding no"
+    - regexp: "^#?AllowTcpForwarding"
+      line: "AllowTcpForwarding no"
+    - regexp: "^#?MaxAuthTries"
+      line: "MaxAuthTries 2"
+    - regexp: "^#?MaxSessions"
+      line: "MaxSessions 2"
+    - regexp: "^#?TCPKeepAlive"
+      line: "TCPKeepAlive no"
+    - regexp: "^#?UseDNS"
+      line: "UseDNS no"
+    - regexp: "^#?AllowAgentForwarding"
+      line: "AllowAgentForwarding no"
+
+- name: Restart sshd
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: sshd
