@@ -44,7 +44,9 @@
     name: "{{ item }}"
     state: present
     dpkg_options: "force-overwrite"
-  when: item not in ansible_facts.packages
+  when:
+    - apt_force_items is defined
+    - item not in ansible_facts.packages
   loop: "{{ apt_force_items }}"
   register: install_optionless_apt_package
   until: install_optionless_apt_package is successful
