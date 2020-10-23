@@ -1,5 +1,5 @@
 ---
-- name: "List installed Cask packages"
+- name: List installed Cask packages
   command: brew list --cask -1
   register: brew_cask_installed
   changed_when: false

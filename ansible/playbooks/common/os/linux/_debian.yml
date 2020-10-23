@@ -2,8 +2,14 @@
 - name: Prepare packages
   set_fact:
     packages: "{{ (shared_packages | default([])) + (apt_items | default([])) }}"
+- name: Install python-apt
+  apt:
+    name: python-apt
+    state: present
+  register: install_apt_py
+  until: install_apt_py is successful
 
-- name: "List all apt packages"
+- name: List all apt packages
   package_facts:
     manager: apt
   register: apt_pkgs_list

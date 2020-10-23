@@ -1,6 +1,6 @@
 ---
 # Homebrew Taps
-- name: "List all Homebrew taps"
+- name: List all Homebrew taps
   command: brew tap
   register: brew_tap_list
   changed_when: false
@@ -26,7 +26,7 @@
   set_fact:
     packages: "{{ (shared_packages | default([])) + (brew_packages | default([])) }}"
 
-- name: "List all Homebrew packages"
+- name: List all Homebrew packages
   command: brew ls
   register: brew_pkgs_list
   changed_when: false

@@ -1,6 +1,6 @@
 ---
 # Snap packages
-- name: "List Snap packages"
+- name: List Snap packages
   command: snap list
   register: snap_installed_packages
   changed_when: false

@@ -2,7 +2,7 @@
 - debug: var=hostvars['server']
 
 # NPM Modules
-- name: "List installed npm modules"
+- name: List installed npm modules
   command: npm list -g --depth=0
   register: npm_modules_installed
   changed_when: false

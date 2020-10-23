@@ -13,7 +13,7 @@
     value: "dalisoft"
 
 # FNM Versions
-- name: "List installed fnm versions"
+- name: List installed fnm versions
   command: fnm ls
   register: fnmv_list
   changed_when: false
@@ -64,7 +64,7 @@
   register: fix_vscodium
   until: fix_vscodium is successful
 
-- name: "List installed VSCodium extensions"
+- name: List installed VSCodium extensions
   shell: codium --list-extensions
   register: codium_extensions_list
   changed_when: false
