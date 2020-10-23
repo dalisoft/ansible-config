@@ -1,5 +1,8 @@
 ---
+- hosts: all
+
 - name: Include Linux Common playbook
+  hosts: all
   import_playbook: ../../../common/os/linux/playbook.yml
 
 - name: Linux Server Playbook
