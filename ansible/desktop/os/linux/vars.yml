@@ -8,9 +8,8 @@ binaries:
     binary: True
 
 # Linux shared package names
-shared_packages: &shared_packages
-  # Shared names (DRY method)
-  # PHP
+# Shared names (DRY method)
+shared_packages: &shared_packages # PHP
   - php
   - composer
   # Mobile-dev
