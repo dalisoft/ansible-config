@@ -9,8 +9,6 @@
   register: apt_pkgs_list
   changed_when: false
   check_mode: false
-  tags:
-    - list-apt-packages
 
 - name: Adding apt keys
   become: true
@@ -22,8 +20,6 @@
   when: apt_keys is defined
   register: install_apt_key
   until: install_apt_key is successful
-  tags:
-    - add-apt-keys
 
 - name: Adding apt ring keys
   become: true
@@ -35,8 +31,6 @@
   when: apt_ring_keys is defined
   register: install_apt_ring_key
   until: install_apt_ring_key is successful
-  tags:
-    - add-apt-ring-keys
 
 - name: Adding apt repositories
   become: true
@@ -49,8 +43,6 @@
   when: apt_repos is defined
   register: install_apt_repo
   until: install_apt_repo is successful
-  tags:
-    - add-apt-repos
 
 - name: Installing apt force packages
   become: true
@@ -65,8 +57,6 @@
     - item not in ansible_facts.packages
   register: install_optionless_apt_package
   until: install_optionless_apt_package is successful
-  tags:
-    - install-apt-force-items
 
 - name: Installing apt packages
   become: true
@@ -78,8 +68,6 @@
   when: item not in ansible_facts.packages
   register: install_apt_package
   until: install_apt_package is successful
-  tags:
-    - install-apt-items
 
 - name: Cleanup apt packages
   become: true
@@ -89,5 +77,3 @@
     autoremove: yes
   register: clean_apt_package
   until: clean_apt_package is successful
-  tags:
-    - cleanup-apt
