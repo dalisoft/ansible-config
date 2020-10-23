@@ -1,0 +1,23 @@
+---
+- name: Install polyfill repos
+  become: true
+  become_user: root
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop:
+    - ppa:jonathonf/ffmpeg-4
+  register: install_apt_repo
+  until: install_apt_repo is successful
+
+- name: Install polyfill tools
+  become: true
+  become_user: root
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - python-apt
+  register: install_apt_py
+  until: install_apt_py is successful

@@ -13,6 +13,9 @@ apt_repos:
   - "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_lsb.id|lower }} {{ ansible_lsb.codename|lower }} stable"
 
 apt_items:
+  # Security
+  - iptables-persistent
+  - netfilter-persistent
   # Fonts
   - fonts-firacode
   # PopOS polyfill
@@ -39,7 +42,6 @@ apt_force_items:
 # Snap packages
 snap_packages:
   - starship
-  - ffmpeg
 
 snap_classic_packages:
   - heroku
@@ -55,4 +57,3 @@ pacman_packages:
   - starship
   - bat
   - ripgrep
-  - ffmpeg
