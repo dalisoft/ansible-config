@@ -27,6 +27,17 @@
   register: install_apt_key
   until: install_apt_key is successful
 
+- name: Adding apt ring keys
+  become: true
+  become_user: root
+  apt_key:
+    keyserver: "{{ item.keyserver }}"
+    id: "{{ item.id }}"
+  loop: "{{ apt_ring_keys }}"
+  when: apt_ring_keys is defined
+  register: install_apt_ring_key
+  until: install_apt_ring_key is successful
+
 - name: Adding apt repositories
   become: true
   become_user: root

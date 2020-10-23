@@ -35,6 +35,10 @@ apt_keys:
   - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
 
+apt_ring_keys:
+  - keyserver: keyserver.ubuntu.com
+    id: 3FEF9748469ADBE15DA7CA80AC2D62742012EA22
+
 apt_repos:
   - deb http://deb.xanmod.org releases main
   - deb [arch=amd64] https://onepassword.s3.amazonaws.com/linux/debian edge main
