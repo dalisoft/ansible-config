@@ -1,4 +1,10 @@
 ---
+initial_configs:
+  # Files
+  - .nanorc
+  # Folders
+  - .nano
+
 shared_packages:
   # Required
   - ansible

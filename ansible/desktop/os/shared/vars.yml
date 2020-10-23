@@ -8,9 +8,7 @@ initial_configs:
   # Files
   - .gitconfig
   - .gitignore
-  - .nanorc
   # Folders
-  - .nano
   - .config/autostart
   - nfancurve
 
