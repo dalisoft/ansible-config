@@ -5,10 +5,6 @@ extra_vars=''
 args=''
 os=${OSTYPE//[0-9.-]*/}
 
-if [ "$3" != "" ]; then
-  os="$3"
-fi
-
 # Prepare data
 if [ "$1" != "" ]; then
   extra_vars="{\"SUDO_PASS\":\"$1\",\"ansible_become_pass\":\"$1\",\"USER\":\"$USER\"}"
