@@ -17,17 +17,3 @@
   register: docker_post_step_2
   until: docker_post_step_2 is successful
   when: docker_post_step_1.changed
-
-- name: Hide some applications
-  become: true
-  become_user: root
-  lineinfile:
-    path: "/usr/share/applications/{{ item }}.desktop"
-    insertafter: "^Name= "
-    line: NoDisplay=true
-  loop:
-    - nvim
-    - openjdk-8-java
-    - openjdk-8-policytool
-    - groovyConsole
-  when: ansible_facts['os_family'] == 'Debian' or ansible_facts['os_family'] == 'Pop!_OS'

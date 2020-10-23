@@ -8,3 +8,17 @@
   retries: 1
   register: vscodium_debian_link
   until: vscodium_debian_link.attempts == 1
+
+- name: Hide some applications
+  become: true
+  become_user: root
+  lineinfile:
+    path: "/usr/share/applications/{{ item }}.desktop"
+    insertafter: "^Name= "
+    line: NoDisplay=true
+  loop:
+    - nvim
+    - openjdk-8-java
+    - openjdk-8-policytool
+    - groovyConsole
+  when: ansible_facts['os_family'] == 'Debian' or ansible_facts['os_family'] == 'Pop!_OS'
