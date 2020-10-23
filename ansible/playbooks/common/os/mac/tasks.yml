@@ -41,8 +41,6 @@
   loop: "{{ packages }}"
   register: install_brew_package
   until: install_brew_package is successful
-  when:
-    - packages is defined
-    - item not in brew_pkgs_list.stdout_lines
+  when: item not in brew_pkgs_list.stdout_lines
   tags:
     - install-brew-packages
