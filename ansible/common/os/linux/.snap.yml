@@ -5,6 +5,8 @@
   register: snap_installed_packages
   changed_when: false
   check_mode: false
+  tags:
+    - list-snap-packages
 
 - name: Installing Snap packages
   become: true
@@ -18,6 +20,8 @@
     - item not in snap_installed_packages
   register: install_snap_package
   until: install_snap_package is successful
+  tags:
+    - install-snap-packages
 
 - name: Installing Snap [classic] packages
   become: true
@@ -32,3 +36,5 @@
     - item not in snap_installed_packages
   register: install_snap_classic_package
   until: install_snap_classic_package is successful
+  tags:
+    - install-snap-classic-packages
