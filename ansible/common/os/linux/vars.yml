@@ -20,6 +20,7 @@ apt_items:
   - snapd
   # Addinational tools
   - nodejs
+  - python3-pip
   # Docker
   - docker-ce
   - docker-ce-cli
