@@ -90,6 +90,10 @@ apt_items:
   # Java tools
   - adoptopenjdk-8-hotspot
 
+apt_force_items:
+  - bat
+  - ripgrep
+
 # Snap packages
 snap_packages:
   - starship

@@ -27,10 +27,6 @@ apt_items:
   - libsrtp2-dev
   - pkg-config
 
-apt_force_items:
-  - bat
-  - ripgrep
-
 # Pacman/Manjaro Packages
 pacman_packages:
   # Docker
