@@ -32,39 +32,6 @@
   tags:
     - install-fnm-version
 
-# NPM Modules
-- name: "List installed npm modules"
-  command: npm list -g --depth=0
-  register: npm_modules_installed
-  changed_when: false
-  check_mode: false
-  tags:
-    - install-fnm-version
-- name: Installing npm modules
-  npm:
-    global: yes
-    path: "~/.npm-global"
-    name: "{{ item }}"
-    state: present
-  loop: "{{ npm_modules }}"
-  register: install_npm_package
-  until: install_npm_package is successful
-  when: item not in npm_modules_installed.stdout
-  tags:
-    - install-npm-modules
-
-# PIP Modules
-- name: Installing pip modules
-  pip:
-    name: "{{ item }}"
-    state: present
-    executable: pip3
-  loop: "{{ pip_modules }}"
-  register: install_pip_module
-  until: install_pip_module is successful
-  tags:
-    - install-pip-modules
-
 # Post-installation
 # SublimeText extensions
 - name: Installing Sublime Text packages

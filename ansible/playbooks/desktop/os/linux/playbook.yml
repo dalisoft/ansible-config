@@ -1,11 +1,10 @@
 ---
-- hosts: all
-
 - name: Include Linux Common playbook
   import_playbook: ../../../common/os/linux/playbook.yml
 
 - name: Linux Desktop Playbook
   hosts: all
+  gather_facts: yes
   become: false
   vars_files:
     - ../shared/vars.yml
@@ -27,12 +26,13 @@
 
   tasks:
     - import_tasks: ../../../common/os/linux/_manjaro.yml
-      when: ansible_os_family == 'Archlinux'
+      when: ansible_facts['os_family'] == 'Archlinux'
     - import_tasks: ../../../common/os/linux/_debian.yml
-      when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
+      when: ansible_facts['os_family'] == 'Debian' or ansible_facts['os_family'] == 'Pop!_OS'
     - import_tasks: _debian.yml
-      when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
+      when: ansible_facts['os_family'] == 'Debian' or ansible_facts['os_family'] == 'Pop!_OS'
     # Post-installation
+    - import_tasks: ../../../common/shared/unix_post-task.yml
     - import_tasks: ../shared/unix_post-task.yml
     - import_tasks: post-task.yml
     # Binary packages

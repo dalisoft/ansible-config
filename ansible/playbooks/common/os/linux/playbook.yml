@@ -1,6 +1,7 @@
 ---
 - name: Linux Common Playbook
   hosts: all
+  gather_facts: yes
   become: false
 
   vars_files:
@@ -17,13 +18,11 @@
     PATH: "/usr/local/bin:$HOME/.local/bin:{{ ansible_env.PATH }}"
 
   tasks:
-    # Tasks list
-
     # Installation
     - import_tasks: _manjaro.yml
-      when: ansible_os_family == 'Archlinux'
+      when: ansible_facts['os_family'] == 'Archlinux'
     - import_tasks: _debian.yml
-      when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'
+      when: ansible_facts['os_family'] == 'Debian' or ansible_facts['os_family'] == 'Pop!_OS'
     # Post-installation
     - import_tasks: ../shared/unix_post-task.yml
     - import_tasks: post-task.yml

@@ -6,7 +6,9 @@ ensure_folders:
 initial_configs:
   # Files
   - .vimrc
+  - .nanorc
   # Folders
+  - .nano
   - .vim
   - .config/nvim
   - .config/autostart

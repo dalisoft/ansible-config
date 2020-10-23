@@ -5,6 +5,5 @@
   command: nvim -c "PlugInstall" -c "qa"
   register: install_vim_plugin
   until: install_vim_plugin is successful
-  when: initial_config_link is successful
   tags:
     - install-vim-plugins

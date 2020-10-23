@@ -115,7 +115,7 @@
   loop:
     - iptables-persistent
     - netfilter-persistent
-  when: ansible_os_family == "Debian"
+  when: ansible_facts['os_family'] == "Debian"
 
 - name: Override some basic fail2ban configurations
   copy:

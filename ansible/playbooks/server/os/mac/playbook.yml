@@ -1,6 +1,7 @@
 ---
 - name: macOS Server Playbook
   hosts: all
+  gather_facts: yes
   become: false
 
   vars_files:

@@ -62,6 +62,3 @@
     autoremove: yes
   register: clean_apt_package
   until: clean_apt_package is successful
-# - import_tasks: ../ubuntu/snap.yml
-#  when:
-#    - INSTALL_MODE == 'DESKTOP'
