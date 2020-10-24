@@ -11,6 +11,11 @@ initial_configs:
   - .config/autostart
   - nfancurve
 
+shared_packages:
+  # Necessary tools
+  - ffmpeg
+  - imagemagick
+
 fnm_versions:
   - 12.18.4
   - 13.14.0

@@ -22,6 +22,3 @@ shared_packages:
   - yarn
   # Build tools
   - cmake
-  # Necessary tools
-  - ffmpeg
-  - imagemagick

@@ -17,8 +17,6 @@ apt_items: # Security
   - netfilter-persistent
   # Fonts
   - fonts-firacode
-  # PopOS polyfill
-  - snapd
   # Addinational tools
   - nodejs
   - python3-pip
@@ -27,13 +25,6 @@ apt_items: # Security
   - docker-ce-cli
   - containerd.io
   - docker-compose
-  # Dependencies for WebRTC
-  - libavdevice-dev
-  - libavfilter-dev
-  - libopus-dev
-  - libvpx-dev
-  - libsrtp2-dev
-  - pkg-config
 
 apt_force_items:
   - ripgrep

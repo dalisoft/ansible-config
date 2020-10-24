@@ -52,11 +52,11 @@ apt_items:
   - intel-microcode
   - iucode-tool
   # PopOS polyfill
+  - snapd
   - grub2-common
   - exfat-fuse
   - exfat-utils
   # Programming languages
-  - pkg-config
   # Go
   - golang-go
   # Python
@@ -90,6 +90,13 @@ apt_items:
   - nvidia-cuda-doc
   # Java tools
   - adoptopenjdk-8-hotspot
+  # Dependencies for WebRTC
+  - libavdevice-dev
+  - libavfilter-dev
+  - libopus-dev
+  - libvpx-dev
+  - libsrtp2-dev
+  - pkg-config
 
 apt_force_items:
   - bat
