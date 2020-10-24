@@ -2,7 +2,7 @@
 # Before first using the playbook, run the below command to create a hashed
 # password that Ansible will assign to your new user.
 # python -c 'import crypt; print crypt.crypt("<b>password</b>", "$1$<b>SALT</b>$")'
-USER: user
+username: user
 password: "0000"
 hash_salt: "$1$SomeSalt$"
 

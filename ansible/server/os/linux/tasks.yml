@@ -14,14 +14,14 @@
 
 - name: Create the non-root user account
   user:
-    name: "{{ USER }}"
+    name: "{{ username }}"
     password: "{{ password | password_hash('sha512', hash_salt) }}"
     shell: /bin/bash
     update_password: on_create
     groups: wheel
     system: no
     create_home: yes # Defaults to yes
-    home: "/home/{{ USER }}" # Defaults to /home/<username>
+    home: "/home/{{ username }}" # Defaults to /home/<username>
 
 - name: Harden sshd configuration
   lineinfile:
