@@ -17,7 +17,7 @@
     argv:
       - /usr/bin/python
       - -c
-      - import crypt; print crypt.crypt('{{ password }}')
+      - import crypt; print crypt.crypt('{{ password }}', '{{ hash_salt }}')
   register: HASHP
 
 - name: Create the non-root user account

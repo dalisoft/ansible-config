@@ -4,6 +4,7 @@
 # python -c 'import crypt; print crypt.crypt("<b>password</b>", "$1$<b>SALT</b>$")'
 USER: user
 password: "0000"
+hash_salt: "$1$SomeSalt$"
 
 apt_items:
   - openssh-server
