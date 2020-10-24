@@ -3,7 +3,7 @@
 # password that Ansible will assign to your new user.
 # python -c 'import crypt; print crypt.crypt("<b>password</b>", "$1$<b>SALT</b>$")'
 USER: user
-password: 0000
+password: "0000"
 
 apt_items:
   - openssh-server
