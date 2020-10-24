@@ -27,7 +27,7 @@
   file:
     path: "/home/{{ username }}/.ssh"
     state: directory
-    mode: "0600"
+    mode: 0700
 
 - name: Copy authorized_keys to created user
   copy:
@@ -37,7 +37,7 @@
     force: yes
     owner: "{{ username }}"
     group: wheel
-    mode: 0600
+    mode: 0644
 
 - name: Harden sshd configuration
   lineinfile:
