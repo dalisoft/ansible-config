@@ -12,10 +12,14 @@
     line: "%wheel ALL=(ALL:ALL) ALL"
     validate: "/usr/sbin/visudo -cf %s"
 
+- name: Encrypt password for non-root new user account
+  command: 'python -c ''import crypt; print crypt.crypt("{{ password }}")'''
+  register: HASHP
+
 - name: Create the non-root user account
   user:
     name: "{{ USER }}"
-    password: "{{ password }}"
+    password: "{{ HASHP.stdout }}"
     shell: /bin/bash
     update_password: on_create
     groups: wheel
