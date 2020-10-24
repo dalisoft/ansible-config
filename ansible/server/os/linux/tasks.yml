@@ -13,7 +13,11 @@
     validate: "/usr/sbin/visudo -cf %s"
 
 - name: Encrypt password for non-root new user account
-  command: 'python -c ''import crypt; print crypt.crypt("{{ password }}")'''
+  command:
+    argv:
+      - /usr/bin/python
+      - -c
+      - import crypt; print crypt.crypt('{{ password }}')
   register: HASHP
 
 - name: Create the non-root user account
