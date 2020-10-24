@@ -23,6 +23,16 @@
     create_home: yes # Defaults to yes
     home: "/home/{{ username }}" # Defaults to /home/<username>
 
+- name: Copy authorized_keys to created user
+  copy:
+    src: ~/.ssh/authorized_keys
+    dest: "/home/{{ username }}/.ssh/authorized_keys"
+    state: present
+    owner: "{{ username }}"
+    group: wheel
+    mode: "0644"
+    backup: yes
+
 - name: Harden sshd configuration
   lineinfile:
     dest: /etc/ssh/sshd_config
