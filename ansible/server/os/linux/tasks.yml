@@ -55,7 +55,7 @@
     - regexp: "^#?AllowTcpForwarding"
       line: "AllowTcpForwarding no"
     - regexp: "^#?MaxAuthTries"
-      line: "MaxAuthTries 2"
+      line: "MaxAuthTries 5"
     - regexp: "^#?MaxSessions"
       line: "MaxSessions 2"
     - regexp: "^#?TCPKeepAlive"
