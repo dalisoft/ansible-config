@@ -64,6 +64,8 @@
       line: "UseDNS no"
     - regexp: "^#?AllowAgentForwarding"
       line: "AllowAgentForwarding no"
+    - regexp: '^(AllowUsers.*)(\!\*)$'
+      replace: '\1{{ username }} !*'
 
 - name: Restart sshd
   systemd:
