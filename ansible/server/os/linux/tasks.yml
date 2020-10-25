@@ -5,15 +5,24 @@
     password: "{{ password | password_hash('sha512', hash_salt) }}"
     shell: /bin/bash
     update_password: on_create
-    groups: sudo
+    groups: "{{ username }}"
+    system: no
     create_home: yes # Defaults to yes
     home: "/home/{{ username }}" # Defaults to /home/<username>
 
+- name: Ensure ssh folder exists
+  file:
+    path: "/home/{{ username }}/.ssh"
+    state: directory
+    mode: 0700
+
 - name: Copy authorized_keys to created user
-  authorized_key:
-    user: "{{ username }}"
-    state: present
-    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+  copy:
+    src: ~/.ssh/authorized_keys
+    dest: "/home/{{ username }}/.ssh/authorized_keys"
+    backup: yes
+    owner: "{{ username }}"
+    mode: 0644
 
 - name: Harden sshd configuration
   lineinfile:
