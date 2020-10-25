@@ -52,7 +52,7 @@
 
 - name: "Allow {{ username }} to SSH access"
   lineinfile:
-    path: /etc/httpd/conf/httpd.conf
+    path: /etc/ssh/sshd_config
     regexp: "^AllowUsers "
     insertafter: "^#Subsystem "
     line: "AllowUsers {{ username }}"
