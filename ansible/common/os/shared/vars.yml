@@ -1,4 +1,8 @@
 ---
+ensure_folders:
+  - "~/.local/bin"
+  - /usr/local/bin
+
 initial_configs:
   # Files
   - .nanorc
