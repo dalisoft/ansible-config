@@ -19,6 +19,8 @@
     path: "{{ item }}"
     state: directory
     mode: "0755"
+    owner: "{{ USER }}"
+    group: "{{ USER }}"
   loop: "{{ ensure_folders }}"
   when: ensure_folders is defined
   tags:
