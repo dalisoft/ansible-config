@@ -11,6 +11,7 @@ initial_configs:
   # Folders
   - .vim
   - .config/nvim
+  - .config/htop
 
 shared_packages:
   # Addinational terminal stuffs

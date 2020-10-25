@@ -5,6 +5,7 @@
     dest: "~/{{ item }}"
     state: link
     force: yes
+    follow: no
   loop: "{{ initial_configs }}"
   when: initial_configs is defined
   retries: 1

@@ -2,11 +2,10 @@
 initial_configs:
   # Files
   - .nanorc
-  - .config/fish/config.fish
   - .config/starship.toml
   # Folders
   - .nano
-  - .config/fish/functions
+  - .config/fish
 
 shared_packages:
   # Required
