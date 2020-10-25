@@ -45,9 +45,8 @@ pacman_packages:
 binaries:
   - name: fnm
     link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
-    command: mv fnm-linux/fnm fnm
     binary: False
-    direct: False
+    direct: True
   - name: wrk
     link: https://github.com/dalisoft/wrk/releases/latest/download/wrk-linux.zip
     binary: False
