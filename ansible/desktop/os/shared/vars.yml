@@ -9,7 +9,6 @@ initial_configs:
 
 shared_packages:
   # Necessary tools
-  - ffmpeg
   - imagemagick
 
 fnm_versions:
