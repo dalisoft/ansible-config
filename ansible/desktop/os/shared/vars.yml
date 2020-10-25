@@ -61,6 +61,7 @@ vscodium_extensions:
   - dbaeumer.vscode-eslint
   - esbenp.prettier-vscode
   - foxundermoon.shell-format
+  - bmalehorn.vscode-fish
   - mkaufman.HTMLHint
   # Other tools
   - redhat.vscode-yaml

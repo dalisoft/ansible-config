@@ -16,7 +16,6 @@
 
   environment:
     NPM_CONFIG_PREFIX: "~/.npm-global"
-    MOZ_USE_OMTC: 1
 
   pre_tasks:
     # Pre-installation steps

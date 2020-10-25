@@ -12,12 +12,15 @@ set -gx fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 ###################################
 
 switch (uname)
-  case Darwin
-    alias cat=bat
+    case Darwin
+        alias cat=bat
 
-  case Linux
-    set -gx MOZ_USE_OMTC 1
-    alias cat=batcat
+    case Linux
+        set -gx MOZ_USE_OMTC 1
+
+        if type -q batcat
+            alias cat=batcat
+        end
 
 end
 
@@ -90,9 +93,12 @@ set -gx PATH "$HOME/lsp/bin" $PATH
 ###################################
 
 # **** Terminal stuffs ****
-alias ls=exa
-alias grep=rg
-alias vim=nvim
+if type -q exa
+    alias ls=exa
+end
+if type -q rg
+    alias grep=rg
+end
 
 # **** git clean alias ****
 alias git_reflog_expire="git reflog expire --expire=now --all"
@@ -122,4 +128,6 @@ alias brew_cleanup "brew cleanup --prune 0 && brew cleanup -s"
 ###################################
 
 # **** starship ****
-starship init fish | source
+if type -q starship
+    starship init fish | source
+end
