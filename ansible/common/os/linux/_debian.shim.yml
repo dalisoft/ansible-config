@@ -7,5 +7,6 @@
     state: present
   loop:
     - python-apt
+    - exa
   register: install_apt_py
   until: install_apt_py is successful

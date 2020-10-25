@@ -48,11 +48,6 @@ binaries:
     command: mv fnm-linux/fnm fnm
     binary: False
     direct: False
-  - name: exa
-    link: https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
-    command: mv exa-linux-x86_64 exa
-    binary: False
-    direct: False
   - name: wrk
     link: https://github.com/dalisoft/wrk/releases/latest/download/wrk-linux.zip
     binary: False
