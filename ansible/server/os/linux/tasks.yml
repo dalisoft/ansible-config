@@ -3,12 +3,13 @@
   user:
     name: "{{ username }}"
     password: "{{ password | password_hash('sha512', hash_salt) }}"
-    shell: /bin/bash
-    update_password: on_create
-    groups: "{{ username }}"
-    system: no
+    group: "{{ username }}"
     create_home: yes # Defaults to yes
     home: "/home/{{ username }}" # Defaults to /home/<username>
+    update_password: on_create
+    shell: /bin/fish
+    groups: sudo
+    append: yes
 
 - name: Ensure ssh folder exists
   file:
