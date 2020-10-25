@@ -10,6 +10,7 @@ initial_configs:
   - .vimrc
   # Folders
   - .vim
+  - .config/nvim
 
 shared_packages:
   # Addinational terminal stuffs

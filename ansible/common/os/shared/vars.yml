@@ -4,7 +4,7 @@ initial_configs:
   - .nanorc
   # Folders
   - .nano
-  - .config
+  - .config/fish
 
 shared_packages:
   # Required
