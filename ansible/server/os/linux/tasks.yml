@@ -16,6 +16,8 @@
   file:
     path: "/home/{{ username }}/.ssh"
     state: directory
+    owner: "{{ username }}"
+    group: "{{ username }}"
     mode: 0700
 
 - name: Copy authorized_keys to created user
@@ -24,6 +26,7 @@
     dest: "/home/{{ username }}/.ssh/authorized_keys"
     backup: yes
     owner: "{{ username }}"
+    group: "{{ username }}"
     mode: 0644
 
 - name: Harden sshd configuration
