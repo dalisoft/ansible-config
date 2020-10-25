@@ -1,9 +1,10 @@
 ---
 - name: Create the non-root user account
+  become: true
+  become_user: root
   user:
     name: "{{ username }}"
     password: "{{ password | password_hash('sha512', hash_salt) }}"
-    group: "{{ username }}"
     create_home: yes # Defaults to yes
     home: "/home/{{ username }}" # Defaults to /home/<username>
     update_password: on_create
