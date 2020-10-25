@@ -4,6 +4,7 @@ initial_configs:
   - .nanorc
   # Folders
   - .nano
+  - .config
 
 shared_packages:
   # Required

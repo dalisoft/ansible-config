@@ -8,7 +8,6 @@ initial_configs:
   - .gitconfig
   - .gitignore
   # Folders
-  - .config/autostart
   - nfancurve
 
 shared_packages:
