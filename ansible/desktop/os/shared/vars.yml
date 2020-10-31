@@ -56,6 +56,9 @@ sublime_extensions_git:
 
 # VSCodium Extensions
 vscodium_extensions:
+  # Experiemental installed
+  - planbcoding.vscode-react-refactor
+  - sburg.vscode-javascript-booster
   # Linters
   - dbaeumer.vscode-eslint
   - esbenp.prettier-vscode
