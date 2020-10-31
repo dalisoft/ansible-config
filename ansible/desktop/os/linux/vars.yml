@@ -49,7 +49,7 @@ apt_repos:
   - deb [arch=amd64] https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
   - deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main
-  - deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ focal main
+  - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
 
 apt_items:
   # Improve Linux performance
