@@ -58,7 +58,8 @@ sublime_extensions_git:
 vscodium_extensions:
   # Experiemental installed
   - planbcoding.vscode-react-refactor
-  - sburg.vscode-javascript-booster
+  - 2gua.rainbow-brackets
+  - vincaslt.highlight-matching-tag
   # Linters
   - dbaeumer.vscode-eslint
   - esbenp.prettier-vscode
