@@ -80,6 +80,7 @@ apt_items:
   # System utilities
   - timeshift
   # Most needed desktop apps
+  - flameshot
   - anydesk
   - transmission
   # Editors
@@ -143,8 +144,9 @@ pacman_packages:
   - sassc
   - gtk-engine-murrine
   - gtk-engines
-  - ungoogled-chromium
   # Most needed desktop apps
+  - ungoogled-chromium
+  - flameshot-git
   - uget
   - notion-app
   - anydesk-bin
