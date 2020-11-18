@@ -143,8 +143,10 @@ pacman_packages:
   - sassc
   - gtk-engine-murrine
   - gtk-engines
+  - ungoogled-chromium
   # Most needed desktop apps
   - uget
+  - notion-app
   - anydesk-bin
   - transmittion-gtk
   # Development tools

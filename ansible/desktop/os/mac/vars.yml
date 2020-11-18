@@ -46,12 +46,13 @@ brew_cask_packages:
   - kdiff3
   - android-file-transfer
   # Browsers
-  - google-chrome
+  - eloston-chromium
   - firefox
   # Most needed desktop apps
   - telegram-desktop
   - vlc
   - 1password
+  - notion
   - anydesk
   - octave-app
   - folx
