@@ -25,7 +25,6 @@ brew_packages:
   - rust-analyzer # LSP for Rust
   # Mobile-dev
   - gradle
-  - watchman
   # Other desktop tools
   - heroku
   - cassowary
@@ -49,6 +48,7 @@ brew_cask_packages:
   - eloston-chromium
   - firefox
   # Most needed desktop apps
+  - adguard
   - telegram-desktop
   - vlc
   - 1password
