@@ -14,7 +14,7 @@
 
 - name: Ensure ssh folder exists
   become: true
-  become_user: root
+  become_user: "{{ username }}"
   file:
     path: "/home/{{ username }}/.ssh"
     state: directory
@@ -24,14 +24,14 @@
 
 - name: Copy authorized_keys to created user
   become: true
-  become_user: root
+  become_user: "{{ username }}"
   copy:
     src: ~/.ssh/authorized_keys
     dest: "/home/{{ username }}/.ssh/authorized_keys"
     backup: yes
     owner: "{{ username }}"
     group: "{{ username }}"
-    mode: 0644
+    mode: 0640
 
 - name: Harden sshd configuration
   become: true
