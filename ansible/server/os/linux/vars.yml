@@ -11,3 +11,5 @@ apt_items:
   - sudo
   - iptables
   - fail2ban
+  - certbot
+  - python-certbot-nginx
