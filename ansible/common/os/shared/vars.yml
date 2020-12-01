@@ -37,11 +37,10 @@ shared_packages:
   - gpg
   - git-cola
   - neofetch
+  # Addinational tools
+  - yarn
   # Build tools
   - cmake
   - unzip
   # Necessary tools
   - ffmpeg
-
-npm_modules:
-  - yarn
