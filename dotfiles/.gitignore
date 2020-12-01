@@ -123,6 +123,7 @@ jspm_packages
 
 .lock-wscript
 .yarn-integrity
+.yarn
 
 #################
 ### Security ####
