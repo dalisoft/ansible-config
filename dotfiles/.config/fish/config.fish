@@ -2,10 +2,11 @@
 ######### fish-user Paths #########
 ###################################
 
-set -gx fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
-set -gx fish_user_paths "$HOME/.npm-global/bin" $fish_user_paths
-set -gx fish_user_paths "$HOME/go/bin" $fish_user_paths
+set -gx fish_user_paths "/usr/local/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
+set -gx fish_user_paths "$HOME/go/bin" $fish_user_paths
+set -gx fish_user_paths "$HOME/.npm-global/bin" $fish_user_paths
+set -gx fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 
 ###################################
 ######### env parameters  #########
@@ -35,6 +36,13 @@ set -gx LC_ALL "en_US.UTF-8"
 # **** Brew ****
 set -gx HOMEBREW_NO_ANALYTICS 1
 
+# **** Rust (Cargo) ****
+set -gx CARGO_INSTALL_ROOT "$HOME/.cargo"
+set -gx CARGO_HOME "$HOME/.cargo"
+
+# **** GO ****
+set -gx GOPATH "$HOME/go"
+
 # **** Android SDK ****
 set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
 
@@ -44,15 +52,37 @@ set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
 # **** BAT ****
 set -gx BAT_THEME "Monokai Extended Bright"
 
-# **** GO ****
-set -gx GOPATH "$HOME/go"
-
-# **** Rust (Cargo) ****
-set -gx CARGO_INSTALL_ROOT "$HOME/.cargo"
-set -gx CARGO_HOME "$HOME/.cargo"
-
 # **** nFanCurve ****
 set -gx NFANCURVE_PATH "$HOME/nfancurve"
+
+# ********************************
+# ********** path env ************
+# ********************************
+
+# **** Load local binaries ****
+set -gx PATH "/usr/local/bin" $PATH
+
+# **** Rust (Cargo) ****
+set -gx PATH "$HOME/.cargo/bin" $PATH
+
+# **** GO ****
+set -gx PATH "$HOME/go/bin" $PATH
+
+# **** NPM ****
+set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
+
+# **** Android SDK ****
+set -gx PATH "$ANDROID_HOME/emulator" $PATH
+set -gx PATH "$ANDROID_HOME/tools" $PATH
+set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
+set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
+
+# **** Homebrew - Linux ****
+set -gx PATH "$HOMEBREW_PREFIX/bin" $PATH
+set -gx PATH "$HOMEBREW_PREFIX/sbin" $PATH
+
+# **** LSP ****
+set -gx PATH "$HOME/lsp/bin" $PATH
 
 # ********************************
 # ********* openssl env **********
@@ -69,32 +99,6 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 set -gx LDFLAGS "-L/usr/local/opt/openblas/lib"
 set -gx CPPFLAGS "-I/usr/local/opt/openblas/include"
 set -gx PKG_CONFIG_PATH "/usr/local/opt/openblas/lib/pkgconfig"
-
-# ********************************
-# ********** path env ************
-# ********************************
-
-# **** Android SDK ****
-set -gx PATH "$ANDROID_HOME/emulator" $PATH
-set -gx PATH "$ANDROID_HOME/tools" $PATH
-set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
-set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
-
-# **** Homebrew - Linux ****
-set -gx PATH "$HOMEBREW_PREFIX/bin" $PATH
-set -gx PATH "$HOMEBREW_PREFIX/sbin" $PATH
-
-# **** NPM ****
-set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
-
-# **** GO ****
-set -gx PATH "$HOME/go/bin" $PATH
-
-# **** Rust (Cargo) ****
-set -gx PATH "$HOME/.cargo/bin" $PATH
-
-# **** LSP ****
-set -gx PATH "$HOME/lsp/bin" $PATH
 
 ###################################
 ############# aliases #############
