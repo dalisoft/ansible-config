@@ -1,15 +1,21 @@
 ---
 ensure_folders:
+  - "~/.config/nvim"
+  - "~/Desktop/config/dotfiles/.vim/autoload"
   - "~/.local/bin"
   - /usr/local/bin
 
 initial_configs:
   # Files
   - .nanorc
+  - .vimrc
   - .config/starship.toml
   # Folders
-  - .nano
   - .config/fish
+  - .nano
+  - .vim
+  - .config/nvim
+  - .config/htop
 
 shared_packages:
   # Required
@@ -20,13 +26,20 @@ shared_packages:
   - git-lfs
   # Addinational terminal stuffs
   - nano
+  - neovim
+  - mosh
+  - tmux
+  - htop
   # Optional, but common utilities
   - rsync
   - curl
   - wget
+  - gpg
+  - neofetch
   # Addinational tools
   - yarn
   # Build tools
   - cmake
+  - unzip
   # Necessary tools
   - ffmpeg

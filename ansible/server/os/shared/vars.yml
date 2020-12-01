@@ -1,25 +1,6 @@
 ---
 ensure_folders:
-  - "~/.config/nvim"
-  - "~/Desktop/config/dotfiles/.vim/autoload"
   - /etc/fail2ban
-
-# Initial files to link
-initial_configs:
-  # Files
-  - .vimrc
-  # Folders
-  - .vim
-  - .config/nvim
-  - .config/htop
-
-shared_packages:
-  # Addinational terminal stuffs
-  - htop
-  - tmux
-  - neovim
-  # Build tools
-  - unzip
 
 npm_modules:
   - pm2

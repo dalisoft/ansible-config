@@ -27,6 +27,11 @@ switch (uname)
 
 end
 
+# **** Mosh ****
+set -gx LANG "en_US.UTF-8"
+set -gx LANGUAGE "en_US.UTF-8"
+set -gx LC_ALL "en_US.UTF-8"
+
 # **** Brew ****
 set -gx HOMEBREW_NO_ANALYTICS 1
 
@@ -117,6 +122,10 @@ alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
 
 # **** fnm ****
 alias load_fnm "fnm env --shell=fish --multi | source"
+
+# **** docker vm ****
+alias run_vm "docker run -ti --rm --net=bridge --name=vm_terminal"
+alias run_vm_tmp "docker run -ti --rm --net=bridge --name=tmp_vm_terminal"
 
 # **** test internet speed ****
 alias inet_speed_test "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
