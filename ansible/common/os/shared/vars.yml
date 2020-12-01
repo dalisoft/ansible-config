@@ -36,10 +36,11 @@ shared_packages:
   - wget
   - gpg
   - neofetch
-  # Addinational tools
-  - yarn
   # Build tools
   - cmake
   - unzip
   # Necessary tools
   - ffmpeg
+
+npm_modules:
+  - yarn
