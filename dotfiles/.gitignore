@@ -33,7 +33,7 @@ artifacts
 #################
 
 logs
-.log
+*.log
 *-debug.log*
 
 #################
