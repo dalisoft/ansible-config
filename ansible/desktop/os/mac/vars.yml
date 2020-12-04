@@ -41,6 +41,7 @@ brew_cask_packages:
   - font-fira-code
   # Utilities
   - the-unarchiver
+  - appcleaner
   # - macs-fan-control # This is only for MacBook
   - kdiff3
   - android-file-transfer
@@ -59,6 +60,10 @@ brew_cask_packages:
   # Development tools
   - postman
   - gitkraken
+  # - paw
+  # - parallels
+  # - sqlpro-studio
+  # - adobe-creative-cloud
   # DevOps tools
   - docker
   # Editors
