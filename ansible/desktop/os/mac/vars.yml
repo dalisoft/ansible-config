@@ -42,6 +42,7 @@ brew_cask_packages:
   # Utilities
   - the-unarchiver
   - appcleaner
+  - altserver
   # - macs-fan-control # This is only for MacBook
   - kdiff3
   - android-file-transfer
