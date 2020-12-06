@@ -1,3 +1,10 @@
 [user]
 	name = dalisoft
 	email = dalisoft@mail.ru
+[cola]
+	spellcheck = false
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

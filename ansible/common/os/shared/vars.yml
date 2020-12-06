@@ -35,6 +35,7 @@ shared_packages:
   - curl
   - wget
   - gpg
+  - git-cola
   - neofetch
   # Build tools
   - cmake

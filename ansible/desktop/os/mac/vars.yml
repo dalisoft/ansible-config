@@ -59,21 +59,24 @@ brew_cask_packages:
   - octave-app
   - folx
   # Development tools
+  - cocoarestclient
   - postman
+  - insomnia
+  - insomnia-designer
   - gitkraken
+  - github
+  - beekeeper-studio
+  - psequel
+  - mongodb-compass
   # - paw
-  # - parallels
-  # - sqlpro-studio
   # - adobe-creative-cloud
-  # DevOps tools
-  - docker
   # Editors
   #  - sublime-text # Enable when v4 comes to Homebrew
   - vscodium
-  # - clion # This is only for iMac
-  # - intellij-idea # This is only for iMac
   - android-studio
 
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk8
   - docker
+  - vmware-fusion
+  - anka-virtualization
