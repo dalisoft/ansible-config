@@ -39,6 +39,7 @@ apt_keys:
   - https://keys.anydesk.com/repos/DEB-GPG-KEY
   - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+  - https://packagecloud.io/shiftkey/desktop/gpgkey
 
 apt_ring_keys:
   - keyserver: keyserver.ubuntu.com
@@ -50,6 +51,7 @@ apt_repos:
   - deb http://deb.anydesk.com/ all main
   - deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
+  - deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main
 
 apt_items:
   # Improve Linux performance
@@ -83,6 +85,7 @@ apt_items:
   - flameshot
   - anydesk
   - transmission
+  - github-desktop
   # Editors
   - codium
   # KVM/Packages for Virtual Machines
@@ -167,6 +170,7 @@ pacman_packages:
   - insomnia-bin
   - insomnia-designer-bin
   - gitkraken
+  - github-desktop
   - beekeeper-studio-appimage
   # Editors / IDE
   - vscodium-bin
