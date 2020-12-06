@@ -90,9 +90,12 @@ apt_items:
   - qemu-kvm
   - qemu-system
   - qemu-utils
-  - ibvirt-clients
+  - libvirt-clients
+  - libvirt-daemon
   - libvirt-daemon-system
   - virtinst
+  - virt-manager
+  - bridge-utils
   - cpu-checker
   # For AI Stuffs
   - nvidia-cuda-toolkit
