@@ -86,7 +86,12 @@ apt_items:
   # Editors
   - codium
   # KVM/Packages for Virtual Machines
+  - qemu
   - qemu-kvm
+  - qemu-system
+  - qemu-utils
+  - ibvirt-clients
+  - libvirt-daemon-system
   - virtinst
   - cpu-checker
   # For AI Stuffs
