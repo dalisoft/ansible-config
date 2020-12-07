@@ -118,6 +118,9 @@ alias git_repack_ad="git repack -ad"
 alias git_prune="git prune"
 alias git_rb="git fetch --all --prune && git pull --rebase && git submodule update --init --recursive"
 
+# **** ssh generate ****
+alias sshg="ssh-keygen -o -a 100 -t ed25519 -C \"dalisoft@mail.ru\""
+
 # **** python3 ****
 alias python=python3
 
