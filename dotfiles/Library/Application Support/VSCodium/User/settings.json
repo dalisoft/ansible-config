@@ -56,6 +56,7 @@
   "extensions.autoCheckUpdates": false,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
+  "code-runner.enableAppInsights": false,
   "update.mode": "none",
   "update.showReleaseNotes": false,
   "workbench.enableExperiments": false,
