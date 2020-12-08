@@ -122,8 +122,8 @@ apt_force_items:
 snap_packages:
   - starship
   - postman
-  - insomnia
-  - insomnia-designer
+  # - insomnia
+  # - insomnia-designer
   - beekeeper-studio
 
 snap_classic_packages:
@@ -167,8 +167,8 @@ pacman_packages:
   - transmittion-gtk
   # Development tools
   - postman
-  - insomnia-bin
-  - insomnia-designer-bin
+  # - insomnia-bin
+  # - insomnia-designer-bin
   - gitkraken
   - github-desktop
   - beekeeper-studio-appimage

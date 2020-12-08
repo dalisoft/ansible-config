@@ -61,8 +61,8 @@ brew_cask_packages:
   # Development tools
   - cocoarestclient
   - postman
-  - insomnia
-  - insomnia-designer
+  # - insomnia
+  # - insomnia-designer
   - gitkraken
   - github
   - beekeeper-studio
