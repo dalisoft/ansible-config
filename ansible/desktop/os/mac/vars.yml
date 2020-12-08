@@ -64,7 +64,7 @@ brew_cask_packages:
   # - insomnia
   # - insomnia-designer
   - gitkraken
-  - github
+  # - github
   - beekeeper-studio
   - psequel
   - mongodb-compass

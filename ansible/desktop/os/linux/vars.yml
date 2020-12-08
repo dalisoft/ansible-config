@@ -85,7 +85,7 @@ apt_items:
   - flameshot
   - anydesk
   - transmission
-  - github-desktop
+  # - github-desktop
   # Editors
   - codium
   # KVM/Packages for Virtual Machines
@@ -170,7 +170,7 @@ pacman_packages:
   # - insomnia-bin
   # - insomnia-designer-bin
   - gitkraken
-  - github-desktop
+  # - github-desktop
   - beekeeper-studio-appimage
   # Editors / IDE
   - vscodium-bin
