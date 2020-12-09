@@ -114,6 +114,7 @@ if type -q rg
 end
 
 # **** git clean alias ****
+alias git_status="git status --show-stash -b -uall --renames"
 alias git_reflog_expire="git reflog expire --expire=now --all"
 alias git_repack_ad="git repack -ad"
 alias git_prune="git prune"

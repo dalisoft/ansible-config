@@ -76,7 +76,6 @@
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.nativeTabs": true,
   "window.titleBarStyle": "custom",
-  "window.restoreWindows": "folders",
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
   "javascript.suggest.autoImports": true,
@@ -164,5 +163,9 @@
   "rust-analyzer.updates.askBeforeDownload": false,
   "docker.images.label": "Tag",
   "python.languageServer": "Microsoft",
-  "cSpell.enabled": false
+  "cSpell.enabled": false,
+  "zenMode.restore": true,
+  "window.restoreFullscreen": true,
+  "workbench.quickOpen.preserveInput": true,
+  "workbench.commandPalette.preserveInput": true
 }
