@@ -107,6 +107,7 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/openblas/lib/pkgconfig"
 # **** Terminal stuffs ****
 if type -q exa
     alias ls=exa
+    alias ll="ls -hlaS --extended --git --time-style=long-iso"
 end
 if type -q rg
     alias grep=rg
