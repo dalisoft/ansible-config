@@ -172,6 +172,7 @@ pacman_packages:
   - gitkraken
   # - github-desktop
   - beekeeper-studio-appimage
+  - mongotron-bin
   # Editors / IDE
   - vscodium-bin
   - android-studio
