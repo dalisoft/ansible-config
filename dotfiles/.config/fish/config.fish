@@ -118,7 +118,8 @@ alias git_status="git status --show-stash -b -uall --renames"
 alias git_reflog_expire="git reflog expire --expire=now --all"
 alias git_repack_ad="git repack -ad"
 alias git_prune="git prune"
-alias git_rb="git fetch --all --prune && git pull --rebase && git submodule update --init --recursive"
+alias git_fetch="git fetch --all --prune"
+alias git_rb="git_fetch && git pull --rebase && git submodule update --init --recursive"
 
 # **** ssh generate ****
 alias sshg="ssh-keygen -o -a 100 -t ed25519 -C \"dalisoft@mail.ru\""
