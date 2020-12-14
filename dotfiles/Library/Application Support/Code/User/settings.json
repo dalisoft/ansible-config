@@ -83,6 +83,7 @@
   "typescript.implementationsCodeLens.enabled": true,
   "typescript.referencesCodeLens.enabled": true,
   "typescript.tsserver.useSeparateSyntaxServer": true,
+  "typescript.disableAutomaticTypeAcquisition": true,
   "typescript.surveys.enabled": false,
   "typescript.suggest.paths": true,
   "css.validate": false,
@@ -145,7 +146,6 @@
   "task.autoDetect": "on",
   "task.quickOpen.detail": true,
   "npm.autoDetect": "on",
-  "npm.fetchOnlinePackageInfo": false,
   "go.gopath": "~/go",
   "go.toolsGopath": "~/go/bin",
   "go.formatTool": "goimports",
@@ -159,5 +159,5 @@
   "python.analysis.completeFunctionParens": true,
   "python.analysis.typeCheckingMode": "strict",
   "cSpell.enabled": false,
-  "zenMode.restore": true,
+  "zenMode.restore": true
 }
