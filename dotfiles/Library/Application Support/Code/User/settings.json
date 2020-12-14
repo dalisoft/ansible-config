@@ -1,27 +1,14 @@
 {
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
+  "prettier.requireConfig": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.wordWrap": "bounded",
   "editor.scrollBeyondLastLine": false,
   "editor.scrollBeyondLastColumn": 0,
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
   "editor.renderIndentGuides": true,
-  "editor.cursorBlinking": "solid",
-  "editor.cursorSmoothCaretAnimation": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
@@ -31,7 +18,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 80,
   "editor.minimap.showSlider": "always",
-  "editor.smoothScrolling": false,
+  "editor.smoothScrolling": true,
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.snippetSuggestions": "top",
   "editor.definitionLinkOpensInPeek": true,
@@ -49,10 +36,10 @@
   "terminal.integrated.experimentalUseTitleEvent": true,
   "terminal.integrated.experimentalLinkProvider": true,
   "timeline.showView": true,
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "extensions.ignoreRecommendations": false,
-  "extensions.autoUpdate": false,
-  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": true,
+  "extensions.autoCheckUpdates": true,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "code-runner.enableAppInsights": false,
@@ -102,7 +89,8 @@
   "less.validate": false,
   "scss.validate": false,
   "stylelint.enable": false,
-  "python.jediEnabled": false,
+  "python.jediEnabled": true,
+  "python.linting.pylamaEnabled": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
@@ -127,7 +115,6 @@
     "*.css": "postcss"
   },
   "files.saveConflictResolution": "askUser",
-  "prettier.requireConfig": true,
   "emmet.includeLanguages": {
     "vue-html": "html",
     "postcss": "css",
@@ -140,7 +127,7 @@
   "emmet.showSuggestionsAsSnippets": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "git.autofetch": false,
+  "git.autofetch": true,
   "scm.alwaysShowActions": true,
   "scm.alwaysShowRepositories": true,
   "scm.defaultViewMode": "tree",
@@ -155,8 +142,8 @@
   },
   "search.searchOnType": false,
   "search.collapseResults": "alwaysCollapse",
-  "task.autoDetect": "off",
-  "task.quickOpen.detail": false,
+  "task.autoDetect": "on",
+  "task.quickOpen.detail": true,
   "npm.autoDetect": "on",
   "npm.fetchOnlinePackageInfo": false,
   "go.gopath": "~/go",
@@ -173,5 +160,4 @@
   "python.analysis.typeCheckingMode": "strict",
   "cSpell.enabled": false,
   "zenMode.restore": true,
-  "python.linting.pylamaEnabled": true,
 }
