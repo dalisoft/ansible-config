@@ -23,6 +23,8 @@ shared_packages:
   # Browsers
   - epiphany-browser
   - firefox
+  # Editors
+  - code
   # Most needed desktop apps
   - telegram-desktop
   - vlc
@@ -35,9 +37,9 @@ shared_packages:
 
 # APT (Debian/Ubuntu) packages
 apt_keys:
-  - https://dl.xanmod.org/gpg.key
+  # - https://dl.xanmod.org/gpg.key
   - https://keys.anydesk.com/repos/DEB-GPG-KEY
-  - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+  - https://packages.microsoft.com/keys/microsoft.asc
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
   # - https://packagecloud.io/shiftkey/desktop/gpgkey
 
@@ -46,23 +48,25 @@ apt_ring_keys:
     id: 3FEF9748469ADBE15DA7CA80AC2D62742012EA22
 
 apt_repos:
-  - deb http://deb.xanmod.org releases main
-  - deb [arch=amd64] https://onepassword.s3.amazonaws.com/linux/debian edge main
+  # - deb http://deb.xanmod.org releases main
+  - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
-  - deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main
+  - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
   # - deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main
 
 apt_items:
   # Improve Linux performance
-  - linux-xanmod
-  - intel-microcode
-  - iucode-tool
+  # - linux-xanmod
+  # - intel-microcode
+  # - iucode-tool
   # PopOS polyfill
   - snapd
   - grub2-common
   - exfat-fuse
   - exfat-utils
+  - software-properties-common
+  - apt-transport-https
   # Programming languages
   # Go
   - golang-go
@@ -85,9 +89,9 @@ apt_items:
   - flameshot
   - anydesk
   - transmission
+  # Browser
+  - chromium-browser
   # - github-desktop
-  # Editors
-  - codium
   # KVM/Packages for Virtual Machines
   - qemu
   - qemu-kvm
@@ -159,7 +163,7 @@ pacman_packages:
   - gtk-engine-murrine
   - gtk-engines
   # Most needed desktop apps
-  - ungoogled-chromium
+  - chromium
   - flameshot-git
   - uget
   - notion-app
@@ -174,7 +178,6 @@ pacman_packages:
   - beekeeper-studio-appimage
   - mongotron-bin
   # Editors / IDE
-  - vscodium-bin
   - android-studio
   # KVM/Packages for Virtual Machines
   - virt-manager

@@ -47,7 +47,7 @@ brew_cask_packages:
   - kdiff3
   - android-file-transfer
   # Browsers
-  - eloston-chromium
+  - google-chrome
   - firefox
   # Most needed desktop apps
   - adguard
@@ -72,7 +72,7 @@ brew_cask_packages:
   # - adobe-creative-cloud
   # Editors
   #  - sublime-text # Enable when v4 comes to Homebrew
-  - vscodium
+  - visual-studio-code
   - android-studio
 
 brew_cask_packages_root:

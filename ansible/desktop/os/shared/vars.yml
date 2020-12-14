@@ -53,42 +53,56 @@ sublime_extensions_git:
   - name: LSP-SouceKit
     git_url: git@github.com:sublimelsp/LSP-SourceKit.git
 
-# VSCodium Extensions
-vscodium_extensions:
-  # Experiemental installed
+# VSCode Extensions
+vscode_extensions:
+  # Formatters
   - planbcoding.vscode-react-refactor
-  # Linters
-  - dbaeumer.vscode-eslint
   - esbenp.prettier-vscode
   - foxundermoon.shell-format
+  # Linters
+  - dbaeumer.vscode-eslint
   - bmalehorn.vscode-fish
   - mkaufman.HTMLHint
-  # Other tools
   - redhat.vscode-yaml
+  - DavidAnson.vscode-markdownlint
+  # Editor essentials
   - EditorConfig.EditorConfig
   - mikestead.dotenv
   - emilast.LogFileHighlighter
-  - DavidAnson.vscode-markdownlint
-  - PKief.material-icon-theme
+  - wayou.vscode-todo-highlight
+  # npm plugins
   - eg2.vscode-npm-script
   - christian-kohler.npm-intellisense
+  - christian-kohler.path-intellisense
+  # Frontend tools
   - techer.open-in-browser
   - ricard.postcss
   - cssho.vscode-svgviewer
-  - wayou.vscode-todo-highlight
-  - ms-vscode.vscode-typescript-tslint-plugin
-  - ms-azuretools.vscode-docker
-  - liximomo.sftp
-  - christian-kohler.path-intellisense
-  - pnp.polacode
-  # Programming Languages
+  # Productivity
   - bmewburn.vscode-intelephense-client
-  - matklad.rust-analyzer
-  - ms-python.python
-  - golang.go
-  - llvm-vs-code-extensions.vscode-clangd
-  # IntelliSense
+  - ms-vscode.vscode-typescript-tslint-plugin
   - VisualStudioExptTeam.vscodeintellicode
-  # Spell check
+  # Programming language
+  - ms-toolsai.jupyter
+  - ms-python.gather
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - golang.go
+  - ms-vscode.cpptools
+  - matklad.rust-analyzer
+  # Spell-checking
   - streetsidesoftware.code-spell-checker
   - streetsidesoftware.code-spell-checker-russian
+  # DevOps
+  - ms-azuretools.vscode-docker
+  - liximomo.sftp
+  - ms-vscode-remote.remote-containers
+  - ms-vscode-remote.remote-ssh
+  - ms-vscode-remote.remote-wsl
+  - ms-vscode-remote.remote-ssh-edit
+  - vscoss.vscode-ansible
+  # Debugging
+  - msjsdiag.debugger-for-chrome
+  # Design / Showcase
+  - PKief.material-icon-theme
+  - pnp.polacode

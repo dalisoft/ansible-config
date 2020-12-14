@@ -50,32 +50,16 @@
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
   when: gopls_bin.stat.exists != true
 
-# VSCodium Extensions
-
-# Fix VSCodium extensions as VSCodium uses
-# Open-VSX.org market url and there isn't available
-# some of extensions
-- name: Fix VSCodium extensions path
-  become: true
-  become_user: root
-  script: "~/Desktop/config/scripts/fix-codium.py"
-  args:
-    executable: python3
-  register: fix_vscodium
-  until: fix_vscodium is successful
-
-- name: List installed VSCodium extensions
-  shell: codium --list-extensions
-  register: codium_extensions_list
+# VSCode Extensions
+- name: List installed VSCode extensions
+  shell: code --list-extensions
+  register: code_extensions_list
   changed_when: false
   check_mode: false
-  when: fix_vscodium.changed
 
-- name: Installing VSCodium extensions
-  shell: "codium --install-extension {{ item }}"
-  loop: "{{ vscodium_extensions }}"
-  register: install_codium_extensions
-  until: install_codium_extensions is successful
-  when:
-    - fix_vscodium.changed
-    - item not in codium_extensions_list.stdout_lines
+- name: Installing VSCode extensions
+  shell: "code --install-extension {{ item }}"
+  loop: "{{ vscode_extensions }}"
+  register: install_code_extensions
+  until: install_code_extensions is successful
+  when: item not in code_extensions_list.stdout_lines
