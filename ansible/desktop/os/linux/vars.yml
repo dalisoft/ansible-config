@@ -177,8 +177,16 @@ pacman_packages:
   - vscodium-bin
   - android-studio
   # KVM/Packages for Virtual Machines
+  - virt-manager
   - qemu
-  - virtualbox
+  - qemu-arch-extra
+  - vde2
+  - iptables
+  - ebtables
+  - ovmf
+  - dnsmasq
+  - bridge-utils
+  - openbsd-netcat
   # For AI Stuffs
   - cuda
   # Java tools
