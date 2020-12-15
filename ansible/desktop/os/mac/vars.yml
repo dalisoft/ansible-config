@@ -65,9 +65,9 @@ brew_cask_packages:
   # - insomnia-designer
   - gitkraken
   # - github
-  # - beekeeper-studio
+  - beekeeper-studio
   # - psequel
-  - mongodb-compass
+  # - mongodb-compass
   # - paw
   # - adobe-creative-cloud
   # Editors
