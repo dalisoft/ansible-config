@@ -57,7 +57,7 @@ brew_cask_packages:
   - notion
   - anydesk
   - octave-app
-  - folx
+  # - folx
   # Development tools
   # - cocoarestclient
   - postman
