@@ -4,6 +4,7 @@ apt_keys:
   - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
   - https://dl.yarnpkg.com/debian/pubkey.gpg
   - https://download.docker.com/linux/ubuntu/gpg
+  - "https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/testing/xUbuntu_{{ ansible_lsb.release }}/Release.key"
 
 apt_repos:
   - ppa:git-core/ppa
@@ -11,6 +12,7 @@ apt_repos:
   - "deb https://deb.nodesource.com/node_15.x {{ ansible_lsb.codename|lower }} main"
   - deb https://dl.yarnpkg.com/debian/ stable main
   - "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_lsb.id|lower }} {{ ansible_lsb.codename|lower }} stable"
+  - "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/testing/xUbuntu_{{ ansible_lsb.release }}"
 
 apt_items: # Security
   - iptables-persistent

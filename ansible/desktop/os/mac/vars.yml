@@ -40,7 +40,6 @@ brew_cask_packages:
   # Fonts
   - font-fira-code
   # Utilities
-  - the-unarchiver
   - appcleaner
   - altserver
   # - macs-fan-control # This is only for MacBook
@@ -51,9 +50,7 @@ brew_cask_packages:
   - firefox
   # Most needed desktop apps
   - adguard
-  - telegram-desktop
   - vlc
-  - 1password
   - notion
   - anydesk
   - octave-app
