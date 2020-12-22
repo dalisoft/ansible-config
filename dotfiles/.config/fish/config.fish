@@ -2,6 +2,7 @@
 ######### fish-user Paths #########
 ###################################
 
+set -gx fish_greeting ""
 set -gx fish_user_paths "/usr/local/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 set -gx fish_user_paths "$HOME/go/bin" $fish_user_paths
