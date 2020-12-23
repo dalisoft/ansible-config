@@ -132,7 +132,7 @@ alias python=python3
 alias venv "source $HOME/env/bin/activate.fish" # Activate V-Env by request
 
 # **** fnm ****
-alias load_fnm "fnm env --shell=fish --multi | source"
+alias load_fnm "fnm env --shell=fish | source"
 
 # **** docker vm ****
 alias run_vm "docker run -ti --rm --net=bridge --name=vm_terminal"
