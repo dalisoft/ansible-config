@@ -20,8 +20,6 @@ dependencies:
         - id: 1466185689
           name: Blackmagic RAW Speed test
         - id: 1322465647
-          name: Disk-O
-        - id: 747648890
           name: Telegram macOS
         - id: 803453959
           name: Slack
@@ -35,8 +33,8 @@ dependencies:
           name: Apple Developer
         - id: 408981434
           name: iMovie
-        - id: 571213070
-          name: DeVinci Resolve
+        # - id: 571213070
+        #  name: DeVinci Resolve
         - id: 409201541
           name: Pages
         - id: 409183694
