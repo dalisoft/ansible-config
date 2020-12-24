@@ -83,7 +83,6 @@ vscode_extensions:
   - bmewburn.vscode-intelephense-client
   - ms-vscode.vscode-typescript-tslint-plugin
   - VisualStudioExptTeam.vscodeintellicode
-  - kiteco.kite
   # Programming language
   - ms-toolsai.jupyter
   - ms-python.gather
