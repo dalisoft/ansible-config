@@ -15,10 +15,10 @@ dependencies:
           name: The Unarchiver
         - id: 1515213004
           name: Session Pal
-        - id: 425264550
-          name: Blackmagic SSD Speed test
-        - id: 1466185689
-          name: Blackmagic RAW Speed test
+        # - id: 425264550
+        #  name: Blackmagic SSD Speed test
+        # - id: 1466185689
+        #  name: Blackmagic RAW Speed test
         - id: 1322465647
           name: Telegram macOS
         - id: 803453959
