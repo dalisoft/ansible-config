@@ -5,6 +5,7 @@ st_packages_dir: "~/Library/Application Support/Sublime Text 3/Packages"
 # Homebrew taps
 brew_taps:
   - heroku/brew
+  - dprint/dprint
   - homebrew/cask-fonts
   - adoptopenjdk/openjdk
   - octave-app/octave-app
@@ -26,6 +27,7 @@ brew_packages:
   # Mobile-dev
   - gradle
   # Other desktop tools
+  - dprint
   - heroku
   - cassowary
   - deno
@@ -56,6 +58,7 @@ brew_cask_packages:
   - octave-app
   # - folx
   # Development tools
+  - kite
   # - cocoarestclient
   - postman
   # - insomnia

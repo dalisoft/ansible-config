@@ -59,6 +59,7 @@ vscode_extensions:
   - planbcoding.vscode-react-refactor
   - esbenp.prettier-vscode
   - foxundermoon.shell-format
+  - dprint.dprint
   # Linters
   - dbaeumer.vscode-eslint
   - bmalehorn.vscode-fish
@@ -82,6 +83,7 @@ vscode_extensions:
   - bmewburn.vscode-intelephense-client
   - ms-vscode.vscode-typescript-tslint-plugin
   - VisualStudioExptTeam.vscodeintellicode
+  - kiteco.kite
   # Programming language
   - ms-toolsai.jupyter
   - ms-python.gather
