@@ -14,7 +14,7 @@
   "editor.formatOnType": false,
   "editor.linkedEditing": true,
   "editor.codeActionsOnSave": ["source.fixAll", "source.organizeImports"],
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 80,
   "editor.minimap.showSlider": "always",
