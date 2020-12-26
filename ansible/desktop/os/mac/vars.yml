@@ -78,4 +78,4 @@ brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk8
   - docker
   - vmware-fusion
-  - anka-virtualization
+  # - anka-virtualization

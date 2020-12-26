@@ -53,6 +53,16 @@ sublime_extensions_git:
   - name: LSP-SouceKit
     git_url: git@github.com:sublimelsp/LSP-SourceKit.git
 
+# Oni2 Extensions
+oni2_extensions:
+  # Formatters
+  - esbenp.prettier-vscode
+  # Linters
+  - dbaeumer.vscode-eslint
+  # Programming Language
+  - ms-python.python
+  - golang.go
+
 # VSCode Extensions
 vscode_extensions:
   # Formatters
