@@ -23,13 +23,13 @@ shared_packages:
   # Browsers
   - epiphany-browser
   - firefox
+  # Most needed desktop apps
+  - 1password
+  - vlc
+  - telegram-desktop
+  - octave
   # Editors
   - code
-  # Most needed desktop apps
-  - telegram-desktop
-  - vlc
-  - 1password
-  - octave
   # System utilities
   - gparted
   # KVM/Packages for Virtual Machines
@@ -85,8 +85,8 @@ apt_items:
   - libglib2.0-dev
   # System utilities
   - timeshift
-  # Most needed desktop apps
   - flameshot
+  # Most needed desktop apps
   - anydesk
   - transmission
   # Browser
