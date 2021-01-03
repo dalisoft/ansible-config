@@ -134,6 +134,8 @@ snap_packages:
 snap_classic_packages:
   - heroku
   - gitkraken
+  - webstorm
+  - pycharm
   - android-studio
 
 # Pacman packages
@@ -178,6 +180,8 @@ pacman_packages:
   - insomnia-designer-bin
   - github-desktop
   # Editors / IDE
+  - webstorm
+  - pycharm
   - android-studio
   # KVM/Packages for Virtual Machines
   - virt-manager
