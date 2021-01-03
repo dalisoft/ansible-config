@@ -42,30 +42,36 @@ brew_cask_packages:
   # Fonts
   - font-fira-code
   # Utilities
+  - the-unarchiver
   - appcleaner
-  - altserver
-  # - macs-fan-control # This is only for MacBook
   - kdiff3
   - android-file-transfer
-  # Browsers
-  - google-chrome
-  - firefox
-  # Most needed desktop apps
+  - altserver
   - adguard
-  - vlc
-  - notion
+  # - macs-fan-control # This is only for MacBook
+  - speedify
   - anydesk
-  - octave-app
+  # Browsers
+  - firefox
+  - google-chrome
+  # Most needed desktop apps
+  - 1password
+  - vlc
   # - folx
+  - telegram
+  - slack
+  - notion
+  - noto
+  - github
+  - octave-app
+  - beekeeper-studio
+  - mongodb-compass
+  - gitkraken
   # Development tools
   # - cocoarestclient
   - postman
   - insomnia
   - insomnia-designer
-  - gitkraken
-  - github
-  - beekeeper-studio
-  - mongodb-compass
   # - paw
   # - adobe-creative-cloud
   # Editors
