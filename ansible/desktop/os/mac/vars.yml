@@ -60,22 +60,23 @@ brew_cask_packages:
   # Development tools
   # - cocoarestclient
   - postman
-  # - insomnia
-  # - insomnia-designer
+  - insomnia
+  - insomnia-designer
   - gitkraken
-  # - github
+  - github
   - beekeeper-studio
-  # - psequel
-  # - mongodb-compass
+  - mongodb-compass
   # - paw
   # - adobe-creative-cloud
   # Editors
-  #  - sublime-text # Enable when v4 comes to Homebrew
+  - sublime-text
   - visual-studio-code
+  - webstorm
+  - pycharm
   - android-studio
 
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk8
   - docker
-  # - vmware-fusion
-  # - anka-virtualization
+  - vmware-fusion
+  - anka-virtualization

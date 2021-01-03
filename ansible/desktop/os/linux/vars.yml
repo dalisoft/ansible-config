@@ -41,7 +41,7 @@ apt_keys:
   - https://keys.anydesk.com/repos/DEB-GPG-KEY
   - https://packages.microsoft.com/keys/microsoft.asc
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-  # - https://packagecloud.io/shiftkey/desktop/gpgkey
+  - https://packagecloud.io/shiftkey/desktop/gpgkey
 
 apt_ring_keys:
   - keyserver: keyserver.ubuntu.com
@@ -53,7 +53,7 @@ apt_repos:
   - deb http://deb.anydesk.com/ all main
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
-  # - deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main
+  - deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main
 
 apt_items:
   # Improve Linux performance
@@ -91,7 +91,7 @@ apt_items:
   - transmission
   # Browser
   - chromium-browser
-  # - github-desktop
+  - github-desktop
   # KVM/Packages for Virtual Machines
   - qemu
   - qemu-kvm
@@ -126,8 +126,8 @@ apt_force_items:
 snap_packages:
   - starship
   - postman
-  # - insomnia
-  # - insomnia-designer
+  - insomnia
+  - insomnia-designer
   - beekeeper-studio
 
 snap_classic_packages:
@@ -171,10 +171,10 @@ pacman_packages:
   - transmittion-gtk
   # Development tools
   - postman
-  # - insomnia-bin
-  # - insomnia-designer-bin
+  - insomnia-bin
+  - insomnia-designer-bin
   - gitkraken
-  # - github-desktop
+  - github-desktop
   - beekeeper-studio-appimage
   - mongotron-bin
   # Editors / IDE
