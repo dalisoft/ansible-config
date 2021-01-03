@@ -47,7 +47,9 @@ pip_modules:
 # Sublime Text Extensions
 sublime_extensions_git:
   - name: GoSublime
-    git_url: https://github.com/DisposaBoy/GoSublime.git
+    git_url: git@github.com:DisposaBoy/GoSublime.git
+  - name: LSP-cmake
+    git_url: git@github.com:sublimelsp/LSP-cmake.git
   - name: LSP-PyLS
     git_url: git@github.com:sublimelsp/LSP-pyls.git
   - name: LSP-SouceKit
