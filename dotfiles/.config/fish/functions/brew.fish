@@ -1,5 +1,4 @@
-function update_modules
-    npm update -g
+function update_repos
     cd ~/Desktop
     git_rb
 end
@@ -20,5 +19,6 @@ end
 function update_all
   brew_upgrade
   brew_cleanup
-  update_modules
+  npm update -g
+  update_repos
 end
