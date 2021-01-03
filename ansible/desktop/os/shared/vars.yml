@@ -46,6 +46,8 @@ pip_modules:
 # Extensions
 # Sublime Text Extensions
 sublime_extensions_git:
+  - name: dprint
+    git_url: git@github.com:dprint/dprint-sublime.git
   - name: GoSublime
     git_url: git@github.com:DisposaBoy/GoSublime.git
   - name: LSP-cmake
@@ -54,6 +56,8 @@ sublime_extensions_git:
     git_url: git@github.com:sublimelsp/LSP-pyls.git
   - name: LSP-SouceKit
     git_url: git@github.com:sublimelsp/LSP-SourceKit.git
+  - name: Dictionaries
+    git_url: git@github.com:titoBouzout/Dictionaries.git
 
 # Oni2 Extensions
 oni2_extensions:
