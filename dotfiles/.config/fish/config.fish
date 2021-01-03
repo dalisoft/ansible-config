@@ -8,14 +8,14 @@ set -gx FISH_FUNCTIONS_PATH "$FISH_PATH/functions"
 set -gx FISH_PATHS_PATH "$FISH_PATH/paths"
 
 # Load some functions
-cat $FISH_FUNCTIONS_PATH/git.fish | source
-cat $FISH_FUNCTIONS_PATH/brew.fish | source
+source $FISH_FUNCTIONS_PATH/git.fish
+source $FISH_FUNCTIONS_PATH/brew.fish
 
 # Load paths
-cat $FISH_PATHS_PATH/autoload.fish | source
+source $FISH_PATHS_PATH/autoload.fish
 
 # Load aliases
-cat $FISH_PATH/alias.fish | source
+source $FISH_PATH/alias.fish
 
 ########## init scripts ###########
 
