@@ -198,3 +198,5 @@ pacman_packages:
   - cuda
   # Java tools
   - jdk8-adoptopenjdk
+  # Python tools
+  - anaconda
