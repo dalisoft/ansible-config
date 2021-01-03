@@ -167,7 +167,7 @@ pacman_packages:
   # Most needed desktop apps
   - flameshot-git
   - anydesk-bin
-  - chromium
+  - google-chrome
   - uget
   - notion-app
   - transmittion-gtk
