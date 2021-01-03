@@ -29,6 +29,7 @@ shared_packages:
   - telegram-desktop
   - octave
   # Editors
+  - sublime-text
   - code
   # System utilities
   - gparted
@@ -125,14 +126,13 @@ apt_force_items:
 # Snap packages
 snap_packages:
   - starship
+  - beekeeper-studio
   - postman
   - insomnia
   - insomnia-designer
-  - beekeeper-studio
 
 snap_classic_packages:
   - heroku
-  - sublime-text
   - gitkraken
   - android-studio
 
@@ -163,20 +163,20 @@ pacman_packages:
   - gtk-engine-murrine
   - gtk-engines
   # Most needed desktop apps
-  - chromium
   - flameshot-git
+  - anydesk-bin
+  - chromium
   - uget
   - notion-app
-  - anydesk-bin
   - transmittion-gtk
   # Development tools
+  - beekeeper-studio-appimage
+  - mongotron-bin
+  - gitkraken
   - postman
   - insomnia-bin
   - insomnia-designer-bin
-  - gitkraken
   - github-desktop
-  - beekeeper-studio-appimage
-  - mongotron-bin
   # Editors / IDE
   - android-studio
   # KVM/Packages for Virtual Machines
