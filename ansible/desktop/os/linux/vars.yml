@@ -11,6 +11,19 @@ binaries:
     link: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux
     direct: False
     binary: True
+  - name: reason-language-server
+    link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-linux.zip
+    command: mv rls-linux/reason-language-server reason-language-server
+    direct: False
+    binary: False
+  - name: dprint
+    link: https://github.com/dprint/dprint/releases/latest/download/dprint-x86_64-unknown-linux-gnu.zip
+    direct: True
+    binary: False
+  - name: cassowary
+    link: https://github.com/rogerwelin/cassowary/releases/latest/download/cassowary_0.11.0_Linux_x86_64.tar.gz
+    direct: True
+    binary: False
 
 # Linux shared package names
 # Shared names (DRY method)
@@ -201,10 +214,3 @@ pacman_packages:
   - jdk8-adoptopenjdk
   # Python tools
   - anaconda
-
-# Linked binaries
-binaries:
-  - name: dprint
-    link: https://github.com/dprint/dprint/releases/latest/download/dprint-x86_64-unknown-linux-gnu.zip
-    binary: False
-    direct: True

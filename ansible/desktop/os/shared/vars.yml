@@ -12,9 +12,9 @@ shared_packages:
   - imagemagick
 
 fnm_versions:
-  - 10.23.0
-  - 12.20.0
-  - 14.15.3
+  - 10.23.1
+  - 12.20.1
+  - 14.15.4
 
 npm_modules:
   # Necessary tools
@@ -24,7 +24,6 @@ npm_modules:
   - nodemon
   # Local Server stuffs
   - http-server
-  # - expo-cli # disable until https://github.com/expo/expo-cli/issues/2354 fixed
   # Update deps
   - npm-check-updates
   # Monorepo management
@@ -35,7 +34,10 @@ npm_modules:
   - serverless
   # Mobile dev
   - cordova
-  # - ocaml-language-server
+  - expo-cli
+  # ReasonML
+  - bs-platform
+  - esy
 
 pip_modules:
   - virtualenv
