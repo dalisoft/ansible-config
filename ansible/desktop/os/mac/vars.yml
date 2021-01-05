@@ -1,6 +1,13 @@
 ---
 st_packages_dir: "~/Library/Application Support/Sublime Text 3/Packages"
 
+binaries:
+  - name: reason-language-server
+    link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-linux.zip
+    command: mv rls-linux/reason-language-server reason-language-server
+    direct: False
+    binary: False
+
 # Homebrew
 # Homebrew taps
 brew_taps:
