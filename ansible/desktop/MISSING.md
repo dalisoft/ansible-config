@@ -27,9 +27,11 @@
 
 ### Windows Apps
 
-| AltServer | - | - | [Download](https://altstore.io/) | Included (Homebrew) |
-| Notion | - | - | [Download](https://www.notion.so/desktop) | Included (Homebrew) |
-| Epic Games Store | - | - | [Download](https://www.epicgames.com/store/ru/download) | Included (Homebrew) |
+| Package name     | Debian Linux | Arch Linux | Windows                                                 | macOS (source)      |
+| ---------------- | ------------ | ---------- | ------------------------------------------------------- | ------------------- |
+| AltServer        | -            | -          | [Download](https://altstore.io/)                        | Included (Homebrew) |
+| Notion           | -            | -          | [Download](https://www.notion.so/desktop)               | Included (Homebrew) |
+| Epic Games Store | -            | -          | [Download](https://www.epicgames.com/store/ru/download) | Included (Homebrew) |
 
 ---
 
