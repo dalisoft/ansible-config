@@ -28,13 +28,14 @@ List of packages which is missing on some of installation platform
 | The Unarchiver                                   | -            | -                              | 7-Zip          | Included (Homebrew)      |
 | [Anka Develop](https://veertu.com/anka-develop/) | -            | -                              | -              | Included (Homebrew)      |
 
-### Windows Apps
+### macOS + Windows Apps
 
-| Package name     | Debian Linux | Arch Linux | Windows                                                 | macOS (source)      |
-| ---------------- | ------------ | ---------- | ------------------------------------------------------- | ------------------- |
-| AltServer        | -            | -          | [Download](https://altstore.io/)                        | Included (Homebrew) |
-| Notion           | -            | -          | [Download](https://www.notion.so/desktop)               | Included (Homebrew) |
-| Epic Games Store | -            | -          | [Download](https://www.epicgames.com/store/ru/download) | Included (Homebrew) |
+| Package name     | Debian Linux | Arch Linux | Windows                                                 | macOS (source)       |
+| ---------------- | ------------ | ---------- | ------------------------------------------------------- | -------------------- |
+| AltServer        | -            | -          | [Download](https://altstore.io/)                        | Included (Homebrew)  |
+| Notion           | -            | -          | [Download](https://www.notion.so/desktop)               | Included (Homebrew)  |
+| Epic Games Store | -            | -          | [Download](https://www.epicgames.com/store/ru/download) | Included (Homebrew)  |
+| NextDNS          | -            | -          | [Download](https://my.nextdns.io/3c9349/setup)          | Included (App Store) |
 
 ---
 
@@ -43,7 +44,6 @@ List of packages which is missing on some of installation platform
 | Package name                                                   | Debian Linux  | Arch Linux                                                                                                            | Windows                              | macOS (source)       |
 | -------------------------------------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
 | Joxi Screenshot                                                | -->           | [Download](http://joxi.ru/download/), Used flameshot <--                                                              | [Download](http://joxi.ru/download/) | Included (App Store) |
-| NextDNS                                                        | -->           | [More info](https://github.com/nextdns/nextdns/wiki)                                                                  | <--                                  | Included (App Store) |
 | DaVinci Resolve                                                | -->           | [Download](https://www.blackmagicdesign.com/ru/products/davinciresolve/)                                              | <--                                  | Included (App Store) |
 | VMWare WP16                                                    | -->           | [Download](https://my.vmware.com/en/web/vmware/downloads/details?downloadGroup=PLAYER-1610&productId=1039&rPId=55792) | <--                                  | Included (Homebrew)  |
 | [Anaconda](https://www.anaconda.com/products/individual#linux) | Click to name | Included (AUR)                                                                                                        | Click to name                        | Included (Homebrew)  |

@@ -1,6 +1,6 @@
 function update_repos
     cd ~/Desktop
-    git_rb
+    git_rebase
 end
 
 function brew_cleanup --argument hard
