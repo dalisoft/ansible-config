@@ -46,8 +46,11 @@ shared_packages:
   - code
   # System utilities
   - gparted
+  - speedify
   # KVM/Packages for Virtual Machines
   - bridge-utils
+  # Tools
+  - obs-studio
 
 # APT (Debian/Ubuntu) packages
 apt_keys:
@@ -57,6 +60,7 @@ apt_keys:
   - https://packages.microsoft.com/keys/microsoft.asc
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
   - https://packagecloud.io/shiftkey/desktop/gpgkey
+  - https://get.speedify.com/pgp.key
 
 apt_ring_keys:
   - keyserver: keyserver.ubuntu.com
@@ -64,12 +68,14 @@ apt_ring_keys:
 
 apt_repos:
   # - deb http://deb.xanmod.org releases main
+  - ppa:obsproject/obs-studio
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
   - deb http://dl.google.com/linux/chrome/deb/ stable main
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
   - deb https://packagecloud.io/shiftkey/desktop/any/ any main
+  - deb http://apt.connectify.me/ speedify main
 
 apt_items:
   # Improve Linux performance
@@ -102,6 +108,7 @@ apt_items:
   # System utilities
   - timeshift
   - flameshot
+  - speedifyui
   # Most needed desktop apps
   - anydesk
   - transmission
@@ -142,6 +149,7 @@ apt_force_items:
 snap_packages:
   - starship
   - slack
+  - android-file-transfer-linux
   - beekeeper-studio
   - postman
   - insomnia
@@ -172,6 +180,7 @@ pacman_packages:
   - rust
   # Other desktop tools
   - heroku-cli
+  - android-file-transfer
   # For some GTK themes
   # and macOS Theme dependencies
   # for Linux
