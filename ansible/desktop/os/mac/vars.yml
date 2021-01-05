@@ -30,7 +30,6 @@ brew_packages:
   - dprint
   - heroku
   - cassowary
-  - deno
   - llvm
 
 brew_cask_packages:
@@ -47,10 +46,15 @@ brew_cask_packages:
   - kdiff3
   - android-file-transfer
   - altserver
+  - obs
   - adguard
   # - macs-fan-control # This is only for MacBook
   - speedify
+  - lulu
   - anydesk
+  # Games
+  - steam
+  - epic-games
   # Browsers
   - firefox
   - google-chrome
@@ -61,7 +65,6 @@ brew_cask_packages:
   - telegram
   - slack
   - notion
-  - noto
   - github
   - octave-app
   - beekeeper-studio
