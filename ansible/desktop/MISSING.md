@@ -1,5 +1,7 @@
 # Missing packages table
 
+List of packages which is missing on some of installation platform
+
 ## [BACK](../MISSING.md)
 
 ## Exclusive apps
