@@ -201,3 +201,10 @@ pacman_packages:
   - jdk8-adoptopenjdk
   # Python tools
   - anaconda
+
+# Linked binaries
+binaries:
+  - name: dprint
+    link: https://github.com/dprint/dprint/releases/latest/download/dprint-x86_64-unknown-linux-gnu.zip
+    binary: False
+    direct: True
