@@ -6,4 +6,4 @@ List of packages which is missing on some of installation platform
 
 | Package name | Debian Linux                   | Arch Linux     | Windows | macOS (source)      |
 | ------------ | ------------------------------ | -------------- | ------- | ------------------- |
-| deno         | [Download](https://deno.land/) | Included (AUR) | ???     | Included (Homebrew) |
+| deno         | Included (Snap) [Desktop only] | Included (AUR) | ???     | Included (Homebrew) |
