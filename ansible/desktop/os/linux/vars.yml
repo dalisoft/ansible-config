@@ -53,6 +53,7 @@ shared_packages:
 apt_keys:
   # - https://dl.xanmod.org/gpg.key
   - https://keys.anydesk.com/repos/DEB-GPG-KEY
+  - https://dl.google.com/linux/linux_signing_key.pub
   - https://packages.microsoft.com/keys/microsoft.asc
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
   - https://packagecloud.io/shiftkey/desktop/gpgkey
@@ -65,9 +66,10 @@ apt_repos:
   # - deb http://deb.xanmod.org releases main
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
+  - deb http://dl.google.com/linux/chrome/deb/ stable main
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
-  - deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main
+  - deb https://packagecloud.io/shiftkey/desktop/any/ any main
 
 apt_items:
   # Improve Linux performance
@@ -104,7 +106,7 @@ apt_items:
   - anydesk
   - transmission
   # Browser
-  - chromium-browser
+  - google-chrome-stable
   - github-desktop
   # KVM/Packages for Virtual Machines
   - qemu
@@ -139,6 +141,7 @@ apt_force_items:
 # Snap packages
 snap_packages:
   - starship
+  - slack
   - beekeeper-studio
   - postman
   - insomnia
@@ -180,6 +183,7 @@ pacman_packages:
   - gtk-engines
   # Most needed desktop apps
   - flameshot-git
+  - slack-desktop
   - anydesk-bin
   - google-chrome
   - uget
