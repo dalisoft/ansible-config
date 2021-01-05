@@ -1,5 +1,7 @@
 # Missing packages table
 
+## [BACK](../MISSING.md)
+
 ## Exclusive apps
 
 | Package name                                  | Debian Linux | Arch Linux                    | Windows | macOS (source)           |
