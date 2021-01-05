@@ -132,6 +132,7 @@ snap_packages:
   - insomnia-designer
 
 snap_classic_packages:
+  - deno
   - heroku
   - gitkraken
   - webstorm

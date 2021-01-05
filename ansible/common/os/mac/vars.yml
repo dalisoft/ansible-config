@@ -8,6 +8,7 @@ brew_taps:
 brew_packages:
   # Addinational tools
   - node
+  - deno
   - fnm
   - wrk
   # Build tools

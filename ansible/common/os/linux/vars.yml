@@ -35,6 +35,7 @@ apt_force_items:
 pacman_packages:
   # Addinational tools
   - node
+  - deno
   # Docker
   - docker
   - docker-compose
