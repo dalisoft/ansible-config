@@ -57,7 +57,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.enablePreview": true,
   "workbench.editor.restoreViewState": false,
-  "workbench.startupEditor": "none",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.editor.closeOnFileDelete": true,
   "workbench.iconTheme": "material-icon-theme",
