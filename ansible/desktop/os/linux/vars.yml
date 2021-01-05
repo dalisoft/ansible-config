@@ -98,6 +98,8 @@ apt_items:
   # Rust
   - rustc
   - cargo
+  # Games
+  - steam-installer
   # For some GTK themes
   # and macOS Theme dependencies
   # for Linux
@@ -181,6 +183,8 @@ pacman_packages:
   # Other desktop tools
   - heroku-cli
   - android-file-transfer
+  # Games
+  - steam
   # For some GTK themes
   # and macOS Theme dependencies
   # for Linux
