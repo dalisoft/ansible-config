@@ -74,7 +74,7 @@ oni2_extensions:
 # VSCode Extensions
 vscode_extensions:
   # Formatters
-  - planbcoding.vscode-react-refactor
+  # - planbcoding.vscode-react-refactor
   - esbenp.prettier-vscode
   - foxundermoon.shell-format
   - dprint.dprint
