@@ -99,7 +99,7 @@ vscode_extensions:
   - cssho.vscode-svgviewer
   # Productivity
   - bmewburn.vscode-intelephense-client
-  - ms-vscode.vscode-typescript-tslint-plugin
+  # - ms-vscode.vscode-typescript-tslint-plugin # Deprecated
   # - VisualStudioExptTeam.vscodeintellicode
   # Programming language
   - ms-toolsai.jupyter
