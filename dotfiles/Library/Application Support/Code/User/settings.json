@@ -1,4 +1,7 @@
 {
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "prettier.requireConfig": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.scrollBeyondLastLine": false,
@@ -178,5 +181,5 @@
   "python.analysis.completeFunctionParens": true,
   "python.analysis.typeCheckingMode": "strict",
   "jupyter.enableCellCodeLens": true,
-  "cSpell.enabled": false,
+  "cSpell.enabled": false
 }
