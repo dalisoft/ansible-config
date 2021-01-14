@@ -55,7 +55,6 @@ brew_cask_packages:
   - altserver
   - obs
   - adguard
-  # - macs-fan-control # This is only for MacBook
   - speedify
   - anydesk
   # Browsers
