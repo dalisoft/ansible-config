@@ -54,7 +54,6 @@ shared_packages:
 
 # APT (Debian/Ubuntu) packages
 apt_keys:
-  # - https://dl.xanmod.org/gpg.key
   - https://keys.anydesk.com/repos/DEB-GPG-KEY
   - https://dl.google.com/linux/linux_signing_key.pub
   - https://packages.microsoft.com/keys/microsoft.asc
@@ -67,7 +66,6 @@ apt_ring_keys:
     id: 3FEF9748469ADBE15DA7CA80AC2D62742012EA22
 
 apt_repos:
-  # - deb http://deb.xanmod.org releases main
   - ppa:obsproject/obs-studio
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
@@ -78,10 +76,6 @@ apt_repos:
   - deb http://apt.connectify.me/ speedify main
 
 apt_items:
-  # Improve Linux performance
-  # - linux-xanmod
-  # - intel-microcode
-  # - iucode-tool
   # PopOS polyfill
   - snapd
   - grub2-common
@@ -98,17 +92,7 @@ apt_items:
   # Rust
   - rustc
   - cargo
-  # Games
-  - steam-installer
-  # For some GTK themes
-  # and macOS Theme dependencies
-  # for Linux
-  - optipng
-  - sassc
-  - libcanberra-gtk-module
-  - libglib2.0-dev
   # System utilities
-  - timeshift
   - flameshot
   - speedifyui
   # Most needed desktop apps
@@ -167,8 +151,6 @@ snap_classic_packages:
 
 # Pacman packages
 pacman_packages:
-  # Improve Linux performance
-  - linux-manjaro-xanmod
   # Polyfills
   - exfat-dkms-git
   # Fonts
@@ -183,17 +165,6 @@ pacman_packages:
   # Other desktop tools
   - heroku-cli
   - android-file-transfer
-  # Games
-  - steam
-  # For some GTK themes
-  # and macOS Theme dependencies
-  # for Linux
-  - krita
-  - inkscape
-  - optipng
-  - sassc
-  - gtk-engine-murrine
-  - gtk-engines
   # Most needed desktop apps
   - flameshot-git
   - slack-desktop

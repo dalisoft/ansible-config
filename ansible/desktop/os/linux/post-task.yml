@@ -11,16 +11,6 @@
   register: fish_set_default
   until: fish_set_default is successful
 
-# VSCode
-- name: Linking VSCode Settings on Linux
-  file:
-    src: "~/Desktop/config/dotfiles/Library/Application Support/Code"
-    dest: "~/Desktop/config/dotfiles/.config/Code"
-    state: link
-  retries: 1
-  register: vscode_debian_link
-  until: vscode_debian_link.attempts == 1
-
 - name: Hide some applications
   become: true
   become_user: root

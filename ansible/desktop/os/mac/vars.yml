@@ -59,8 +59,6 @@ brew_cask_packages:
   - speedify
   - lulu
   - anydesk
-  # Games
-  - steam
   # Browsers
   - firefox
   - google-chrome
