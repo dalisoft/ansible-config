@@ -61,7 +61,6 @@ brew_cask_packages:
   - anydesk
   # Games
   - steam
-  - epic-games
   # Browsers
   - firefox
   - google-chrome
