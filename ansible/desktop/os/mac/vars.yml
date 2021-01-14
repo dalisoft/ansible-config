@@ -57,7 +57,6 @@ brew_cask_packages:
   - adguard
   # - macs-fan-control # This is only for MacBook
   - speedify
-  - lulu
   - anydesk
   # Browsers
   - firefox
@@ -65,7 +64,6 @@ brew_cask_packages:
   # Most needed desktop apps
   - 1password
   - vlc
-  # - folx
   - telegram
   - slack
   - notion
@@ -75,10 +73,7 @@ brew_cask_packages:
   - mongodb-compass
   - gitkraken
   # Development tools
-  # - cocoarestclient
   - postman
-  - insomnia
-  - insomnia-designer
   # - paw
   # - adobe-creative-cloud
   # Editors

@@ -138,8 +138,6 @@ snap_packages:
   - android-file-transfer-linux
   - beekeeper-studio
   - postman
-  - insomnia
-  - insomnia-designer
 
 snap_classic_packages:
   - deno
@@ -178,8 +176,6 @@ pacman_packages:
   - mongotron-bin
   - gitkraken
   - postman
-  - insomnia-bin
-  - insomnia-designer-bin
   - github-desktop
   # Editors / IDE
   - webstorm
