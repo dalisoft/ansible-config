@@ -8,26 +8,26 @@ List of packages which is missing on some of installation platform
 
 ### macOS Apps
 
-| Package name                                     | Debian Linux | Arch Linux                     | Windows        | macOS (source)           |
-| ------------------------------------------------ | ------------ | ------------------------------ | -------------- | ------------------------ |
-| Apple Notes                                      | -->          | Missing, use iCloud.com        | <--            | Included (Pre-installed) |
-| Apple Photos                                     | -            | -                              | -              | Included (Pre-installed) |
-| Apple Keynote                                    | -->          | Missing, use iCloud.com        | <--            | Included (App Store)     |
-| Apple Pages                                      | -->          | Missing, use iCloud.com        | <--            | Included (App Store)     |
-| Apple Numbers                                    | -->          | Missing, use iCloud.com        | <--            | Included (App Store)     |
-| Apple iMovie                                     | -            | -                              | -              | Included (App Store)     |
-| Apple GarageBand                                 | -            | -                              | -              | Available in App Store   |
-| [Noto](https://noto.ink/)                        | -            | -                              | -              | Included (App Store)     |
-| BlackMagic Disk Speed Test                       | -            | -                              | -              | Included (App Store)     |
-| BlackMagic RAW Speed Test                        | -            | -                              | -              | Included (App Store)     |
-| Session Pal macOS                                | -            | -                              | -              | Included (App Store)     |
-| WebSocket Client                                 | -->          | Use <https://appsocket.js.org> | <--            | Included (App Store)     |
-| XCode                                            | -            | -                              | -              | Included (App Store)     |
-| [AppCleaner](http://freemacsoft.net)             | -            | -                              | CCleaner?      | Included (Homebrew)      |
-| Folx                                             | -            | -                              | IDM + uTorrent | `brew install folx`      |
-| [LuLu](https://github.com/objective-see/LuLu)    | -            | -                              | -              | `brew install lulu`      |
-| The Unarchiver                                   | -            | -                              | 7-Zip          | Included (Homebrew)      |
-| [Anka Develop](https://veertu.com/anka-develop/) | -            | -                              | -              | Included (Homebrew)      |
+| Package name                                     | Debian Linux | Arch Linux                     | Windows        | macOS (source)                     |
+| ------------------------------------------------ | ------------ | ------------------------------ | -------------- | ---------------------------------- |
+| Apple Notes                                      | -->          | Missing, use iCloud.com        | <--            | Included (Pre-installed)           |
+| Apple Photos                                     | -            | -                              | -              | Included (Pre-installed)           |
+| Apple Keynote                                    | -->          | Missing, use iCloud.com        | <--            | Included (App Store)               |
+| Apple Pages                                      | -->          | Missing, use iCloud.com        | <--            | Included (App Store)               |
+| Apple Numbers                                    | -->          | Missing, use iCloud.com        | <--            | Included (App Store)               |
+| Apple iMovie                                     | -            | -                              | -              | Included (App Store)               |
+| Apple GarageBand                                 | -            | -                              | -              | Available in App Store             |
+| [Noto](https://noto.ink/)                        | -            | -                              | -              | Included (App Store)               |
+| BlackMagic Disk Speed Test                       | -            | -                              | -              | Available in App Store             |
+| BlackMagic RAW Speed Test                        | -            | -                              | -              | Available in App Store             |
+| Session Pal macOS                                | -            | -                              | -              | Available in App Store             |
+| WebSocket Client                                 | -->          | Use <https://appsocket.js.org> | <--            | Included (App Store)               |
+| XCode                                            | -            | -                              | -              | Included (App Store)               |
+| [AppCleaner](http://freemacsoft.net)             | -            | -                              | CCleaner?      | Included (Homebrew)                |
+| Folx                                             | -            | -                              | IDM + uTorrent | `brew install folx`                |
+| [LuLu](https://github.com/objective-see/LuLu)    | -            | -                              | -              | `brew install lulu`                |
+| The Unarchiver                                   | -            | -                              | 7-Zip          | Included (Homebrew)                |
+| [Anka Develop](https://veertu.com/anka-develop/) | -            | -                              | -              | `brew install anka-virtualization` |
 
 ### macOS + Windows Apps
 
