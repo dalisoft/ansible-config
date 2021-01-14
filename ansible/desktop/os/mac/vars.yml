@@ -67,15 +67,11 @@ brew_cask_packages:
   - telegram
   - slack
   - notion
-  - github
   - octave-app
-  - beekeeper-studio
-  - mongodb-compass
   - gitkraken
   # Development tools
   - postman
   # - paw
-  # - adobe-creative-cloud
   # Editors
   - sublime-text
   - visual-studio-code

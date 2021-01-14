@@ -58,7 +58,6 @@ apt_keys:
   - https://dl.google.com/linux/linux_signing_key.pub
   - https://packages.microsoft.com/keys/microsoft.asc
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-  - https://packagecloud.io/shiftkey/desktop/gpgkey
   - https://get.speedify.com/pgp.key
 
 apt_ring_keys:
@@ -72,7 +71,6 @@ apt_repos:
   - deb http://dl.google.com/linux/chrome/deb/ stable main
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
-  - deb https://packagecloud.io/shiftkey/desktop/any/ any main
   - deb http://apt.connectify.me/ speedify main
 
 apt_items:
@@ -100,7 +98,6 @@ apt_items:
   - transmission
   # Browser
   - google-chrome-stable
-  - github-desktop
   # KVM/Packages for Virtual Machines
   - qemu
   - qemu-kvm
@@ -136,7 +133,6 @@ snap_packages:
   - starship
   - slack
   - android-file-transfer-linux
-  - beekeeper-studio
   - postman
 
 snap_classic_packages:
@@ -172,11 +168,8 @@ pacman_packages:
   - notion-app
   - transmittion-gtk
   # Development tools
-  - beekeeper-studio-appimage
-  - mongotron-bin
   - gitkraken
   - postman
-  - github-desktop
   # Editors / IDE
   - webstorm
   - pycharm
