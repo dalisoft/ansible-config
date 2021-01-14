@@ -1,6 +1,0 @@
----
-binaries:
-  - name: rust-analyzer
-    link: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux
-    direct: False
-    binary: True

@@ -31,6 +31,8 @@ My machine configuration playbook
 
 For better and cleaner installation, please cleanup your architectures list. See [here](https://superuser.com/a/714392) or see `scripts` folder
 
+See [**MISSING TABLE**](./ansible/MISSING.md)
+
 #### Arguments table
 
 | Argument name | Default | Values          | Type   | Required |

@@ -1,0 +1,65 @@
+---
+# Post-installation
+# GIT Config
+- name: Set GIT e-mail
+  git_config:
+    name: user.email
+    scope: global
+    value: "dalisoft@mail.ru"
+- name: Set GIT username
+  git_config:
+    name: user.name
+    scope: global
+    value: "dalisoft"
+
+# FNM Versions
+- name: List installed fnm versions
+  command: fnm ls
+  register: fnmv_list
+  changed_when: false
+  check_mode: false
+  tags:
+    - install-fnm-version
+
+- name: Installing fnm version
+  shell: "fnm install {{ item }}"
+  loop: "{{ fnm_versions }}"
+  register: install_fnm_version
+  until: install_fnm_version is successful
+  when:
+    - fnm_versions is defined
+    - item not in fnmv_list.stdout
+  tags:
+    - install-fnm-version
+
+# Post-installation
+# SublimeText extensions
+- name: Installing Sublime Text packages
+  git:
+    repo: "{{ item.git_url }}"
+    dest: "{{ st_packages_dir }}/{{ item.name }}"
+  loop: "{{ sublime_extensions_git }}"
+
+# Language Server binaries for SublimeText
+- name: Checking GoPLS
+  stat:
+    path: "~/go/bin/gopls"
+  register: gopls_bin
+
+- name: Installing Golang Program Language Server
+  shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
+  when: gopls_bin.stat.exists != true
+
+# VSCode Extensions
+- name: List installed VSCode extensions
+  shell: code --list-extensions
+  register: code_extensions_list
+  changed_when: false
+  check_mode: false
+
+- name: Installing VSCode extensions
+  shell: "code --install-extension {{ item }}"
+  loop: "{{ vscode_extensions }}"
+  register: install_code_extensions
+  until: install_code_extensions is successful
+  when: item not in code_extensions_list.stdout_lines

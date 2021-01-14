@@ -1,0 +1,27 @@
+---
+- name: macOS Common Playbook
+  hosts: all
+  gather_facts: yes
+  become: false
+
+  vars_files:
+    - ../shared/vars.yml
+    - vars.yml
+
+  environment:
+    NPM_CONFIG_PREFIX: "~/.npm-global"
+
+  pre_tasks:
+    # Pre-installation steps
+    - import_tasks: ../shared/unix_pre-task.yml
+
+  tasks:
+    # Tasks list
+    - import_tasks: tasks.yml
+    # Post-installation
+    - import_tasks: ../shared/unix_post-task.yml
+    # Binary packages
+    - import_tasks: ../shared/unix_binary-task.yml
+      when: binaries is defined and binaries|length > 0
+      tags:
+        - install-binary-packages

@@ -1,0 +1,127 @@
+---
+initial_configs:
+  # Files
+  - .gitconfig
+  - .gitignore
+  # Folders
+  - .config/autostart
+  - nfancurve
+
+shared_packages:
+  # Necessary tools
+  - imagemagick
+
+fnm_versions:
+  - 10.23.1
+  - 12.20.1
+  - 14.15.4
+
+npm_modules:
+  # Necessary tools
+  - prettier
+  - node-gyp
+  # JS Reload
+  - nodemon
+  # Local Server stuffs
+  - http-server
+  # Update deps
+  - npm-check-updates
+  # Monorepo management
+  - lerna
+  - lerna-wizard
+  # Deploy to platforms
+  - vercel
+  - serverless
+  # Mobile dev
+  - cordova
+  - expo-cli
+  # ReasonML
+  - bs-platform
+  - esy
+
+pip_modules:
+  - virtualenv
+  - jupyterlab
+  - notebook
+  - labelme
+
+# Extensions
+# Sublime Text Extensions
+sublime_extensions_git:
+  - name: dprint
+    git_url: git@github.com:dprint/dprint-sublime.git
+  - name: GoSublime
+    git_url: git@github.com:DisposaBoy/GoSublime.git
+  - name: LSP-cmake
+    git_url: git@github.com:sublimelsp/LSP-cmake.git
+  - name: LSP-PyLS
+    git_url: git@github.com:sublimelsp/LSP-pyls.git
+  - name: LSP-SouceKit
+    git_url: git@github.com:sublimelsp/LSP-SourceKit.git
+  - name: Dictionaries
+    git_url: git@github.com:titoBouzout/Dictionaries.git
+
+# Oni2 Extensions
+oni2_extensions:
+  # Formatters
+  - esbenp.prettier-vscode
+  # Linters
+  - dbaeumer.vscode-eslint
+  # Programming Language
+  - ms-python.python
+  - golang.go
+
+# VSCode Extensions
+vscode_extensions:
+  # Formatters
+  # - planbcoding.vscode-react-refactor
+  - esbenp.prettier-vscode
+  - foxundermoon.shell-format
+  - dprint.dprint
+  # Linters
+  - dbaeumer.vscode-eslint
+  - bmalehorn.vscode-fish
+  - mkaufman.HTMLHint
+  - redhat.vscode-yaml
+  - DavidAnson.vscode-markdownlint
+  # Editor essentials
+  - EditorConfig.EditorConfig
+  - mikestead.dotenv
+  - emilast.LogFileHighlighter
+  - wayou.vscode-todo-highlight
+  # npm plugins
+  - eg2.vscode-npm-script
+  - christian-kohler.npm-intellisense
+  - christian-kohler.path-intellisense
+  # Frontend tools
+  - techer.open-in-browser
+  - ricard.postcss
+  - cssho.vscode-svgviewer
+  # Productivity
+  - bmewburn.vscode-intelephense-client
+  # - ms-vscode.vscode-typescript-tslint-plugin # Deprecated
+  # - VisualStudioExptTeam.vscodeintellicode
+  # Programming language
+  - ms-toolsai.jupyter
+  - ms-python.gather
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - golang.go
+  - ms-vscode.cpptools
+  - matklad.rust-analyzer
+  # Spell-checking
+  - streetsidesoftware.code-spell-checker
+  - streetsidesoftware.code-spell-checker-russian
+  # DevOps
+  # - ms-azuretools.vscode-docker
+  # - liximomo.sftp
+  # - ms-vscode-remote.remote-containers
+  # - ms-vscode-remote.remote-ssh
+  # - ms-vscode-remote.remote-wsl
+  # - ms-vscode-remote.remote-ssh-edit
+  # - vscoss.vscode-ansible
+  # Debugging
+  # - msjsdiag.debugger-for-chrome
+  # Design / Showcase
+  - PKief.material-icon-theme
+  - pnp.polacode

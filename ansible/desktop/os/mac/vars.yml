@@ -1,0 +1,98 @@
+---
+st_packages_dir: "~/Library/Application Support/Sublime Text 3/Packages"
+
+binaries:
+  - name: reason-language-server
+    link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-linux.zip
+    command: mv rls-linux/reason-language-server reason-language-server
+    direct: False
+    binary: False
+
+# Homebrew
+# Homebrew taps
+brew_taps:
+  - heroku/brew
+  - dprint/dprint
+  - homebrew/cask-fonts
+  - adoptopenjdk/openjdk
+  - octave-app/octave-app
+
+# Homebrew packages
+brew_packages:
+  # Programming languages
+  # PHP
+  - php
+  - composer
+  # Go
+  - go
+  # Python
+  - python
+  - pyqt
+  # Rust
+  - rust
+  - rust-analyzer # LSP for Rust
+  # Mobile-dev
+  - gradle
+  # Other desktop tools
+  - dprint
+  - heroku
+  - cassowary
+  - llvm
+
+brew_cask_packages:
+  # macOS QuickLook plugins
+  - qlcolorcode
+  - qlstephen
+  - qlmarkdown
+  - qlimagesize
+  # Fonts
+  - font-fira-code
+  # Utilities
+  - the-unarchiver
+  - appcleaner
+  - kdiff3
+  - android-file-transfer
+  - altserver
+  - obs
+  - adguard
+  # - macs-fan-control # This is only for MacBook
+  - speedify
+  - lulu
+  - anydesk
+  # Games
+  - steam
+  # Browsers
+  - firefox
+  - google-chrome
+  # Most needed desktop apps
+  - 1password
+  - vlc
+  # - folx
+  - telegram
+  - slack
+  - notion
+  - github
+  - octave-app
+  - beekeeper-studio
+  - mongodb-compass
+  - gitkraken
+  # Development tools
+  # - cocoarestclient
+  - postman
+  - insomnia
+  - insomnia-designer
+  # - paw
+  # - adobe-creative-cloud
+  # Editors
+  - sublime-text
+  - visual-studio-code
+  - webstorm
+  - pycharm
+  - android-studio
+
+brew_cask_packages_root:
+  - adoptopenjdk/openjdk/adoptopenjdk8
+  - anaconda
+  - docker
+  - vmware-fusion
+  - anka-virtualization

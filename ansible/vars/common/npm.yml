@@ -1,8 +1,0 @@
----
-npm_modules:
-  - prettier
-  - node-gyp
-
-fnm_versions:
-  - 12.18.3
-  - 13.14.0

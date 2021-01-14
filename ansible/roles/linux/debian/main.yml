@@ -1,6 +1,0 @@
----
-- import_tasks: apt.yml
-
-- import_tasks: ../ubuntu/snap.yml
-  when:
-    - INSTALL_MODE == 'DESKTOP'

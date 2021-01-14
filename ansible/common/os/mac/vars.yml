@@ -1,0 +1,21 @@
+---
+# Homebrew
+# Homebrew taps
+brew_taps:
+  - schniz/tap
+
+# Homebrew packages
+brew_packages:
+  # Addinational tools
+  - node
+  - deno
+  - fnm
+  - wrk
+  # Build tools
+  - openblas
+  # Necessary tools
+  - starship
+  - bat
+  - exa
+  - ripgrep
+  - ghostscript

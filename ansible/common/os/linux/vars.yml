@@ -1,0 +1,56 @@
+---
+# APT (Debian/Ubuntu) packages
+apt_keys:
+  - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+  - https://dl.yarnpkg.com/debian/pubkey.gpg
+  - https://download.docker.com/linux/ubuntu/gpg
+  - "https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/testing/xUbuntu_{{ ansible_lsb.release }}/Release.key"
+
+apt_repos:
+  - ppa:git-core/ppa
+  - ppa:fish-shell/release-3
+  - "deb https://deb.nodesource.com/node_15.x {{ ansible_lsb.codename|lower }} main"
+  - deb https://dl.yarnpkg.com/debian/ stable main
+  - "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_lsb.id|lower }} {{ ansible_lsb.codename|lower }} stable"
+  - "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/testing/xUbuntu_{{ ansible_lsb.release }}"
+
+apt_items: # Security
+  - iptables-persistent
+  - netfilter-persistent
+  # Fonts
+  - fonts-firacode
+  # Addinational tools
+  - nodejs
+  - python3-pip
+  # Docker
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-compose
+
+apt_force_items:
+  - ripgrep
+
+# Pacman/Manjaro Packages
+pacman_packages:
+  # Addinational tools
+  - node
+  - deno
+  # Docker
+  - docker
+  - docker-compose
+  # Necessary tools
+  - starship
+  - bat
+  - ripgrep
+
+# Linked binaries
+binaries:
+  - name: fnm
+    link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
+    binary: False
+    direct: True
+  - name: wrk
+    link: https://github.com/dalisoft/wrk/releases/latest/download/wrk-linux.zip
+    binary: False
+    direct: True
