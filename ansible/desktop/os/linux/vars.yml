@@ -131,7 +131,6 @@ apt_force_items:
 # Snap packages
 snap_packages:
   - starship
-  - slack
   - android-file-transfer-linux
   - postman
 
@@ -139,8 +138,6 @@ snap_classic_packages:
   - deno
   - heroku
   - gitkraken
-  - webstorm
-  - pycharm
   - android-studio
 
 # Pacman packages
@@ -161,7 +158,6 @@ pacman_packages:
   - android-file-transfer
   # Most needed desktop apps
   - flameshot-git
-  - slack-desktop
   - anydesk-bin
   - google-chrome
   - uget
@@ -171,8 +167,6 @@ pacman_packages:
   - gitkraken
   - postman
   # Editors / IDE
-  - webstorm
-  - pycharm
   - android-studio
   # KVM/Packages for Virtual Machines
   - virt-manager

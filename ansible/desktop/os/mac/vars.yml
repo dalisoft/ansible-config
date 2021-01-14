@@ -65,7 +65,6 @@ brew_cask_packages:
   - 1password
   - vlc
   - telegram
-  - slack
   - notion
   - octave-app
   - gitkraken
@@ -75,8 +74,6 @@ brew_cask_packages:
   # Editors
   - sublime-text
   - visual-studio-code
-  - webstorm
-  - pycharm
   - android-studio
 
 brew_cask_packages_root:
