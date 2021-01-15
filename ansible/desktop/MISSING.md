@@ -8,7 +8,7 @@ List of packages which is missing on some of installation platform
 
 ### macOS Apps
 
-| Package name                                     | Debian Linux | Arch Linux                     | Windows        | macOS (source)                     |
+| Package name                                     | Debian Linux | Arch Linux                     | Windows        | macOS                              |
 | ------------------------------------------------ | ------------ | ------------------------------ | -------------- | ---------------------------------- |
 | Apple Notes                                      | -->          | Missing, use iCloud.com        | <--            | Included (Pre-installed)           |
 | Apple Photos                                     | -            | -                              | -              | Included (Pre-installed)           |
@@ -29,13 +29,20 @@ List of packages which is missing on some of installation platform
 | The Unarchiver                                   | -            | -                              | 7-Zip          | Included (Homebrew)                |
 | [Anka Develop](https://veertu.com/anka-develop/) | -            | -                              | -              | `brew install anka-virtualization` |
 
+### Windows Apps
+
+| Package name              | Debian Linux | Arch Linux | Windows                                   | macOS |
+| ------------------------- | ------------ | ---------- | ----------------------------------------- | ----- |
+| Internet Download Manager | -            | -          | `choco install internet-download-manager` | -     |
+
 ### macOS + Windows Apps
 
-| Package name     | Debian Linux | Arch Linux | Windows                           | macOS (source)                 |
+| Package name     | Debian Linux | Arch Linux | Windows                           | macOS                          |
 | ---------------- | ------------ | ---------- | --------------------------------- | ------------------------------ |
 | AltServer        | -            | -          | `choco install altserver`         | Included (Homebrew)            |
 | Notion           | -            | -          | `choco install notion`            | Included (Homebrew)            |
 | NextDNS          | -            | -          | `choco install nextdns`           | Included (App Store)           |
+| AdGuard          | -            | -          | <https://adguard.com>             | `brew install adguard`         |
 | Epic Games Store | -            | -          | `choco install epicgameslauncher` | `brew install epic-games`      |
 | MongoDB Compass  | -            | -          | `choco install mongodb-compass`   | `brew install mongodb-compass` |
 | Github Desktop   | -            | -          | `choco install github-desktop`    | `brew install github`          |
@@ -44,7 +51,7 @@ List of packages which is missing on some of installation platform
 
 ## All apps
 
-| Package name                                                   | Debian Linux                     | Arch Linux                                                                                                            | Windows                                   | macOS (source)                   |
+| Package name                                                   | Debian Linux                     | Arch Linux                                                                                                            | Windows                                   | macOS                            |
 | -------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------------------------------- |
 | Joxi Screenshot                                                | -->                              | [Download](http://joxi.ru/download/), Used flameshot <--                                                              | [Download](http://joxi.ru/download/)      | Included (App Store)             |
 | DaVinci Resolve                                                | -->                              | [Download](https://www.blackmagicdesign.com/ru/products/davinciresolve/)                                              | <--                                       | Available App Store              |
@@ -57,3 +64,4 @@ List of packages which is missing on some of installation platform
 | Insomnia Designer                                              | `snap install insomnia-designer` | `pacman -S insomnia-designer-bin`                                                                                     | `choco install insomnia-designer`         | `brew install insomnia-designer` |
 | Slack                                                          | `snap install slack`             | `pacman -S slack-desktop`                                                                                             | `choco install slack`                     | `brew install slack`             |
 | Steam                                                          | -->                              | [Download](https://store.steampowered.com/about/Steam)                                                                | `choco install steam`                     | `brew install steam`             |
+| [uTorrent](https://www.utorrent.com)                           | Click to name                    | Click to name                                                                                                         | `choco install utorrent`                  | Click to name                    |
