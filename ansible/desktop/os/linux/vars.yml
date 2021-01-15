@@ -20,10 +20,6 @@ binaries:
     link: https://github.com/dprint/dprint/releases/latest/download/dprint-x86_64-unknown-linux-gnu.zip
     direct: True
     binary: False
-  - name: cassowary
-    link: https://github.com/rogerwelin/cassowary/releases/latest/download/cassowary_0.11.0_Linux_x86_64.tar.gz
-    direct: True
-    binary: False
 
 # Linux shared package names
 # Shared names (DRY method)

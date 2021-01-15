@@ -36,7 +36,6 @@ brew_packages:
   # Other desktop tools
   - dprint
   - heroku
-  - cassowary
   - llvm
 
 brew_cask_packages:
