@@ -29,11 +29,15 @@ List of packages which is missing on some of installation platform
 | The Unarchiver                                   | -            | -                              | 7-Zip          | Included (Homebrew)                |
 | [Anka Develop](https://veertu.com/anka-develop/) | -            | -                              | -              | `brew install anka-virtualization` |
 
+<br />
+
 ### Windows Apps
 
 | Package name              | Debian Linux | Arch Linux | Windows                                   | macOS |
 | ------------------------- | ------------ | ---------- | ----------------------------------------- | ----- |
 | Internet Download Manager | -            | -          | `choco install internet-download-manager` | -     |
+
+<br />
 
 ### macOS + Windows Apps
 
