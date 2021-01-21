@@ -13,8 +13,6 @@ dependencies:
           name: Transporter
         - id: 640199958
           name: Apple Developer
-        - id: 1459055246
-          name: Noto Elegant Note
         - id: 408981434
           name: iMovie
         - id: 409201541

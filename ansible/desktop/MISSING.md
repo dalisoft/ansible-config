@@ -17,7 +17,7 @@ List of packages which is missing on some of installation platform
 | Apple Numbers                                    | -->          | Missing, use iCloud.com        | <--            | Included (App Store)               |
 | Apple iMovie                                     | -            | -                              | -              | Included (App Store)               |
 | Apple GarageBand                                 | -            | -                              | -              | Available in App Store             |
-| [Noto](https://noto.ink/)                        | -            | -                              | -              | Included (App Store)               |
+| [Noto](https://noto.ink/)                        | -            | -                              | -              | Available in App Store             |
 | BlackMagic Disk Speed Test                       | -            | -                              | -              | Available in App Store             |
 | BlackMagic RAW Speed Test                        | -            | -                              | -              | Available in App Store             |
 | Session Pal macOS                                | -            | -                              | -              | Available in App Store             |
@@ -43,9 +43,9 @@ List of packages which is missing on some of installation platform
 
 | Package name     | Debian Linux | Arch Linux | Windows                           | macOS                          |
 | ---------------- | ------------ | ---------- | --------------------------------- | ------------------------------ |
-| AltServer        | -            | -          | `choco install altserver`         | Included (Homebrew)            |
-| Notion           | -            | -          | `choco install notion`            | Included (Homebrew)            |
 | NextDNS          | -            | -          | `choco install nextdns`           | Included (App Store)           |
+| AltServer        | -            | -          | `choco install altserver`         | `brew install altserver`       |
+| Notion           | -            | -          | `choco install notion`            | `brew install notion`          |
 | AdGuard          | -            | -          | <https://adguard.com>             | `brew install adguard`         |
 | Epic Games Store | -            | -          | `choco install epicgameslauncher` | `brew install epic-games`      |
 | MongoDB Compass  | -            | -          | `choco install mongodb-compass`   | `brew install mongodb-compass` |
