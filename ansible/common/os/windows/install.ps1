@@ -1,6 +1,13 @@
 # Install chocolately
-echo "Install chocolately..."
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+echo "Installing chocolately..."
+$testchoco = powershell choco -v
+if(-not($testchoco)){
+    echo "Seems Chocolatey is not installed, installing now"
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+}
+else{
+    echo "Chocolatey Version $testchoco is already installed"
+}
 
 # First disable prompt
 echo "Disabling prompt for every installation..."
