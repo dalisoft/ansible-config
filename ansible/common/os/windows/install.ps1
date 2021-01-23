@@ -1,3 +1,7 @@
+# Install chocolately
+echo "Install chocolately..."
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
 # First disable prompt
 echo "Disabling prompt for every installation..."
 choco feature enable -n=allowGlobalConfirmation
