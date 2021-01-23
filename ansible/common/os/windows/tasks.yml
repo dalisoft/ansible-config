@@ -1,0 +1,25 @@
+---
+# Chocolate packages
+- name: Prepare packages
+  set_fact:
+    packages: "{{ (shared_packages | default([])) + (choco_packages | default([])) }}"
+
+- name: List all Chocolately packages
+  command: choco list --local-only
+  register: choco_pkgs_list
+  changed_when: false
+  check_mode: false
+  tags:
+    - install-chocolate-packages
+
+- name: Installing Chocolately packages
+  win_chocolatey:
+    name: "{{ item }}"
+    state: present
+    install_args: /S
+  loop: "{{ packages }}"
+  register: install_choco_package
+  until: install_choco_package is successful
+  when: item not in choco_pkgs_list.stdout_lines
+  tags:
+    - install-chocolate-packages

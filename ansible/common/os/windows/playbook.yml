@@ -1,0 +1,20 @@
+---
+- name: Windows Common Playbook
+  hosts: all
+  gather_facts: yes
+  become: false
+  roles:
+    - win_chocolatey
+
+  vars_files:
+    - ../shared/vars.yml
+    - vars.yml
+
+  environment:
+    NPM_CONFIG_PREFIX: "$HOME/.npm-global"
+
+  tasks:
+    # Tasks list
+    - import_tasks: tasks.yml
+    # Post-installation
+    - import_tasks: ../shared/post-task.yml

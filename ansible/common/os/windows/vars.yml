@@ -1,0 +1,18 @@
+---
+# Chocolately
+
+# Chocolately packages
+choco_packages:
+  # Addinational tools
+  - node
+  - deno
+  - fnm
+  - wrk
+  # Build tools
+  - openblas
+  # Necessary tools
+  - starship
+  - bat
+  - exa
+  - ripgrep
+  - ghostscript
