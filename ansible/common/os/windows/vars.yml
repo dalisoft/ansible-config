@@ -3,16 +3,41 @@
 
 # Chocolately packages
 choco_packages:
+  # Required
+  - ansible
+  # Most common terminal stuffs
+  - fish
+  - git
+  - git-lfs
+  # Addinational terminal stuffs
+  - nano
+  - neovim
+  - mosh
+  - tmux
+  - htop
+  # Optional, but common utilities
+  - rsync
+  - rclone
+  - curl
+  - wget
+  - gpg
+  - git-cola
+  - neofetch
+  # Build tools
+  - cmake
+  - unzip
   # Addinational tools
-  - node
+  - nodejs
   - deno
+  - yarn
+  - podman
   - fnm
   - wrk
   # Build tools
   - openblas
   # Necessary tools
+  - ffmpeg
   - starship
   - bat
-  - exa
   - ripgrep
   - ghostscript

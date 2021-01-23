@@ -2,7 +2,7 @@
 # Chocolate packages
 - name: Prepare packages
   set_fact:
-    packages: "{{ (shared_packages | default([])) + (choco_packages | default([])) }}"
+    packages: "{{ (choco_packages | default([])) }}"
 
 - name: List all Chocolately packages
   command: choco list --local-only
