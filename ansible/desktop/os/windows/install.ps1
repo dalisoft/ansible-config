@@ -15,6 +15,7 @@ choco feature enable -n=allowGlobalConfirmation
 
 Write-Output "Installing packages..."
 choco install pyqt heroku-cli
+choco install anaconda3 rust-analyzer
 choco install 7zip kdiff3
 choco install obs vlc
 choco install anydesk

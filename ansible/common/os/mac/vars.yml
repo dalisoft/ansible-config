@@ -13,7 +13,6 @@ brew_packages:
   - go
   - deno
   # PL essentials
-  - rust-analyzer
   - llvm
   # Addinational tools
   - fnm

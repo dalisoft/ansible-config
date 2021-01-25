@@ -20,6 +20,8 @@ brew_taps:
 # Homebrew packages
 brew_packages:
   - pyqt
+  # PL Essentials
+  - rust-analyzer
   # Other desktop tools
   - dprint
   - heroku

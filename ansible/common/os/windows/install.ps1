@@ -25,7 +25,7 @@ choco install ffmpeg ghostscript                      # Addinitional utilities
 choco install nodejs python3 php                      # Languages essentials
 choco install rust cmake golang deno                  # Languages essentials #2
 choco install yarn composer                           # Package managers
-choco install anaconda3 rust-analyzer gradle llvm     # Additions to PL
+choco install gradle llvm                             # Additions to PL
 choco install heroku-cli                              # Terminal additions
 choco install linkshellextension                      # Essential utilities
 
