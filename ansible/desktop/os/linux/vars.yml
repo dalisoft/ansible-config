@@ -24,11 +24,6 @@ binaries:
 # Linux shared package names
 # Shared names (DRY method)
 shared_packages:
-  # PHP
-  - php
-  - composer
-  # Mobile-dev
-  - gradle
   # Browsers
   - epiphany-browser
   - firefox
@@ -77,15 +72,8 @@ apt_items:
   - exfat-utils
   - software-properties-common
   - apt-transport-https
-  # Programming languages
-  # Go
-  - golang-go
   # Python
-  - python3-pip
   - python3-pyqt5
-  # Rust
-  - rustc
-  - cargo
   # System utilities
   - flameshot
   - speedifyui
@@ -121,9 +109,6 @@ apt_items:
   - libsrtp2-dev
   - pkg-config
 
-apt_force_items:
-  - bat
-
 # Snap packages
 snap_packages:
   - starship
@@ -142,13 +127,6 @@ pacman_packages:
   - exfat-dkms-git
   # Fonts
   - ttf-fira-code
-  # Programming languages
-  # Go
-  - go
-  # Python
-  - python
-  # Rust
-  - rust
   # Other desktop tools
   - heroku-cli
   - android-file-transfer

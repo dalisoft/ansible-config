@@ -6,9 +6,16 @@ brew_taps:
 
 # Homebrew packages
 brew_packages:
-  # Addinational tools
+  # Programming languages
   - node
+  - python
+  - rust
+  - go
   - deno
+  # PL essentials
+  - rust-analyzer
+  - llvm
+  # Addinational tools
   - fnm
   - wrk
   # Build tools

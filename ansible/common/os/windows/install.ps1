@@ -22,8 +22,10 @@ choco install git git-lfs git-cola \                  # Git
 			gpg4win-vanilla unzip \                         # Utilities
 		  podman-machine podman-cli \                     # Podman
 		  ffmpeg ghostscript                              # Addinitional utilities
-choco install cmake python3 golang nodejs yarn deno   # Languages essentials
-choco install rust-analyzer gradle anaconda3          # Additions to PL
+choco install nodejs python3 php \                    # Languages essentials
+      rust cmake golang deno                          # Languages essentials #2
+choco install yarn composer                           # Package managers
+choco install anaconda3 rust-analyzer gradle llvm     # Additions to PL
 choco install heroku-cli                              # Terminal additions
 choco install linkshellextension                      # Essential utilities
 

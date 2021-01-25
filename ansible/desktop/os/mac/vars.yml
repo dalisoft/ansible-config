@@ -19,24 +19,10 @@ brew_taps:
 
 # Homebrew packages
 brew_packages:
-  # Programming languages
-  # PHP
-  - php
-  - composer
-  # Go
-  - go
-  # Python
-  - python
   - pyqt
-  # Rust
-  - rust
-  - rust-analyzer # LSP for Rust
-  # Mobile-dev
-  - gradle
   # Other desktop tools
   - dprint
   - heroku
-  - llvm
 
 brew_cask_packages:
   # macOS QuickLook plugins
