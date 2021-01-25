@@ -14,17 +14,20 @@ Write-Output "Disabling prompt for every installation..."
 choco feature enable -n=allowGlobalConfirmation
 
 Write-Output "Installing packages..."
-choco install pyqt heroku-cli
-choco install anaconda3 rust-analyzer
-choco install 7zip kdiff3
-choco install obs vlc
-choco install anydesk
-choco install googlechrome firefox
-choco install 1password telegram
-choco install octave gitkraken postman
-choco install sublimetext3 vscode android-studio
+choco install pyqt heroku-cli kdiff3   # Additional tools
+choco install 7zip nextdns             # Essential desktop tools
+choco install anaconda3 rust-analyzer  # Additional PL tools
+choco install obs vlc potplayer        # Media
+choco install anydesk                  # Remote management
+choco install googlechrome firefox     # Browsers
+choco install 1password telegram       # GUI Essential Apps
+choco install octave gitkraken postman # Development tools
+choco install sublimetext3 vscode      # Editors
+choco install android-studio           # IDE
 
-choco install anacondajdk8
-choco install vmware-workstation-player
+choco install anacondajdk8             # Additional tools
+choco install vmware-workstation-player # VM
+
+choco install samsung-nvme-driver samsung-magician # Samsung Drivers / Tools (last should be installed manually)
 
 Write-Output "Done!"
