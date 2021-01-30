@@ -37,7 +37,7 @@ shared_packages:
   - code
   # System utilities
   - gparted
-  - speedify
+  - speedif
   # KVM/Packages for Virtual Machines
   - bridge-utils
   # Tools
@@ -49,7 +49,6 @@ apt_keys:
   - https://dl.google.com/linux/linux_signing_key.pub
   - https://packages.microsoft.com/keys/microsoft.asc
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-  - https://get.speedify.com/pgp.key
 
 apt_ring_keys:
   - keyserver: keyserver.ubuntu.com
@@ -62,7 +61,6 @@ apt_repos:
   - deb http://dl.google.com/linux/chrome/deb/ stable main
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
-  - deb http://apt.connectify.me/ speedify main
 
 apt_items:
   # PopOS polyfill
@@ -76,7 +74,6 @@ apt_items:
   - python3-pyqt5
   # System utilities
   - flameshot
-  - speedifyui
   # Most needed desktop apps
   - anydesk
   - transmission

@@ -42,7 +42,6 @@ brew_cask_packages:
   - altserver
   - obs
   - adguard
-  - speedify
   - anydesk
   # Browsers
   - firefox
