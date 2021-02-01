@@ -20,7 +20,7 @@
     line: NoDisplay=true
   loop:
     - nvim
-    - openjdk-8-java
-    - openjdk-8-policytool
+    - openjdk-15-java
+    - openjdk-15-policytool
     - groovyConsole
   when: ansible_facts['os_family'] == 'Debian' or ansible_facts['os_family'] == 'Pop!_OS'

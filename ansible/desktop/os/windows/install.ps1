@@ -25,7 +25,7 @@ choco install octave gitkraken postman # Development tools
 choco install sublimetext3 vscode      # Editors
 choco install android-studio           # IDE
 
-choco install anacondajdk8              # Additional tools
+choco install anacondajdk15            # Additional tools
 choco install vmware-workstation-player # VM
 
 choco install steam epicgameslauncher   # Gaming stores

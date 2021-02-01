@@ -152,6 +152,6 @@ pacman_packages:
   # For AI Stuffs
   - cuda
   # Java tools
-  - jdk8-adoptopenjdk
+  - jdk15-adoptopenjdk
   # Python tools
   - anaconda
