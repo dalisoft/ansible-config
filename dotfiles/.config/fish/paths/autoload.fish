@@ -1,7 +1,5 @@
 # Auto-load paths
 
-source $FISH_PATHS_PATH/ssh-load.fish
-
 source $FISH_PATHS_PATH/basic.fish
 source $FISH_PATHS_PATH/compilers.fish
 
