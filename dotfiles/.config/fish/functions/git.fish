@@ -1,25 +1,25 @@
-function git_status
+function gitstat
     git status --show-stash -b -uall --renames
 end
 
-function git_reflog_expire
+function gitre
     git reflog expire --expire=now --all
 end
 
-function git_repack_ad
+function gitra
     git repack -ad
 end
 
-function git_prune
+function gitp
     git prune
 end
 
-function git_fetch
+function gitf
     git fetch --all --prune
 end
 
-function git_rebase
-    git_fetch
+function git_rb
+    gitf
     git pull --rebase
     git submodule update --init --recursive
 end
