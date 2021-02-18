@@ -97,7 +97,7 @@ apt_items:
   - nvidia-cuda-dev
   - nvidia-cuda-doc
   # Java tools
-  - adoptopenjdk-8-hotspot
+  - adoptopenjdk-14-hotspot
   # Dependencies for WebRTC
   - libavdevice-dev
   - libavfilter-dev
@@ -152,6 +152,6 @@ pacman_packages:
   # For AI Stuffs
   - cuda
   # Java tools
-  - jdk15-adoptopenjdk
+  - jdk14-adoptopenjdk
   # Python tools
   - anaconda

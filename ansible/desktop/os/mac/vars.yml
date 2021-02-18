@@ -61,7 +61,7 @@ brew_cask_packages:
   - android-studio
 
 brew_cask_packages_root:
-  - adoptopenjdk/openjdk/adoptopenjdk15
+  - adoptopenjdk/openjdk/adoptopenjdk14
   - anaconda
   - docker
   - vmware-fusion
