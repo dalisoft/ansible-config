@@ -12,9 +12,9 @@ shared_packages:
   - imagemagick
 
 fnm_versions:
-  - 10.23.1
-  - 12.20.1
-  - 14.15.4
+  - 10.23.3
+  - 12.20.2
+  - 14.15.5
 
 npm_modules:
   # Necessary tools
@@ -24,8 +24,9 @@ npm_modules:
   - nodemon
   # Local Server stuffs
   - http-server
-  # Update deps
+  # npm tools
   - npm-check-updates
+  - typesync
   # Monorepo management
   - lerna
   - lerna-wizard

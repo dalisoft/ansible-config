@@ -116,6 +116,7 @@ snap_classic_packages:
   - deno
   - heroku
   - gitkraken
+  - datagrip
   - android-studio
 
 # Pacman packages
@@ -136,6 +137,7 @@ pacman_packages:
   # Development tools
   - gitkraken
   - postman
+  - datagrip
   # Editors / IDE
   - android-studio
   # KVM/Packages for Virtual Machines

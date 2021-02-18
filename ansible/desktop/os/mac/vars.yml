@@ -54,6 +54,7 @@ brew_cask_packages:
   - gitkraken
   # Development tools
   - postman
+  - datagrip
   # - paw
   # Editors
   - sublime-text
