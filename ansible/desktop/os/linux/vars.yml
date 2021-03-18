@@ -20,19 +20,10 @@ binaries:
     link: https://github.com/dprint/dprint/releases/latest/download/dprint-x86_64-unknown-linux-gnu.zip
     direct: True
     binary: False
-  - name: cassowary
-    link: https://github.com/rogerwelin/cassowary/releases/latest/download/cassowary_0.11.0_Linux_x86_64.tar.gz
-    direct: True
-    binary: False
 
 # Linux shared package names
 # Shared names (DRY method)
 shared_packages:
-  # PHP
-  - php
-  - composer
-  # Mobile-dev
-  - gradle
   # Browsers
   - epiphany-browser
   - firefox
@@ -41,12 +32,13 @@ shared_packages:
   - vlc
   - telegram-desktop
   - octave
+  - qbittorrent
   # Editors
   - sublime-text
   - code
   # System utilities
   - gparted
-  - speedify
+  - speedif
   # KVM/Packages for Virtual Machines
   - bridge-utils
   # Tools
@@ -54,34 +46,26 @@ shared_packages:
 
 # APT (Debian/Ubuntu) packages
 apt_keys:
-  # - https://dl.xanmod.org/gpg.key
   - https://keys.anydesk.com/repos/DEB-GPG-KEY
   - https://dl.google.com/linux/linux_signing_key.pub
   - https://packages.microsoft.com/keys/microsoft.asc
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-  - https://packagecloud.io/shiftkey/desktop/gpgkey
-  - https://get.speedify.com/pgp.key
 
 apt_ring_keys:
   - keyserver: keyserver.ubuntu.com
     id: 3FEF9748469ADBE15DA7CA80AC2D62742012EA22
 
 apt_repos:
-  # - deb http://deb.xanmod.org releases main
   - ppa:obsproject/obs-studio
+  - ppa:qbittorrent-team/qbittorrent-stable
+  - ppa:noobslab/apps
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
   - deb http://dl.google.com/linux/chrome/deb/ stable main
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
-  - deb https://packagecloud.io/shiftkey/desktop/any/ any main
-  - deb http://apt.connectify.me/ speedify main
 
 apt_items:
-  # Improve Linux performance
-  # - linux-xanmod
-  # - intel-microcode
-  # - iucode-tool
   # PopOS polyfill
   - snapd
   - grub2-common
@@ -89,34 +73,15 @@ apt_items:
   - exfat-utils
   - software-properties-common
   - apt-transport-https
-  # Programming languages
-  # Go
-  - golang-go
   # Python
-  - python3-pip
   - python3-pyqt5
-  # Rust
-  - rustc
-  - cargo
-  # Games
-  - steam-installer
-  # For some GTK themes
-  # and macOS Theme dependencies
-  # for Linux
-  - optipng
-  - sassc
-  - libcanberra-gtk-module
-  - libglib2.0-dev
   # System utilities
-  - timeshift
   - flameshot
-  - speedifyui
   # Most needed desktop apps
   - anydesk
-  - transmission
+  - xdman
   # Browser
   - google-chrome-stable
-  - github-desktop
   # KVM/Packages for Virtual Machines
   - qemu
   - qemu-kvm
@@ -135,7 +100,7 @@ apt_items:
   - nvidia-cuda-dev
   - nvidia-cuda-doc
   # Java tools
-  - adoptopenjdk-8-hotspot
+  - adoptopenjdk-14-hotspot
   # Dependencies for WebRTC
   - libavdevice-dev
   - libavfilter-dev
@@ -144,75 +109,39 @@ apt_items:
   - libsrtp2-dev
   - pkg-config
 
-apt_force_items:
-  - bat
-
 # Snap packages
 snap_packages:
   - starship
-  - slack
   - android-file-transfer-linux
-  - beekeeper-studio
   - postman
-  - insomnia
-  - insomnia-designer
+  # - libreoffice
 
 snap_classic_packages:
   - deno
   - heroku
   - gitkraken
-  - webstorm
-  - pycharm
+  - datagrip
   - android-studio
 
 # Pacman packages
 pacman_packages:
-  # Improve Linux performance
-  - linux-manjaro-xanmod
   # Polyfills
   - exfat-dkms-git
   # Fonts
   - ttf-fira-code
-  # Programming languages
-  # Go
-  - go
-  # Python
-  - python
-  # Rust
-  - rust
   # Other desktop tools
   - heroku-cli
   - android-file-transfer
-  # Games
-  - steam
-  # For some GTK themes
-  # and macOS Theme dependencies
-  # for Linux
-  - krita
-  - inkscape
-  - optipng
-  - sassc
-  - gtk-engine-murrine
-  - gtk-engines
   # Most needed desktop apps
   - flameshot-git
-  - slack-desktop
   - anydesk-bin
   - google-chrome
-  - uget
-  - notion-app
-  - transmittion-gtk
   # Development tools
-  - beekeeper-studio-appimage
-  - mongotron-bin
   - gitkraken
   - postman
-  - insomnia-bin
-  - insomnia-designer-bin
-  - github-desktop
+  - datagrip
+  - freedownloadmanager
   # Editors / IDE
-  - webstorm
-  - pycharm
   - android-studio
   # KVM/Packages for Virtual Machines
   - virt-manager
@@ -228,6 +157,6 @@ pacman_packages:
   # For AI Stuffs
   - cuda
   # Java tools
-  - jdk8-adoptopenjdk
+  - jdk14-adoptopenjdk
   # Python tools
   - anaconda

@@ -19,9 +19,13 @@ apt_items: # Security
   - netfilter-persistent
   # Fonts
   - fonts-firacode
-  # Addinational tools
+  # Programming Languages
   - nodejs
   - python3-pip
+  - rustc
+  # Package managers
+  - cargo
+  - golang-go
   # Docker
   - docker-ce
   - docker-ce-cli
@@ -29,20 +33,24 @@ apt_items: # Security
   - docker-compose
 
 apt_force_items:
+  - bat
   - ripgrep
 
 # Pacman/Manjaro Packages
 pacman_packages:
-  # Addinational tools
-  - node
-  - deno
-  # Docker
-  - docker
-  - docker-compose
   # Necessary tools
   - starship
   - bat
   - ripgrep
+  # Programming languages
+  - node
+  - python
+  - rust
+  - go
+  - deno
+  # Docker
+  - docker
+  - docker-compose
 
 # Linked binaries
 binaries:

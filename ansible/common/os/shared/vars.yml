@@ -38,8 +38,14 @@ shared_packages:
   - gpg
   - git-cola
   - neofetch
-  # Addinational tools
+  # Programming Language
+  - php
+  # Package managers
   - yarn
+  - composer
+  # PL essentials
+  - gradle
+  # Addinational tools
   - podman
   # Build tools
   - cmake

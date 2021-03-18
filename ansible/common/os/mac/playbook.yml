@@ -19,7 +19,7 @@
     # Tasks list
     - import_tasks: tasks.yml
     # Post-installation
-    - import_tasks: ../shared/unix_post-task.yml
+    - import_tasks: ../shared/post-task.yml
     # Binary packages
     - import_tasks: ../shared/unix_binary-task.yml
       when: binaries is defined and binaries|length > 0

@@ -49,17 +49,3 @@
 - name: Installing Golang Program Language Server
   shell: GO111MODULE=on go get golang.org/x/tools/gopls@latest
   when: gopls_bin.stat.exists != true
-
-# VSCode Extensions
-- name: List installed VSCode extensions
-  shell: code --list-extensions
-  register: code_extensions_list
-  changed_when: false
-  check_mode: false
-
-- name: Installing VSCode extensions
-  shell: "code --install-extension {{ item }}"
-  loop: "{{ vscode_extensions }}"
-  register: install_code_extensions
-  until: install_code_extensions is successful
-  when: item not in code_extensions_list.stdout_lines

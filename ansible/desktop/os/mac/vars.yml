@@ -19,25 +19,12 @@ brew_taps:
 
 # Homebrew packages
 brew_packages:
-  # Programming languages
-  # PHP
-  - php
-  - composer
-  # Go
-  - go
-  # Python
-  - python
   - pyqt
-  # Rust
-  - rust
-  - rust-analyzer # LSP for Rust
-  # Mobile-dev
-  - gradle
+  # PL Essentials
+  - rust-analyzer
   # Other desktop tools
   - dprint
   - heroku
-  - cassowary
-  - llvm
 
 brew_cask_packages:
   # macOS QuickLook plugins
@@ -55,43 +42,29 @@ brew_cask_packages:
   - altserver
   - obs
   - adguard
-  # - macs-fan-control # This is only for MacBook
-  - speedify
-  - lulu
+  - cloudflare-warp
   - anydesk
-  # Games
-  - steam
   # Browsers
   - firefox
   - google-chrome
   # Most needed desktop apps
   - 1password
   - vlc
-  # - folx
   - telegram
-  - slack
-  - notion
-  - github
   - octave-app
-  - beekeeper-studio
-  - mongodb-compass
   - gitkraken
+  - folx
+  - qbittorrent
   # Development tools
-  # - cocoarestclient
   - postman
-  - insomnia
-  - insomnia-designer
-  # - paw
-  # - adobe-creative-cloud
+  - datagrip
   # Editors
   - sublime-text
   - visual-studio-code
-  - webstorm
-  - pycharm
   - android-studio
 
 brew_cask_packages_root:
-  - adoptopenjdk/openjdk/adoptopenjdk8
+  - adoptopenjdk/openjdk/adoptopenjdk14
   - anaconda
   - docker
   - vmware-fusion
