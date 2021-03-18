@@ -53,12 +53,10 @@ brew_cask_packages:
   - octave-app
   - gitkraken
   - folx
-  - free-download-manager
   - qbittorrent
   # Development tools
   - postman
   - datagrip
-  # - paw
   # Editors
   - sublime-text
   - visual-studio-code

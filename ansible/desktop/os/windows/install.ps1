@@ -25,6 +25,7 @@ choco install 1password telegram              # GUI Essential Apps
 choco install octave gitkraken postman datagrip # Development tools
 choco install sublimetext3 vscode             # Editors
 choco install android-studio                  # IDE
+# choco install libreoffice-fresh               # Office tools
 
 choco install anacondajdk15                   # Additional tools
 choco install vmware-workstation-player       # VM

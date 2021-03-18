@@ -58,6 +58,7 @@ apt_ring_keys:
 apt_repos:
   - ppa:obsproject/obs-studio
   - ppa:qbittorrent-team/qbittorrent-stable
+  - ppa:noobslab/apps
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
   - deb http://dl.google.com/linux/chrome/deb/ stable main
@@ -78,7 +79,7 @@ apt_items:
   - flameshot
   # Most needed desktop apps
   - anydesk
-  - transmission
+  - xdman
   # Browser
   - google-chrome-stable
   # KVM/Packages for Virtual Machines
@@ -113,6 +114,7 @@ snap_packages:
   - starship
   - android-file-transfer-linux
   - postman
+  # - libreoffice
 
 snap_classic_packages:
   - deno
@@ -134,8 +136,6 @@ pacman_packages:
   - flameshot-git
   - anydesk-bin
   - google-chrome
-  - uget
-  - transmittion-gtk
   # Development tools
   - gitkraken
   - postman
