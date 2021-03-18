@@ -42,6 +42,7 @@ brew_cask_packages:
   - altserver
   - obs
   - adguard
+  - cloudflare-warp
   - anydesk
   # Browsers
   - firefox

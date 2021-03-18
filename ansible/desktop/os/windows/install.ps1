@@ -32,6 +32,7 @@ choco install vmware-workstation-player       # VM
 
 choco install steam epicgameslauncher         # Gaming stores
 
+choco install warp                            # VPN
 choco install nextdns --ignore-checksum # Disable checksum until it got fixed
 choco install samsung-nvme-driver samsung-magician # Samsung Drivers / Tools (last should be installed manually)
 
