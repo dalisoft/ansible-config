@@ -52,6 +52,9 @@ brew_cask_packages:
   - telegram
   - octave-app
   - gitkraken
+  - folx
+  - free-download-manager
+  - qbittorrent
   # Development tools
   - postman
   - datagrip

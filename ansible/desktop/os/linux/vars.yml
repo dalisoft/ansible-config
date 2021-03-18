@@ -32,6 +32,7 @@ shared_packages:
   - vlc
   - telegram-desktop
   - octave
+  - qbittorrent
   # Editors
   - sublime-text
   - code
@@ -56,6 +57,7 @@ apt_ring_keys:
 
 apt_repos:
   - ppa:obsproject/obs-studio
+  - ppa:qbittorrent-team/qbittorrent-stable
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
   - deb http://dl.google.com/linux/chrome/deb/ stable main
@@ -138,6 +140,7 @@ pacman_packages:
   - gitkraken
   - postman
   - datagrip
+  - freedownloadmanager
   # Editors / IDE
   - android-studio
   # KVM/Packages for Virtual Machines
