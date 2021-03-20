@@ -5,7 +5,7 @@
 
 # Packman packages
 - name: Installing Pacman packages
-  become: true
+  become: yes
   become_user: root
   pacman:
     name: "{{ item }}"

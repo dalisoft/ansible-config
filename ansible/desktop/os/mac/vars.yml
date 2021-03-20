@@ -50,7 +50,7 @@ brew_cask_packages:
   # Most needed desktop apps
   - 1password
   - vlc
-  - telegram
+  # - telegram
   - octave-app
   - gitkraken
   - folx

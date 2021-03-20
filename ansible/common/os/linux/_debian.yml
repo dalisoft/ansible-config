@@ -11,7 +11,7 @@
   check_mode: false
 
 - name: Adding apt keys
-  become: true
+  become: yes
   become_user: root
   apt_key:
     url: "{{ item }}"
@@ -22,7 +22,7 @@
   until: install_apt_key is successful
 
 - name: Adding apt ring keys
-  become: true
+  become: yes
   become_user: root
   apt_key:
     keyserver: "{{ item.keyserver }}"
@@ -33,7 +33,7 @@
   until: install_apt_ring_key is successful
 
 - name: Adding apt repositories
-  become: true
+  become: yes
   become_user: root
   apt_repository:
     repo: "{{ item }}"
@@ -45,7 +45,7 @@
   until: install_apt_repo is successful
 
 - name: Installing apt force packages
-  become: true
+  become: yes
   become_user: root
   apt:
     name: "{{ item }}"
@@ -59,7 +59,7 @@
   until: install_optionless_apt_package is successful
 
 - name: Installing apt packages
-  become: true
+  become: yes
   become_user: root
   apt:
     name: "{{ item }}"
@@ -70,7 +70,7 @@
   until: install_apt_package is successful
 
 - name: Cleanup apt packages
-  become: true
+  become: yes
   become_user: root
   apt:
     autoclean: yes

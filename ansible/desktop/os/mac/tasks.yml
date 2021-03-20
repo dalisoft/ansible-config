@@ -16,7 +16,7 @@
   when: item not in brew_cask_installed.stdout_lines
 
 - name: Installing Cask packages with ROOT permission
-  become: true
+  become: yes
   homebrew_cask:
     name: "{{ item }}"
     state: present

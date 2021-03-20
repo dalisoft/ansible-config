@@ -1,6 +1,6 @@
 ---
 - name: Setting default shell
-  become: true
+  become: yes
   become_user: root
   user:
     name: "{{ item }}"
@@ -12,7 +12,7 @@
   until: fish_set_default is successful
 
 - name: Hide some applications
-  become: true
+  become: yes
   become_user: root
   lineinfile:
     path: "/usr/share/applications/{{ item }}.desktop"

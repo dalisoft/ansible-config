@@ -1,6 +1,6 @@
 ---
 - name: Install polyfill repos
-  become: true
+  become: yes
   become_user: root
   apt_repository:
     repo: "{{ item }}"
@@ -12,7 +12,7 @@
   until: install_apt_repo is successful
 
 - name: Install polyfill tools
-  become: true
+  become: yes
   become_user: root
   apt:
     name: "{{ item }}"

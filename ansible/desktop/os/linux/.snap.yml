@@ -7,7 +7,7 @@
   check_mode: false
 
 - name: Installing Snap packages
-  become: true
+  become: yes
   become_user: root
   snap:
     name: "{{ item }}"
@@ -20,7 +20,7 @@
   until: install_snap_package is successful
 
 - name: Installing Snap [classic] packages
-  become: true
+  become: yes
   become_user: root
   snap:
     name: "{{ item }}"

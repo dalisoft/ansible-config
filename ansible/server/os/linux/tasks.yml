@@ -1,6 +1,6 @@
 ---
 - name: Create the non-root user account
-  become: true
+  become: yes
   become_user: root
   user:
     name: "{{ username }}"
@@ -13,7 +13,7 @@
     append: yes
 
 - name: Ensure ssh folder exists
-  become: true
+  become: yes
   become_user: "{{ username }}"
   file:
     path: "/home/{{ username }}/.ssh"
@@ -23,7 +23,7 @@
     mode: 0700
 
 - name: Copy authorized_keys to created user
-  become: true
+  become: yes
   become_user: "{{ username }}"
   copy:
     src: ~/.ssh/authorized_keys
@@ -34,7 +34,7 @@
     mode: 0640
 
 - name: Harden sshd configuration
-  become: true
+  become: yes
   become_user: root
   lineinfile:
     dest: /etc/ssh/sshd_config
@@ -62,7 +62,7 @@
       line: "AllowAgentForwarding no"
 
 - name: "Allow {{ username }} to SSH access"
-  become: true
+  become: yes
   become_user: root
   lineinfile:
     path: /etc/ssh/sshd_config
@@ -71,7 +71,7 @@
     line: "AllowUsers {{ username }}"
 
 - name: Restart sshd
-  become: true
+  become: yes
   become_user: root
   systemd:
     state: restarted
@@ -79,13 +79,13 @@
     name: sshd
 
 - name: Flush existing firewall rules
-  become: true
+  become: yes
   become_user: root
   iptables:
     flush: true
 
 - name: Firewall rule - allow all loopback traffic
-  become: true
+  become: yes
   become_user: root
   iptables:
     action: append
@@ -94,7 +94,7 @@
     jump: ACCEPT
 
 - name: Firewall rule - allow established connections
-  become: true
+  become: yes
   become_user: root
   iptables:
     chain: INPUT
@@ -102,7 +102,7 @@
     jump: ACCEPT
 
 - name: Firewall rule - allow port ping traffic
-  become: true
+  become: yes
   become_user: root
   iptables:
     chain: INPUT
@@ -110,7 +110,7 @@
     protocol: icmp
 
 - name: Firewall rule - allow port 22/SSH traffic
-  become: true
+  become: yes
   become_user: root
   iptables:
     chain: INPUT
@@ -119,7 +119,7 @@
     protocol: tcp
 
 - name: Firewall rule - allow port 80/HTTP traffic
-  become: true
+  become: yes
   become_user: root
   iptables:
     chain: INPUT
@@ -128,7 +128,7 @@
     protocol: tcp
 
 - name: Firewall rule - allow port 443/HTTPS traffic
-  become: true
+  become: yes
   become_user: root
   iptables:
     chain: INPUT
@@ -137,14 +137,14 @@
     protocol: tcp
 
 - name: Firewall rule - drop any traffic without rule
-  become: true
+  become: yes
   become_user: root
   iptables:
     chain: INPUT
     jump: DROP
 
 - name: Install `netfilter-persistent` && `iptables-persistent` packages
-  become: true
+  become: yes
   become_user: root
   package:
     name: "{{item}}"
@@ -155,7 +155,7 @@
   when: ansible_facts['os_family'] == "Debian"
 
 - name: Creating a file with content
-  become: true
+  become: yes
   become_user: root
   copy:
     dest: /etc/fail2ban/jail.local
