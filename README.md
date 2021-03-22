@@ -3,7 +3,6 @@
 My machine configuration playbook
 
 > Don't forget to to copy this repo to `~/Desktop/config`, else it's does not work
-> **This is only for UNIX systems**
 
 ## Steps
 
