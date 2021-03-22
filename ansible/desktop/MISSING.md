@@ -25,7 +25,7 @@ List of packages which is missing on some of installation platform
 | XCode                                            | -            | -                          | -         | Included (App Store)               |
 | [AppCleaner](http://freemacsoft.net)             | -            | -                          | CCleaner? | Included (Homebrew)                |
 | Folx                                             | -            | -                          | -         | Included (Homebrew)                |
-| [LuLu](https://github.com/objective-see/LuLu)    | -            | -                          | -         | Included (Homebrew)                |
+| [LuLu](https://github.com/objective-see/LuLu)    | -            | -                          | -         | `brew install lulu`                |
 | The Unarchiver                                   | -            | -                          | 7-Zip     | Included (Homebrew)                |
 | [Anka Develop](https://veertu.com/anka-develop/) | -            | -                          | -         | `brew install anka-virtualization` |
 

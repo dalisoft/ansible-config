@@ -27,7 +27,7 @@
     packages: "{{ (shared_packages | default([])) + (brew_packages | default([])) }}"
 
 - name: List all Homebrew packages
-  command: brew ls
+  command: brew list -1
   register: brew_pkgs_list
   changed_when: false
   check_mode: false
