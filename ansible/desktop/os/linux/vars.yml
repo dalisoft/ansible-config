@@ -1,25 +1,10 @@
 ---
-st_packages_dir: "~/.config/sublime-text-3/Packages"
-
 binaries:
   - name: exa
     link: https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
     command: mv exa-linux-x86_64 exa
     binary: False
     direct: False
-  - name: rust-analyzer
-    link: https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux
-    direct: False
-    binary: True
-  - name: reason-language-server
-    link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-linux.zip
-    command: mv rls-linux/reason-language-server reason-language-server
-    direct: False
-    binary: False
-  - name: dprint
-    link: https://github.com/dprint/dprint/releases/latest/download/dprint-x86_64-unknown-linux-gnu.zip
-    direct: True
-    binary: False
 
 # Linux shared package names
 # Shared names (DRY method)
@@ -34,7 +19,6 @@ shared_packages:
   - octave
   - qbittorrent
   # Editors
-  - sublime-text
   - code
   # System utilities
   - gparted

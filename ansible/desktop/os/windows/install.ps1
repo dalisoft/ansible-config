@@ -23,7 +23,7 @@ choco install anydesk                         # Remote management
 choco install googlechrome firefox            # Browsers
 choco install 1password telegram              # GUI Essential Apps
 choco install octave gitkraken postman datagrip # Development tools
-choco install sublimetext3 vscode             # Editors
+choco install vscode                          # Editors
 choco install android-studio                  # IDE
 # choco install libreoffice-fresh               # Office tools
 

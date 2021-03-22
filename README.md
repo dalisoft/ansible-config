@@ -51,12 +51,10 @@ Shell default change (if possible), guide [here for macOS](https://stackoverflow
 
 > This steps for me to not forget
 
-| No  | Application        | Tasks                                                                                             | Required |
-| --- | ------------------ | ------------------------------------------------------------------------------------------------- | -------- |
-| 1   | JetBrains apps     | - Sync Settings<br/> - Sync Plugins                                                               | Yes      |
-| 2   | Sublime Text       | - Download Package Control<br/>- Download Sync Settings<br/>- Download sync configuration         | Yes      |
-| 3   | Design-2-Code Apps | - Download from cloud Adobe Apps<br/>- Download purchased Sketch                                  | Yes      |
-| 4   | Workdir            | - Download Open-source projects from Cloud<br/>- Copy other private workdirs from another machine | Yes      |
+| No  | Application    | Tasks                                                                                             | Required |
+| --- | -------------- | ------------------------------------------------------------------------------------------------- | -------- |
+| 1   | JetBrains apps | - Sync Settings<br/> - Sync Plugins                                                               |
+| 2   | Workdir        | - Download Open-source projects from Cloud<br/>- Copy other private workdirs from another machine | Yes      |
 
 ### Step 5 [Optional]
 

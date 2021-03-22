@@ -3,6 +3,7 @@ ensure_folders:
   - "~/.config/nvim"
   - "~/.config/htop"
   - "~/.config/fish"
+  - "~/.npm-global"
   - "~/Desktop/config/dotfiles/.vim/autoload"
   - "~/.local/bin"
   - /usr/local/bin

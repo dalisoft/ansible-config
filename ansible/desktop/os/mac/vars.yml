@@ -1,14 +1,4 @@
 ---
-st_packages_dir: "~/Library/Application Support/Sublime Text 3/Packages"
-
-binaries:
-  - name: reason-language-server
-    link: https://github.com/jaredly/reason-language-server/releases/latest/download/rls-linux.zip
-    command: mv rls-linux/reason-language-server reason-language-server
-    direct: False
-    binary: False
-
-# Homebrew
 # Homebrew taps
 brew_taps:
   - heroku/brew
@@ -41,7 +31,6 @@ brew_cask_packages:
   - android-file-transfer
   - altserver
   - obs
-  - adguard
   - cloudflare-warp
   - anydesk
   # Browsers
@@ -59,7 +48,6 @@ brew_cask_packages:
   - postman
   - datagrip
   # Editors
-  - sublime-text
   - visual-studio-code
   - android-studio
 

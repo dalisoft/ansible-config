@@ -18,22 +18,12 @@ fnm_versions:
 
 npm_modules:
   # Necessary tools
-  - prettier
   - node-gyp
-  # JS Reload
-  - nodemon
   # Local Server stuffs
   - http-server
   # npm tools
   - npm-check-updates
   - typesync
-  - svgo
-  # Monorepo management
-  - lerna
-  - lerna-wizard
-  # Deploy to platforms
-  - vercel
-  - serverless
   # Mobile dev
   - cordova
   # - expo-cli
@@ -46,22 +36,6 @@ pip_modules:
   - jupyterlab
   - notebook
   - labelme
-
-# Extensions
-# Sublime Text Extensions
-sublime_extensions_git:
-  - name: dprint
-    git_url: git@github.com:dprint/dprint-sublime.git
-  - name: GoSublime
-    git_url: git@github.com:DisposaBoy/GoSublime.git
-  - name: LSP-cmake
-    git_url: git@github.com:sublimelsp/LSP-cmake.git
-  - name: LSP-PyLS
-    git_url: git@github.com:sublimelsp/LSP-pyls.git
-  - name: LSP-SouceKit
-    git_url: git@github.com:sublimelsp/LSP-SourceKit.git
-  - name: Dictionaries
-    git_url: git@github.com:titoBouzout/Dictionaries.git
 
 # Oni2 Extensions
 oni2_extensions:

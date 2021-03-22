@@ -1,5 +1,14 @@
 ---
 # NPM Modules
+- name: Installing npm
+  npm:
+    global: yes
+    path: "~/.npm-global"
+    name: npm
+    state: latest
+  register: install_npm_package
+  until: install_npm_package is successful
+
 - name: List installed npm modules
   command: npm list -g --depth=0
   register: npm_modules_installed
@@ -15,8 +24,8 @@
     name: "{{ item }}"
     state: present
   loop: "{{ npm_modules }}"
-  register: install_npm_package
-  until: install_npm_package is successful
+  register: install_npm_packages
+  until: install_npm_packages is successful
   when:
     - npm_modules is defined
     - item not in npm_modules_installed.stdout
