@@ -15,6 +15,7 @@ My machine configuration playbook
 | Linux Ubuntu  | 18.04                 | 19.04 and higher            |
 | Linux PopOS   | 18.04                 | 19.04 and higher            |
 | Linux Manjaro | 18                    | 19 or Higher                |
+| Windows       | v1903                 | v2004                       |
 
 ---
 
@@ -24,6 +25,7 @@ My machine configuration playbook
 | Ansible   | See [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) | macOS, Linux         | Yes      |
 | XCode CLI | `xcode-select --install`                                                                       | macOS                | Yes      |
 | snap      | See [here](https://snapcraft.io/docs/installing-snap-on-ubuntu)                                | Linux                | Yes      |
+| choco     | See [here](https://chocolatey.org/install)                                                     | Windows              | Yes      |
 
 > **Don't forget install all of these dependencies**
 
@@ -40,8 +42,8 @@ See [**MISSING TABLE**](./ansible/MISSING.md)
 | PASSWORD      | -       | -               | String | Yes      |
 | MODE          | DESKTOP | DESKTOP, SERVER | String | No       |
 
-- Open terminal
-- Run `./run-ansible.sh $PASSWORD $MODE?`
+- Open terminal (Unix) or PowerShell (Windows)
+- Run `./run-ansible.sh $PASSWORD $MODE?` (Linux) or `./install.ps1` (Windows)
 
 ### Step 3
 
