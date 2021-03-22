@@ -21,7 +21,7 @@ choco install obs vlc potplayer               # Media
 choco install freedownloadmanager qbittorrent # Download tools
 choco install anydesk                         # Remote management
 choco install googlechrome firefox            # Browsers
-choco install 1password telegram              # GUI Essential Apps
+choco install 1password telegram slack        # GUI Essential Apps
 choco install octave gitkraken postman datagrip # Development tools
 choco install vscode                          # Editors
 choco install android-studio                  # IDE

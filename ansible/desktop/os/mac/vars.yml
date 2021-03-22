@@ -31,18 +31,28 @@ brew_cask_packages:
   - android-file-transfer
   - obs
   - anydesk
+  # Games
+  - steam
+  - epic-games
   # VPN
   - cloudflare-warp
   - speedify
+  - lulu
   # Browsers
   - firefox
   - google-chrome
   # Most needed desktop apps
   - 1password
   - vlc
+  - notion
+  # Messengers
   # - telegram
+  - slack
   - octave-app
+  # Git App
   - gitkraken
+  - github
+  # Download managers
   - free-download-manager
   - folx
   - qbittorrent

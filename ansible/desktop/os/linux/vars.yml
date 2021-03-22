@@ -142,6 +142,8 @@ pacman_packages:
   - android-studio
   # Office tools
   - libreoffice-fresh
+  # Messengers
+  - slack-desktop
   # KVM/Packages for Virtual Machines
   - virt-manager
   - qemu
