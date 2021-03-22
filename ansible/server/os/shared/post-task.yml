@@ -1,9 +1,0 @@
----
-# Post-installation
-# Install Vim/Neo vim plugins
-- name: Install Neo-Vim plugins
-  command: nvim -c "PlugInstall" -c "qa"
-  register: install_vim_plugin
-  until: install_vim_plugin is successful
-  tags:
-    - install-vim-plugins

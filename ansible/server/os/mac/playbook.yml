@@ -25,4 +25,3 @@
     - import_tasks: ../../../common/os/mac/tasks.yml
     # Post-installation
     - import_tasks: ../../../common/os/shared/unix_post-task.yml
-    - import_tasks: ../shared/post-task.yml

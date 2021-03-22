@@ -29,5 +29,3 @@
     # Some of codes we're used from
     # https://blog.ssdnodes.com/blog/secure-ansible-playbook/
     - import_tasks: tasks.yml
-    # Post-installation
-    - import_tasks: ../shared/post-task.yml

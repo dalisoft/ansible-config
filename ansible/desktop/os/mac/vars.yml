@@ -37,6 +37,7 @@ brew_cask_packages:
   # VPN
   - cloudflare-warp
   - speedify
+  - lulu
   # Browsers
   - firefox
   - google-chrome
