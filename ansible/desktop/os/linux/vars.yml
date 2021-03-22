@@ -18,15 +18,20 @@ shared_packages:
   - telegram-desktop
   - octave
   - qbittorrent
+  - github-desktop
+  # Development tools
+  - postman
+  - datagrip
   # Editors
   - code
   # System utilities
   - gparted
-  - speedif
+  - speedify
   # KVM/Packages for Virtual Machines
   - bridge-utils
   # Tools
   - obs-studio
+  - android-file-transfer
 
 # APT (Debian/Ubuntu) packages
 apt_keys:
@@ -34,6 +39,10 @@ apt_keys:
   - https://dl.google.com/linux/linux_signing_key.pub
   - https://packages.microsoft.com/keys/microsoft.asc
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+  - https://packagecloud.io/shiftkey/desktop/gpgkey
+  - https://get.speedify.com/pgp.key
+  - https://s3.eu-central-1.amazonaws.com/jetbrains-ppa/0xA6E8698A.pub.asc
+  - https://cli-assets.heroku.com/apt/release.key
 
 apt_ring_keys:
   - keyserver: keyserver.ubuntu.com
@@ -41,13 +50,21 @@ apt_ring_keys:
 
 apt_repos:
   - ppa:obsproject/obs-studio
+  - ppa:maarten-fonville/android-studio
+  - ppa:tiagohillebrandt/postman
   - ppa:qbittorrent-team/qbittorrent-stable
+  - ppa:samoilov-lex/aftl-stable
+  - ppa:libreoffice/libreoffice-7-0
   - ppa:noobslab/apps
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
   - deb http://dl.google.com/linux/chrome/deb/ stable main
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
+  - deb https://packagecloud.io/shiftkey/desktop/any/ any main
+  - deb http://apt.connectify.me/ speedify main
+  - deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com bionic main
+  - deb https://cli-assets.heroku.com/apt
 
 apt_items:
   # PopOS polyfill
@@ -61,11 +78,16 @@ apt_items:
   - python3-pyqt5
   # System utilities
   - flameshot
+  - heroku
   # Most needed desktop apps
   - anydesk
   - xdman
   # Browser
   - google-chrome-stable
+  # Mobile dev
+  - android-studio-4.1
+  # Office tools
+  - libreoffice
   # KVM/Packages for Virtual Machines
   - qemu
   - qemu-kvm
@@ -96,16 +118,10 @@ apt_items:
 # Snap packages
 snap_packages:
   - starship
-  - android-file-transfer-linux
-  - postman
-  # - libreoffice
 
 snap_classic_packages:
   - deno
-  - heroku
   - gitkraken
-  - datagrip
-  - android-studio
 
 # Pacman packages
 pacman_packages:
@@ -115,18 +131,17 @@ pacman_packages:
   - ttf-fira-code
   # Other desktop tools
   - heroku-cli
-  - android-file-transfer
   # Most needed desktop apps
   - flameshot-git
   - anydesk-bin
   - google-chrome
   # Development tools
   - gitkraken
-  - postman
-  - datagrip
   - freedownloadmanager
   # Editors / IDE
   - android-studio
+  # Office tools
+  - libreoffice-fresh
   # KVM/Packages for Virtual Machines
   - virt-manager
   - qemu

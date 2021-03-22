@@ -29,10 +29,11 @@ brew_cask_packages:
   - appcleaner
   - kdiff3
   - android-file-transfer
-  - altserver
   - obs
-  - cloudflare-warp
   - anydesk
+  # VPN
+  - cloudflare-warp
+  - speedify
   # Browsers
   - firefox
   - google-chrome
@@ -42,6 +43,7 @@ brew_cask_packages:
   # - telegram
   - octave-app
   - gitkraken
+  - free-download-manager
   - folx
   - qbittorrent
   # Development tools

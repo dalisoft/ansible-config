@@ -20,7 +20,7 @@ List of packages which is missing on some of installation platform
 | [Noto](https://noto.ink/)                        | -            | -                              | -              | Available in App Store             |
 | BlackMagic Disk Speed Test                       | -            | -                              | -              | Available in App Store             |
 | BlackMagic RAW Speed Test                        | -            | -                              | -              | Available in App Store             |
-| Session Pal macOS                                | -            | -                              | -              | Available in App Store             |
+| Session Pal macOS                                | -            | -                              | -              | Included (App Store)               |
 | WebSocket Client                                 | -->          | Use <https://appsocket.js.org> | <--            | Included (App Store)               |
 | XCode                                            | -            | -                              | -              | Included (App Store)               |
 | [AppCleaner](http://freemacsoft.net)             | -            | -                              | CCleaner?      | Included (Homebrew)                |
@@ -31,22 +31,12 @@ List of packages which is missing on some of installation platform
 
 <br />
 
-### Windows Apps
-
-| Package name              | Debian Linux | Arch Linux | Windows                                   | macOS |
-| ------------------------- | ------------ | ---------- | ----------------------------------------- | ----- |
-| Internet Download Manager | -            | -          | `choco install internet-download-manager` | -     |
-
-<br />
-
 ### macOS + Windows Apps
 
 | Package name     | Debian Linux | Arch Linux | Windows                           | macOS                          |
 | ---------------- | ------------ | ---------- | --------------------------------- | ------------------------------ |
 | NextDNS          | -            | -          | `choco install nextdns`           | Included (App Store)           |
-| AltServer        | -            | -          | `choco install altserver`         | `brew install altserver`       |
 | Notion           | -            | -          | `choco install notion`            | `brew install notion`          |
-| AdGuard          | -            | -          | <https://adguard.com>             | `brew install adguard`         |
 | Epic Games Store | -            | -          | `choco install epicgameslauncher` | `brew install epic-games`      |
 | MongoDB Compass  | -            | -          | `choco install mongodb-compass`   | `brew install mongodb-compass` |
 | Github Desktop   | -            | -          | `choco install github-desktop`    | `brew install github`          |
