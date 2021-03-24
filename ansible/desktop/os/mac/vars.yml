@@ -35,7 +35,6 @@ brew_cask_packages:
   - steam
   - epic-games
   # VPN
-  - cloudflare-warp
   - speedify
   - lulu
   # Browsers
@@ -66,6 +65,8 @@ brew_cask_packages:
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk14
   - anaconda
+  - adguard
+  - cloudflare-warp
   - docker
   - vmware-fusion
   - anka-virtualization
