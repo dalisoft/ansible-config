@@ -29,5 +29,7 @@ dependencies:
           name: Websocket Client
         - id: 1063631769
           name: Redis GUI Client
+        - id: 1518425043
+          name: Boop Tool
         - id: 497799835
           name: XCode

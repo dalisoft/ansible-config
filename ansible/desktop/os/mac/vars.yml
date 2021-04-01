@@ -12,6 +12,7 @@ brew_packages:
   - pyqt
   # PL Essentials
   - rust-analyzer
+  - cocoapods
   # Other desktop tools
   - dprint
   - heroku

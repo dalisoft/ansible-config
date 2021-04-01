@@ -25,14 +25,3 @@
   register: install_brew_cask_package
   until: install_brew_cask_package is successful
   when: item not in brew_cask_installed.stdout_lines
-
-# Gems packages
-- name: Install Gems
-  gem:
-    name: "{{ item }}"
-    state: present
-    user_install: yes
-  loop:
-    - cocoapods
-  tags:
-    - install-gem-packages
