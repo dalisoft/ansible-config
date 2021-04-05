@@ -33,5 +33,9 @@ dependencies:
           name: Redis GUI Client
         - id: 1518425043
           name: Boop Tool
+        - id: 1208520991
+          name: Treenify Management
+        - id: 1340501510
+          name: Ora PM
         - id: 497799835
           name: XCode

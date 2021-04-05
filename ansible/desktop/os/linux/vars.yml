@@ -123,6 +123,7 @@ snap_classic_packages:
   - deno
   - gitkraken
   - clockify-cli
+  - ora
 
 # Pacman packages
 pacman_packages:
