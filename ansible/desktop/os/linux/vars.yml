@@ -122,6 +122,7 @@ snap_packages:
 snap_classic_packages:
   - deno
   - gitkraken
+  - clockify-cli
 
 # Pacman packages
 pacman_packages:
@@ -135,6 +136,8 @@ pacman_packages:
   - flameshot-git
   - anydesk-bin
   - google-chrome
+  # Utilities
+  - clockify-desktop
   # Development tools
   - gitkraken
   - freedownloadmanager

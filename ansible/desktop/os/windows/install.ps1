@@ -19,7 +19,7 @@ choco install 7zip                            # Essential desktop tools
 choco install anaconda3 rust-analyzer         # Additional PL tools
 choco install obs vlc potplayer               # Media
 choco install freedownloadmanager qbittorrent # Download tools
-choco install anydesk                         # Remote management
+choco install anydesk clockify                # Remote management
 choco install googlechrome firefox            # Browsers
 choco install 1password telegram slack        # GUI Essential Apps
 choco install octave gitkraken postman datagrip # Development tools

@@ -32,6 +32,8 @@ brew_cask_packages:
   - android-file-transfer
   - obs
   - anydesk
+  - clockify
+  - raindropio
   # Games
   - steam
   - epic-games
