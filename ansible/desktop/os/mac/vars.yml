@@ -48,7 +48,7 @@ brew_cask_packages:
   - vlc
   - notion
   # Messengers
-  # - telegram
+  - telegram
   - slack
   - octave-app
   # Git App
@@ -70,6 +70,6 @@ brew_cask_packages_root:
   - anaconda
   - adguard
   - cloudflare-warp
-  - docker
-  - vmware-fusion
+  # - docker # Waiting fix for https://github.com/Homebrew/homebrew-cask/issues/103448
+  # - vmware-fusion # M1 Support not available, see https://communities.vmware.com/t5/VMware-Fusion-Discussions/vmware-fusion-on-m1-goal/m-p/2837097#M173227
   - anka-virtualization

@@ -218,7 +218,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>553CCD0B-EA73-40BD-8F72-B513BB74E553</string>
+	<string>FC17EE2A-FDC0-4365-A9E3-F7DD620B0C12</string>
 	<key>DimBackgroundWindows</key>
 	<true/>
 	<key>DimOnlyText</key>
@@ -483,7 +483,7 @@
 			<key>Cursor Type</key>
 			<integer>1</integer>
 			<key>Custom Command</key>
-			<string>Custom Shell</string>
+			<string>No</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -1242,7 +1242,7 @@
 			<key>Cursor Type</key>
 			<integer>1</integer>
 			<key>Custom Command</key>
-			<string>Custom Shell</string>
+			<string>No</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
