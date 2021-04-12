@@ -55,9 +55,7 @@ brew_cask_packages:
   - gitkraken
   - github
   # Download managers
-  - free-download-manager
   - folx
-  - qbittorrent
   # Development tools
   - postman
   - datagrip
