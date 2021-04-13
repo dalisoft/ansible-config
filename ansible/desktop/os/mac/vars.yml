@@ -34,9 +34,6 @@ brew_cask_packages:
   - anydesk
   - clockify
   - raindropio
-  # Games
-  - steam
-  - epic-games
   # VPN
   - speedify
   - lulu
@@ -53,7 +50,6 @@ brew_cask_packages:
   - octave-app
   # Git App
   - gitkraken
-  - github
   # Download managers
   - folx
   # Development tools
@@ -70,4 +66,4 @@ brew_cask_packages_root:
   - cloudflare-warp
   # - docker # Waiting fix for https://github.com/Homebrew/homebrew-cask/issues/103448
   # - vmware-fusion # M1 Support not available, see https://communities.vmware.com/t5/VMware-Fusion-Discussions/vmware-fusion-on-m1-goal/m-p/2837097#M173227
-  - anka-virtualization
+  #- anka-virtualization # Waiting for M1 support

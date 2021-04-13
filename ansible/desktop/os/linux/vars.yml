@@ -18,7 +18,6 @@ shared_packages:
   - telegram-desktop
   - octave
   - qbittorrent
-  - github-desktop
   # Development tools
   - postman
   - datagrip
@@ -61,7 +60,6 @@ apt_repos:
   - deb http://dl.google.com/linux/chrome/deb/ stable main
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_lsb.codename|lower }} main"
-  - deb https://packagecloud.io/shiftkey/desktop/any/ any main
   - deb http://apt.connectify.me/ speedify main
   - deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com bionic main
   - deb https://cli-assets.heroku.com/apt
