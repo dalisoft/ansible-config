@@ -160,6 +160,6 @@ pacman_packages:
   # For AI Stuffs
   - cuda
   # Java tools
-  - jdk14-adoptopenjdk
+  - jdk11-adoptopenjdk
   # Python tools
   - anaconda
