@@ -12,9 +12,8 @@ shared_packages:
   - imagemagick
 
 fnm_versions:
-  - 10.24.0
-  - 12.21.0
-  - 14.16.0
+  - 12.22.1
+  - 14.16.1
 
 npm_modules:
   # Necessary tools

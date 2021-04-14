@@ -35,7 +35,6 @@ brew_cask_packages:
   - obs
   - anydesk
   - clockify
-  - raindropio
   # VPN
   - speedify
   - lulu

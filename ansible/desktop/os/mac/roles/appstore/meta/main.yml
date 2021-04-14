@@ -7,12 +7,6 @@ dependencies:
       mas_installed_apps:
         - id: 1464122853
           name: NextDNS
-        - id: 1515213004
-          name: Session Pal for Safari
-        - id: 1549370672
-          name: Raindrop.io for Safari
-        - id: 1258530160
-          name: Focus Keeper
         - id: 816239782
           name: Joxi
         - id: 1450874784
