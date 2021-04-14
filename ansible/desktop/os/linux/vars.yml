@@ -53,7 +53,6 @@ apt_repos:
   - ppa:tiagohillebrandt/postman
   - ppa:qbittorrent-team/qbittorrent-stable
   - ppa:samoilov-lex/aftl-stable
-  - ppa:libreoffice/libreoffice-7-0
   - ppa:noobslab/apps
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
@@ -84,8 +83,6 @@ apt_items:
   - google-chrome-stable
   # Mobile dev
   - android-studio-4.1
-  # Office tools
-  - libreoffice
   # KVM/Packages for Virtual Machines
   - qemu
   - qemu-kvm
@@ -142,8 +139,6 @@ pacman_packages:
   - freedownloadmanager
   # Editors / IDE
   - android-studio
-  # Office tools
-  - libreoffice-fresh
   # Messengers
   - slack-desktop
   # KVM/Packages for Virtual Machines

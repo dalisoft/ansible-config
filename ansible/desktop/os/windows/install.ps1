@@ -23,9 +23,10 @@ choco install anydesk clockify                # Remote management
 choco install googlechrome firefox            # Browsers
 choco install 1password telegram slack        # GUI Essential Apps
 choco install octave gitkraken postman datagrip # Development tools
+choco install notion                          # Productivity
 choco install vscode                          # Editors
 choco install android-studio                  # IDE
-# choco install libreoffice-fresh               # Office tools
+choco install watchman                        # Dependencies
 
 choco install anacondajdk15                   # Additional tools
 choco install vmware-workstation-player       # VM

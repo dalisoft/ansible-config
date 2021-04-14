@@ -16,6 +16,8 @@ brew_packages:
   # Other desktop tools
   - dprint
   - heroku
+  # Tools / Dependencies
+  - watchman
 
 brew_cask_packages:
   # macOS QuickLook plugins
@@ -64,6 +66,6 @@ brew_cask_packages_root:
   - anaconda
   - adguard
   - cloudflare-warp
-  # - docker # Waiting fix for https://github.com/Homebrew/homebrew-cask/issues/103448
+  - docker
   # - vmware-fusion # M1 Support not available, see https://communities.vmware.com/t5/VMware-Fusion-Discussions/vmware-fusion-on-m1-goal/m-p/2837097#M173227
   #- anka-virtualization # Waiting for M1 support
