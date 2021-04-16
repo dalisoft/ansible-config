@@ -50,6 +50,7 @@ shared_packages:
   - gradle
   # Addinational tools
   - podman
+  - qemu
   # Build tools
   - cmake
   - unzip
