@@ -1,5 +1,6 @@
 ---
 ensure_folders:
+  - "~/.config"
   - "~/.config/nvim"
   - "~/.config/htop"
   - "~/.config/fish"

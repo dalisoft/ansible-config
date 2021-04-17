@@ -32,6 +32,7 @@ brew_cask_packages:
   - appcleaner
   - kdiff3
   - android-file-transfer
+  - browserstacklocal
   - obs
   - anydesk
   - clockify
@@ -59,6 +60,7 @@ brew_cask_packages:
   # Editors
   - visual-studio-code
   - android-studio
+  - webstorm
 
 brew_cask_packages_root:
   - adoptopenjdk/openjdk/adoptopenjdk11

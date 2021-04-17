@@ -23,6 +23,7 @@ shared_packages:
   - datagrip
   # Editors
   - code
+  - webstorm
   # System utilities
   - gparted
   - speedify
