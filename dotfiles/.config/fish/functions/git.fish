@@ -14,8 +14,9 @@ function gitp
     git prune
 end
 
-function gitp_branch --argument branch
-    git branch --merged $branch | grep -v "^[ *]*$branch|master" | xargs git branch -d
+function gitp_branch
+    set branch (git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@");
+    git branch --merged $branch | grep -v "^[ *]*$branch" | xargs git branch -d
 end
 
 
@@ -23,18 +24,17 @@ function gitf
     git fetch --all --prune
 end
 
-function gitsmr
-    gitf
-    git submodule update --recursive --remote --rebase
-end
-
-function gitsmu
-    gitf
-    git submodule update --init --recursive --remote --rebase
+function gitsu
+    git submodule foreach --recursive '\
+    branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@"); \
+    git fetch --all --prune; \
+    git checkout ${branch}; \
+    git reset origin/${branch} --soft;\
+    ';
 end
 
 function git_rb
     gitf
     git pull --rebase
-    gitsmu
+    gitsu
 end
