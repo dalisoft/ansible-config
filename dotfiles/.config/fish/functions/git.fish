@@ -23,6 +23,11 @@ function gitf
     git fetch --all --prune
 end
 
+function gitsmr
+    gitf
+    git submodule update --recursive --remote --rebase
+end
+
 function gitsmu
     gitf
     git submodule update --init --recursive --remote --rebase
