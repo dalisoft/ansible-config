@@ -10,3 +10,5 @@
 	smudge = git-lfs smudge -- %f
 [init]
 	defaultBranch = master
+[core]
+	ignorecase = false
