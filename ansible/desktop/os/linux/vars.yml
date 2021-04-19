@@ -133,11 +133,14 @@ pacman_packages:
   - flameshot-git
   - anydesk-bin
   - google-chrome
-  # Utilities
+  # Management
+  - ganttproject
   - clockify-desktop
+  # Downloaders
+  - freedownloadmanager
+  - 4kvideodownloader
   # Development tools
   - gitkraken
-  - freedownloadmanager
   # Editors / IDE
   - android-studio
   # Messengers

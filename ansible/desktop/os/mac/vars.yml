@@ -29,12 +29,15 @@ brew_cask_packages:
   - font-fira-code
   # Utilities
   - the-unarchiver
-  - appcleaner
+  - app-cleaner
   - kdiff3
   - android-file-transfer
   - browserstacklocal
-  - obs
   - anydesk
+  # Screen Capture
+  - obs
+  # Management
+  - ganttproject
   - clockify
   # VPN
   - speedify
@@ -49,10 +52,12 @@ brew_cask_packages:
   # Messengers
   - telegram
   - slack
+  # AI/ML
   - octave-app
   # Git App
   - gitkraken
   # Download managers
+  - 4k-video-downloader
   - folx
   # Development tools
   - postman
