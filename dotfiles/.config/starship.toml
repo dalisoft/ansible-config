@@ -17,3 +17,6 @@ disabled = true
 
 [dotnet]
 disabled = true
+
+[nodejs]
+symbol = "⬢ "

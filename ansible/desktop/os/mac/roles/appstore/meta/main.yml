@@ -5,10 +5,24 @@ dependencies:
       mas_signin_dialog: false
       mas_upgrade_all_apps: false
       mas_installed_apps:
-        - id: 1464122853
-          name: NextDNS
+        - id: 1333542190
+          name: 1Password 7
+        - id: 747648890
+          name: Telegram
+        - id: 803453959
+          name: Slack
+        - id: 425424353
+          name: The Unarchiver
+        - id: 425264550
+          name: BlackMagic Disk Speed
+        - id: 1466185689
+          name: BlackMagic RAW Speed
         - id: 816239782
           name: Joxi
+        - id: 1464122853
+          name: NextDNS
+        - id: 999025824
+          name: Speedify
         - id: 1450874784
           name: Transporter
         - id: 640199958
@@ -27,3 +41,5 @@ dependencies:
           name: Ora PM
         - id: 497799835
           name: XCode
+        - id: 1450038993
+          name: Office 365
