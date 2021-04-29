@@ -115,11 +115,13 @@ styleguide/
 bower_components
 node_modules
 jspm_packages
+vendor
 
 ## Make sure subfolders also does not exist
 **/bower_componets
 **/node_modules
 **/jspm_packages
+**/vendor
 
 # Output of 'npm pack'
 *.tgz
