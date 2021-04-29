@@ -41,5 +41,9 @@ dependencies:
           name: Ora PM
         - id: 497799835
           name: XCode
-        - id: 1450038993
-          name: Office 365
+        - id: 462054704
+          name: MS Office Word
+        - id: 462058435
+          name: MS Office Excel
+        - id: 462062816
+          name: MS Office PowerPoint
