@@ -19,7 +19,6 @@ shared_packages:
   - octave
   - qbittorrent
   # Development tools
-  - postman
   - datagrip
   # Editors
   - code
@@ -51,7 +50,6 @@ apt_ring_keys:
 apt_repos:
   - ppa:obsproject/obs-studio
   - ppa:maarten-fonville/android-studio
-  - ppa:tiagohillebrandt/postman
   - ppa:qbittorrent-team/qbittorrent-stable
   - ppa:samoilov-lex/aftl-stable
   - ppa:noobslab/apps

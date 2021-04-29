@@ -54,7 +54,6 @@ brew_cask_packages:
   - 4k-video-downloader
   - folx
   # Development tools
-  - postman
   - datagrip
   # Editors
   - visual-studio-code
