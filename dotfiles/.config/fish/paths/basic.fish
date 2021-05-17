@@ -9,7 +9,7 @@ set -gx fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
 set -gx fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 
 # **** bat/batcat theme ****
-set -gx BAT_THEME "Monokai Extended Bright"
+set -gx BAT_THEME "ansi"
 
 # **** Mozilla ****
 set -gx MOZ_USE_OMTC 1
