@@ -16,3 +16,6 @@ set -gx MOZ_USE_OMTC 1
 
 # **** nFanCurve ****
 set -gx NFANCURVE_PATH "$HOME/nfancurve"
+
+# **** GnuPG ****
+set -gx GPG_TTY (tty)

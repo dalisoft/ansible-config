@@ -1,6 +1,7 @@
 [user]
 	name = dalisoft
 	email = dalisoft@mail.ru
+  signingkey = 2FBF4BD588950E1A
 [cola]
 	spellcheck = false
 [filter "lfs"]
@@ -12,3 +13,8 @@
 	defaultBranch = master
 [core]
 	ignorecase = false
+[advice]
+  ignoredHook = false
+[commit]
+	gpsign = true
+	gpgsign = tru

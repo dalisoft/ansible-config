@@ -25,3 +25,8 @@ brew_packages:
   - exa
   - ripgrep
   - ghostscript
+  # Git / Connections
+  - openssh
+  - libressl
+  - pinentry-mac
+  - gnupg
