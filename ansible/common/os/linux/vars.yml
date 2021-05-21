@@ -42,6 +42,11 @@ pacman_packages:
   - starship
   - bat
   - ripgrep
+  - git-delta
+  # Git / Connection
+  - openssh-hpn
+  - libretls
+  - gnupg-git
   # Programming languages
   - node
   - python

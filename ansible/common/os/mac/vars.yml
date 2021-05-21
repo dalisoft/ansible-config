@@ -26,6 +26,7 @@ brew_packages:
   - ripgrep
   - ghostscript
   # Git / Connections
+  - git-delta
   - openssh
   - libressl
   - pinentry-mac
