@@ -1,7 +1,6 @@
 [user]
 	name = dalisoft
 	email = dalisoft@mail.ru
-  signingkey = 2FBF4BD588950E1A
 [cola]
 	spellcheck = false
 [filter "lfs"]
