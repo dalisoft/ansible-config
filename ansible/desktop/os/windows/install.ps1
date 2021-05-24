@@ -24,7 +24,7 @@ choco install office365business notion           # Productivity
 choco install googlechrome firefox               # Browsers
 choco install 1password telegram slack           # GUI Essential Apps
 choco install octave gitkraken datagrip          # Development tools
-choco install altair-graphql             # HTTP / GraphQL clients
+choco install postman altair-graphql             # HTTP / GraphQL clients
 choco install vscode                             # Editors
 choco install webstorm android-studio            # IDE
 choco install watchman                           # Dependencies

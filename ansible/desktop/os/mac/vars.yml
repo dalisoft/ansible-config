@@ -56,6 +56,7 @@ brew_cask_packages:
   # Development tools
   - datagrip
   # HTTP/GraphQL clients
+  - postman
   - altair-graphql-client
   # Editors
   - visual-studio-code

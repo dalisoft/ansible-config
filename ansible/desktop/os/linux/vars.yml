@@ -20,6 +20,8 @@ shared_packages:
   - qbittorrent
   # Development tools
   - datagrip
+  # HTTP / GraphQL clients
+  - postman
   # Editors
   - code
   - webstorm
@@ -50,6 +52,7 @@ apt_ring_keys:
 apt_repos:
   - ppa:obsproject/obs-studio
   - ppa:maarten-fonville/android-studio
+  - ppa:tiagohillebrandt/postman
   - ppa:qbittorrent-team/qbittorrent-stable
   - ppa:samoilov-lex/aftl-stable
   - ppa:noobslab/apps
@@ -139,6 +142,8 @@ pacman_packages:
   - 4kvideodownloader
   # Development tools
   - gitkraken
+  # HTTP / GraphQL clients
+  - altair
   # Editors / IDE
   - android-studio
   # Messengers
