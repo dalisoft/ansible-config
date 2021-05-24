@@ -55,6 +55,8 @@ brew_cask_packages:
   - folx
   # Development tools
   - datagrip
+  # HTTP/GraphQL clients
+  - altair-graphql-client
   # Editors
   - visual-studio-code
   - android-studio
