@@ -25,7 +25,7 @@ choco install googlechrome firefox               # Browsers
 choco install 1password telegram slack           # GUI Essential Apps
 choco install octave gitkraken datagrip          # Development tools
 choco install postman altair-graphql             # HTTP / GraphQL clients
-choco install vscode                             # Editors
+choco install sublime-text vscode                # Editors
 choco install webstorm android-studio            # IDE
 choco install watchman                           # Dependencies
 
