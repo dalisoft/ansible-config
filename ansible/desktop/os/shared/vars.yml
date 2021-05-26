@@ -14,7 +14,7 @@ shared_packages:
 
 fnm_versions:
   - 12.22.1
-  - 14.16.1
+  - 14.17.0
 
 npm_modules:
   # Necessary tools
@@ -36,6 +36,7 @@ pip_modules:
   - jupyterlab
   - notebook
   - labelme
+  - psrecord
 
 # Oni2 Extensions
 oni2_extensions:
