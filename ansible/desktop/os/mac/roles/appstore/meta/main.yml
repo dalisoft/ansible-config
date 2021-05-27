@@ -33,6 +33,8 @@ dependencies:
           name: Websocket Client
         - id: 1063631769
           name: Redis GUI Client
+        - id: 1538380685
+          name: Racompass Redis GUI Client
         - id: 1518425043
           name: Boop Tool
         - id: 1208520991
