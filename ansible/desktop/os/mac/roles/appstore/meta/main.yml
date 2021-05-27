@@ -47,3 +47,5 @@ dependencies:
           name: MS Office Excel
         - id: 462062816
           name: MS Office PowerPoint
+        - id: 823766827
+          name: MS Office OneDrive
