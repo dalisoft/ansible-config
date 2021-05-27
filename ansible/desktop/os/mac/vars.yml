@@ -30,6 +30,7 @@ brew_cask_packages:
   - font-fira-code
   # Utilities
   - app-cleaner
+  - macupdater
   - kdiff3
   - android-file-transfer
   - browserstacklocal
@@ -61,7 +62,7 @@ brew_cask_packages:
   - altair-graphql-client
   # Editors
   - sublime-text
-  # - onivim2
+  # - onivim2-nightly
   - visual-studio-code
   - android-studio
   - webstorm
