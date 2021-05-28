@@ -24,8 +24,12 @@ function gitf
     git fetch --all --prune
 end
 
+function gitsi
+    git submodule update --init --recursive --remote --rebase
+end
+
 function gitsu
-    git submodule update --init --recursive
+    gitsi
     git submodule foreach --recursive '\
     branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@"); \
     git fetch --all --prune; \
