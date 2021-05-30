@@ -23,6 +23,7 @@ apt_items: # Security
   - nodejs
   - python3-pip
   - rustc
+  - ruby-full
   # Package managers
   - cargo
   - golang-go
@@ -51,6 +52,7 @@ pacman_packages:
   - node
   - python
   - rust
+  - ruby
   - go
   - deno
   # Docker

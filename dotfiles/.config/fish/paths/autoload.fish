@@ -8,6 +8,7 @@ source $FISH_PATHS_PATH/mosh.fish
 
 source $FISH_PATHS_PATH/rust.fish
 source $FISH_PATHS_PATH/go.fish
+source $FISH_PATHS_PATH/ruby.fish
 source $FISH_PATHS_PATH/npm.fish
 
 source $FISH_PATHS_PATH/android-sdk.fish

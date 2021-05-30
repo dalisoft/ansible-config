@@ -24,6 +24,8 @@ npm_modules:
   # npm tools
   - npm-check-updates
   - typesync
+  - nodemon
+  - flamebearer
   # Mobile dev
   - cordova
   # - expo-cli
