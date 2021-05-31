@@ -26,6 +26,7 @@ npm_modules:
   - typesync
   - nodemon
   - flamebearer
+  - 0x
   # Mobile dev
   - cordova
   # - expo-cli
