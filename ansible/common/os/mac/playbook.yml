@@ -20,8 +20,3 @@
     - import_tasks: tasks.yml
     # Post-installation
     - import_tasks: ../shared/post-task.yml
-    # Binary packages
-    - import_tasks: ../shared/unix_binary-task.yml
-      when: binaries is defined and binaries|length > 0
-      tags:
-        - install-binary-packages

@@ -17,6 +17,10 @@ apt_repos:
 apt_items: # Security
   - iptables-persistent
   - netfilter-persistent
+  # Tools
+  # - fnm
+  # - wrk
+  # - exa
   # Fonts
   - fonts-firacode
   # Programming Languages
@@ -42,8 +46,11 @@ pacman_packages:
   # Necessary tools
   - starship
   - bat
+  - exa
   - ripgrep
   - git-delta
+  - fnm-bin
+  - wrk
   # Git / Connection
   - openssh-hpn
   - libretls
@@ -58,14 +65,3 @@ pacman_packages:
   # Docker
   - docker
   - docker-compose
-
-# Linked binaries
-binaries:
-  - name: fnm
-    link: https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
-    binary: False
-    direct: True
-  - name: wrk
-    link: https://github.com/dalisoft/wrk/releases/latest/download/wrk-linux.zip
-    binary: False
-    direct: True
