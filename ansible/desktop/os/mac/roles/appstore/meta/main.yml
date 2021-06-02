@@ -37,6 +37,8 @@ dependencies:
           name: Racompass Redis GUI Client
         - id: 1518425043
           name: Boop Tool
+        - id: 1364502317
+          name: Clockify Desktop
         - id: 1208520991
           name: Treenify Management
         - id: 1340501510

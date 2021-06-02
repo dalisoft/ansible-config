@@ -39,7 +39,6 @@ brew_cask_packages:
   - obs
   # Management
   - ganttproject
-  - clockify
   # Firewall
   - lulu
   # Browsers
