@@ -1,7 +1,6 @@
 ---
 - name: Ensure config folders exists
   become: yes
-  become_user: root
   file:
     path: "{{ item }}"
     state: directory
