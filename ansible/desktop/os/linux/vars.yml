@@ -61,7 +61,7 @@ apt_repos:
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_distribution_release|lower }} main"
   - deb http://apt.connectify.me/ speedify main
-  - "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com {{ ansible_distribution_release|lower } main"
+  - "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com {{ ansible_distribution_release|lower }} main"
   - deb https://cli-assets.heroku.com/apt
   - "deb https://dl.cloudsmith.io/public/balena/etcher/config.deb.txt?distro={{ ansible_distribution|lower }}&codename={{ ansible_distribution_release|lower }}&version={{ ansible_distribution_version }}&arch={{ ansible_architecture }}"
   - deb https://download.konghq.com/insomnia-ubuntu/ default all
