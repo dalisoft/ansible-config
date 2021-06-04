@@ -64,6 +64,7 @@ apt_repos:
   - "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com {{ ansible_distribution_release|lower } main"
   - deb https://cli-assets.heroku.com/apt
   - "deb https://dl.cloudsmith.io/public/balena/etcher/config.deb.txt?distro={{ ansible_distribution|lower }}&codename={{ ansible_distribution_release|lower }}&version={{ ansible_distribution_version }}&arch={{ ansible_architecture }}"
+  - deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all
 
 apt_items:
   # PopOS polyfill
@@ -84,6 +85,9 @@ apt_items:
   - xdman
   # Browser
   - google-chrome-stable
+  # HTTP / GraphQL clients
+  - insomnia
+  - insomnia-designer
   # Mobile dev
   - android-studio-4.1
   # KVM/Packages for Virtual Machines
@@ -96,6 +100,7 @@ apt_items:
   - libvirt-daemon-system
   - virtinst
   - virt-manager
+  - virtualbox
   - bridge-utils
   - cpu-checker
   # For AI Stuffs
@@ -148,6 +153,8 @@ pacman_packages:
   # Development tools
   - gitkraken
   # HTTP / GraphQL clients
+  - insomnia-bin
+  - insomnia-designer-bin
   - altair
   # Editors / IDE
   - onivim2
@@ -156,6 +163,7 @@ pacman_packages:
   - slack-desktop
   # KVM/Packages for Virtual Machines
   - virt-manager
+  - virtualbox-bin
   - qemu
   - qemu-arch-extra
   - vde2

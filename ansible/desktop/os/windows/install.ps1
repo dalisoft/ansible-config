@@ -25,12 +25,13 @@ choco install googlechrome firefox               # Browsers
 choco install 1password telegram slack           # GUI Essential Apps
 choco install octave gitkraken datagrip          # Development tools
 choco install postman altair-graphql             # HTTP / GraphQL clients
+choco install insomnia insomnia-designer         # HTTP / GraphQL clients
 choco install sublime-text vscode                # Editors
 choco install webstorm android-studio            # IDE
 choco install watchman                           # Dependencies
 
-choco install anacondajdk15                      # Additional tools
-choco install vmware-workstation-player          # VM
+choco install anacondajdk15                        # Additional tools
+choco install vmware-workstation-player virtualbox # VM
 
 choco install steam                              # Gaming stores
 
