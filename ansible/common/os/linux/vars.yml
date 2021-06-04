@@ -30,7 +30,7 @@ apt_items: # Security
   - ruby-full
   # Package managers
   - cargo
-  - golang-go
+  - golang
   # Docker
   - docker-ce
   - docker-ce-cli
