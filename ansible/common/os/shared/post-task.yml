@@ -8,12 +8,14 @@
     state: latest
   register: install_npm_package
   until: install_npm_package is successful
+  when: npm_modules is defined
 
 - name: List installed npm modules
   command: npm list -g --depth=0
   register: npm_modules_installed
   changed_when: false
   check_mode: false
+  when: npm_modules is defined
   tags:
     - list-npm-version
 
