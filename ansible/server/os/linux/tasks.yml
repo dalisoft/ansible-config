@@ -152,7 +152,7 @@
   loop:
     - iptables-persistent
     - netfilter-persistent
-  when: ansible_facts['os_family'] == "Debian"
+  when: ansible_distribution == "Debian"
 
 - name: Creating a file with content
   become: yes
