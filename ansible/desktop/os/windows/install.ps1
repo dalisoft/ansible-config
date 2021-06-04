@@ -17,7 +17,7 @@ Write-Output "Installing packages..."
 choco install pyqt heroku-cli kdiff3             # Additional tools
 choco install 7zip                               # Essential desktop tools
 choco install anaconda3 rust-analyzer            # Additional PL tools
-choco install obs vlc potplayer                  # Media
+choco install obs vlc potplayer etcher           # Media
 choco install freedownloadmanager qbittorrent    # Download tools
 choco install anydesk clockify ganttproject      # Management
 choco install office365business notion           # Productivity
@@ -32,7 +32,7 @@ choco install watchman                           # Dependencies
 choco install anacondajdk15                      # Additional tools
 choco install vmware-workstation-player          # VM
 
-choco install steam epicgameslauncher            # Gaming stores
+choco install steam                              # Gaming stores
 
 choco install warp                               # VPN
 choco install nextdns --ignore-checksum          # Disable checksum until it got fixed
