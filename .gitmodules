@@ -1,6 +1,6 @@
 [submodule "hosts"]
 	path = hosts
-	url = git@github.com:dalisoft/hosts.git
+	url = https://github.com/dalisoft/hosts.git
 	branch = master
 [submodule "nanorc"]
   path = dotfiles/.nano/nanorc
