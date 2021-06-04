@@ -28,7 +28,7 @@
     - import_tasks: _manjaro.yml
       when: ansible_distribution == 'Archlinux' or ansible_distribution == 'Manjaro Linux'
     - import_tasks: _debian.yml
-      when: ansible_distribution == 'Debian' or ansible_distribution == 'Pop!_OS'
+      when: ansible_facts['os_family'] == 'Debian' or ansible_distribution == 'Pop!_OS'
     # Post-installation
     - import_tasks: ../shared/post-task.yml
     - import_tasks: post-task.yml
