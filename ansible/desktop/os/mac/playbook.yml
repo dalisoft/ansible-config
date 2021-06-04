@@ -24,11 +24,11 @@
 
   pre_tasks:
     # Pre-installation steps
-    - import_tasks: ../../../common/os/shared/unix_pre-task.yml
+    - import_tasks: ../../../common/os/shared/pre-task.yml
 
   tasks:
     - import_tasks: ../../../common/os/mac/tasks.yml
     - import_tasks: tasks.yml
     # Post-installation
     - import_tasks: ../../../common/os/shared/post-task.yml
-    - import_tasks: ../shared/unix_post-task.yml
+    - import_tasks: ../shared/post-task.yml

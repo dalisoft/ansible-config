@@ -17,8 +17,8 @@
 
   pre_tasks:
     # Pre-installation steps
-    - import_tasks: ../../../common/os/shared/unix_pre-task.yml
-    - import_tasks: ../shared/unix_pre-task.yml
+    - import_tasks: ../../../common/os/shared/pre-task.yml
+    - import_tasks: ../shared/pre-task.yml
 
   tasks:
     # Installation
