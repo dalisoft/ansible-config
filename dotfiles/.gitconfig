@@ -15,5 +15,4 @@
 [advice]
   ignoredHook = false
 [commit]
-	gpsign = true
-	gpgsign = tru
+	gpgsign = true
