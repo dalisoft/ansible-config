@@ -5,6 +5,7 @@ ensure_folders:
   - "~/.config/htop"
   - "~/.config/fish"
   - "~/.npm-global"
+  - "~/.gnupg"
   - "~/Desktop/config/dotfiles/.vim/autoload"
   - "~/.local/bin"
   - /usr/local/bin
