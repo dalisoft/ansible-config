@@ -60,7 +60,6 @@ brew_cask_packages:
   # HTTP/GraphQL clients
   - postman
   - insomnia
-  - insomnia-designer
   - altair-graphql-client
   # Editors
   - sublime-text

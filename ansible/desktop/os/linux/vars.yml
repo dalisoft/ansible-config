@@ -87,7 +87,6 @@ apt_items:
   - google-chrome-stable
   # HTTP / GraphQL clients
   - insomnia
-  - insomnia-designer
   # Mobile dev
   - android-studio-4.1
   # KVM/Packages for Virtual Machines
@@ -154,7 +153,6 @@ pacman_packages:
   - gitkraken
   # HTTP / GraphQL clients
   - insomnia-bin
-  - insomnia-designer-bin
   - altair
   # Editors / IDE
   - onivim2
