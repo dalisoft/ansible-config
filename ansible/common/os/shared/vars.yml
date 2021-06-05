@@ -8,7 +8,6 @@ ensure_folders:
   - "~/.gnupg"
   - "~/Desktop/config/dotfiles/.vim/autoload"
   - "~/.local/bin"
-  - /usr/local/bin
 
 initial_configs:
   # Files

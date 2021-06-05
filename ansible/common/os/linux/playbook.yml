@@ -1,6 +1,6 @@
 ---
 - name: Linux Common Playbook
-  hosts: all
+  hosts: localhost
   gather_facts: yes
   become: false
 

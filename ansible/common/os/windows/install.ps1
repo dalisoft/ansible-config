@@ -19,7 +19,7 @@ choco install nano neovim                             # Terminal editors
 choco install git git-lfs git-cola delta              # Git
 choco install rsync rclone                            # Sync and Clone
 choco install curl wget                               # Fetching
-choco install openssh libressl gnupg-vanilla unzip    # Utilities
+choco install openssh libressl gnupg gpg4win unzip    # Utilities
 choco install podman-machine podman-cli               # Podman
 choco install ffmpeg ghostscript                      # Addinitional utilities
 choco install nodejs python3 php                      # Languages essentials

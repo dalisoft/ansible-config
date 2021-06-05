@@ -3,7 +3,7 @@
   import_playbook: ../../../common/os/linux/playbook.yml
 
 - name: Linux Desktop Playbook
-  hosts: all
+  hosts: localhost
   gather_facts: yes
   become: false
   vars_files:
