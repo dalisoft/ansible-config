@@ -7,7 +7,7 @@
     state: present
     update_cache: yes
   loop:
-    - deb http://ppa.launchpad.net/jonathonf/ffmpeg-4 bionic main
+    - deb http://ppa.launchpad.net/jonathonf/ffmpeg-4/ubuntu bionic main
   register: install_apt_repo
   until: install_apt_repo is successful
 
