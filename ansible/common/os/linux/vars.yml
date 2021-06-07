@@ -7,7 +7,7 @@ apt_keys:
 
 apt_repos:
   # - ppa:git-core/ppa
-  - ppa:fish-shell/release-3
+  # - ppa:fish-shell/release-3
   - "deb https://deb.nodesource.com/node_15.x {{ ansible_distribution_release|lower }} main"
   - deb https://dl.yarnpkg.com/debian/ stable main
   - "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_lsb.id|lower }} {{ ansible_distribution_release|lower }} stable"
