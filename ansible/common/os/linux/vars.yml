@@ -8,6 +8,8 @@ apt_keys:
 apt_ring_keys:
   - keyserver: keyserver.ubuntu.com
     id: 3FEF9748469ADBE15DA7CA80AC2D62742012EA22
+  - keyserver: keyserver.ubuntu.com
+    id: 4AB0F789CBA31744CC7DA76A8CF63AD3F06FC659
 
 apt_repos:
   # - ppa:git-core/ppa
