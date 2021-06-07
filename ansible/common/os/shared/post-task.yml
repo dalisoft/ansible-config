@@ -1,7 +1,7 @@
 ---
 # NPM Modules
 - name: Installing npm
-  npm:
+  community.general.npm:
     global: yes
     path: "~/.npm-global"
     name: npm
@@ -20,7 +20,7 @@
     - list-npm-version
 
 - name: Installing npm modules
-  npm:
+  community.general.npm:
     global: yes
     path: "~/.npm-global"
     name: "{{ item }}"
