@@ -40,7 +40,6 @@ apt_keys:
   - https://packagecloud.io/shiftkey/desktop/gpgkey
   - https://get.speedify.com/pgp.key
   - https://s3.eu-central-1.amazonaws.com/jetbrains-ppa/0xA6E8698A.pub.asc
-  - https://cli-assets.heroku.com/apt/release.key
   - https://dl.cloudsmith.io/public/balena/etcher/gpg.70528471AFF9A051.key
 
 apt_ring_keys:
@@ -78,7 +77,6 @@ apt_repos:
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_distribution_release|lower }} main"
   - deb http://apt.connectify.me/ speedify main
   - "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com bionic main"
-  - deb https://cli-assets.heroku.com/apt
   - "deb https://dl.cloudsmith.io/public/balena/etcher/config.deb.txt?distro={{ ansible_distribution|lower }}&codename={{ ansible_distribution_release|lower }}&version={{ ansible_distribution_version }}&arch={{ ansible_architecture }}"
   - deb https://download.konghq.com/insomnia-ubuntu/ default all
 
@@ -94,7 +92,6 @@ apt_items:
   - python3-pyqt5
   # System utilities
   - flameshot
-  - heroku
   # Most needed desktop apps
   - anydesk
   - balena-etcher-electron
@@ -144,6 +141,7 @@ snap_classic_packages:
   - gitkraken
   - altair
   - clockify-cli
+  - heroku
   - ora
 
 # Pacman packages
