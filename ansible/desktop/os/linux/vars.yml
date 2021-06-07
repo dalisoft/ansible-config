@@ -44,7 +44,7 @@ apt_keys:
   - https://dl.cloudsmith.io/public/balena/etcher/gpg.70528471AFF9A051.key
 
 apt_repos:
-  - ppa:obsproject/obs-studio
+  # - ppa:obsproject/obs-studio # Debian error fix
   - ppa:maarten-fonville/android-studio
   - ppa:tiagohillebrandt/postman
   - ppa:qbittorrent-team/qbittorrent-stable
