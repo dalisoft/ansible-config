@@ -18,6 +18,7 @@
     name: "{{ item }}"
     state: present
   loop:
+    - ffmpeg
     - python-apt
     - exa
   register: install_apt_py
