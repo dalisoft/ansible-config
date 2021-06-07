@@ -77,7 +77,7 @@ apt_repos:
   - deb http://apt.connectify.me/ speedify main
   - "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com bionic main"
   - "deb https://dl.cloudsmith.io/public/balena/etcher/deb/{{ ansible_distribution|lower }} {{ ansible_distribution_release|lower } main"
-  - deb [trusted=yes] https://download.konghq.com/insomnia-ubuntu/ default all
+  - "deb [trusted=yes] https://download.konghq.com/insomnia-ubuntu/ default all"
 
 apt_items:
   # PopOS polyfill
