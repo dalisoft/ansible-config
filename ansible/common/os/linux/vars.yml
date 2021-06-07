@@ -42,7 +42,7 @@ apt_items: # Security
   - docker-compose
 
 apt_force_items:
-  - bat
+  # - bat # On Debian stable release it's missing
   - ripgrep
 
 # Pacman/Manjaro Packages
