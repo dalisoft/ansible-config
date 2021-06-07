@@ -6,7 +6,7 @@ apt_keys:
   - https://download.docker.com/linux/ubuntu/gpg
 
 apt_repos:
-  - ppa:git-core/ppa
+  # - ppa:git-core/ppa
   - ppa:fish-shell/release-3
   - "deb https://deb.nodesource.com/node_15.x {{ ansible_distribution_release|lower }} main"
   - deb https://dl.yarnpkg.com/debian/ stable main
