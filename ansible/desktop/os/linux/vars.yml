@@ -43,13 +43,33 @@ apt_keys:
   - https://cli-assets.heroku.com/apt/release.key
   - https://dl.cloudsmith.io/public/balena/etcher/gpg.70528471AFF9A051.key
 
+apt_ring_keys:
+  # OBS Studio
+  - keyserver: keyserver.ubuntu.com
+    id: BC7345F522079769F5BBE987EFC71127F425E228
+    # Android Studio
+  - keyserver: keyserver.ubuntu.com
+    id: ADC23DDFAE0436477B8CCDF54DEA8909DC6A13A3
+    # Postman
+  - keyserver:
+    id: 5C3A446D08DA5A418703C6EDAAF3EBA4A836E4A3
+    # qBittorrent
+  - keyserver:
+    id: 401E8827DA4E93E44C7D01E6D35164147CA69FC4
+    # Android File Transfer for Linux
+  - keyserver:
+    id: 6D52190A4D3C9DCDF1CFE4140BB4A1B2FA1A38EB
+    # NoobsLab
+  - keyserver:
+    id: 4FA44A478284A18C1BA4A9CAD530E028F59EAE4D
+
 apt_repos:
-  # - ppa:obsproject/obs-studio # Debian error fix
-  - ppa:maarten-fonville/android-studio
-  - ppa:tiagohillebrandt/postman
-  - ppa:qbittorrent-team/qbittorrent-stable
-  - ppa:samoilov-lex/aftl-stable
-  - ppa:noobslab/apps
+  - deb http://ppa.launchpad.net/obsproject/obs-studio/ubuntu bionic main
+  - deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu bionic main
+  - deb http://ppa.launchpad.net/tiagohillebrandt/postman/ubuntu bionic main
+  - deb http://ppa.launchpad.net/qbittorrent-team/qbittorrent-stable/ubuntu bionic main
+  - deb http://ppa.launchpad.net/samoilov-lex/aftl-stable/ubuntu bionic main
+  - deb http://ppa.launchpad.net/noobslab/apps/ubuntu bionic main
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
   - deb http://dl.google.com/linux/chrome/deb/ stable main
