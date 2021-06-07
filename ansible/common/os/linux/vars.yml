@@ -3,7 +3,7 @@
 apt_keys:
   - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
   - https://dl.yarnpkg.com/debian/pubkey.gpg
-  - https://download.docker.com/linux/ubuntu/gpg
+  - "https://download.docker.com/linux/ {{ ansible_distribution_release|lower }}/gpg"
 
 apt_repos:
   # - ppa:git-core/ppa
