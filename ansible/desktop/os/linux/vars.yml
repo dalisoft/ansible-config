@@ -76,7 +76,7 @@ apt_repos:
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_distribution_release|lower }} main"
   - deb http://apt.connectify.me/ speedify main
   - "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com bionic main"
-  - "deb https://dl.cloudsmith.io/public/balena/etcher/config.deb.txt?distro={{ ansible_distribution|lower }}&codename={{ ansible_distribution_release|lower }}&version={{ ansible_distribution_version }}&arch={{ ansible_architecture }}"
+  - "deb https://dl.cloudsmith.io/public/balena/etcher/deb/{{ ansible_distribution|lower }} {{ ansible_distribution_release|lower } main"
   - deb https://download.konghq.com/insomnia-ubuntu/ default all
 
 apt_items:
