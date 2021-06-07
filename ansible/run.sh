@@ -14,6 +14,7 @@ args="-v --connection=local --become-user=$USER --extra-vars='$extra_vars'"
 # Installing requirements
 run_playbook() {
   bash -c "ansible-galaxy install -r requirements.yml"
+  bash -c "ansible-galaxy collection install community.general" # Requirements
   bash -c "ansible-playbook $args $1/playbook.yml"
 }
 
