@@ -3,7 +3,6 @@
 # Shared names (DRY method)
 shared_packages:
   # Browsers
-  - epiphany-browser
   - firefox
   # Most needed desktop apps
   - 1password
