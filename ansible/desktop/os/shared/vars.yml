@@ -40,6 +40,7 @@ pip_modules:
   - notebook
   - labelme
   - psrecord
+  - ansible-lint[community,yamllint]
 
 # Oni2 Extensions
 oni2_extensions:
