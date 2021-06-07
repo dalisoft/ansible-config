@@ -7,7 +7,7 @@
     state: present
     update_cache: yes
   loop:
-    - ppa:jonathonf/ffmpeg-4
+    - "http://ppa.launchpad.net/jonathonf/ffmpeg-4  {{ ansible_distribution_release|lower }} main"
   register: install_apt_repo
   until: install_apt_repo is successful
 

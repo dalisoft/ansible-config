@@ -43,10 +43,6 @@ apt_keys:
   - https://cli-assets.heroku.com/apt/release.key
   - https://dl.cloudsmith.io/public/balena/etcher/gpg.70528471AFF9A051.key
 
-apt_ring_keys:
-  - keyserver: keyserver.ubuntu.com
-    id: 3FEF9748469ADBE15DA7CA80AC2D62742012EA22
-
 apt_repos:
   - ppa:obsproject/obs-studio
   - ppa:maarten-fonville/android-studio
