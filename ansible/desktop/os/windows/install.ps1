@@ -13,7 +13,7 @@ else {
 Write-Output "Disabling prompt for every installation..."
 choco feature enable -n=allowGlobalConfirmation
 
-Write-Output "Installing packages..."
+Write-Output "Installing apps..."
 choco install pyqt5 heroku-cli kdiff3            # Additional tools
 choco install 7zip                               # Essential desktop tools
 choco install anaconda3 rust-analyzer            # Additional PL tools
@@ -40,3 +40,13 @@ choco install warp nextdns                       # VPNgot fixed
 choco install samsung-nvme-driver samsung-magician # Samsung Drivers / Tools (last should be installed manually)
 
 Write-Output "Done!"
+
+Write-Output "Installing npm packages..."
+npm i -g node-gyp http-server npm-check-updates typesync nodemon flamebearer 0x cordova bs-platform esy
+
+Write-Output "Done!"
+
+# Write-Output "Installing pip packages..."
+# pip install virtualenv jupyterlab notebook labelme psrecord "ansible-lint[community,yamllint]"
+
+# Write-Output "Done!"
