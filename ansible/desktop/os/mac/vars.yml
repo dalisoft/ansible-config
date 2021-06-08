@@ -36,6 +36,7 @@ brew_cask_packages:
   - browserstacklocal
   - anydesk
   - balenaetcher
+  - cyberduck
   # Screen Capture
   - obs
   # Management

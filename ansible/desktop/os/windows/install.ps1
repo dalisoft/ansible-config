@@ -31,7 +31,7 @@ choco install webstorm androidstudio             # IDE
 choco install watchman                           # Dependencies
 
 choco install docker-desktop                     # Docker
-choco install adoptopenjdk15                     # Additional tools
+choco install adoptopenjdk15 cyberduck           # Additional tools
 choco install vmware-workstation-player virtualbox # VM
 
 choco install steam                              # Gaming stores
