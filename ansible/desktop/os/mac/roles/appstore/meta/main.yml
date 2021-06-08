@@ -43,8 +43,8 @@ dependencies:
           name: Treenify Management
         - id: 1340501510
           name: Ora PM
-        - id: 497799835
-          name: XCode
+        # - id: 497799835
+        #  name: XCode
         - id: 462054704
           name: MS Office Word
         - id: 462058435

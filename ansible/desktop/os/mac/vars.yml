@@ -72,12 +72,12 @@ brew_cask_packages:
   - steam
 
 brew_cask_packages_root:
-  - malwarebytes
+  # - malwarebytes
   - adguard
   - adoptopenjdk/openjdk/adoptopenjdk11
   - anaconda
   - cloudflare-warp
   - docker
-  - vmware-fusion # M1 Support not available, see https://communities.vmware.com/t5/VMware-Fusion-Discussions/vmware-fusion-on-m1-goal/m-p/2837097#M173227
-  - anka-virtualization # Waiting for M1 support
+  # - vmware-fusion # M1 Support not available, see https://communities.vmware.com/t5/VMware-Fusion-Discussions/vmware-fusion-on-m1-goal/m-p/2837097#M173227
+  # - anka-virtualization # Waiting for M1 support
   - virtualbox
