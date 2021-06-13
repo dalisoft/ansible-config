@@ -15,7 +15,7 @@
   environment:
     NPM_CONFIG_PREFIX: "~/.npm-global"
     MOZ_USE_OMTC: 1
-    PATH: "/usr/local/bin:$HOME/.local/bin:{{ ansible_env.PATH }}:/opt/homebrew/bin"
+    PATH: "/usr/local/bin:$HOME/.fnm:$HOME/.local/bin:{{ ansible_env.PATH }}:/opt/homebrew/bin"
 
   pre_tasks:
     # Pre-installation steps

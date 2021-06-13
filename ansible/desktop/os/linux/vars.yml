@@ -36,7 +36,6 @@ apt_keys:
   - https://download.sublimetext.com/sublimehq-pub.gpg
   - https://packages.microsoft.com/keys/microsoft.asc
   - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
-  - https://packagecloud.io/shiftkey/desktop/gpgkey
   - https://get.speedify.com/pgp.key
   - https://s3.eu-central-1.amazonaws.com/jetbrains-ppa/0xA6E8698A.pub.asc
   - https://dl.cloudsmith.io/public/balena/etcher/gpg.70528471AFF9A051.key
@@ -49,23 +48,23 @@ apt_ring_keys:
   - keyserver: keyserver.ubuntu.com
     id: ADC23DDFAE0436477B8CCDF54DEA8909DC6A13A3
     # Postman
-  - keyserver:
+  - keyserver: keyserver.ubuntu.com
     id: 5C3A446D08DA5A418703C6EDAAF3EBA4A836E4A3
     # qBittorrent
   - keyserver:
     id: 401E8827DA4E93E44C7D01E6D35164147CA69FC4
     # Android File Transfer for Linux
-  - keyserver:
+  - keyserver: keyserver.ubuntu.com
     id: 6D52190A4D3C9DCDF1CFE4140BB4A1B2FA1A38EB
     # NoobsLab
-  - keyserver:
+  - keyserver: keyserver.ubuntu.com
     id: 4FA44A478284A18C1BA4A9CAD530E028F59EAE4D
 
 apt_repos:
-  - deb http://ppa.launchpad.net/obsproject/obs-studio/ubuntu bionic main
-  - deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu bionic main
-  - deb http://ppa.launchpad.net/tiagohillebrandt/postman/ubuntu bionic main
-  - deb http://ppa.launchpad.net/qbittorrent-team/qbittorrent-stable/ubuntu bionic main
+  - deb http://ppa.launchpad.net/obsproject/obs-studio/ubuntu focal main
+  - deb http://ppa.launchpad.net/maarten-fonville/android-studio/ubuntu focal main
+  - deb http://ppa.launchpad.net/tiagohillebrandt/postman/ubuntu focal main
+  - deb http://ppa.launchpad.net/qbittorrent-team/qbittorrent-stable/ubuntu focal main
   - deb http://ppa.launchpad.net/samoilov-lex/aftl-stable/ubuntu bionic main
   - deb http://ppa.launchpad.net/noobslab/apps/ubuntu bionic main
   - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
@@ -75,7 +74,7 @@ apt_repos:
   - deb https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_distribution_release|lower }} main"
   - deb http://apt.connectify.me/ speedify main
-  - "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com bionic main"
+  - "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com focal main"
   - "deb https://dl.cloudsmith.io/public/balena/etcher/deb/{{ ansible_distribution|lower }} {{ ansible_distribution_release|lower }} main"
   - deb [trusted=yes] https://download.konghq.com/insomnia-ubuntu/ default all
 
@@ -94,7 +93,6 @@ apt_items:
   # Most needed desktop apps
   - anydesk
   - balena-etcher-electron
-  - xdman
   # Browser
   - google-chrome-stable
   # HTTP / GraphQL clients

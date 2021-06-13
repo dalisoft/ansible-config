@@ -2,7 +2,6 @@
 # Homebrew taps
 brew_taps:
   - heroku/brew
-  - dprint/dprint
   - homebrew/cask-fonts
   - adoptopenjdk/openjdk
   - octave-app/octave-app
@@ -15,7 +14,6 @@ brew_packages:
   - rust-analyzer
   - cocoapods
   # Other desktop tools
-  - dprint
   - heroku
   # Tools / Dependencies
   - watchman
