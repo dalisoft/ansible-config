@@ -1,7 +1,7 @@
 [user]
-	name = dalisoft
-	email = dalisoft@mail.ru
-  signingkey = AA50795214BAA74A
+	name = Davlatjon Shavkatov
+	email = opensource@dalisoft.uz
+  signingkey = 20DBA1393DB06FC1
 [cola]
 	spellcheck = false
 [filter "lfs"]
