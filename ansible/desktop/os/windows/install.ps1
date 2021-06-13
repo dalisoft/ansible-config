@@ -46,6 +46,6 @@ npm i -g node-gyp http-server npm-check-updates typesync nodemon flamebearer 0x 
 Write-Output "Done!"
 
 # Write-Output "Installing pip packages..."
-# pip install virtualenv jupyterlab notebook labelme psrecord "ansible-lint[community,yamllint]"
+# pip install virtualenv jupyterlab notebook labelme psrecord
 
 # Write-Output "Done!"
