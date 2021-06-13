@@ -67,16 +67,16 @@ apt_repos:
   - deb http://ppa.launchpad.net/qbittorrent-team/qbittorrent-stable/ubuntu focal main
   - deb http://ppa.launchpad.net/samoilov-lex/aftl-stable/ubuntu bionic main
   - deb http://ppa.launchpad.net/noobslab/apps/ubuntu bionic main
-  - deb https://onepassword.s3.amazonaws.com/linux/debian edge main
+  - deb [arch=amd64] https://onepassword.s3.amazonaws.com/linux/debian edge main
   - deb http://deb.anydesk.com/ all main
   - deb http://dl.google.com/linux/chrome/deb/ stable main
   - deb https://download.sublimetext.com/ apt/stable/
-  - deb https://packages.microsoft.com/repos/vscode stable main
+  - deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
   - "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ {{ ansible_distribution_release|lower }} main"
   - deb http://apt.connectify.me/ speedify main
   - "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com focal main"
   - "deb https://dl.cloudsmith.io/public/balena/etcher/deb/{{ ansible_distribution|lower }} {{ ansible_distribution_release|lower }} main"
-  - deb [trusted=yes] https://download.konghq.com/insomnia-ubuntu/ default all
+  - deb [arch=amd64 trusted=yes] https://download.konghq.com/insomnia-ubuntu/ default all
 
 apt_items:
   # PopOS polyfill
