@@ -3,7 +3,6 @@ initial_configs:
   # Files
   - .gitconfig
   - .gitignore
-  - .gnupg/gpg.conf
   # Folders
   - .config/autostart
   - nfancurve
