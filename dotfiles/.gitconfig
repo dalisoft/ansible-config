@@ -1,7 +1,7 @@
 [user]
 	name = Davlatjon Shavkatov
 	email = opensource@dalisoft.uz
-	signingkey = 20DBA1393DB06FC1
+	signingKey = 3F3BD31DC9AE05DC22A8F4F520DBA1393DB06FC1
 [cola]
 	spellcheck = false
 [filter "lfs"]
@@ -17,3 +17,5 @@
 	ignoredHook = false
 [commit]
 	gpgsign = true
+[tag]
+	forceSignAnnotated = true
