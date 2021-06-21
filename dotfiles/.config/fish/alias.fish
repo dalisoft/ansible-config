@@ -1,17 +1,20 @@
 # Aliases
-
-# batcat alias
 switch (uname)
     case Darwin
-        alias cat=bat
+        alias cat=bat # bat
+        set -gx JAVA_HOME (/usr/libexec/java_home -v11) # Java
 
     case Linux
+        # bat
         if type -q batcat
             alias cat=batcat
         end
         if type -q bat
             alias cat=bat
         end
+
+        # Java
+        set -gx JAVE_HOME "/usr/lib/jvm/adoptopenjdk-14-hotspot-amd64"
 end
 
 
@@ -24,5 +27,7 @@ if type -q rg
     alias grep=rg
 end
 
-# **** python3 ****
 alias python=python3
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
+
+alias clean_ds='find ~/Desktop -name .DS_Store -not -path "*/node_modules/*" -delete'
