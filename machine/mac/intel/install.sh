@@ -131,6 +131,18 @@ function install_pip_packages {
     psrecord
 }
 
+## Installation Mac App Store apps
+function install_mas_apps {
+  mas install \
+    1333542190 \ # 1Password 7
+  1518425043 \ # Boop
+  408981434 \ # iMovie
+  1063631769 \ # Medis
+  1538380685 \ # Racompass
+  747648890 \ # Telegram
+  425424353 # The Unarchiver
+}
+
 ### POST-installation
 ### steps for configure
 function post_installation {
@@ -148,9 +160,10 @@ function installation {
   ## only on *compact* and *full*
   ## modes so all of these tools
   ## does not conflicts
-  if ["$MODE" != "minimal"]; then
+  if [["$MODE" != "minimal"]]; then
     install_npm_packages
     install_pip_packages
+    install_mas_apps
   fi
 
   # Post-installation
