@@ -160,7 +160,7 @@ function installation {
   ## only on *compact* and *full*
   ## modes so all of these tools
   ## does not conflicts
-  if [["$MODE" != "minimal"]]; then
+  if [[ "$MODE" != "minimal" ]]; then
     install_npm_packages
     install_pip_packages
     install_mas_apps
