@@ -2,6 +2,9 @@
 ######### fish-user Paths #########
 ###################################
 
+# Load aliases
+source $FISH_PATH/alias.fish
+
 ## Variables
 set -gx fish_greeting ""
 
@@ -61,9 +64,6 @@ set -gx PATH "$JAVA_HOME/bin" $PATH # Java
 # Load some functions
 source $FISH_FUNCTIONS_PATH/git_utils.fish
 source $FISH_FUNCTIONS_PATH/brew_utils.fish
-
-# Load aliases
-source $FISH_PATH/alias.fish
 
 # ********************************
 # ********* shell flags **********
