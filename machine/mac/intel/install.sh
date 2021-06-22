@@ -48,6 +48,7 @@ function configure_askpass {
 function configure_env {
   export NPM_CONFIG_PREFIX="~/.npm-global"
   export SUDO_ASKPASS=$(pwd)/askpass.sh
+  export PATH="$NPM_CONFIG_PREFIX/bin:/usr/local/bin:/opt/homebrew/bin:$PATH"
 }
 ### Check for SUDO
 ### access check to
@@ -94,12 +95,12 @@ function pre_installation {
 
   ## Link files
   for link_file in "${LINK_FILES[@]}"; do
-    ln -f "$HOME/Desktop/config/dotfiles/$link_file" "$HOME/$link_file"
+    ln -h -f "$HOME/Desktop/config/dotfiles/$link_file" "$HOME/$link_file"
   done
 
-  ## Link files
+  ## Link folders
   for link_folder in "${LINK_FOLDERS[@]}"; do
-    ln -s -f "$HOME/Desktop/config/dotfiles/$link_folder" "$HOME/$link_folder"
+    ln -h -f -s "$HOME/Desktop/config/dotfiles/$link_folder" "$HOME/$link_folder"
   done
 }
 
@@ -188,7 +189,18 @@ function install_fnm_versions {
 ### POST-installation
 ### steps for configure
 function post_installation {
+  # neovim plugins installation
   nvim -c "PlugInstall" -c "qa"
+
+  ### fish shell configuration
+  FISH_SHELL_PATH=$(which fish)
+  if cat /etc/shells | grep "$FISH_SHELL_PATH" >>/dev/null; then
+    echo "Already set fish as list of shells"
+  else
+    echo $FISH_SHELL_PATH | sudo -A tee -a /etc/shells
+  fi
+  sudo -A chsh -s $FISH_SHELL_PATH       # change for root
+  sudo -A chsh -s $FISH_SHELL_PATH $USER # change for current user
 }
 
 #############################
