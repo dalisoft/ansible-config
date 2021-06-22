@@ -133,14 +133,26 @@ function install_pip_packages {
 
 ## Installation Mac App Store apps
 function install_mas_apps {
-  mas install \
-    1333542190 \ # 1Password 7
-  1518425043 \ # Boop
-  408981434 \ # iMovie
-  1063631769 \ # Medis
-  1538380685 \ # Racompass
-  747648890 \ # Telegram
-  425424353 # The Unarchiver
+  # 1Password 7
+  mas install 1333542190
+  # Boop
+  mas install 1518425043
+  # iMovie
+  mas install 408981434
+  # Medis
+  mas install 1063631769
+  # Racompass
+  mas install 1538380685
+  # Telegram
+  mas install 747648890
+  # The Unarchiver
+  mas install 425424353
+}
+
+## Installation Node.js versions
+function install_fnm_versions {
+  fnm install 12.22.1
+  fnm install 14.17.1
 }
 
 ### POST-installation
@@ -162,6 +174,7 @@ function installation {
   ## does not conflicts
   if [[ "$MODE" != "minimal" ]]; then
     install_npm_packages
+    install_fnm_versions
     install_pip_packages
     install_mas_apps
   fi
