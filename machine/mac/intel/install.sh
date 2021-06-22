@@ -122,7 +122,7 @@ function install_npm_packages {
 ### Installation pip packages
 function install_pip_packages {
   echo "Installing pip packages..."
-  python3 -m pip upgrade pip
+  python3 -m pip install --upgrade pip
   python3 -m pip install \
     virtualenv \
     jupyterlab \
