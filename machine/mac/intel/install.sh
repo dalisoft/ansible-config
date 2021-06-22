@@ -18,14 +18,11 @@ if [[ "$MODE" != "minimal" && $MODE != "compact" && $MODE != "full" ]]; then
 fi
 
 # Configure askpass
-if cat askpass.sh >>/dev/null; then
-  echo "Seems already exists Askfile. continue..."
-else
-  echo "#!/bin/sh" >>./askpass.sh
-  echo "echo \"$PASSWORD\"" >>./askpass.sh
-  chmod 700 askpass.sh
-fi
-export SUDO_ASKPASS=$(pwd)/askpass.sh # Configure path
+rm -rf askpass.sh
+echo "#!/bin/sh" >>./askpass.sh
+echo "echo \"$PASSWORD\"" >>./askpass.sh
+chmod 700 askpass.sh
+export SUDO_ASKPASS=$(pwd)/askpass.sh
 
 if [[ "$EUID" = 0 ]]; then
   echo "Hey, welcome! I got (sudo) access"
