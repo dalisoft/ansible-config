@@ -6,6 +6,7 @@ set -e
 #############################
 PASSWORD=$1
 MODE=$2
+ARCH=$(uname -m)
 
 #############################
 ### Preparations of steps ###
@@ -83,14 +84,24 @@ function check_and_prepare {
 function install_package_manager {
   # XCode requirements
   if sudo -A xcode-select --version >>/dev/null; then
-    echo "XCode already installed! Continue process..."
+    echo "XCode is already installed! Continue process..."
   else
     sudo -A xcode-select --install
   fi
 
+  # Rosetta installation for Apple Silicon
+  # This is required to run x64/x86 apps
+  if [[ "$ARCH" == "arm64" ]]; then
+    if [[ ! -f "/Library/Apple/System/Library/LaunchDaemons/com.apple.oahd.plist" ]]; then
+      sudo -A softwareupdate --install-rosetta --agree-to-license
+    else
+      echo "Rosetta is already installed. Continue process..."
+    fi
+  fi
+
   # Install Homebrew
   if brew --version >>/dev/null; then
-    echo "Homebrew already installed! Continue process..."
+    echo "Homebrew is already installed! Continue process..."
   else
     curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash -
   fi
@@ -99,7 +110,7 @@ function install_package_manager {
 function install_system_packages {
   # Installing bundle
   cd $MODE
-  brew bundle
+  brew bundle --force --no-lock
 }
 
 ### Installation npm packages
@@ -133,20 +144,12 @@ function install_pip_packages {
 
 ## Installation Mac App Store apps
 function install_mas_apps {
-  # 1Password 7
-  mas install 1333542190
-  # Boop
-  mas install 1518425043
   # iMovie
   mas install 408981434
   # Medis
   mas install 1063631769
   # Racompass
   mas install 1538380685
-  # Telegram
-  mas install 747648890
-  # The Unarchiver
-  mas install 425424353
 }
 
 ## Installation Node.js versions
