@@ -22,7 +22,7 @@ if cat askpass.sh >>/dev/null; then
   echo "Seems already exists Askfile. continue..."
 else
   echo "#!/bin/sh" >>./askpass.sh
-  echo "echo $PASSWORD" >>./askpass.sh
+  echo "echo \"$PASSWORD\"" >>./askpass.sh
   chmod 700 askpass.sh
 fi
 export SUDO_ASKPASS=$(pwd)/askpass.sh # Configure path
