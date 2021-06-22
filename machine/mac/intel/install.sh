@@ -8,6 +8,13 @@ PASSWORD=$1
 MODE=$2
 ARCH=$(uname -m)
 
+##############################
+### Installation variables ###
+##############################
+ENSURE_FOLDERS=(".config" ".config/fish" ".config/nvim" ".config/htop" ".npm-global" "Desktop/config/dotfiles/.vim/autoload")
+LINK_FILES=(".vimrc" ".config/starship.toml")
+LINK_FOLDERS=(".nano" ".vim" ".config/fish" ".config/nvim" ".config/htop")
+
 #############################
 ### Preparations of steps ###
 #############################
@@ -74,6 +81,26 @@ function check_and_prepare {
   configure_askpass
   configure_env
   sudo_access_check
+}
+
+###################################
+### Prepares linking and config ###
+###################################
+function pre_installation {
+  ## Ensure these folders exists
+  for ensure_folder in "${ENSURE_FOLDERS[@]}"; do
+    mkdir -p "$HOME/$ensure_folder"
+  done
+
+  ## Link files
+  for link_file in "${LINK_FILES[@]}"; do
+    ln -f "$HOME/Desktop/config/dotfiles/$link_file" "$HOME/$link_file"
+  done
+
+  ## Link files
+  for link_folder in "${LINK_FOLDERS[@]}"; do
+    ln -s -f "$HOME/Desktop/config/dotfiles/$link_folder" "$HOME/$link_folder"
+  done
 }
 
 #############################
@@ -168,6 +195,8 @@ function post_installation {
 ### All installation step ###
 #############################
 function installation {
+  pre_installation
+
   install_package_manager
   install_system_packages
 
