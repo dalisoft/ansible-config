@@ -105,7 +105,7 @@ function install_system_packages {
 ### Installation npm packages
 function install_npm_packages {
   echo "Installing npm packages..."
-  npm install --global npm
+  npm install --global npm@latest
   npm install --global \
     0x \
     bs-platform \
