@@ -15,6 +15,11 @@ ENSURE_FOLDERS=(".config" ".config/fish" ".config/nvim" ".config/htop" ".npm-glo
 LINK_FILES=(".vimrc" ".config/starship.toml")
 LINK_FOLDERS=(".nano" ".vim" ".config/fish" ".config/nvim" ".config/htop")
 
+NPM_PACKAGES=("npm" "0x" "bs-platform" "cordova" "esy" "flamebearer" "http-server" "node-gyp" "nodemon" "npm-check-updates" "typesync")
+PIP_PACKAGES=("virtualenv" "jupyterlab" "notebook" "labelme" "psrecord")
+
+FNM_VERSIONS=("12.22.1" "14.17.1")
+
 #############################
 ### Preparations of steps ###
 #############################
@@ -88,6 +93,10 @@ function check_and_prepare {
 ### Prepares linking and config ###
 ###################################
 function pre_installation {
+  echo "------"
+
+  echo "Pre-installation steps..."
+
   ## Ensure these folders exists
   for ensure_folder in "${ENSURE_FOLDERS[@]}"; do
     mkdir -p "$HOME/$ensure_folder"
@@ -110,6 +119,8 @@ function pre_installation {
 
 ### Installing package manager
 function install_package_manager {
+  echo "------"
+
   # XCode requirements
   if sudo -A xcode-select --version >>/dev/null; then
     echo "XCode is already installed! Continue process..."
@@ -136,6 +147,8 @@ function install_package_manager {
 }
 ### Installing system packages
 function install_system_packages {
+  echo "------"
+
   # Installing bundle
   cd $MODE
   brew bundle --force --no-lock
@@ -143,35 +156,41 @@ function install_system_packages {
 
 ### Installation npm packages
 function install_npm_packages {
+  echo "------"
+
   echo "Installing npm packages..."
-  npm install --global npm@latest
-  npm install --global \
-    0x \
-    bs-platform \
-    cordova \
-    esy \
-    flamebearer \
-    http-server \
-    node-gyp \
-    nodemon \
-    npm-check-updates \
-    typesync
+
+  INSTALLED_PACKAGES=$(npm list --global --depth=0 --json)
+  for package in "${NPM_PACKAGES[@]}"; do
+    if [[ $(echo "$INSTALLED_PACKAGES" | grep -o "\"$package\"") == "\"$package\"" ]]; then
+      echo "Already installed npm package: $package"
+    else
+      npm install --global $package
+    fi
+  done
 }
 
 ### Installation pip packages
 function install_pip_packages {
+  echo "------"
+
   echo "Installing pip packages..."
+
+  INSTALLED_PACKAGES=$(pip list --format json)
   python3 -m pip install --upgrade pip
-  python3 -m pip install \
-    virtualenv \
-    jupyterlab \
-    notebook \
-    labelme \
-    psrecord
+  for package in "${PIP_PACKAGES[@]}"; do
+    if [[ $(echo "$INSTALLED_PACKAGES" | grep -o "\"$package\"") == "\"$package\"" ]]; then
+      echo "Already installed pip package: $package"
+    else
+      python3 -m pip install $package
+    fi
+  done
 }
 
 ## Installation Mac App Store apps
 function install_mas_apps {
+  echo "------"
+
   # iMovie
   mas install 408981434
   # Medis
@@ -182,13 +201,27 @@ function install_mas_apps {
 
 ## Installation Node.js versions
 function install_fnm_versions {
-  fnm install 12.22.1
-  fnm install 14.17.1
+  echo "------"
+
+  echo "Installing fnm versions..."
+
+  INSTALLED_VERSION=$(fnm ls)
+  for fnm_nvm in "${FNM_VERSIONS[@]}"; do
+    if echo "$INSTALLED_VERSION" | grep "* v$fnm_nvm" >>/dev/null; then
+      echo "Already installed fnm version: $fnm_nvm"
+    else
+      fnm install $fnm_nvm
+    fi
+  done
 }
 
 ### POST-installation
 ### steps for configure
 function post_installation {
+  echo "------"
+
+  echo "Pre-installation steps..."
+
   # neovim plugins installation
   nvim -c "PlugInstall" -c "qa"
 
