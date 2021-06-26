@@ -1,0 +1,5 @@
+cask "anaconda"
+cask "anka-virtualization"
+cask "steam"
+cask "webstorm"
+cask "vmware-fusion"

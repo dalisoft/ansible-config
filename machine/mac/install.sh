@@ -11,6 +11,8 @@ ARCH=$(uname -m)
 ##############################
 ### Installation variables ###
 ##############################
+MAX_TRIES=5
+
 ENSURE_FOLDERS=(".config" ".config/fish" ".config/nvim" ".config/htop" ".npm-global" "Desktop/config/dotfiles/.vim/autoload")
 LINK_FILES=(".vimrc" ".config/starship.toml")
 LINK_FOLDERS=(".nano" ".vim" ".config/fish" ".config/nvim" ".config/htop")
@@ -149,9 +151,29 @@ function install_package_manager {
 function install_system_packages {
   echo "------"
 
+  PWD=$(pwd)
+  BREWFILE_PATH="${ARCH}_$MODE"
+
+  rm -rf Brewfile
+  touch Brewfile
+  cat "$PWD/base/Brewfile" >>Brewfile
+  echo "" >>Brewfile # empty space for fix newline bug
+  if [[ "$MODE" == "compact" ]]; then
+    cat "$PWD/${ARCH}_minimal/Brewfile" >>Brewfile
+    echo "" >>Brewfile # empty space for fix newline bug
+  fi
+  if [[ "$MODE" == "all" ]]; then
+    cat "$PWD/${ARCH}_minimal/Brewfile" >>Brewfile
+    echo "" >>Brewfile # empty space for fix newline bug
+    cat "$PWD/${ARCH}_compact/Brewfile" >>Brewfile
+    echo "" >>Brewfile # empty space for fix newline bug
+  fi
+  cat "$PWD/$BREWFILE_PATH/Brewfile" >>Brewfile
+
   # Installing bundle
-  cd $MODE
   brew bundle --force --no-lock
+
+  rm -rf Brewfile
 }
 
 ### Installation npm packages
@@ -260,13 +282,12 @@ function installation {
   post_installation
 
   # Remove password by removing askpass
-  rm -rf ../askpass.sh
+  rm -rf askpass.sh
 
   return 0
 }
 
 RETRIES=0
-MAX_TRIES=5
 
 ### Run preparation
 ### steps once
