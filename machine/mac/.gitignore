@@ -1,5 +1,0 @@
-**/*.lock.json
-**/*.lock
-askpass.sh
-Brewfile
-!/**/Brewfile
