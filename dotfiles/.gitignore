@@ -8,6 +8,17 @@ artifacts
 **/artifacts
 **/.ansible
 
+git
+git-cola
+.git
+
+**/git
+**/git-cola
+**/.git
+
+configstore
+**/configstore
+
 #################
 ## IDE / Editor #
 #################

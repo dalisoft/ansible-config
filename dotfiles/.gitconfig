@@ -18,7 +18,6 @@
   p = prune
   f = fetch --all --prune
   si = submodule update --init --recursive --remote --rebase
-  rb = !git f; git pull --rebase; gitsu
 [core]
   ignorecase = false
 [advice]

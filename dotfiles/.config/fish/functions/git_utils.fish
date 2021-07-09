@@ -4,11 +4,17 @@ function gitp_branch
 end
 
 function gitsu
-    gitsi
+    git si
     git submodule foreach --recursive '\
     branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@"); \
     git fetch --all --prune; \
     git checkout ${branch}; \
     git reset origin/${branch} --soft;\
     ';
+end
+
+function git_rb
+  git f
+  git pull --rebase
+  gitsu
 end

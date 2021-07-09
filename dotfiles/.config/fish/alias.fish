@@ -30,4 +30,5 @@ end
 alias python=python3
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 
+alias lsa='killall ssh-agent; eval (ssh-agent -c)'
 alias clean_ds='find ~/Desktop -name .DS_Store -not -path "*/node_modules/*" -delete'
