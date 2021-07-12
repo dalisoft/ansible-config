@@ -17,5 +17,5 @@
   forceSignAnnotated = true
 [include]
   path = oss.gitconfig
-[includeIf "gitdir:**/Workdir/**"]
+[includeIf "gitdir:~/Desktop/Workdir/"]
   path = commercial.gitconfig
