@@ -18,6 +18,7 @@
   p = prune
   f = fetch --all --prune
   si = submodule update --init --recursive --remote --rebase
+  rebase = rebase --committer-date-is-author-date
 [core]
   ignorecase = false
 [advice]

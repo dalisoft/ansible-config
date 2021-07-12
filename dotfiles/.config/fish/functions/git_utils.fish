@@ -15,6 +15,6 @@ end
 
 function git_rb
   git f
-  git pull --rebase
+  git pull --rebase --committer-date-is-author-date
   gitsu
 end
