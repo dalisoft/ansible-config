@@ -44,7 +44,7 @@ function git_prb
 end
 
 function git_sign_tags
-  git tag -l | while read -r tag; do
+  git tag -l | while read -l tag
     set COMMIT_HASH (git rev-list -1 $tag)
     set COMMIT_MSG (git tag -l --format='%(contents)' $tag | head -n1)
     set GIT_COMMITTER_DATE "(git show $COMMIT_HASH --format=%aD | head -1)"
