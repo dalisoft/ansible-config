@@ -2,3 +2,9 @@
   name = Davlatjon Shavkatov
   email = opensource@dalisoft.uz
   signingKey = 3F3BD31DC9AE05DC22A8F4F520DBA1393DB06FC1
+[commit]
+  gpgsign = true
+[tag]
+  forceSignAnnotated = true
+[alias]
+  commit = commit -S

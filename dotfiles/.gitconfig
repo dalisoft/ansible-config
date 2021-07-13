@@ -1,3 +1,6 @@
+[user]
+  name = Davlatjon Shavkatov
+  email = opensource@dalisoft.uz
 [cola]
   spellcheck = false
 [filter "lfs"]
@@ -11,11 +14,7 @@
   ignorecase = false
 [advice]
   ignoredHook = false
-[commit]
-  gpgsign = true
-[tag]
-  forceSignAnnotated = true
-[include]
+[includeIf "gitdir:~/Desktop/Open_Source/"]
   path = oss.gitconfig
 [includeIf "gitdir:~/Desktop/Workdir/"]
   path = commercial.gitconfig
