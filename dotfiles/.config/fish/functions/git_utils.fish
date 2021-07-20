@@ -54,3 +54,4 @@ function git_sign_tags
 end
 
 alias git_rebase='git rebase -S --committer-date-is-author-date'
+alias gitsuf='git submodule update --init --recursive --remote --force --checkout'
