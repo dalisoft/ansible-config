@@ -75,5 +75,12 @@ function git_correct_tags
   end
 end
 
+function git_remap_tag --argument commit_hash tag
+  set COMMIT_MSG (git show -s --format=%B $commit_hash)
+  set GIT_COMMITTER_DATE "(git show $commit_hash --format=%aD | head -1)"
+  git tag -s -a -f $tag -m"$COMMIT_MSG" $commit_hash
+  git push origin refs/tags/$tag --force --no-verify
+end
+
 alias git_rebase='git rebase -S --committer-date-is-author-date'
 alias gitsuf='git submodule update --init --recursive --remote --force --checkout'
