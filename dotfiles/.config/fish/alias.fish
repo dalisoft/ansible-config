@@ -17,7 +17,6 @@ switch (uname)
         set -gx JAVE_HOME "/usr/lib/jvm/adoptopenjdk-14-hotspot-amd64"
 end
 
-
 # **** Terminal stuffs ****
 if type -q exa
     alias ls=exa
@@ -32,3 +31,4 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 
 alias lsa='killall ssh-agent; eval (ssh-agent -c)'
 alias clean_ds='find ~/Desktop -name .DS_Store -not -path "*/node_modules/*" -delete'
+alias get_storage="sudo smartctl -a disk1s2 | rg 'Data Unit|Available|Percentage|Temperature'"
