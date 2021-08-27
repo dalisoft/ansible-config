@@ -31,4 +31,4 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 
 alias lsa='killall ssh-agent; eval (ssh-agent -c)'
 alias clean_ds='find ~/Desktop -name .DS_Store -not -path "*/node_modules/*" -delete'
-alias get_storage="sudo smartctl -a disk1s2 | rg 'Data Unit|Available|Percentage|Temperature'"
+alias get_storage="smartctl -a disk1s2 | rg 'Data Unit|Available|Percentage|Temperature'"

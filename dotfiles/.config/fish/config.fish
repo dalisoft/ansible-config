@@ -2,9 +2,6 @@
 ######### fish-user Paths #########
 ###################################
 
-# Load aliases
-source $FISH_PATH/alias.fish
-
 ## Variables
 set -gx fish_greeting ""
 
@@ -75,6 +72,9 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 
 ########## init scripts ###########
+
+# Load aliases
+source $FISH_PATH/alias.fish
 
 # **** starship ****
 if type -q starship
