@@ -2,8 +2,6 @@
 switch (uname)
     case Darwin
         alias cat=bat # bat
-        set -gx JAVA_HOME (/usr/libexec/java_home -v11) # Java
-
     case Linux
         # bat
         if type -q batcat
@@ -12,9 +10,6 @@ switch (uname)
         if type -q bat
             alias cat=bat
         end
-
-        # Java
-        set -gx JAVE_HOME "/usr/lib/jvm/adoptopenjdk-14-hotspot-amd64"
 end
 
 # **** Terminal stuffs ****

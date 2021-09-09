@@ -52,6 +52,7 @@ set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
 set -gx PATH "$HOME/.fnm" $PATH
 
 # Android SDK
+set -gx PATH "/opt/homebrew/opt/openjdk/bin" $PATH
 set -gx PATH "$ANDROID_HOME/emulator" $PATH
 set -gx PATH "$ANDROID_HOME/tools" $PATH
 set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
@@ -80,3 +81,4 @@ source $FISH_PATH/alias.fish
 if type -q starship
     starship init fish | source
 end
+
