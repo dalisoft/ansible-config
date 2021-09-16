@@ -19,6 +19,9 @@ git-cola
 configstore
 **/configstore
 
+# Temporarily
+octave
+
 #################
 ## IDE / Editor #
 #################
@@ -29,6 +32,7 @@ configstore
 # VS(Code/Codium)
 .vscode
 .vscodium
+.history
 
 # VIM
 .vim/plugged

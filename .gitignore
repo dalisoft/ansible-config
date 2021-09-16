@@ -18,6 +18,7 @@ artifacts
 # VS(Code/Codium)
 .vscode
 .vscodium
+.history
 
 # VIM
 .vim/plugged
