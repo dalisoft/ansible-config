@@ -1,6 +1,8 @@
 # Aliases
 switch (uname)
     case Darwin
+        set -gx JAVA_HOME (/usr/libexec/java_home)
+
         alias cat=bat # bat
     case Linux
         # bat
