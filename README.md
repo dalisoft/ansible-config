@@ -8,23 +8,19 @@ My machine configuration playbook
 
 ### Step 1
 
-| OS            | Min. required version | Recommended version         |
-| ------------- | --------------------- | --------------------------- |
-| macOS         | High Sierra (10.13.6) | Mojave (10.14.6) and higher |
-| Linux Ubuntu  | 18.04                 | 20.04 and higher            |
-| Linux PopOS   | 18.04                 | 19.04 and higher            |
-| Linux Manjaro | 18                    | 19 or Higher                |
-| Windows       | v1903                 | v2004                       |
+| OS            | Min. required version | Recommended version         | Link to script                                      |
+| ------------- | --------------------- | --------------------------- | --------------------------------------------------- |
+| macOS         | High Sierra (10.13.6) | Mojave (10.14.6) and higher | [Here](https://github.com/dalisoft/mac-config-bash) |
+| Linux Ubuntu  | 18.04                 | 20.04 and higher            | This repo                                           |
+| Linux PopOS   | 18.04                 | 19.04 and higher            | This repo                                           |
+| Linux Manjaro | 18                    | 19 or Higher                | This repo                                           |
+| Windows       | v1903                 | v2004                       | [Here](https://github.com/dalisoft/win-install)     |
 
 ---
 
-| Name      | Command                                                                                        | System               | Required |
-| --------- | ---------------------------------------------------------------------------------------------- | -------------------- | -------- |
-| Homebrew  | See [here](https://brew.sh)                                                                    | macOS, Debian/Ubuntu | Yes      |
-| Ansible   | See [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) | macOS, Linux         | Yes      |
-| XCode CLI | `xcode-select --install`                                                                       | macOS                | Yes      |
-| snap      | See [here](https://snapcraft.io/docs/installing-snap-on-ubuntu)                                | Linux                | Yes      |
-| choco     | See [here](https://chocolatey.org/install)                                                     | Windows              | Yes      |
+| Name | Command                                                         | System | Required |
+| ---- | --------------------------------------------------------------- | ------ | -------- |
+| snap | See [here](https://snapcraft.io/docs/installing-snap-on-ubuntu) | Linux  | Yes      |
 
 > **Don't forget install all of these dependencies**
 
@@ -46,7 +42,7 @@ See [**MISSING TABLE**](./ansible/MISSING.md)
 
 ### Step 3
 
-Shell default change (if possible), guide [here for macOS](https://stackoverflow.com/a/26321141) or [here for Linux](https://superuser.com/a/119216)
+Shell default change (if possible) [here for Linux](https://superuser.com/a/119216)
 
 ### Step 4
 
