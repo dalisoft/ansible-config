@@ -62,3 +62,7 @@ See [here](https://github.com/vinceliuice/WhiteSur-gtk-theme#suggested-themes) f
 For icons, see [here](https://github.com/keeferrourke/capitaine-cursors)
 
 ### Done. Enjoy
+
+## License
+
+Apache-2.0 License
