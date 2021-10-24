@@ -1,4 +1,0 @@
-[submodule "dotfiles"]
-path = "dotfiles"
-url = git@github.com:dalisoft/dotfiles.git
-branch = master
