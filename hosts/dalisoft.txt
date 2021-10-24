@@ -1,0 +1,224 @@
+# [Adobe]
+0.0.0.0 redhat.tt.omtrdc.net
+
+# [CrispChat]
+0.0.0.0 client.crisp.chat
+0.0.0.0 client.relay.crisp.chat
+0.0.0.0 settings.crisp.chat
+
+# [Sentry]
+0.0.0.0 browser.sentry-cdn.com
+
+# [Yandex]
+0.0.0.0 aflt.market.yandex.ru
+0.0.0.0 aflt.yandex.ru
+0.0.0.0 sentry.iddqd.yandex.net
+0.0.0.0 adfox.yandex.ru
+0.0.0.0 ads.adfox.ru
+0.0.0.0 an.yandex.ru
+
+# [Facebook]
+0.0.0.0 edge-chat.facebook.com
+0.0.0.0 edge-mqtt.facebook.com
+0.0.0.0 instagram.c10r.facebook.com
+0.0.0.0 graph.instagram.com
+0.0.0.0 lookaside.facebook.com
+0.0.0.0 connect.facebook.net
+0.0.0.0 scontent.xx.fbcdn.net
+0.0.0.0 scontent.fakx2-1.fna.fbcdn.net
+0.0.0.0 fbsbx.com
+0.0.0.0 fbcdn.com
+0.0.0.0 platform-lookaside.fbsbx.com
+
+# [Google]
+0.0.0.0 adservice.google.co.uz
+0.0.0.0 adservice.google.com
+0.0.0.0 googleads.g.double.net
+0.0.0.0 static.doubleclick.net
+0.0.0.0 ogs.google.com
+0.0.0.0 csi.gstatic.com
+0.0.0.0 analytics-google.com
+0.0.0.0 device-provisioning.googleapis.com
+0.0.0.0 www-googletagmanager.l.google.com
+0.0.0.0 www.googletagmanager.com
+0.0.0.0 manifest.googlevideo.com
+0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 firebaselogging-pa.googleapis.com
+# This blocks Google Sheets sync
+# 0.0.0.0 clients.l.google.com
+# This may break Auth or Chrome Extensions downloading
+# 0.0.0.0 clients1.google.com
+
+# Essential feature
+# but tracks activity
+# 0.0.0.0 suggestqueries.google.com
+
+# [YouTube]
+# Allow YouTube Studio assets
+# 0.0.0.0 s.ytimg.com
+
+# As this site doesn't uses cookie, we can allow
+# 0.0.0.0 youtube-nocookie.com
+
+# This entry slow downs video-loading
+# 0.0.0.0 r1---sn-01oxu-u5ne.googlevideo.com
+
+# This entry disables YouTube history
+# 0.0.0.0 s.youtube.com
+
+
+# [Microsoft]
+0.0.0.0 msftconnecttest.com
+0.0.0.0 www.msftconnecttest.com
+0.0.0.0 dns.msftncsi.com
+0.0.0.0 settings-win.data.microsoft.com
+0.0.0.0 livetileedge.dsx.mp.microsoft.com
+# This blocks Windows activation
+# 0.0.0.0 client.wns.windows.com
+
+# [GitHub]
+0.0.0.0 collector.githubapp.com
+0.0.0.0 alive.github.com
+
+# [Apple]
+0.0.0.0 metrics.icloud.com
+0.0.0.0 api.smoot.apple.com
+0.0.0.0 weather-analytics-events.apple.com
+0.0.0.0 xp.apple.com
+0.0.0.0 apple-finance.query.yahoo.com
+0.0.0.0 captive.apple.com
+0.0.0.0 supportmetrics.apple.com
+# This blocks iCloud validity check
+# 0.0.0.0 valid.apple.com
+
+# [Trello]
+0.0.0.0 c.trello.com
+
+# [WWW Uzbekistan]
+0.0.0.0 cnt0.www.uz
+
+# [Olx Uzbekistan]
+0.0.0.0 tracking.olx-st.com
+0.0.0.0 bz2.olx.uz
+0.0.0.0 ninja.data.olxcdn.com
+0.0.0.0 laquesis.data.olxcdn.com
+
+# [Yadro Counter]
+0.0.0.0 counter.yadro.ru
+0.0.0.0 counter.yadro.com
+
+# [Mail Group LLC - Russia]
+0.0.0.0 xray.imgsmail.ru
+0.0.0.0 utimg.ru
+
+# [VK]
+0.0.0.0 vktarget.ru
+
+# [Online Casino and Poker services]
+0.0.0.0 robinbob.in
+0.0.0.0 betsponsport.ru
+0.0.0.0 userator.ru
+0.0.0.0 biglion.ru
+
+# [aaXads]
+0.0.0.0 aaxads.com
+
+# [Crashlytics]
+0.0.0.0 settings.crashlytics.com
+
+# [AppsFlyer]
+0.0.0.0 stats.appsflyer.com
+0.0.0.0 statsgoogle.appsflyer.com
+
+# [Ubuntu]
+0.0.0.0 connectivity-check.ubuntu.com
+
+# [AppMeasurement]
+0.0.0.0 app-measurement.com
+0.0.0.0 www.app-measurement.com
+
+# [Akamaized]
+0.0.0.0 ninja.akamaized.net
+
+# [IP Address]
+0.0.0.0 ipaddress.com
+
+# [InterCom]
+0.0.0.0 intercom.com
+0.0.0.0 www.intercom.com
+0.0.0.0 js.intercomcdn.com
+0.0.0.0 api-iam.intercom.io
+0.0.0.0 nexus-websocket-a.intercom.io
+0.0.0.0 widget.intercom.io
+
+# [DuckDuckGo]
+0.0.0.0 improving.duckduckgo.com
+
+# [Spam]
+0.0.0.0 franecki.net
+0.0.0.0 falcon.r.acdnpro.com
+
+# [MMStat]
+0.0.0.0 ru.mmstat.com
+
+# [Unknown Trackers]
+0.0.0.0 rutracker.appspot.com
+0.0.0.0 cdn.advg.agency
+0.0.0.0 cdn.admitad-connect.com
+
+# [Intel]
+0.0.0.0 gameplayapi.intel.com
+
+# [NVidia]
+0.0.0.0 services.gfe.nvidia.com
+
+# [SnigelWeb]
+0.0.0.0 geo-eu.snigelweb.com
+0.0.0.0 cdn.snigelweb.com
+
+# [Eltima]
+0.0.0.0 appstatico.eltima.com
+
+# [LinkOnClick]
+0.0.0.0 linkonclick.com
+0.0.0.0 www.linkonclick.com
+
+# [CrRepo]
+0.0.0.0 crrepo.com
+0.0.0.0 wwww.crrepo.com
+
+# [OmniTagJS]
+0.0.0.0 hb-api.omnitagjs.com
+
+# [SwitchAdHub]
+0.0.0.0 cdn.switchadhub.com
+0.0.0.0 delivery.g.switchadhub.com
+0.0.0.0 delivery.swid.switchadhub.com
+
+# [Lalucherut]
+0.0.0.0 lalucherut.com
+0.0.0.0 s.lalucherut.com
+0.0.0.0 news-fancy.com
+
+# Uncategorized
+0.0.0.0 cdn.trafficbass.com
+0.0.0.0 z.cdn.trafficbass.com
+0.0.0.0 pocketbitsllc.com
+0.0.0.0 hopigrarn.com
+0.0.0.0 cowner.net
+0.0.0.0 fukavertal.pro
+0.0.0.0 ultimedia.com
+0.0.0.0 in.appcenter.ms
+0.0.0.0 data.flurry.com
+0.0.0.0 adsvolume.com
+0.0.0.0 no-thanks.invalid
+0.0.0.0 stat.joxi.ru
+0.0.0.0 update.joxi.ru
+0.0.0.0 router.bitcomet.com
+0.0.0.0 router.utorrent.com
+0.0.0.0 router.bittorrent.com
+# 0.0.0.0 s.w.org # This host enables some icon share
+0.0.0.0 sw-update.obdev.at
+0.0.0.0 version.cyberduck.io
+0.0.0.0 peterborgapps.com
+0.0.0.0 www.peterborgapps.com
