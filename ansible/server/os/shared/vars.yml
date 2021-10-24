@@ -1,6 +1,0 @@
----
-ensure_folders:
-  - /etc/fail2ban
-
-npm_modules:
-  - pm2
