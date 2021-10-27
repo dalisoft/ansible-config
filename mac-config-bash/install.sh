@@ -8,6 +8,7 @@ read -p "Enter your password: " PASSWORD
 ARCH=$(uname -m)
 PWD=$(pwd)
 OS_VER=$(sw_vers -productVersion | cut -d':' -f2 | tr -d ' ')
+MIN_OS=11.6
 
 ##############################
 ### Installation variables ###
@@ -22,7 +23,7 @@ LINK_FILES=(".nanorc" ".vimrc" ".tmux.conf" ".gitconfig")
 NPM_PACKAGES=("npm" "0x" "cordova" "esy" "flamebearer" "http-server" "node-gyp" "nodemon" "npm-check-updates" "typesync")
 PIP_PACKAGES=("virtualenv" "jupyterlab" "notebook" "labelme" "psrecord")
 
-FNM_VERSIONS=("16.12.0")
+FNM_VERSIONS=("16.13.0")
 
 #############################
 ### Preparations of steps ###
@@ -35,6 +36,12 @@ function check_env {
     echo "Hey, welcome! please trust me"
     echo "and enter valid password here"
     echo "I hope you understand me..."
+    exit 1
+  fi
+
+  if [ $(echo -e $MIN_OS"\n"$OS_VER | sort -V | tail -1) == "$MIN_OS" ]; then
+    echo "Your OS does not meet requirements"
+    echo "Minimum required OS is: v11.6.x"
     exit 1
   fi
 }
@@ -85,19 +92,6 @@ function sudo_access_check {
 function optimziations_setup {
   echo "------"
 
-  echo "Optimizations steps..."
-
-  echo ""
-  ## Disable Spotlight
-  MIN_OS=10.14
-  if [ $(echo -e $MIN_OS"\n"$OS_VER | sort -V | tail -1) == "$MIN_OS" ]; then
-    sudo -A launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
-  else
-    echo "You running latest *macOS*"
-    echo "You should disable SIP"
-    echo "to disable *Spotlight*"
-  fi
-
   sudo -A mdutil -a -i off
   sudo -A defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
   killall mds >/dev/null 2>&1
@@ -105,21 +99,16 @@ function optimziations_setup {
   sudo -A mdutil -a -i off /
   sudo -A mdutil -a -i off /*
 
-  ## Disable Siri
-  MIN_OS=10.14
-  if [ $(echo -e $MIN_OS"\n"$OS_VER | sort -V | tail -1) == "$MIN_OS" ]; then
-    sudo -A plutil -replace Disabled -bool true /System/Library/LaunchAgents/com.apple.Siri.agent.plist || echo "Siri cannot be disabled, SIP enabled"
-  else
-    echo "You running latest *macOS*"
-    echo "You should disable SIP"
-    echo "to disable *Siri*"
-  fi
   defaults write com.apple.Siri StatusMenuVisible -bool false
   defaults write com.apple.Siri UserHasDeclinedEnable -bool true
   defaults write com.apple.assistant.support "Assistant Enabled" 0
+}
 
-  ## Disable Software Update
-  sudo -A softwareupdate --schedule off
+function finder_setup {
+  echo "------"
+
+  defaults write com.apple.finder ShowStatusBar -bool true
+  defaults write com.apple.finder ShowPathbar -bool true
 }
 
 #############################
@@ -256,8 +245,6 @@ function install_fnm_versions {
     else
       fnm install $fnm_nvm
     fi
-    # Set default to 14 for compatibility
-    fnm default 14
   done
 }
 
@@ -302,6 +289,7 @@ function post_installation {
 function installation {
   pre_installation
   optimziations_setup
+  finder_setup
 
   install_package_manager
   install_system_packages
