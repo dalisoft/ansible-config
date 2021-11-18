@@ -82,6 +82,7 @@ cask "4k-video-downloader"
 cask "adguard"
 cask "adguard-vpn"
 cask "altair-graphql-client"
+cask "altserver"
 cask "android-file-transfer"
 cask "android-studio"
 cask "app-cleaner"
@@ -126,6 +127,7 @@ mas "Asphalt 8+", id: 1563005359
 mas "Blackmagic RAW Speed Test", id: 1466185689
 mas "Boop", id: 1518425043
 mas "Cleaner for Xcode", id: 1296084683
+mas "Craft", id: 1487937127
 mas "Data Modeler", id: 1575153701
 mas "Developer", id: 640199958
 mas "Disk Speed Test", id: 425264550
@@ -133,10 +135,12 @@ mas "iMovie", id: 408981434
 mas "iPreview", id: 1519213509
 mas "Medis", id: 1579200037
 mas "Microsoft Excel", id: 462058435
+mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "Ora", id: 1340501510
 mas "Sequel Ace", id: 1518036000
+mas "Spark", id: 1176895641
 mas "The Unarchiver", id: 425424353
 mas "Transporter", id: 1450874784
 mas "Treenity", id: 1208520991
