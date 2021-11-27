@@ -86,6 +86,7 @@ cask "altserver"
 cask "android-file-transfer"
 cask "android-studio"
 cask "app-cleaner"
+cask "avibrazil-rdm"
 cask "browserstacklocal"
 cask "coconutbattery"
 cask "cyberduck"
@@ -106,6 +107,7 @@ cask "microsoft-auto-update"
 cask "microsoft-edge"
 cask "miniforge"
 cask "miro"
+cask "monitorcontrol"
 cask "netnewswire"
 cask "notion"
 cask "numi"
@@ -114,7 +116,7 @@ cask "paw"
 cask "postgres-unofficial"
 cask "postman"
 cask "raspberry-pi-imager"
-cask "silicon"
+#cask "silicon"
 cask "slack"
 #cask "sublime-text"
 cask "telegram"
@@ -123,7 +125,7 @@ cask "visual-studio-code"
 #cask "webstorm"
 cask "zoom"
 mas "Apple Configurator 2", id: 1037126344
-mas "Asphalt 8+", id: 1563005359
+mas "Asphalt 8", id: 610391947
 mas "Blackmagic RAW Speed Test", id: 1466185689
 mas "Boop", id: 1518425043
 mas "Cleaner for Xcode", id: 1296084683
@@ -138,7 +140,10 @@ mas "Microsoft Excel", id: 462058435
 mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
+mas "OneDrive", id: 823766827
 mas "Ora", id: 1340501510
+mas "Pixelmator Pro", id: 1289583905
+mas "Save to Raindrop.io", id: 1549370672
 mas "Sequel Ace", id: 1518036000
 mas "Spark", id: 1176895641
 mas "The Unarchiver", id: 425424353
