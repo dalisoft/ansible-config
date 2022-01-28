@@ -25,13 +25,11 @@ brew "deno"
 #brew "docker-compose"
 brew "dprint"
 brew "exa"
-brew "unbound", restart_service: true
-brew "gobject-introspection"
+brew "unbound"
 brew "ffmpeg"
 brew "fish"
 brew "fnm"
 brew "git"
-brew "qt@5"
 brew "git-cola"
 brew "git-gui"
 brew "git-lfs"
@@ -53,11 +51,11 @@ brew "neovim"
 brew "node"
 brew "openblas"
 brew "openjdk@11"
-brew "php", restart_service: true
+brew "php"
 brew "pinentry-mac"
 brew "qemu"
 brew "podman"
-brew "postgresql", restart_service: true
+brew "postgresql"
 brew "qt"
 brew "pyqt"
 brew "rclone"
@@ -73,7 +71,7 @@ brew "unzip"
 brew "watchman"
 brew "websocat"
 brew "wget"
-brew "wrk", args: ["HEAD"]
+brew "wrk"
 brew "yarn"
 brew "heroku/brew/heroku"
 brew "mongodb/brew/mongodb-community"
@@ -94,9 +92,9 @@ cask "browserstacklocal"
 cask "coconutbattery"
 cask "cyberduck"
 cask "datagrip"
-cask "docker"
+#cask "docker"
 cask "figma"
-cask "firefox"
+#cask "firefox"
 cask "folx"
 cask "font-fira-code"
 cask "framer"
@@ -113,7 +111,7 @@ cask "microsoft-office"
 cask "microsoft-teams"
 cask "miniforge"
 cask "miro"
-cask "monitorcontrol"
+#cask "monitorcontrol"
 cask "netnewswire"
 cask "notion"
 cask "numi"
@@ -124,15 +122,14 @@ cask "postico"
 cask "postman"
 cask "raindropio"
 cask "raspberry-pi-imager"
-cask "silicon"
+#cask "silicon"
 cask "slack"
-#cask "sublime-text"
 cask "telegram"
 cask "tuxera-ntfs"
 cask "utm"
 cask "visual-studio-code"
-#cask "webstorm"
 cask "vmware-fusion"
+cask "webstorm"
 cask "zoom"
 mas "Apple Configurator 2", id: 1037126344
 mas "Blackmagic RAW Speed Test", id: 1466185689
@@ -141,11 +138,16 @@ mas "Craft", id: 1487937127
 mas "Data Modeler", id: 1575153701
 mas "Developer", id: 640199958
 mas "Disk Speed Test", id: 425264550
+mas "Home Design 3D", id: 1342163391
 mas "iMovie", id: 408981434
+mas "Infuse", id: 1136220934
 mas "iPreview", id: 1519213509
+mas "Live Home 3D", id: 1066144116
 mas "Medis", id: 1579200037
+mas "Notability", id: 360593530
 mas "Ora", id: 1340501510
 mas "Pixelmator Pro", id: 1289583905
+mas "Planner 5D", id: 1310584536
 mas "Save to Raindrop.io", id: 1549370672
 mas "Sequel Ace", id: 1518036000
 mas "Spark", id: 1176895641
