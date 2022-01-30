@@ -87,6 +87,7 @@ cask "android-studio"
 cask "app-cleaner"
 cask "avibrazil-rdm"
 cask "beekeeper-studio"
+cask "bettertouchtool"
 cask "boop"
 cask "browserstacklocal"
 cask "coconutbattery"
@@ -132,6 +133,7 @@ cask "vmware-fusion"
 cask "webstorm"
 cask "zoom"
 mas "Apple Configurator 2", id: 1037126344
+mas "Baking Soda", id: 1601151613
 mas "Blackmagic RAW Speed Test", id: 1466185689
 mas "Cleaner for Xcode", id: 1296084683
 mas "Craft", id: 1487937127
@@ -145,14 +147,18 @@ mas "iPreview", id: 1519213509
 mas "Live Home 3D", id: 1066144116
 mas "Medis", id: 1579200037
 mas "Notability", id: 360593530
+mas "Octotree", id: 1457450145
 mas "Ora", id: 1340501510
 mas "Pixelmator Pro", id: 1289583905
 mas "Planner 5D", id: 1310584536
+mas "Rakuten Cash Back", id: 1451893560
 mas "Save to Raindrop.io", id: 1549370672
 mas "Sequel Ace", id: 1518036000
 mas "Spark", id: 1176895641
 mas "The Unarchiver", id: 425424353
 mas "Transporter", id: 1450874784
 mas "Treenity", id: 1208520991
+mas "Vinegar", id: 1591303229
+mas "Wappalyzer", id: 1520333300
 mas "WebSocket Client", id: 1399498094
 mas "Xcode", id: 497799835
