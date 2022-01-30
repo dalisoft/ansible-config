@@ -7,7 +7,7 @@ HOSTS_EXTERNAL_URL = [
 	['raw.githubusercontent.com', 'AdAway/adaway.github.io/master/hosts.txt'],
 	['raw.githubusercontent.com','/r-a-y/mobile-hosts/master/AdguardDNS.txt'],
 	['o0.pages.dev', '/Pro/hosts.txt'],
-	['block.energized.pro', '/unified/formats/hosts.txt']
+	['block.energized.pro', '/ultimate/formats/hosts.txt']
 ]
 
 def bytes2utf (bytelist: list[bytes]) -> list[str]:
@@ -59,7 +59,7 @@ for line in custom_host_lines:
 		output_list.append(line)
 
 index = 1
-len = len(HOSTS_EXTERNAL_URL) + 1
+length = len(HOSTS_EXTERNAL_URL) + 1
 for host, path in (HOSTS_EXTERNAL_URL):
 	host_list = request(host, path)
 
@@ -68,7 +68,7 @@ for host, path in (HOSTS_EXTERNAL_URL):
 			line = line.replace('127.0.0.1', '0.0.0.0')
 			output_list.append(line)
 
-	print('Generating hosts... {}%'.format(int((index / len) * 100 )))
+	print('Generating hosts... {}%'.format(int((index / length) * 100 )))
 	index += 1
 
 ## IP Generation block
