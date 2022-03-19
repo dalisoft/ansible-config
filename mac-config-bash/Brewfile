@@ -87,7 +87,7 @@ cask "app-cleaner"
 cask "arctype"
 cask "avibrazil-rdm"
 cask "beekeeper-studio"
-cask "bettertouchtool"
+#cask "bettertouchtool"
 cask "boop"
 cask "browserstacklocal"
 cask "coconutbattery"
@@ -108,19 +108,24 @@ cask "macs-fan-control"
 cask "macupdater"
 cask "microsoft-auto-update"
 cask "microsoft-edge"
-cask "microsoft-office"
+cask "microsoft-excel"
+cask "microsoft-outlook"
+cask "microsoft-powerpoint"
 cask "microsoft-teams"
+cask "microsoft-word"
 cask "miniforge"
 cask "miro"
 #cask "monitorcontrol"
 cask "netnewswire"
 cask "notion"
 cask "numi"
+cask "onedrive"
 cask "paw"
 cask "postgres-unofficial"
 cask "postico"
 cask "postman"
 cask "proxyman"
+cask "qbittorrent"
 cask "raindropio"
 cask "raspberry-pi-imager"
 #cask "silicon"
@@ -147,6 +152,7 @@ mas "Infuse", id: 1136220934
 mas "iPreview", id: 1519213509
 mas "Live Home 3D", id: 1066144116
 mas "Medis", id: 1579200037
+mas "Mockup", id: 1527554407
 mas "Notability", id: 360593530
 mas "Octotree", id: 1457450145
 mas "Ora", id: 1340501510
