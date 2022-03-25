@@ -138,7 +138,7 @@ cask "visual-studio-code"
 cask "vmware-fusion"
 cask "webstorm"
 cask "zoom"
-mas "Apple Configurator 2", id: 1037126344
+mas "Apple Configurator", id: 1037126344
 mas "Baking Soda", id: 1601151613
 mas "Blackmagic RAW Speed Test", id: 1466185689
 mas "Cleaner for Xcode", id: 1296084683
