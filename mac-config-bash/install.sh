@@ -21,7 +21,7 @@ LINK_FILES=(".nanorc" ".vimrc" ".tmux.conf" ".gitconfig")
 
 # M1 incompatible npm packages: "bs-platform"
 NPM_PACKAGES=("npm" "0x" "cordova" "esy" "flamebearer" "http-server" "node-gyp" "nodemon" "npm-check-updates" "typesync")
-PIP_PACKAGES=("virtualenv" "jupyterlab" "notebook" "labelme" "psrecord")
+PIP_PACKAGES=("virtualenv" "jupyterlab" "notebook" "labelme" "labelImg" "psrecord")
 
 FNM_VERSIONS=("16.14.2", "17.18.0")
 
