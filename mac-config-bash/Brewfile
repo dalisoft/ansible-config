@@ -122,6 +122,7 @@ cask "netnewswire"
 cask "notion"
 cask "numi"
 cask "onedrive"
+cask "outline-manager"
 cask "paw"
 cask "postgres-unofficial"
 cask "postico"
@@ -163,6 +164,7 @@ mas "MQTT Explorer", id: 1455214828
 mas "Notability", id: 360593530
 mas "Octotree", id: 1457450145
 mas "Ora", id: 1340501510
+mas "Outline", id: 1356178125
 mas "Pixelmator Pro", id: 1289583905
 mas "Planner 5D", id: 1310584536
 mas "Rakuten Cash Back", id: 1451893560
