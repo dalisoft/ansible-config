@@ -23,7 +23,7 @@ LINK_FILES=(".nanorc" ".vimrc" ".tmux.conf" ".gitconfig")
 NPM_PACKAGES=("npm" "0x" "cordova" "esy" "flamebearer" "http-server" "node-gyp" "nodemon" "npm-check-updates" "typesync")
 PIP_PACKAGES=("virtualenv" "jupyterlab" "notebook" "labelme" "labelImg" "psrecord")
 
-FNM_VERSIONS=("16.14.2", "17.8.0")
+FNM_VERSIONS=("16.14.2", "17.9.0")
 
 #############################
 ### Preparations of steps ###
