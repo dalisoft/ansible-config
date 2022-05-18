@@ -263,8 +263,8 @@ function post_installation {
   nvim -c "PlugInstall" -c "qa"
 
   # use XCode SDK tools
-  sudo -A xcode-select -s /Applications/Xcode.app/Contents/Developer
-  sudo -A xcodebuild -license accept
+  # sudo -A xcode-select -s /Applications/Xcode.app/Contents/Developer
+  # sudo -A xcodebuild -license accept
 
   # link OpenJDK
   sudo -A ln -sfn $BREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk@11.jdk
