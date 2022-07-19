@@ -23,8 +23,9 @@ LINK_FILES=(".nanorc" ".vimrc" ".tmux.conf" ".gitconfig")
 # M1 incompatible npm packages: "bs-platform"
 NPM_PACKAGES=("npm" "0x" "cordova" "esy" "flamebearer" "http-server" "node-gyp" "nodemon" "npm-check-updates" "typesync")
 PIP_PACKAGES=("virtualenv" "jupyterlab" "notebook" "labelme" "labelImg" "psrecord")
+PIPX_PACKAGES=("osxphotos")
 
-FNM_VERSIONS=("16.15.0", "17.9.0")
+FNM_VERSIONS=("16.16.0", "17.9.1")
 
 #############################
 ### Preparations of steps ###
@@ -226,6 +227,22 @@ function install_pip_packages {
   done
 }
 
+### Installation pipx packages
+function install_pipx_packages {
+  echo "------"
+
+  echo "Installing pipx packages..."
+
+  INSTALLED_PACKAGES=$(pipx list --json)
+  for package in "${PIPX_PACKAGES[@]}"; do
+    if [[ $(echo "$INSTALLED_PACKAGES" | grep -o "\"$package\"") == "\"$package\"" ]]; then
+      echo "Already installed pipx package: $package"
+    else
+      pipx install $package
+    fi
+  done
+}
+
 ## Installation Mac App Store apps
 function install_mas_apps {
   echo "------"
@@ -305,6 +322,7 @@ function installation {
   install_npm_packages
   install_fnm_versions
   install_pip_packages
+  install_pipx_packages
   install_mas_apps
 
   # Post-installation
