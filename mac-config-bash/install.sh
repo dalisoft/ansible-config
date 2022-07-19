@@ -275,8 +275,9 @@ function post_installation {
   # link OpenJDK
   sudo -A ln -sfn $BREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk@11.jdk
 
-  # locate `RemMe`
+  # locate binaries
   sudo -A ln -vh $(pwd)/remme.sh $BREW_PREFIX/bin/remme
+  sudo -A ln -vh $(pwd)/git-show-lfs.sh $BREW_PREFIX/bin/git-show-lfs
 
   ### fish shell configuration
   FISH_SHELL_PATH=$(which fish)
