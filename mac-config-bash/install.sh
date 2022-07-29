@@ -276,6 +276,10 @@ function post_installation {
 
   echo "Post-installation steps..."
 
+  # Mutagen prepare
+  # mutagen daemon register
+  # mutagen daemon start
+
   # neovim plugins installation
   wget -O "$HOME/Desktop/dotfiles/.vim/autoload/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   nvim -c "PlugInstall" -c "qa"
