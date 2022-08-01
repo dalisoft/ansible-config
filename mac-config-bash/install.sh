@@ -18,7 +18,7 @@ MAX_TRIES=5
 
 ENSURE_FOLDERS=(".npm-global/lib" "Desktop/dotfiles/.vim/autoload")
 LINK_FOLDERS=(".nano" ".vim" ".config")
-LINK_FILES=(".nanorc" ".vimrc" ".tmux.conf" ".gitconfig")
+LINK_FILES=(".nanorc" ".vimrc" ".tmux.conf" ".gitconfig", ".hushlogin")
 
 # M1 incompatible npm packages: "bs-platform"
 NPM_PACKAGES=("npm" "0x" "cordova" "esy" "flamebearer" "http-server" "node-gyp" "nodemon" "npm-check-updates" "typesync")
