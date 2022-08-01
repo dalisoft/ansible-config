@@ -281,7 +281,9 @@ function post_installation {
   # mutagen daemon start
 
   # GnuPG configuration
-  echo "pinentry-program $(which pinentry-mac)" >>~/.gnupg/gpg-agent.conf
+  echo "pinentry-program $(which pinentry-mac)" >>"$HOME/.gnupg/gpg-agent.conf"
+  echo "default-cache-ttl 7200" >>"$HOME/.gnupg/gpg-agent.conf"
+  echo "max-cache-ttl 36000" >>"$HOME/.gnupg/gpg-agent.conf"
 
   # neovim plugins installation
   wget -O "$HOME/Desktop/dotfiles/.vim/autoload/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
