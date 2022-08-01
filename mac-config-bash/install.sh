@@ -16,7 +16,7 @@ BREAKING_OS=12.3
 ##############################
 MAX_TRIES=5
 
-ENSURE_FOLDERS=(".npm-global" "Desktop/dotfiles/.vim/autoload")
+ENSURE_FOLDERS=(".npm-global/lib" "Desktop/dotfiles/.vim/autoload")
 LINK_FOLDERS=(".nano" ".vim" ".config")
 LINK_FILES=(".nanorc" ".vimrc" ".tmux.conf" ".gitconfig")
 
@@ -279,6 +279,9 @@ function post_installation {
   # Mutagen prepare
   # mutagen daemon register
   # mutagen daemon start
+
+  # GnuPG configuration
+  echo "pinentry-program $(which pinentry-mac)" >>~/.gnupg/gpg-agent.conf
 
   # neovim plugins installation
   wget -O "$HOME/Desktop/dotfiles/.vim/autoload/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
