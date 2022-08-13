@@ -10,8 +10,10 @@ CLEAN_FOLDERS=(
   # System library clean folders
   "/Library/LaunchDaemons"
   "/Library/LaunchAgents"
+  "/Library/Preferences"
   "/Library/PrivilegedHelperTools"
   # User library clean folders
+  "$HOME/Library/LaunchDaemons"
   "$HOME/Library/LaunchAgents"
   "$HOME/Library/Preferences"
   "$HOME/Library/Caches"
