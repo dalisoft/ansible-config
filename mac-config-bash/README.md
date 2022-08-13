@@ -2,6 +2,10 @@
 
 <p align='center'>A single "bash" script which configures machine on macOS based on architecture<br/><b>Compatible with Apple Silicon</b></p>
 
+## Guide
+
+If you want guide (optional), there exists a file. See [here](./guide.md)
+
 ## Installation
 
 No installation required, it's just basic and clean "bash" script
@@ -11,7 +15,8 @@ No installation required, it's just basic and clean "bash" script
 ```bash
 git clone https://github.com/dalisoft/mac-config-bash.git
 cd mac-config-bash
-./install.sh "YOUR_PASSWORD"
+./install.sh
+> "YOUR_PASSWORD"
 ```
 
 ## Old history

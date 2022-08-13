@@ -89,11 +89,10 @@ function sudo_access_check {
 #############################
 ### Optimizations  Set-up ###
 #############################
-# See link for more info
-# https://blog.macstadium.com/blog/simple-optimizations-for-macos-and-ios-build-agents
 function optimziations_setup {
   echo "------"
 
+  # Disable Spotlight
   sudo -A mdutil -a -i off
   sudo -A defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
   killall mds >/dev/null 2>&1
@@ -101,16 +100,135 @@ function optimziations_setup {
   sudo -A mdutil -a -i off /
   sudo -A mdutil -a -i off /*
 
+  # Siri disable
   defaults write com.apple.Siri StatusMenuVisible -bool false
   defaults write com.apple.Siri UserHasDeclinedEnable -bool true
   defaults write com.apple.assistant.support "Assistant Enabled" 0
 }
 
-function finder_setup {
+#############################
+### Automatize attributes ###
+#############################
+function attributes_setup {
   echo "------"
 
+  #############################
+  ########## Finder ###########
+  #############################
+  chflags nohidden ~/Library
+
+  # Show bars
   defaults write com.apple.finder ShowStatusBar -bool true
   defaults write com.apple.finder ShowPathbar -bool true
+  defaults write com.apple.finder ShowRecentTags -bool false
+
+  # Sorting & Group
+  defaults write com.apple.finder FXArrangeGroupViewBy -string "Date Modified"
+  defaults write com.apple.finder FXPreferredGroupBy -string "None"
+  defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+  # Icons for hard drives, servers, and removable media on the desktop (default: false)
+  defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+  defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+  defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+  defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+  # USB & Network
+  defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+  # Dialogs & Misc
+  defaults write com.apple.finder FXRemoveOldTrashItems -bool true
+  defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/$USER/Downloads/"
+  defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool false
+  defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+  # Save to disk (not to iCloud) by default
+  defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+  #############################
+  ############ Dock ###########
+  #############################
+  defaults write com.apple.dock show-recents -bool false
+  defaults write com.apple.dock mru-spaces -bool false
+  defaults write com.apple.dock expose-group-by-app -bool true
+
+  #############################
+  ########### Safari ##########
+  #############################
+  defaults write com.apple.Safari IncludeDevelopMenu -bool true
+  defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+  defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+  # Add a context menu item for showing the Web Inspector in web views
+  defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+  # Enable continuous spellchecking
+  defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
+  defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
+
+  # Disable AutoFill
+  defaults write com.apple.Safari AutoFillFromAddressBook -bool false
+  defaults write com.apple.Safari AutoFillPasswords -bool false
+  defaults write com.apple.Safari AutoFillCreditCardData -bool false
+  defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
+
+  # Enable “Do Not Track”
+  defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
+  # Update extensions automatically
+  defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+
+  # only use UTF-8
+  defaults write com.apple.terminal StringEncodings -array 4
+
+  #############################
+  ######## Time Machine #######
+  #############################
+  hash tmutil &>/dev/null && sudo tmutil disablelocal
+
+  #############################
+  ##### Activity Monitor ######
+  #############################
+  defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+
+  # Visualize CPU usage in the Activity Monitor Dock icon
+  defaults write com.apple.ActivityMonitor IconType -int 5
+
+  # Show all processes in Activity Monitor
+  defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+  # Sort Activity Monitor results by CPU usage
+  defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+  defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+  #############################
+  ###### Trackpad config ######
+  #############################
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+  defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+  defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+  defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+  defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+  #############################
+  ### Disable Spell Check ####
+  #############################
+  defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+  defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+  defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+  defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+  defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+  #############################
+  ############ Misc ###########
+  #############################
+  # Disable Notification Center and remove the menu bar icon
+  launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2>/dev/null
+  # Prevent Photos from opening automatically when devices are plugged in
+  defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+  # Reboot to take effect
+  killall Dock Finder
 }
 
 #############################
@@ -323,7 +441,7 @@ function post_installation {
 function installation {
   pre_installation
   optimziations_setup
-  finder_setup
+  attributes_setup
 
   install_package_manager
   install_system_packages
