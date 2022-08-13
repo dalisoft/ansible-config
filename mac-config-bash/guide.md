@@ -1,5 +1,9 @@
 # Installation » macOS 11.5+
 
+> This configuration was made for remote employee who work always from home and has it's secure home for it. No one touches to my machine
+
+**I do not guarantee nor support for your any damage & data loss, do & run it at your own risk**
+
 ## Create USB OS
 
 1. <https://support.apple.com/en-us/HT201372>

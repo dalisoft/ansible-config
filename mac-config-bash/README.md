@@ -2,6 +2,12 @@
 
 <p align='center'>A single "bash" script which configures machine on macOS based on architecture<br/><b>Compatible with Apple Silicon</b></p>
 
+## Note
+
+> This configuration was made for remote employee who work always from home and has it's secure home for it. No one touches to my machine
+
+**I do not guarantee nor support for your any damage & data loss, do & run it at your own risk**
+
 ## Guide
 
 If you want guide (optional), there exists a file. See [here](./guide.md)
