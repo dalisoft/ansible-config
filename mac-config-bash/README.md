@@ -8,6 +8,10 @@
 
 **I do not guarantee nor support for your any damage & data loss, do & run it at your own risk**
 
+## Used projects
+
+- <https://github.com/mathiasbynens/dotfiles/blob/main/.macos>
+
 ## Guide
 
 If you want guide (optional), there exists a file. See [here](./guide.md)

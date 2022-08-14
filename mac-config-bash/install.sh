@@ -89,10 +89,11 @@ function sudo_access_check {
 #############################
 ### Optimizations  Set-up ###
 #############################
+# See link for more info
+# https://blog.macstadium.com/blog/simple-optimizations-for-macos-and-ios-build-agents
 function optimziations_setup {
   echo "------"
 
-  # Disable Spotlight
   sudo -A mdutil -a -i off
   sudo -A defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
   killall mds >/dev/null 2>&1
@@ -100,135 +101,123 @@ function optimziations_setup {
   sudo -A mdutil -a -i off /
   sudo -A mdutil -a -i off /*
 
-  # Siri disable
   defaults write com.apple.Siri StatusMenuVisible -bool false
   defaults write com.apple.Siri UserHasDeclinedEnable -bool true
   defaults write com.apple.assistant.support "Assistant Enabled" 0
 }
 
-#############################
-### Automatize attributes ###
-#############################
-function attributes_setup {
+function finder_setup {
   echo "------"
 
-  #############################
-  ########## Finder ###########
-  #############################
-  chflags nohidden ~/Library
-
-  # Show bars
-  defaults write com.apple.finder ShowStatusBar -bool true
-  defaults write com.apple.finder ShowPathbar -bool true
-  defaults write com.apple.finder ShowRecentTags -bool false
-
-  # Sorting & Group
+  defaults write com.apple.finder DownloadsFolderListViewSettingsVersion -bool true
   defaults write com.apple.finder FXArrangeGroupViewBy -string "Date Modified"
+  defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+  defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
   defaults write com.apple.finder FXPreferredGroupBy -string "None"
   defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+  defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 
-  # Icons for hard drives, servers, and removable media on the desktop (default: false)
-  defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-  defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+  defaults write com.apple.finder FinderSpawnTab -bool false
+  defaults write com.apple.finder NSNavLastUserSetHideExtensionButtonState -bool true
   defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-  defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+  defaults write com.apple.finder ShowRecentTags -bool false
+  defaults write com.apple.finder ShowStatusBar -bool true
+  defaults write com.apple.finder ShowSidebar -bool true
+  defaults write com.apple.finder ShowPathbar -bool true
+  defaults write com.apple.finder SidebarShowingSignedIntoiCloud -bool true
+  defaults write com.apple.finder SidebariCloudDriveSectionDisclosedState -bool true
 
-  # USB & Network
+  # Avoid creating .DS_Store files on network or USB volumes
+  defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
   defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-  # Dialogs & Misc
-  defaults write com.apple.finder FXRemoveOldTrashItems -bool true
-  defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/$USER/Downloads/"
-  defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool false
+  defaults write com.apple.bird optimize-storage -bool false
+}
+
+function settings_setup {
+  echo "------"
+
+  osascript -e 'tell application "System Preferences" to quit'
+
+  launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2>/dev/null
+
+  # General
+  defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
+  defaults write NSGlobalDomain AppleInterfaceStyle -string "Light"
+  defaults write NSGlobalDomain AppleInterfaceStyleSwitchesAutomatically -bool false
+
   defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-  # Save to disk (not to iCloud) by default
-  defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-  #############################
-  ############ Dock ###########
-  #############################
-  defaults write com.apple.dock show-recents -bool false
-  defaults write com.apple.dock mru-spaces -bool false
-  defaults write com.apple.dock expose-group-by-app -bool true
-
-  #############################
-  ########### Safari ##########
-  #############################
-  defaults write com.apple.Safari IncludeDevelopMenu -bool true
-  defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-  defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-
-  # Add a context menu item for showing the Web Inspector in web views
-  defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-  # Enable continuous spellchecking
-  defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
-  defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
-
-  # Disable AutoFill
-  defaults write com.apple.Safari AutoFillFromAddressBook -bool false
-  defaults write com.apple.Safari AutoFillPasswords -bool false
-  defaults write com.apple.Safari AutoFillCreditCardData -bool false
-  defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
-
-  # Enable “Do Not Track”
-  defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
-
-  # Update extensions automatically
-  defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
-
-  # only use UTF-8
-  defaults write com.apple.terminal StringEncodings -array 4
-
-  #############################
-  ######## Time Machine #######
-  #############################
-  hash tmutil &>/dev/null && sudo tmutil disablelocal
-
-  #############################
-  ##### Activity Monitor ######
-  #############################
-  defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
-
-  # Visualize CPU usage in the Activity Monitor Dock icon
-  defaults write com.apple.ActivityMonitor IconType -int 5
-
-  # Show all processes in Activity Monitor
-  defaults write com.apple.ActivityMonitor ShowCategory -int 0
-
-  # Sort Activity Monitor results by CPU usage
-  defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
-  defaults write com.apple.ActivityMonitor SortDirection -int 0
-
-  #############################
-  ###### Trackpad config ######
-  #############################
-  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-  defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-  defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
   defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
-  defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-  #############################
-  ### Disable Spell Check ####
-  #############################
+  # Keyboard
   defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
   defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
   defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
   defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
   defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-  #############################
-  ############ Misc ###########
-  #############################
-  # Disable Notification Center and remove the menu bar icon
-  launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2>/dev/null
-  # Prevent Photos from opening automatically when devices are plugged in
-  defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+  # Sound
+  defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool true
 
-  # Reboot to take effect
-  killall Dock Finder
+  # Magic Trackpad config
+  defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+  defaults write NSGlobalDomain com.apple.trackpad.scaling -float 0.875
+
+  defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -bool false
+  defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -bool false
+  defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool true
+
+  defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+  defaults write com.apple.AppleMultitouchTrackpad TrackpadPinch -bool false
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadPinch -bool false
+
+  defaults write com.apple.AppleMultitouchTrackpad TrackpadRotate -bool false
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -bool false
+
+  defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -bool false
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -bool false
+
+  defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGesture -bool false
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerDoubleTapGesture -bool false
+
+  defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -bool false
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -bool false
+
+  # Missiong control
+  defaults write com.apple.dock mru-spaces -bool false
+  defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+  defaults write com.apple.dock showLaunchpadGestureEnabled -bool false
+  defaults write com.apple.dock expose-group-apps -bool true
+  defaults write com.apple.dock expose-group-by-app -bool true
+
+  # Dock
+  defaults write com.apple.dock show-recents -bool false
+
+  # Activity Monitor
+  defaults write com.apple.ActivityMonitor OpenMainWindow -bool false
+  defaults write com.apple.ActivityMonitor SelectedTab -int 1
+  defaults write com.apple.ActivityMonitor ShowCategory -bool false
+  defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+  defaults write com.apple.ActivityMonitor UpdatePeriod -int 1
+
+  # Enery Power
+  sudo pmset -a autorestart 1
+  sudo systemsetup -setrestartfreeze on
+  sudo pmset -c sleep 0
+  sudo pmset -a displaysleep 15
+  sudo systemsetup -setcomputersleep Off >/dev/null
+  sudo pmset -a hibernatemode 0
+
+  # Privacy
+  defaults write com.apple.screensaver askForPassword -int 1
+  defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+  # Screenshots
+  defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+  defaults write com.apple.screencapture type -string "png"
+  defaults write com.apple.screencapture disable-shadow -bool true
 }
 
 #############################
@@ -433,6 +422,12 @@ function post_installation {
   sudo -A chsh -s $FISH_SHELL_PATH       # change for root
   sudo -A chsh -s $FISH_SHELL_PATH $USER # change for current user
   echo "shell → fish was set"
+
+  # Terminal set theme
+  defaults write com.apple.Terminal Shell "login -pfql $USER $BREW_PREFIX/fish"
+  defaults write com.apple.Terminal NSNavLastRootDirectory "~/Desktop/dotfiles"
+  defaults write com.apple.Terminal "Default Window Settings" "Transcluent"
+  defaults write com.apple.Terminal "Startup Window Settings" "Transcluent"
 }
 
 #############################
@@ -441,7 +436,8 @@ function post_installation {
 function installation {
   pre_installation
   optimziations_setup
-  attributes_setup
+  finder_setup
+  settings_setup
 
   install_package_manager
   install_system_packages
@@ -457,6 +453,31 @@ function installation {
 
   # Remove password by removing askpass
   rm -rf askpass.sh
+
+  for app in "Activity Monitor" \
+    "Address Book" \
+    "Calendar" \
+    "cfprefsd" \
+    "Contacts" \
+    "Dock" \
+    "Finder" \
+    "Google Chrome Canary" \
+    "Google Chrome" \
+    "Mail" \
+    "Messages" \
+    "Opera" \
+    "Photos" \
+    "Safari" \
+    "SizeUp" \
+    "Spectacle" \
+    "SystemUIServer" \
+    "Terminal" \
+    "Transmission" \
+    "Tweetbot" \
+    "Twitter" \
+    "iCal"; do
+    killall "${app}" &>/dev/null
+  done
 
   return 0
 }
