@@ -26,12 +26,14 @@
 1. Login to « **App Store** »
 2. Open « **Settings Preferences** » from **Dock**
 3. Click to « **Apple ID** » then « **Media & Purchases** »
-4. Select *password require* for free « **Never** » and « **15 Minutes** » for paid apps
+4. Select _password require_ for free « **Never** » and « **15 Minutes** » for paid apps
 
 ## Finder
 
 1. Enable all « **Favourites** » on « **Sidebar** » tab
 2. Enable « **iCloud Drive** », all locations except « **COMPUTER NAME** »
+3. Check « **Always open in list view** » at « **~/Desktop**, **Home directory** » and click to « **Use as Defaults** »
+4. Enable « **Item info** » at « **~/Desktop**, **Home directory** » and click to « **Use as Defaults** »
 
 ## Settings
 
@@ -71,13 +73,13 @@ These settings may be outdated or changed, so please be careful with settings
 3. Then go-to over-these and change « **Always** » to « **When active** » on possible items
 
 4. Remove
-    - **AirDrop**
-    - **Time Machine**
-    - **Keyboard Brightness**
-    - **Siri**
-    - **Spotlight**
-    - **User switching**
-    - **Accessibility**
+   - **AirDrop**
+   - **Time Machine**
+   - **Keyboard Brightness**
+   - **Siri**
+   - **Spotlight**
+   - **User switching**
+   - **Accessibility**
 5. Enable « **battery percent** »
 
 ### Settings → Privacy
@@ -105,9 +107,26 @@ These settings may be outdated or changed, so please be careful with settings
 2. Enable **Optimized Charging**
 3. Unselect all including « **Put disk to sleep** » on « **Power adapter** » tab
 
-### Settings → Energy Saver
+### Settings → Battery → Power Adapter
 
-1. Enable « **Power Nap** »
+> On Desktop it's **Settings → Energy Saver**
+
+| Options                     | Desktop | MacBook | Mac Mini |
+| --------------------------- | ------- | ------- | -------- |
+| Prevent your Mac from sleep | ✅      | ❌      | ❌       |
+| Put HDD to sleep            | ❌      | ✅      | ✅       |
+| Enable Power Nap            | ✅      | ❌      | ✅       |
+| Low power mode              | -       | ✅      | -        |
+
+### Settings → Battery → Battery
+
+> On Desktop it's **unavailable**
+
+- [x] Slightly dim the display while on battery
+- [x] Optimize video streaming while on battery
+- [x] Optimized battery changing
+- [x] Show battery status in menu bar
+- [ ] Low-power mode
 
 ## Activity Monitor
 
