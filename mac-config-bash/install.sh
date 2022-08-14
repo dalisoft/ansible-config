@@ -251,10 +251,10 @@ function settings_setup {
   # Enery Power
   sudo pmset -a autorestart 1
   sudo systemsetup -setrestartfreeze on
-  sudo pmset -c sleep 0
+  #sudo pmset -c sleep 0
   sudo pmset -a displaysleep 15
-  sudo systemsetup -setcomputersleep Off >/dev/null
-  sudo pmset -a hibernatemode 0
+  #sudo systemsetup -setcomputersleep Off >/dev/null
+  #sudo pmset -a hibernatemode 0
 
   # Software Update
   defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
