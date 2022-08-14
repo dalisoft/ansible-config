@@ -254,7 +254,6 @@ function settings_setup {
   # Time Machine
   defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-  sudo -A tmutil disablelocal
   sudo -A tmutil stopbackup
   sudo -A tmutil disable
   sudo -A tmutil deletelocalsnapshots /
