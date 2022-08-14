@@ -113,6 +113,9 @@ function finder_setup {
 
   chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library 2>/dev/null
 
+  defaults write com.apple.finder NewWindowTarget -string "PfDe"
+  defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
+
   defaults write com.apple.finder DownloadsFolderListViewSettingsVersion -bool true
   defaults write com.apple.finder DownloadsFolderListViewSettingsVersion -int 1
   defaults write com.apple.finder FXArrangeGroupViewBy -string "Date Modified"

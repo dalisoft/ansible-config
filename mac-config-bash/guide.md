@@ -30,19 +30,8 @@
 
 ## Finder
 
-1. Select default path to « **Downloads** »
-2. Enable « **External disks, CD, DVDs and iPods, Connected servers** »
-3. Enable all « **Favourites** » on « **Sidebar** » tab
-4. Enable « **iCloud Drive** », all locations except « **COMPUTER NAME** »
-5. Disable « **Recent tags** »
-6. Enable « **Show all filename extensions** »
-7. Enable « **Remove items from the Trash after 30 days** »
-
-## Terminal
-
-### Terminal → General
-
-1. Set « **Shells open with** » to « **login -pfql $USER {HOMEBREW}/fish** »
+1. Enable all « **Favourites** » on « **Sidebar** » tab
+2. Enable « **iCloud Drive** », all locations except « **COMPUTER NAME** »
 
 ## Settings
 
@@ -67,9 +56,8 @@ These settings may be outdated or changed, so please be careful with settings
 
 ### Settings → Dock & Menu Bar → Dock & Menu Bar
 
-1. Disable « **Recent apps** »
-2. Enable « **Zoom-on-Hover** »
-3. Reduce size by small margin
+1. Enable « **Zoom-on-Hover** »
+2. Reduce size by small margin
 
 ### Settings → Dock & Menu Bar → Control Centre
 
@@ -92,16 +80,9 @@ These settings may be outdated or changed, so please be careful with settings
     - **Accessibility**
 5. Enable « **battery percent** »
 
-### Settings → Mission Control
-
-1. Enable « **Group** » apps
-2. Disable « **Rearrange Spaces** »
-
 ### Settings → Privacy
 
 1. Enable « **Firewall** »
-2. Enable « **Disable automatic login** »
-3. Disable « **require password** »
 
 ### Settings → Internet Accounts
 
@@ -126,13 +107,11 @@ These settings may be outdated or changed, so please be careful with settings
 
 ### Settings → Energy Saver
 
-1. Set « **Turn display off** » after « **30 minutes** »
-2. Enable « **Power Nap** »
+1. Enable « **Power Nap** »
 
 ## Activity Monitor
 
-1. Change « **Update frequency** » from « **View** » to « **Very often 1s** »
-2. Enable « **Power Nap** »
+1. Enable « **Power Nap** »
 
 ## Profile
 
