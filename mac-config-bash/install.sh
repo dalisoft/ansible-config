@@ -138,7 +138,6 @@ function finder_setup {
   defaults write com.apple.finder SidebarShowingSignedIntoiCloud -bool true
   defaults write com.apple.finder SidebariCloudDriveSectionDisclosedState -bool true
 
-  /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:calculateAllSizes true" ~/Library/Preferences/com.apple.finder.plist
   /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes true" ~/Library/Preferences/com.apple.finder.plist
   /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:calculateAllSizes true" ~/Library/Preferences/com.apple.finder.plist
 
@@ -254,7 +253,7 @@ function settings_setup {
 
   # Time Machine
   defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-  hash tmutil &>/dev/null && sudo tmutil disablelocal
+  hash tmutil &>/dev/null && sudo -A tmutil disablelocal
 
   # Screenshots
   defaults write com.apple.screencapture location -string "${HOME}/Desktop"
