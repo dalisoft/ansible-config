@@ -175,13 +175,13 @@ mas "CompareMerge2", id: 1459748650
 mas "Core Tunnel", id: 1354318707
 mas "Craft", id: 1487937127
 mas "Data Modeler", id: 1575153701
-mas "Developer", id: 640199958
+#mas "Developer", id: 640199958
 #mas "Disk Speed Test", id: 425264550
 #mas "Home Design 3D", id: 1342163391
-mas "iMovie", id: 408981434
+#mas "iMovie", id: 408981434
 mas "Infuse", id: 1136220934
 mas "iPreview", id: 1519213509
-mas "Live Home 3D", id: 1066144116
+#mas "Live Home 3D", id: 1066144116
 #mas "Medis 1", id: 1063631769
 mas "Medis", id: 1579200037
 mas "Mockup", id: 1527554407

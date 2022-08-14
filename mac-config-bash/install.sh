@@ -16,9 +16,9 @@ BREAKING_OS=12.3
 ##############################
 MAX_TRIES=5
 
-ENSURE_FOLDERS=(".npm-global/lib" "Desktop/dotfiles/.vim/autoload")
+ENSURE_FOLDERS=(".npm-global/lib" "Desktop/dotfiles/.vim/autoload" ".gnupg")
 LINK_FOLDERS=(".nano" ".vim" ".config")
-LINK_FILES=(".nanorc" ".vimrc" ".tmux.conf" ".gitconfig", ".hushlogin")
+LINK_FILES=(".nanorc" ".vimrc" ".tmux.conf" ".gitconfig" ".hushlogin")
 
 # M1 incompatible npm packages: "bs-platform"
 NPM_PACKAGES=("npm" "0x" "cordova" "esy" "flamebearer" "http-server" "node-gyp" "nodemon" "npm-check-updates" "typesync")
@@ -109,6 +109,8 @@ function optimziations_setup {
 function finder_setup {
   echo "------"
 
+  echo "Configuring Finder..."
+
   defaults write com.apple.finder DownloadsFolderListViewSettingsVersion -bool true
   defaults write com.apple.finder FXArrangeGroupViewBy -string "Date Modified"
   defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -136,6 +138,8 @@ function finder_setup {
 
 function settings_setup {
   echo "------"
+
+  echo "Configuring Settings..."
 
   osascript -e 'tell application "System Preferences" to quit'
 
@@ -210,14 +214,34 @@ function settings_setup {
   sudo systemsetup -setcomputersleep Off >/dev/null
   sudo pmset -a hibernatemode 0
 
+  # Software Update
+  defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+  defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+  defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+  defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+  defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
+  defaults write com.apple.commerce AutoUpdate -bool true
+  defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
+
   # Privacy
   defaults write com.apple.screensaver askForPassword -int 1
   defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+  # Time Machine
+  defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+  hash tmutil &>/dev/null && sudo tmutil disablelocal
 
   # Screenshots
   defaults write com.apple.screencapture location -string "${HOME}/Desktop"
   defaults write com.apple.screencapture type -string "png"
   defaults write com.apple.screencapture disable-shadow -bool true
+
+  # Debug & Dev-mode
+  defaults write com.apple.appstore WebKitDeveloperExtras -bool true
+  defaults write com.apple.appstore ShowDebugMenu -bool true
+
+  # Prevent Photos from opening automatically when devices are plugged in
+  defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 }
 
 #############################
@@ -388,6 +412,7 @@ function post_installation {
   # mutagen daemon start
 
   # GnuPG configuration
+  rm -rf "$HOME/.gnupg/gpg-agent.conf"
   echo "pinentry-program $(which pinentry-mac)" >>"$HOME/.gnupg/gpg-agent.conf"
   echo "default-cache-ttl 7200" >>"$HOME/.gnupg/gpg-agent.conf"
   echo "max-cache-ttl 36000" >>"$HOME/.gnupg/gpg-agent.conf"
@@ -424,7 +449,7 @@ function post_installation {
   echo "shell → fish was set"
 
   # Terminal set theme
-  defaults write com.apple.Terminal Shell "login -pfql $USER $BREW_PREFIX/fish"
+  defaults write com.apple.Terminal Shell "login -pfql $USER $BREW_PREFIX/bin/fish"
   defaults write com.apple.Terminal NSNavLastRootDirectory "~/Desktop/dotfiles"
   defaults write com.apple.Terminal "Default Window Settings" "Transcluent"
   defaults write com.apple.Terminal "Startup Window Settings" "Transcluent"
@@ -454,31 +479,6 @@ function installation {
   # Remove password by removing askpass
   rm -rf askpass.sh
 
-  for app in "Activity Monitor" \
-    "Address Book" \
-    "Calendar" \
-    "cfprefsd" \
-    "Contacts" \
-    "Dock" \
-    "Finder" \
-    "Google Chrome Canary" \
-    "Google Chrome" \
-    "Mail" \
-    "Messages" \
-    "Opera" \
-    "Photos" \
-    "Safari" \
-    "SizeUp" \
-    "Spectacle" \
-    "SystemUIServer" \
-    "Terminal" \
-    "Transmission" \
-    "Tweetbot" \
-    "Twitter" \
-    "iCal"; do
-    killall "${app}" &>/dev/null
-  done
-
   return 0
 }
 
@@ -495,6 +495,7 @@ while true; do
   ### Installation done
   if installation; then
     echo "Your apps installed successfully..."
+    echo "Please reboot your device!!!"
     echo "Enjoy..."
     exit 0
   ### Installation failed
