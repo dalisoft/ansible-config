@@ -111,13 +111,19 @@ function finder_setup {
 
   echo "Configuring Finder..."
 
+  chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library 2>/dev/null
+
   defaults write com.apple.finder DownloadsFolderListViewSettingsVersion -bool true
+  defaults write com.apple.finder DownloadsFolderListViewSettingsVersion -int 1
   defaults write com.apple.finder FXArrangeGroupViewBy -string "Date Modified"
   defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
   defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
   defaults write com.apple.finder FXPreferredGroupBy -string "None"
   defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
   defaults write com.apple.finder FXRemoveOldTrashItems -bool true
+
+  defaults write com.apple.finder FXSidebarUpgradedToTenFourteen -int 1
+  defaults write com.apple.finder FXSidebarUpgradedToTenTen -int 1
 
   defaults write com.apple.finder FinderSpawnTab -bool false
   defaults write com.apple.finder NSNavLastUserSetHideExtensionButtonState -bool true
@@ -129,11 +135,24 @@ function finder_setup {
   defaults write com.apple.finder SidebarShowingSignedIntoiCloud -bool true
   defaults write com.apple.finder SidebariCloudDriveSectionDisclosedState -bool true
 
+  /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:calculateAllSizes true" ~/Library/Preferences/com.apple.finder.plist
+  /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettingsV2:calculateAllSizes true" ~/Library/Preferences/com.apple.finder.plist
+  /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:calculateAllSizes true" ~/Library/Preferences/com.apple.finder.plist
+
   # Avoid creating .DS_Store files on network or USB volumes
   defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
   defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
   defaults write com.apple.bird optimize-storage -bool false
+  defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+  # Disable the “Are you sure you want to open this application?” dialog
+  defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+  # Disable disk image verification
+  defaults write com.apple.frameworks.diskimages skip-verify -bool true
+  defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+  defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 }
 
 function settings_setup {
