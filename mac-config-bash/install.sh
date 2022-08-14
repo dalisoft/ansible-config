@@ -253,7 +253,11 @@ function settings_setup {
 
   # Time Machine
   defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-  hash tmutil &>/dev/null && sudo -A tmutil disablelocal
+
+  sudo -A tmutil disablelocal
+  sudo -A tmutil stopbackup
+  sudo -A tmutil disable
+  sudo -A tmutil deletelocalsnapshots /
 
   # Screenshots
   defaults write com.apple.screencapture location -string "${HOME}/Desktop"
