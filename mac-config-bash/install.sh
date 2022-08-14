@@ -144,6 +144,11 @@ function finder_setup {
   /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettingsV2:textSize 12" ~/Library/Preferences/com.apple.finder.plist
   /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:textSize 12" ~/Library/Preferences/com.apple.finder.plist
 
+  /usr/libexec/PlistBuddy -c "Set :ComputerViewSettings:CustomViewStyleVersion 1" ~/Library/Preferences/com.apple.finder.plist
+  /usr/libexec/PlistBuddy -c "Set :ComputerViewSettings:WindowState:ContainerShowSidebar 1" ~/Library/Preferences/com.apple.finder.plist
+  /usr/libexec/PlistBuddy -c "Set :ComputerViewSettings:WindowState:ShowTabView 1" ~/Library/Preferences/com.apple.finder.plist
+  /usr/libexec/PlistBuddy -c "Set :ComputerViewSettings:WindowState:ShowToolbar 1" ~/Library/Preferences/com.apple.finder.plist
+
   # Avoid creating .DS_Store files on network or USB volumes
   defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
   defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
@@ -269,6 +274,9 @@ function settings_setup {
 
   # Prevent Photos from opening automatically when devices are plugged in
   defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+  # Disk Utility
+  defaults write com.apple.DiskUtility SidebarShowAllDevices -bool true
 }
 
 #############################
