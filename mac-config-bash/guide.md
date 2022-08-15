@@ -116,7 +116,7 @@ These settings may be outdated or changed, so please be careful with settings
 | Prevent your Mac from sleep | ✅      | ❌      | ❌       |
 | Put HDD to sleep            | ❌      | ✅      | ✅       |
 | Enable Power Nap            | ✅      | ❌      | ✅       |
-| Low power mode              | -       | ✅      | -        |
+| Low power mode              | ❌      | ✅      | ❌        |
 
 ### Settings → Battery → Battery
 
@@ -126,7 +126,7 @@ These settings may be outdated or changed, so please be careful with settings
 - [x] Optimize video streaming while on battery
 - [x] Optimized battery changing
 - [x] Show battery status in menu bar
-- [ ] Low-power mode
+- [ ] Low-power mode (**Set checked for M1 machines**)
 
 ## Activity Monitor
 
