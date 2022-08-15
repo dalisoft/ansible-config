@@ -101,12 +101,6 @@ These settings may be outdated or changed, so please be careful with settings
 4. Enable « **Remote Management** » and choose only « **$YOUR_NAME** »
 5. Enable « **Remote Apple Events** » and choose only « **$YOUR_NAME** »
 
-### Settings → Battery
-
-1. Check all optimizations on « **Battery tab** »
-2. Enable **Optimized Charging**
-3. Unselect all including « **Put disk to sleep** » on « **Power adapter** » tab
-
 ### Settings → Battery → Power Adapter
 
 > On Desktop it's **Settings → Energy Saver**
