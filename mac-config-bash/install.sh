@@ -483,8 +483,9 @@ function post_installation {
   sudo -A ln -sfn $BREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk@11.jdk
 
   # locate binaries
-  sudo -A ln -vh $(pwd)/remme.sh $BREW_PREFIX/bin/remme
-  sudo -A ln -vh $(pwd)/git-show-lfs.sh $BREW_PREFIX/bin/git-show-lfs
+  sudo -A ln -vh $(pwd)/utils/remme.sh $BREW_PREFIX/bin/remme
+  sudo -A ln -vh $(pwd)/utils/git-show-lfs.sh $BREW_PREFIX/bin/git-show-lfs
+  sudo -A ln -vh $(pwd)/utils/mkv2mp4.sh $BREW_PREFIX/bin/mkv2mp4
 
   ### fish shell configuration
   FISH_SHELL_PATH=$(which fish)
