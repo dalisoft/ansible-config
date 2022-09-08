@@ -2,7 +2,7 @@
 
 My machine configuration playbook
 
-> Don't forget to to copy this repo to `~/Desktop/config`, else it's does not work
+> Don't forget to to copy this repo to `~/Desktop/ansible-config`, else it's does not work
 
 ## Steps
 
